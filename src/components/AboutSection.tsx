@@ -14,7 +14,7 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Empowerlter is a dedicated platform created specifically for Sri Lankan women 
+              EmpowerHer is a dedicated platform created specifically for Sri Lankan women 
               to provide comprehensive support in safety, mental health, and personal development. 
               We understand the unique challenges faced by women in our community and strive to 
               create a safe digital space where every woman can access the resources she needs.
@@ -23,12 +23,12 @@ const AboutSection = () => {
               Our platform combines emergency safety tools, professional counseling resources, 
               educational opportunities, and mentorship programs all in one trusted location. 
               Whether you're seeking immediate help, career guidance, or personal growth resources, 
-              Empowerlter is here to support your journey.
+              EmpowerHer is here to support your journey.
             </p>
           </div>
           
           <div className="flex justify-center">
-            <div className="bg-pastel-sand p-8 rounded-2xl">
+            <div className="bg-pastel-rose-light p-8 rounded-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
                 alt="Sri Lankan women empowerment"

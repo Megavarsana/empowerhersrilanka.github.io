@@ -3,16 +3,16 @@ import { Heart, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-pastel-khaki text-gray-800">
+    <footer className="bg-pastel-rose text-gray-800">
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-pastel-flesh p-2 rounded-full">
-                <Heart className="h-6 w-6 text-white" />
+              <div className="bg-white p-2 rounded-full">
+                <Heart className="h-6 w-6 text-pastel-rose-dark" />
               </div>
-              <span className="text-2xl font-bold">Empowerlter</span>
+              <span className="text-2xl font-bold">EmpowerHer</span>
             </div>
             <p className="text-gray-700 mb-6 leading-relaxed">
               Empowering Sri Lankan women through safety, support, and guidance. 
@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <div className="flex items-center space-x-2 text-gray-700">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">support@empowerlter.lk</span>
+                <span className="text-sm">support@empowerher.lk</span>
               </div>
             </div>
           </div>
@@ -58,11 +58,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-pastel-sand mt-12 pt-8">
+        <div className="border-t border-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-700 text-sm">
-              © 2024 Empowerlter. Made with ❤️ for Sri Lankan women.
-            </p>
+            <div className="text-center md:text-left">
+              <p className="text-gray-700 text-sm mb-2">
+                © 2024 EmpowerHer. Made with ❤️ for Sri Lankan women.
+              </p>
+              <p className="text-gray-600 text-xs">
+                Created by: S.Megavarsana
+              </p>
+            </div>
             <div className="flex space-x-6 text-sm text-gray-700">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

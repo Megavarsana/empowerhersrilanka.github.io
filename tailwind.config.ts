@@ -56,12 +56,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Empowerlter pastel color palette
-				'pastel-pearl': '#EAE6E1',
-				'pastel-flesh': '#FADCD9',
+				// EmpowerHer pastel rose color palette
+				'pastel-rose': '#E8A8B8',
+				'pastel-rose-light': '#F8E8F0',
+				'pastel-rose-medium': '#F2C1D3',
+				'pastel-rose-dark': '#D584A1',
 				'soft-white': '#FCFAF7',
-				'pastel-khaki': '#D9CAB3',
-				'pastel-sand': '#F4E1D2',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

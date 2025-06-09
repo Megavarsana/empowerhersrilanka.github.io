@@ -3,37 +3,37 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Empowerlter Design System */
+/* EmpowerHer Design System */
 
 @layer base {
   :root {
-    --background: 42 17% 91%; /* pastel-pearl as main background */
+    --background: 355 20% 95%; /* soft pastel rose background */
     --foreground: 30 10% 25%; /* dark brown for text */
 
-    --card: 42 29% 97%; /* soft-white for cards */
+    --card: 0 0% 100%; /* pure white for cards */
     --card-foreground: 30 10% 25%;
 
-    --popover: 42 29% 97%;
+    --popover: 0 0% 100%;
     --popover-foreground: 30 10% 25%;
 
-    --primary: 25 25% 75%; /* pastel-khaki */
-    --primary-foreground: 30 10% 25%;
+    --primary: 340 60% 75%; /* pastel rose */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 25 38% 89%; /* pastel-sand */
+    --secondary: 350 30% 85%; /* light pastel rose */
     --secondary-foreground: 30 10% 25%;
 
-    --muted: 25 38% 89%;
+    --muted: 350 30% 85%;
     --muted-foreground: 30 10% 50%;
 
-    --accent: 15 46% 90%; /* pastel-flesh */
+    --accent: 345 50% 80%; /* medium pastel rose */
     --accent-foreground: 30 10% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 25 25% 85%;
-    --input: 25 25% 85%;
-    --ring: 25 25% 75%;
+    --border: 345 25% 85%;
+    --input: 345 25% 85%;
+    --ring: 340 60% 75%;
 
     --radius: 1rem;
   }
@@ -43,13 +43,13 @@
   }
 
   body {
-    @apply bg-pastel-pearl text-foreground font-poppins;
+    @apply bg-pastel-rose-light text-foreground font-poppins;
   }
 }
 
 @layer components {
   .gradient-bg {
-    background: linear-gradient(135deg, #EAE6E1 0%, #F4E1D2 50%, #FADCD9 100%);
+    background: linear-gradient(135deg, #F8E8F0 0%, #F5D4E1 50%, #F2C1D3 100%);
   }
   
   .card-hover {
@@ -58,5 +58,9 @@
   
   .section-spacing {
     @apply py-16 px-4;
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, #F8E8F0 0%, #F5D4E1 100%);
   }
 }

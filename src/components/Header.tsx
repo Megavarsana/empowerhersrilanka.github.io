@@ -13,60 +13,76 @@ const Header = () => {
       {/* Navigation */}
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="bg-pastel-flesh p-2 rounded-full">
-              <Heart className="h-6 w-6 text-pastel-khaki" />
+          <div className="flex items-center space-x-4">
+            {/* Logo placeholder space */}
+            <div className="w-12 h-12 bg-pastel-rose-light border-2 border-dashed border-pastel-rose rounded-lg flex items-center justify-center">
+              <span className="text-xs text-pastel-rose-dark">LOGO</span>
             </div>
-            <span className="text-xl font-semibold text-gray-800">Empowerlter</span>
+            <span className="text-2xl font-bold text-gray-800">EmpowerHer</span>
           </div>
           
           <div className="hidden md:flex space-x-8">
-            <button className="text-gray-700 hover:text-pastel-khaki transition-colors font-medium">
-              Home
+            <button className="text-gray-700 hover:text-pastel-rose transition-colors font-medium">
+              Who We Are
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-pastel-khaki transition-colors font-medium"
+              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium"
             >
-              About Us
+              What We Do
             </button>
             <button 
               onClick={() => scrollToSection('vision-mission')}
-              className="text-gray-700 hover:text-pastel-khaki transition-colors font-medium"
+              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium"
             >
-              Our Vision
+              Get Involved
             </button>
-            <button 
-              onClick={() => scrollToSection('vision-mission')}
-              className="text-gray-700 hover:text-pastel-khaki transition-colors font-medium"
-            >
-              Our Mission
-            </button>
-            <button className="text-gray-700 hover:text-pastel-khaki transition-colors font-medium">
-              Contact Us
+            <button className="text-gray-700 hover:text-pastel-rose transition-colors font-medium">
+              Latest News
             </button>
           </div>
 
-          <Button className="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-full">
-            <Shield className="h-4 w-4 mr-2" />
-            Emergency Help
+          <Button className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-full text-lg">
+            EMERGENCY HELP
           </Button>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <div className="container mx-auto px-6 py-16 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Empowerlter
-          </h1>
-          <h2 className="text-2xl md:text-3xl text-pastel-khaki font-medium mb-6">
-            Sri Lankan Women's Guide
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            A comprehensive platform designed specifically for Sri Lankan women to access 
-            safety resources, support services, and guidance for personal and professional growth.
-          </p>
+      {/* Hero Section - Global Fund for Women Style */}
+      <div className="hero-section">
+        <div className="container mx-auto px-6 py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Content */}
+            <div className="text-left">
+              <p className="text-sm font-semibold text-pastel-rose-dark mb-4 tracking-wider">
+                EST. 2024
+              </p>
+              <h1 className="text-5xl md:text-6xl font-bold text-primary mb-8 leading-tight">
+                WE FUND<br />
+                BOLD, FEMINIST<br />
+                MOVEMENTS
+              </h1>
+              <p className="text-xl text-gray-700 mb-6 leading-relaxed max-w-lg">
+                EmpowerHer supports gender justice movements in Sri Lanka to{" "}
+                <span className="bg-yellow-200 px-1">create meaningful change</span>{" "}
+                that will last beyond our lifetimes.
+              </p>
+              <Button className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-none text-lg">
+                JOIN US
+              </Button>
+            </div>
+
+            {/* Right Side - Image placeholder */}
+            <div className="flex justify-center">
+              <div className="w-full h-96 bg-pastel-rose-light border-2 border-dashed border-pastel-rose rounded-lg flex items-center justify-center">
+                <div className="text-center">
+                  <Heart className="h-16 w-16 text-pastel-rose mx-auto mb-4" />
+                  <span className="text-pastel-rose-dark font-medium">Hero Image Placeholder</span>
+                  <p className="text-sm text-pastel-rose-dark mt-2">Sri Lankan women empowerment image</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
