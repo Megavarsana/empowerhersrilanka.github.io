@@ -1,0 +1,78 @@
+
+import { Heart, Mail, Phone, MapPin } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-pastel-khaki text-gray-800">
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid md:grid-cols-4 gap-8">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="bg-pastel-flesh p-2 rounded-full">
+                <Heart className="h-6 w-6 text-white" />
+              </div>
+              <span className="text-2xl font-bold">Empowerlter</span>
+            </div>
+            <p className="text-gray-700 mb-6 leading-relaxed">
+              Empowering Sri Lankan women through safety, support, and guidance. 
+              Creating a digital space where every woman can thrive with confidence and dignity.
+            </p>
+            <div className="flex space-x-4">
+              <div className="flex items-center space-x-2 text-gray-700">
+                <Mail className="h-4 w-4" />
+                <span className="text-sm">support@empowerlter.lk</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-semibold text-gray-800 mb-4">Quick Links</h4>
+            <div className="space-y-2">
+              {['Safety Resources', 'Support Services', 'Mentorship', 'Emergency Contacts', 'Success Stories'].map((link) => (
+                <a key={link} href="#" className="block text-gray-700 hover:text-white transition-colors text-sm">
+                  {link}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Emergency Contacts */}
+          <div>
+            <h4 className="font-semibold text-gray-800 mb-4">Emergency</h4>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-2 text-gray-700">
+                <Phone className="h-4 w-4" />
+                <span className="text-sm">Police: 119</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-700">
+                <Phone className="h-4 w-4" />
+                <span className="text-sm">Women's Helpline: 1938</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-700">
+                <MapPin className="h-4 w-4" />
+                <span className="text-sm">Sri Lanka</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-pastel-sand mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-gray-700 text-sm">
+              © 2024 Empowerlter. Made with ❤️ for Sri Lankan women.
+            </p>
+            <div className="flex space-x-6 text-sm text-gray-700">
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-white transition-colors">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
