@@ -1,74 +1,43 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Users } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-spacing bg-soft-white">
+    <section id="about" className="section-spacing bg-white">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-            About Empowerlter
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+            ABOUT US
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Built by women, for women. We understand the unique challenges faced by Sri Lankan women 
-            and are committed to creating a safe digital space for growth and empowerment.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <Card className="card-hover bg-white border-pastel-sand">
-            <CardContent className="p-8 text-center">
-              <div className="bg-pastel-flesh p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                <Target className="h-8 w-8 text-pastel-khaki" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Our Mission</h3>
-              <p className="text-gray-600">
-                To uplift women across Sri Lanka by providing access to safety tools, 
-                emotional support, and educational guidance.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="card-hover bg-white border-pastel-sand">
-            <CardContent className="p-8 text-center">
-              <div className="bg-pastel-flesh p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                <Eye className="h-8 w-8 text-pastel-khaki" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Our Vision</h3>
-              <p className="text-gray-600">
-                A future where every Sri Lankan woman can live with dignity, 
-                courage, and independence — online and offline.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="card-hover bg-white border-pastel-sand">
-            <CardContent className="p-8 text-center">
-              <div className="bg-pastel-flesh p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                <Users className="h-8 w-8 text-pastel-khaki" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Our Community</h3>
-              <p className="text-gray-600">
-                Created by a team of passionate advocates who believe in the power 
-                of women supporting women through technology.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="bg-gradient-to-r from-pastel-flesh to-pastel-sand p-8 rounded-2xl">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-              Why We Built This Platform
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              Every woman deserves to feel safe, supported, and empowered to pursue her dreams. 
-              We recognized the need for a centralized platform that addresses the unique challenges 
-              faced by Sri Lankan women, from safety concerns to career guidance. Empowerlter bridges 
-              this gap by combining emergency resources, mental health support, and professional 
-              development tools in one trusted space.
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              Empowerlter is a dedicated platform created specifically for Sri Lankan women 
+              to provide comprehensive support in safety, mental health, and personal development. 
+              We understand the unique challenges faced by women in our community and strive to 
+              create a safe digital space where every woman can access the resources she needs.
             </p>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Our platform combines emergency safety tools, professional counseling resources, 
+              educational opportunities, and mentorship programs all in one trusted location. 
+              Whether you're seeking immediate help, career guidance, or personal growth resources, 
+              Empowerlter is here to support your journey.
+            </p>
+          </div>
+          
+          <div className="flex justify-center">
+            <div className="bg-pastel-sand p-8 rounded-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                alt="Sri Lankan women empowerment"
+                className="w-full h-64 object-cover rounded-lg"
+              />
+              <p className="text-center text-gray-600 text-sm mt-4 italic">
+                Supporting Sri Lankan women in their journey towards empowerment
+              </p>
+            </div>
           </div>
         </div>
       </div>

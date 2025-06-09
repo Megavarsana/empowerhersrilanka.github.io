@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Shield, Heart, Star } from "lucide-react";
+import { Heart, Shield } from "lucide-react";
 
 const Header = () => {
   const scrollToSection = (id: string) => {
@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <header className="gradient-bg">
+    <header className="bg-white shadow-sm">
       {/* Navigation */}
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -21,61 +21,52 @@ const Header = () => {
           </div>
           
           <div className="hidden md:flex space-x-8">
-            <button 
-              onClick={() => scrollToSection('safety')}
-              className="flex items-center space-x-2 text-gray-700 hover:text-pastel-khaki transition-colors"
-            >
-              <Shield className="h-4 w-4" />
-              <span>Safety</span>
+            <button className="text-gray-700 hover:text-pastel-khaki transition-colors font-medium">
+              Home
             </button>
             <button 
-              onClick={() => scrollToSection('support')}
-              className="flex items-center space-x-2 text-gray-700 hover:text-pastel-khaki transition-colors"
+              onClick={() => scrollToSection('about')}
+              className="text-gray-700 hover:text-pastel-khaki transition-colors font-medium"
             >
-              <Heart className="h-4 w-4" />
-              <span>Support</span>
+              About Us
             </button>
             <button 
-              onClick={() => scrollToSection('guidance')}
-              className="flex items-center space-x-2 text-gray-700 hover:text-pastel-khaki transition-colors"
+              onClick={() => scrollToSection('vision-mission')}
+              className="text-gray-700 hover:text-pastel-khaki transition-colors font-medium"
             >
-              <Star className="h-4 w-4" />
-              <span>Guidance</span>
+              Our Vision
+            </button>
+            <button 
+              onClick={() => scrollToSection('vision-mission')}
+              className="text-gray-700 hover:text-pastel-khaki transition-colors font-medium"
+            >
+              Our Mission
+            </button>
+            <button className="text-gray-700 hover:text-pastel-khaki transition-colors font-medium">
+              Contact Us
             </button>
           </div>
+
+          <Button className="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-2 rounded-full">
+            <Shield className="h-4 w-4 mr-2" />
+            Emergency Help
+          </Button>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <div className="container mx-auto px-6 py-20 text-center">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+      <div className="container mx-auto px-6 py-16 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             Empowerlter
           </h1>
-          <h2 className="text-xl md:text-2xl text-pastel-khaki font-medium mb-6">
-            A Space for Safety, Support & Success
+          <h2 className="text-2xl md:text-3xl text-pastel-khaki font-medium mb-6">
+            Sri Lankan Women's Guide
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
-            This platform is specially made for <strong>Sri Lankan women</strong> to feel 
-            <strong> safe, supported, and empowered</strong>. From emergency resources to mental wellness, 
-            business inspiration, and mentorship — Empowerlter is your trusted digital companion.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            A comprehensive platform designed specifically for Sri Lankan women to access 
+            safety resources, support services, and guidance for personal and professional growth.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              onClick={() => scrollToSection('safety')}
-              className="bg-pastel-flesh hover:bg-pastel-khaki text-gray-800 font-medium px-8 py-3 rounded-full transition-all duration-300"
-            >
-              Get Started
-            </Button>
-            <Button 
-              variant="outline"
-              onClick={() => scrollToSection('about')}
-              className="border-pastel-khaki text-pastel-khaki hover:bg-pastel-khaki hover:text-white px-8 py-3 rounded-full transition-all duration-300"
-            >
-              Learn More
-            </Button>
-          </div>
         </div>
       </div>
     </header>
