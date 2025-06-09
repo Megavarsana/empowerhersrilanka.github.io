@@ -1,37 +1,26 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, Phone, Smartphone, AlertTriangle, FileText } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
 const SafetyPage = () => {
-  const safetyTopics = [{
-    id: 'tips',
-    title: 'Safety Tips',
-    icon: Shield
-  }, {
-    id: 'defense',
-    title: 'Self-Defense',
-    icon: Shield
-  }, {
-    id: 'emergency',
-    title: 'Emergency Numbers',
-    icon: Phone
-  }, {
-    id: 'apps',
-    title: 'Mobile Safety Apps',
-    icon: Smartphone
-  }, {
-    id: 'report',
-    title: 'How to Report to Police',
-    icon: FileText
-  }];
+  const safetyTopics = [
+    { id: 'emergency', title: 'Emergency Numbers', icon: Phone },
+    { id: 'sos', title: 'One-Click SOS', icon: AlertTriangle },
+    { id: 'defense', title: 'Self-Defense Tips', icon: Shield },
+    { id: 'apps', title: 'Safety Apps', icon: Smartphone },
+    { id: 'online', title: 'Online Safety', icon: FileText }
+  ];
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({
-      behavior: 'smooth'
-    });
+    element?.scrollIntoView({ behavior: 'smooth' });
   };
-  return <div className="min-h-screen">
+
+  return (
+    <div className="min-h-screen">
       <Header />
       
       <div className="container mx-auto px-6 py-12">
@@ -42,344 +31,398 @@ const SafetyPage = () => {
 
         {/* 5-Topic Grid */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
-          {safetyTopics.map(topic => <Card key={topic.id} className="cursor-pointer hover:bg-pastel-flesh transition-colors" onClick={() => scrollToSection(topic.id)}>
+          {safetyTopics.map((topic) => (
+            <Card 
+              key={topic.id}
+              className="cursor-pointer hover:bg-pastel-flesh transition-colors"
+              onClick={() => scrollToSection(topic.id)}
+            >
               <CardContent className="p-6 text-center">
                 <topic.icon className="h-8 w-8 text-pastel-khaki mx-auto mb-3" />
                 <h3 className="font-semibold text-gray-800 text-sm">{topic.title}</h3>
               </CardContent>
-            </Card>)}
+            </Card>
+          ))}
         </div>
 
         {/* Content Sections */}
         <div className="space-y-16">
-          {/* Safety Tips */}
-          <section id="tips" className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6"> 🛡️ Self-Defense Tips for Women
-✅ Awareness & Prevention
-
-🔍 Stay alert to your surroundings, especially in unfamiliar or isolated areas.
-
-🎧 Avoid using headphones at full volume or being glued to your phone while walking alone.
-
-🚷 Trust your instincts — if something feels off, remove yourself from the situation.
-
-🚖 Use safe, well-reviewed transportation apps or services.
-
-🗺️ Let someone know your location or plans when going out alone.
-
-👜 Practical Everyday Habits
-
-🧤 Keep keys between your fingers when walking at night for quick defense.
-
-👜 Carry your bag in a way that’s difficult to snatch (e.g., cross-body with zipper inward).
-
-🔐 Lock your car doors immediately upon entering.
-
-🧯 Carry a personal safety item: pepper spray, mini alarm, or a whistle.
-
-📱 Enable emergency features on your phone (SOS mode, emergency contact).
-
-🥋 Physical Self-Defense Tips
-
-🦵 Aim for vulnerable areas: eyes, nose, throat, groin, knees.
-
-✊ Learn basic strikes: palm strike, elbow strike, and knee to groin.
-
-🏃 Don’t focus on fighting — focus on escaping. The goal is to get away, not win.
-
-🧘 Practice yelling firmly like "STOP!" to shock and alert others.
-
-🥋 Consider taking a self-defense class or martial art (e.g., Krav Maga, Jiu-Jitsu).
-
-🚨 In a Dangerous Situation
-
-🚪 Always identify exits in buildings, clubs, or transport vehicles.
-
-🤳 Discreetly start recording or go live if you feel unsafe.
-
-📢 Use distraction to your advantage — throw something, make noise, or create confusion to escape.
-
-🚗 Avoid parking next to vans or in isolated areas, especially at night.
-
-🌐 Online Safety
-
-👁️ Limit how much personal information you share online.
-
-📸 Avoid posting real-time location on social media.
-
-🛑 Don’t share address, daily routines, or private info publicly.
-
-
-          </h2>
-            <div className="grid lg:grid-cols-2 gap-8">
-              <div>
-                <ul className="space-y-4 text-gray-600">
-                  <li>
-
- 
-✅ Awareness & Prevention
-
-🔍 Stay alert to your surroundings, especially in unfamiliar or isolated areas.
-
-🎧 Avoid using headphones at full volume or being glued to your phone while walking alone.
-
-🚷 Trust your instincts — if something feels off, remove yourself from the situation.
-
-🚖 Use safe, well-reviewed transportation apps or services.
-
-🗺️ Let someone know your location or plans when going out alone.
-
-👜 Practical Everyday Habits
-
-🧤 Keep keys between your fingers when walking at night for quick defense.
-
-👜 Carry your bag in a way that’s difficult to snatch (e.g., cross-body with zipper inward).
-
-🔐 Lock your car doors immediately upon entering.
-
-🧯 Carry a personal safety item: pepper spray, mini alarm, or a whistle.
-
-📱 Enable emergency features on your phone (SOS mode, emergency contact).
-
-🥋 Physical Self-Defense Tips
-
-🦵 Aim for vulnerable areas: eyes, nose, throat, groin, knees.
-
-✊ Learn basic strikes: palm strike, elbow strike, and knee to groin.
-
-🏃 Don’t focus on fighting — focus on escaping. The goal is to get away, not win.
-
-🧘 Practice yelling firmly like "STOP!" to shock and alert others.
-
-🥋 Consider taking a self-defense class or martial art (e.g., Krav Maga, Jiu-Jitsu).
-
-🚨 In a Dangerous Situation
-
-🚪 Always identify exits in buildings, clubs, or transport vehicles.
-
-🤳 Discreetly start recording or go live if you feel unsafe.
-
-📢 Use distraction to your advantage — throw something, make noise, or create confusion to escape.
-
-🚗 Avoid parking next to vans or in isolated areas, especially at night.
-
-🌐 Online Safety
-
-👁️ Limit how much personal information you share online.
-
-📸 Avoid posting real-time location on social media.
-
-🛑 Don’t share address, daily routines, or private info publicly.
-
-
-                </li>
-                  
-                  
-                  
-                  
-                </ul>
-                <div className="mt-6 bg-pastel-sand p-4 rounded-lg">
-                  <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-                  <p className="text-gray-600 text-sm">Personal Safety Tips for Sri Lankan Women</p>
-                </div>
-              </div>
-              <div className="bg-pastel-flesh p-6 rounded-lg">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Women safety awareness" className="w-full h-48 object-cover rounded-lg" />
-              </div>
-            </div>
-          </section>
-
-          {/* Self-Defense */}
-          <section id="defense" className="bg-pastel-pearl p-8 rounded-2xl">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">Self-Defense</h2>
-            <div className="grid lg:grid-cols-2 gap-8">
-              <div>
-                <p className="text-gray-600 mb-4">Here are some practical and important women safety tips you can follow to help protect yourself in various situations:
-
-🚶 When You’re Out Alone
-
-Stay Alert – Avoid distractions like loud music or excessive phone use. Be aware of your surroundings.
-
-Walk Confidently – Keep your head up and make eye contact. Attackers often target people who look vulnerable.
-
-Avoid Isolated Areas – Stick to well-lit and populated places, especially at night.
-
-Trust Your Instincts – If something feels off, leave immediately or seek help.
-
-🚖 Travel & Transport Safety
-
-Share Your Trip Details – Always inform someone you trust about your location and travel plans.
-
-Use Verified Transport – Prefer official taxis or ride-sharing apps with tracking and driver details.
-
-Check the Vehicle – Before getting in, match the number plate, driver's photo, and name.
-
-Sit in the Back – Prefer the back seat for better control and safety in cabs or taxis.
-
-🏠 Home & Online Safety
-
-Secure Your Home – Use strong locks, install a peephole, and avoid opening doors to strangers.
-
-Avoid Oversharing Online – Don’t share your location or personal details publicly on social media.
-
-Have Emergency Numbers Ready – Save police, emergency contacts, and local help services in your phone.
-
-🧠 Self-Defense & Emergency
-
-Learn Basic Self-Defense – Classes can teach you how to escape or disable an attacker.
-
-Carry a Safety Tool – Pepper spray, a whistle, or a small alarm can deter threats.
-
-Use Safety Apps – Install apps like bSafe, Life360, or My Safetipin to share your location in real-time.
-
-🧑‍🤝‍🧑 In Social Situations
-
-Watch Your Drink – Don’t leave your drink unattended at parties or bars.
-
-Set Boundaries – Be assertive. It’s okay to say no or walk away from uncomfortable situations.
-
-Use the Buddy System – Go out with friends, especially in unfamiliar areas.
-
-Would you like me to make this i</p>
-                <ul className="space-y-3 text-gray-600">
-                  
-                  
-                  
-                  
-                </ul>
-                <div className="mt-6 bg-white p-4 rounded-lg">
-                  <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-                  <p className="text-gray-600 text-sm">Self-Defense Techniques for Women</p>
-                </div>
-              </div>
-              <div className="bg-white p-6 rounded-lg">
-                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843" alt="Self-defense training" className="w-full h-48 object-cover rounded-lg" />
-              </div>
-            </div>
-          </section>
-
-          {/* Emergency Numbers */}
+          {/* Emergency Hotline Numbers */}
           <section id="emergency" className="bg-white p-8 rounded-2xl shadow-sm">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">📞 Emergency Hotline Numbers for Women – Sri Lanka</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[{
-              service: "Women's Help Line (Ministry of Women)",
-              number: "1938",
-              description: "24/7 confidential support for women in distress"
-            }, {
-              service: "Police Emergency",
-              number: "119",
-              description: "For any emergency including violence or threats"
-            }, {
-              service: "National Child Protection Authority (NCPA)",
-              number: "1929",
-              description: "For reporting abuse of girls or minors"
-            }, {
-              service: "Suwa Seriya – Ambulance Service",
-              number: "1990",
-              description: "Free emergency ambulance service"
-            }, {
-              service: "Legal Aid Commission – Women's Desk",
-              number: "0112 574 167",
-              description: "Free legal advice for women"
-            }, {
-              service: "Mithuru Piyasa (Hospital-based GBV Care)",
-              number: "0112 682 535",
-              description: "Gender-based violence support centers in major hospitals"
-            }, {
-              service: "Women In Need (WIN)",
-              number: "0114 718 585",
-              description: "Counselling, legal support, shelter, and advocacy for women survivors"
-            }, {
-              service: "WIN Emergency Support (24/7)",
-              number: "077 567 8700",
-              description: "Mobile support line for urgent assistance"
-            }, {
-              service: "Sri Lanka Red Cross – Psychosocial Support",
-              number: "0112 682 585",
-              description: "Emotional and psychological support"
-            }].map((contact, index) => <div key={index} className="bg-pastel-sand p-6 rounded-lg">
+              {[
+                { service: "Women's Help Line (Ministry of Women)", number: "1938", description: "24/7 confidential support for women in distress" },
+                { service: "Police Emergency", number: "119", description: "For any emergency including violence or threats" },
+                { service: "National Child Protection Authority (NCPA)", number: "1929", description: "For reporting abuse of girls or minors" },
+                { service: "Suwa Seriya – Ambulance Service", number: "1990", description: "Free emergency ambulance service" },
+                { service: "Legal Aid Commission – Women's Desk", number: "0112 574 167", description: "Free legal advice for women" },
+                { service: "Mithuru Piyasa (Hospital-based GBV Care)", number: "0112 682 535", description: "Gender-based violence support centers in major hospitals" },
+                { service: "Women In Need (WIN)", number: "0114 718 585", description: "Counselling, legal support, shelter, and advocacy for women survivors" },
+                { service: "WIN Emergency Support (24/7)", number: "077 567 8700", description: "Mobile support line for urgent assistance" },
+                { service: "Sri Lanka Red Cross – Psychosocial Support", number: "0112 682 585", description: "Emotional and psychological support" }
+              ].map((contact, index) => (
+                <div key={index} className="bg-pastel-sand p-6 rounded-lg">
                   <h4 className="font-semibold text-gray-800 mb-2 text-sm leading-tight">{contact.service}</h4>
                   <p className="text-2xl font-bold text-pastel-khaki mb-2">{contact.number}</p>
                   <p className="text-sm text-gray-600">{contact.description}</p>
-                </div>)}
+                </div>
+              ))}
             </div>
             <div className="mt-8 p-6 bg-red-50 border border-red-200 rounded-lg">
               <p className="text-red-800 font-medium text-center">
                 ⚠️ In immediate danger? Call 119 for police or 1990 for ambulance. Your safety is the priority.
               </p>
             </div>
-          </section>
-
-          {/* Mobile Safety Apps */}
-          <section id="apps" className="bg-pastel-pearl p-8 rounded-2xl">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">Mobile Safety Apps</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[{
-              name: "bSafe",
-              description: "Personal safety alarm with GPS tracking and emergency contacts",
-              features: "• Live GPS tracking\n• Silent alarm\n• Auto-recording"
-            }, {
-              name: "MySafetipin",
-              description: "Safety rating for locations based on lighting, crowd, and security",
-              features: "• Location safety scores\n• Community reports\n• Safe route planning"
-            }, {
-              name: "Himaya",
-              description: "Local Sri Lankan safety app for women",
-              features: "• Emergency alerts\n• Local emergency services\n• Community support"
-            }, {
-              name: "Life360",
-              description: "Family safety and location sharing app",
-              features: "• Real-time location sharing\n• Safe arrival notifications\n• Emergency assistance"
-            }, {
-              name: "Shake2Safety",
-              description: "Emergency alert by shaking your phone",
-              features: "• Shake to send alert\n• GPS location sharing\n• Quick emergency contacts"
-            }, {
-              name: "Women Safety",
-              description: "Comprehensive safety app with multiple features",
-              features: "• Fake call feature\n• Emergency contacts\n• Safety tips and guides"
-            }].map((app, index) => <div key={index} className="bg-white p-6 rounded-lg">
-                  <h4 className="font-bold text-gray-800 mb-2">{app.name}</h4>
-                  <p className="text-gray-600 text-sm mb-3">{app.description}</p>
-                  <div className="text-xs text-gray-500 whitespace-pre-line">{app.features}</div>
-                </div>)}
-            </div>
-            <div className="mt-6 bg-pastel-sand p-4 rounded-lg">
-              <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-              <p className="text-gray-600 text-sm">How to Use Safety Apps Effectively</p>
+            
+            {/* Image Upload Space */}
+            <div className="mt-8 bg-pastel-flesh p-6 rounded-lg border-2 border-dashed border-pastel-khaki">
+              <div className="text-center">
+                <h4 className="font-semibold text-gray-800 mb-2">📸 Image Upload Space</h4>
+                <p className="text-gray-600 text-sm">Emergency services or support related image</p>
+                <Button className="mt-4 bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
+                  Upload Image
+                </Button>
+              </div>
             </div>
           </section>
 
-          {/* How to Report to Police */}
-          <section id="report" className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">How to Report to Police</h2>
+          {/* One-Click SOS Button */}
+          <section id="sos" className="bg-pastel-pearl p-8 rounded-2xl">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">🚨 One-Click SOS Button – Ideas & Examples</h2>
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Step-by-Step Reporting Process</h3>
-                <ol className="space-y-4 text-gray-600">
-                  <li><strong>1. Immediate Safety:</strong> If in immediate danger, call 119 first</li>
-                  <li><strong>2. Document Everything:</strong> Take photos, save messages, note dates and times</li>
-                  <li><strong>3. Visit the Police Station:</strong> Go to your nearest police station with evidence</li>
-                  <li><strong>4. File a Complaint:</strong> Request to file a formal complaint (Entry in the Information Book)</li>
-                  <li><strong>5. Get a Copy:</strong> Always request a copy of your complaint for your records</li>
-                  <li><strong>6. Follow Up:</strong> Check the status of your case regularly</li>
-                </ol>
-                <div className="mt-6 p-4 bg-pastel-flesh rounded-lg">
-                  <h4 className="font-semibold text-gray-800 mb-2">What to Bring:</h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Your National Identity Card</li>
-                    <li>• Any evidence (photos, messages, documents)</li>
-                    <li>• Witness contact information if available</li>
-                    <li>• Medical reports if applicable</li>
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">✅ What is it?</h3>
+                  <p className="text-gray-600 mb-4">
+                    A One-Click SOS Button is a visible and accessible button on your website that users can click in an emergency. It can:
+                  </p>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• Call emergency services</li>
+                    <li>• Send a message or location to a caregiver or rescue team</li>
+                    <li>• Trigger an alarm or alert system</li>
+                    <li>• Open a help form or emergency chatbot</li>
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🔘 Text Examples for the Button</h3>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• 🚨 SOS – Emergency Help</li>
+                    <li>• 🆘 Tap Here for Immediate Help</li>
+                    <li>• 📞 Call for Emergency Assistance</li>
+                    <li>• 🔴 One-Click Rescue</li>
+                    <li>• 📍 Send Location & Alert</li>
+                    <li>• 🛑 Need Help Now? Click Here</li>
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🎯 Where to Place It</h3>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• Top-right corner of every page</li>
+                    <li>• Floating button on the bottom corner</li>
+                    <li>• Inside a fixed navigation bar</li>
+                    <li>• On the homepage hero section</li>
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🎨 Design Tips</h3>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• Use bright colors like red 🔴, orange 🟠, or yellow 🟡</li>
+                    <li>• Use emojis to make it eye-catching and instantly understandable</li>
+                    <li>• Add vibration or sound feedback for mobile (optional)</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🧠 Things to Think About</h3>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• Should it make a call, send a message, or trigger an alert?</li>
+                    <li>• Do you need location access?</li>
+                    <li>• Do you want to store the alert logs in a database?</li>
                   </ul>
                 </div>
               </div>
-              <div className="bg-pastel-flesh p-6 rounded-lg">
-                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f" alt="Legal support and reporting" className="w-full h-48 object-cover rounded-lg mb-4" />
-                <div className="bg-white p-4 rounded-lg">
-                  <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-                  <p className="text-gray-600 text-sm">Your Rights When Reporting to Police in Sri Lanka</p>
+              
+              <div className="bg-white p-6 rounded-lg">
+                <div className="text-center mb-6">
+                  <div className="bg-red-500 hover:bg-red-600 w-32 h-32 mx-auto rounded-full flex items-center justify-center mb-6 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <span className="text-white font-bold text-xl">SOS</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-4">Demo SOS Button</h4>
+                </div>
+                
+                {/* Image Upload Space */}
+                <div className="bg-pastel-flesh p-6 rounded-lg border-2 border-dashed border-pastel-khaki">
+                  <div className="text-center">
+                    <h4 className="font-semibold text-gray-800 mb-2">📸 Image Upload Space</h4>
+                    <p className="text-gray-600 text-sm">SOS button or alert system image</p>
+                    <Button className="mt-4 bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
+                      Upload Image
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Self-Defense Tips */}
+          <section id="defense" className="bg-white p-8 rounded-2xl shadow-sm">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">🛡️ Self-Defense Tips for Women</h2>
+            <div className="grid lg:grid-cols-2 gap-8">
+              <div>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-4">✅ Awareness & Prevention</h3>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• 🔍 Stay alert to your surroundings, especially in unfamiliar or isolated areas.</li>
+                      <li>• 🎧 Avoid using headphones at full volume or being glued to your phone while walking alone.</li>
+                      <li>• 🚷 Trust your instincts — if something feels off, remove yourself from the situation.</li>
+                      <li>• 🚖 Use safe, well-reviewed transportation apps or services.</li>
+                      <li>• 🗺️ Let someone know your location or plans when going out alone.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-4">👜 Practical Everyday Habits</h3>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• 🧤 Keep keys between your fingers when walking at night for quick defense.</li>
+                      <li>• 👜 Carry your bag in a way that's difficult to snatch (e.g., cross-body with zipper inward).</li>
+                      <li>• 🔐 Lock your car doors immediately upon entering.</li>
+                      <li>• 🧯 Carry a personal safety item: pepper spray, mini alarm, or a whistle.</li>
+                      <li>• 📱 Enable emergency features on your phone (SOS mode, emergency contact).</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-4">🥋 Physical Self-Defense Tips</h3>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• 🦵 Aim for vulnerable areas: eyes, nose, throat, groin, knees.</li>
+                      <li>• ✊ Learn basic strikes: palm strike, elbow strike, and knee to groin.</li>
+                      <li>• 🏃 Don't focus on fighting — focus on escaping. The goal is to get away, not win.</li>
+                      <li>• 🧘 Practice yelling firmly like "STOP!" to shock and alert others.</li>
+                      <li>• 🥋 Consider taking a self-defense class or martial art (e.g., Krav Maga, Jiu-Jitsu).</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-4">🚨 In a Dangerous Situation</h3>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• 🚪 Always identify exits in buildings, clubs, or transport vehicles.</li>
+                      <li>• 🤳 Discreetly start recording or go live if you feel unsafe.</li>
+                      <li>• 📢 Use distraction to your advantage — throw something, make noise, or create confusion to escape.</li>
+                      <li>• 🚗 Avoid parking next to vans or in isolated areas, especially at night.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-4">🌐 Online Safety</h3>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• 👁️ Limit how much personal information you share online.</li>
+                      <li>• 📸 Avoid posting real-time location on social media.</li>
+                      <li>• 🛑 Don't share address, daily routines, or private info publicly.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                {/* Image Upload Space */}
+                <div className="bg-pastel-flesh p-6 rounded-lg border-2 border-dashed border-pastel-khaki">
+                  <div className="text-center">
+                    <h4 className="font-semibold text-gray-800 mb-2">📸 Image Upload Space</h4>
+                    <p className="text-gray-600 text-sm">Self-defense or safety awareness image</p>
+                    <Button className="mt-4 bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
+                      Upload Image
+                    </Button>
+                  </div>
+                </div>
+
+                {/* YouTube Video Placeholder */}
+                <div className="bg-pastel-sand p-6 rounded-lg">
+                  <h4 className="font-semibold text-gray-800 mb-2">🎥 YouTube Video Placeholder</h4>
+                  <p className="text-gray-600 text-sm mb-4">Self-Defense Techniques for Women</p>
+                  <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-500">YouTube Video will be embedded here</span>
+                  </div>
+                  <Button className="mt-4 w-full bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
+                    Add YouTube Video Link
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Safety Apps */}
+          <section id="apps" className="bg-pastel-pearl p-8 rounded-2xl">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">Safety App Recommendation</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  name: "Suraksha",
+                  type: "Local Sri Lankan App",
+                  description: "A women safety app developed in Sri Lanka, Suraksha allows users to quickly send SOS alerts with their live location to emergency contacts. It also includes access to legal support and helplines."
+                },
+                {
+                  name: "112 Sri Lanka",
+                  type: "Official Emergency Services App",
+                  description: "This app lets you contact the Sri Lanka emergency services (Police, Ambulance, Fire Brigade) with a single tap. Women can use it in emergencies to get quick help nationwide."
+                },
+                {
+                  name: "bSafe",
+                  type: "International Safety App",
+                  description: "bSafe offers voice-activated SOS, live GPS tracking, and automatic video/audio recording when you're in danger. It's great for women who travel or work late."
+                },
+                {
+                  name: "My Safetipin",
+                  type: "Community-Based Safety App",
+                  description: "This app rates locations based on safety (lighting, crowd, security, etc.). It helps women avoid unsafe areas and offers safe route suggestions with navigation."
+                },
+                {
+                  name: "Life360",
+                  type: "Family Locator & Safety App",
+                  description: "Family safety and location sharing app with real-time tracking and emergency assistance features."
+                }
+              ].map((app, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg">
+                  <h4 className="font-bold text-gray-800 mb-2">{app.name}</h4>
+                  <span className="text-xs bg-pastel-khaki text-white px-2 py-1 rounded mb-3 inline-block">
+                    {app.type}
+                  </span>
+                  <p className="text-gray-600 text-sm mb-4">{app.description}</p>
+                </div>
+              ))}
+            </div>
+            
+            {/* Image Upload Space */}
+            <div className="mt-8 bg-pastel-flesh p-6 rounded-lg border-2 border-dashed border-pastel-khaki">
+              <div className="text-center">
+                <h4 className="font-semibold text-gray-800 mb-2">📸 Image Upload Space</h4>
+                <p className="text-gray-600 text-sm">Phone with safety app icons</p>
+                <Button className="mt-4 bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
+                  Upload Image
+                </Button>
+              </div>
+            </div>
+
+            {/* YouTube Video Placeholder */}
+            <div className="mt-6 bg-pastel-sand p-6 rounded-lg">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 YouTube Video Placeholder</h4>
+              <p className="text-gray-600 text-sm mb-4">How to Use Safety Apps Effectively</p>
+              <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+                <span className="text-gray-500">YouTube Video will be embedded here</span>
+              </div>
+              <Button className="mt-4 w-full bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
+                Add YouTube Video Link
+              </Button>
+            </div>
+          </section>
+
+          {/* Online Social Media Safety */}
+          <section id="online" className="bg-white p-8 rounded-2xl shadow-sm">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">🌐 Online Social Media Safety Tips for Women</h2>
+            <div className="grid lg:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🌐 1. Control Your Privacy Settings</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• Limit visibility of your posts to friends or followers you trust.</li>
+                    <li>• Disable location sharing unless absolutely necessary.</li>
+                    <li>• Review tag settings to approve posts you're tagged in before they appear publicly.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">👩‍💻 2. Be Selective with Friend/Follow Requests</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• Avoid accepting requests from unknown accounts or people with no mutual connections.</li>
+                    <li>• Watch for fake profiles (e.g., no posts, few followers, stolen photos).</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🗝️ 3. Use Strong, Unique Passwords</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• Use a long password with letters, numbers, and symbols.</li>
+                    <li>• Never reuse passwords across accounts.</li>
+                    <li>• Enable 2-factor authentication (2FA) for extra protection.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🚫 4. Think Before You Share</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• Avoid posting:</li>
+                    <li className="ml-4">◦ Personal schedule (e.g., travel plans or being home alone)</li>
+                    <li className="ml-4">◦ School/workplace locations</li>
+                    <li className="ml-4">◦ Phone numbers or addresses</li>
+                    <li>• Even deleted posts can be screenshotted or archived.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">📵 5. Block & Report Harassers</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• Don't hesitate to block, mute, or report anyone who makes you uncomfortable.</li>
+                    <li>• Take screenshots of inappropriate behavior for evidence.</li>
+                    <li>• Use platform tools like "Restrict" (on Instagram) to quietly limit someone.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🧠 6. Stay Informed About Scams & Catfishing</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• Be cautious of people who:</li>
+                    <li className="ml-4">◦ Ask for money or personal information</li>
+                    <li className="ml-4">◦ Push romantic/urgent conversations too fast</li>
+                    <li>• Reverse image search suspicious profile photos.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">📲 7. Avoid Sharing Sensitive Media</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• If you must share personal content:</li>
+                    <li className="ml-4">◦ Use end-to-end encrypted platforms (like Signal)</li>
+                    <li className="ml-4">◦ Be aware it can still be saved or misused</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🛡️ 8. Review App Permissions</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• Regularly check what apps have access to:</li>
+                    <li className="ml-4">◦ Your location</li>
+                    <li className="ml-4">◦ Your camera/mic</li>
+                    <li className="ml-4">◦ Your contacts and gallery</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                {/* Image Upload Space */}
+                <div className="bg-pastel-flesh p-6 rounded-lg border-2 border-dashed border-pastel-khaki">
+                  <div className="text-center">
+                    <h4 className="font-semibold text-gray-800 mb-2">📸 Image Upload Space</h4>
+                    <p className="text-gray-600 text-sm">Online safety or social media privacy image</p>
+                    <Button className="mt-4 bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
+                      Upload Image
+                    </Button>
+                  </div>
+                </div>
+
+                {/* YouTube Video Placeholder */}
+                <div className="bg-pastel-sand p-6 rounded-lg">
+                  <h4 className="font-semibold text-gray-800 mb-2">🎥 YouTube Video Placeholder</h4>
+                  <p className="text-gray-600 text-sm mb-4">Online Safety Tips for Sri Lankan Women</p>
+                  <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-500">YouTube Video will be embedded here</span>
+                  </div>
+                  <Button className="mt-4 w-full bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
+                    Add YouTube Video Link
+                  </Button>
                 </div>
               </div>
             </div>
@@ -388,6 +431,8 @@ Would you like me to make this i</p>
       </div>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default SafetyPage;
