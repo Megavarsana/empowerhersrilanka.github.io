@@ -2,7 +2,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Heart, BookOpen, Upload, Play } from "lucide-react";
+import { Shield, Heart, BookOpen, Upload, Play, Phone, Users, Lightbulb, HeartHandshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -26,6 +26,59 @@ const WhatWeDo = () => {
           <p className="text-lg text-gray-700">
             Through our digital platform, we connect women with vital resources, support services, and educational opportunities that help them overcome challenges and reach their full potential.
           </p>
+        </div>
+
+        {/* Our Services Section */}
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Our Services</h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <Card className="overflow-hidden border-pastel-rose">
+            <div className="bg-pastel-rose p-4 flex items-center justify-center">
+              <Phone className="h-8 w-8 text-white" />
+            </div>
+            <CardContent className="p-6 text-center">
+              <h3 className="text-lg font-semibold text-pastel-rose-dark mb-2">24/7 Emergency Support</h3>
+              <p className="text-gray-700 text-sm">
+                Immediate access to emergency contacts and crisis support services
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden border-pastel-khaki">
+            <div className="bg-pastel-khaki p-4 flex items-center justify-center">
+              <HeartHandshake className="h-8 w-8 text-white" />
+            </div>
+            <CardContent className="p-6 text-center">
+              <h3 className="text-lg font-semibold text-pastel-rose-dark mb-2">Mental Health Support</h3>
+              <p className="text-gray-700 text-sm">
+                Free counseling services and mental wellness resources
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden border-pastel-flesh">
+            <div className="bg-pastel-flesh p-4 flex items-center justify-center">
+              <Lightbulb className="h-8 w-8 text-white" />
+            </div>
+            <CardContent className="p-6 text-center">
+              <h3 className="text-lg font-semibold text-pastel-rose-dark mb-2">Skills Development</h3>
+              <p className="text-gray-700 text-sm">
+                Free training programs and educational opportunities
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden border-pastel-sand">
+            <div className="bg-pastel-sand p-4 flex items-center justify-center">
+              <Users className="h-8 w-8 text-white" />
+            </div>
+            <CardContent className="p-6 text-center">
+              <h3 className="text-lg font-semibold text-pastel-rose-dark mb-2">Community Network</h3>
+              <p className="text-gray-700 text-sm">
+                Connect with mentors and supportive communities
+              </p>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Key Focus Areas */}
@@ -197,7 +250,9 @@ const WhatWeDo = () => {
           <h2 className="text-3xl font-bold text-white mb-4">Join Our Mission</h2>
           <p className="text-xl text-white mb-6">Together, we can create a safer, more supportive environment for women across Sri Lanka.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-white text-pastel-rose-dark hover:bg-gray-100 text-lg px-8 py-3">Contact Us</Button>
+            <a href="mailto:support@empowerher.lk">
+              <Button className="bg-white text-pastel-rose-dark hover:bg-gray-100 text-lg px-8 py-3">Contact Us</Button>
+            </a>
             <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-pastel-rose-dark text-lg px-8 py-3">Support Our Work</Button>
           </div>
         </div>

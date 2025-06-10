@@ -1,5 +1,6 @@
 
 import { Heart, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -30,11 +31,21 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-gray-800 mb-4">Quick Links</h4>
             <div className="space-y-2">
-              {['Safety Resources', 'Support Services', 'Mentorship', 'Emergency Contacts', 'Success Stories'].map((link) => (
-                <a key={link} href="#" className="block text-gray-700 hover:text-white transition-colors text-sm">
-                  {link}
-                </a>
-              ))}
+              <Link to="/safety" className="block text-gray-700 hover:text-white transition-colors text-sm">
+                Safety Resources
+              </Link>
+              <Link to="/support" className="block text-gray-700 hover:text-white transition-colors text-sm">
+                Support Services
+              </Link>
+              <Link to="/guidance" className="block text-gray-700 hover:text-white transition-colors text-sm">
+                Mentorship
+              </Link>
+              <Link to="/safety" className="block text-gray-700 hover:text-white transition-colors text-sm">
+                Emergency Contacts
+              </Link>
+              <Link to="/guidance" className="block text-gray-700 hover:text-white transition-colors text-sm">
+                Success Stories
+              </Link>
             </div>
           </div>
 
@@ -69,9 +80,9 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex space-x-6 text-sm text-gray-700">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Contact Us</a>
+              <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+              <a href="mailto:support@empowerher.lk" className="hover:text-white transition-colors">Contact Us</a>
             </div>
           </div>
         </div>
