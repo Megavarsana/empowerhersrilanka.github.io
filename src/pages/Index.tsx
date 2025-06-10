@@ -3,6 +3,9 @@ import Header from "@/components/Header";
 import AboutSection from "@/components/AboutSection";
 import VisionMissionSection from "@/components/VisionMissionSection";
 import MainTopicsSection from "@/components/MainTopicsSection";
+import SafetySection from "@/components/SafetySection";
+import SupportSection from "@/components/SupportSection";
+import GuidanceSection from "@/components/GuidanceSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -12,6 +15,9 @@ const Index = () => {
       <AboutSection />
       <VisionMissionSection />
       <MainTopicsSection />
+      <SafetySection />
+      <SupportSection />
+      <GuidanceSection />
       <Footer />
     </div>
   );
