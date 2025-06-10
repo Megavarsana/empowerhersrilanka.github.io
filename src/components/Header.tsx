@@ -1,14 +1,25 @@
 
 import { Button } from "@/components/ui/button";
 import { Heart, Shield, Phone } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    // If we're not on the home page, navigate there first
+    if (location.pathname !== '/') {
+      navigate('/', { replace: true });
+      // Wait a bit for navigation, then scroll
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const handleEmergencyHelp = () => {
@@ -17,7 +28,26 @@ const Header = () => {
   };
 
   const handleWhoWeAre = () => {
-    scrollToSection('about');
+    // Navigate to privacy policy page which now includes About Us
+    navigate('/privacy');
+  };
+
+  const handleWhatWeDo = () => {
+    // Navigate to what we do page
+    navigate('/what-we-do');
+  };
+
+  const handleGetInvolved = () => {
+    // If on home page, scroll to vision-mission, otherwise navigate to privacy page
+    if (location.pathname === '/') {
+      scrollToSection('vision-mission');
+    } else {
+      navigate('/privacy');
+      setTimeout(() => {
+        const element = document.getElementById('vision-mission');
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
   };
 
   const handleLatestNews = () => {
@@ -35,7 +65,8 @@ const Header = () => {
             <div className="w-12 h-12 bg-pastel-rose-light border-2 border-dashed border-pastel-rose rounded-lg flex items-center justify-center">
               <span className="text-xs text-pastel-rose-dark">LOGO</span>
             </div>
-            <span className="text-2xl font-bold text-gray-800">EmpowerHer</span>
+            <span className="text-2xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>EmpowerHer</span>
+            <span className="text-sm font-semibold text-pastel-rose-dark tracking-wider">EST. 2025</span>
           </div>
           
           <div className="hidden md:flex space-x-8">
@@ -46,13 +77,13 @@ const Header = () => {
               Who We Are
             </button>
             <button 
-              onClick={() => scrollToSection('about')}
+              onClick={handleWhatWeDo}
               className="text-gray-700 hover:text-pastel-rose transition-colors font-medium"
             >
               What We Do
             </button>
             <button 
-              onClick={() => scrollToSection('vision-mission')}
+              onClick={handleGetInvolved}
               className="text-gray-700 hover:text-pastel-rose transition-colors font-medium"
             >
               Get Involved

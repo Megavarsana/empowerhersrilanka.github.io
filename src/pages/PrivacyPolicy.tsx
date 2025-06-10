@@ -1,12 +1,108 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Card, CardContent } from "@/components/ui/card";
+import { Target, Eye, Heart } from "lucide-react";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen">
       <Header />
       
+      {/* About Us Section */}
+      <section id="about" className="section-spacing bg-white">
+        <div className="container mx-auto px-6 py-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+              ABOUT US
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                EmpowerHer is a dedicated platform created specifically for Sri Lankan women 
+                to provide comprehensive support in safety, mental health, and personal development. 
+                We understand the unique challenges faced by women in our community and strive to 
+                create a safe digital space where every woman can access the resources she needs.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Our platform combines emergency safety tools, professional counseling resources, 
+                educational opportunities, and mentorship programs all in one trusted location. 
+                Whether you're seeking immediate help, career guidance, or personal growth resources, 
+                EmpowerHer is here to support your journey.
+              </p>
+            </div>
+            
+            <div className="flex justify-center">
+              <div className="bg-pastel-rose-light p-8 rounded-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                  alt="Sri Lankan women empowerment"
+                  className="w-full h-64 object-cover rounded-lg"
+                />
+                <p className="text-center text-gray-600 text-sm mt-4 italic">
+                  Supporting Sri Lankan women in their journey towards empowerment
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision Mission Section */}
+      <section id="vision-mission" className="section-spacing bg-pastel-rose-light">
+        <div className="container mx-auto px-6 py-12">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Our Vision */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="bg-pastel-rose-medium p-3 rounded-full">
+                  <Eye className="h-6 w-6 text-pastel-rose-dark" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800">Our Vision</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                To create a future where every Sri Lankan woman can live with dignity, 
+                courage, and independence. We envision a society where women have equal 
+                access to opportunities, resources, and support systems that enable them 
+                to thrive both online and offline.
+              </p>
+              <div className="bg-pastel-rose-light p-4 rounded-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1518495973542-4542c06a5843" 
+                  alt="Sri Lankan women's empowerment vision"
+                  className="w-full h-48 object-cover rounded-lg"
+                />
+              </div>
+            </div>
+
+            {/* Our Mission */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="bg-pastel-rose-medium p-3 rounded-full">
+                  <Target className="h-6 w-6 text-pastel-rose-dark" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800">Our Mission</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                To uplift women across Sri Lanka by providing comprehensive access to 
+                safety tools, emotional support, educational guidance, and professional 
+                development resources. We are committed to breaking barriers and creating 
+                pathways for women to achieve their full potential.
+              </p>
+              <div className="bg-pastel-rose-medium p-6 rounded-lg text-center">
+                <Target className="h-16 w-16 text-pastel-rose-dark mx-auto mb-4" />
+                <p className="text-gray-700 font-medium">
+                  Empowering Through Action
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Privacy Policy Content */}
       <div className="container mx-auto px-6 py-12">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-gray-800 mb-6">Privacy Policy</h1>
