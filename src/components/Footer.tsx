@@ -62,9 +62,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-700 text-sm mb-2">
-                © 2024 EmpowerHer. Made with ❤️ for Sri Lankan women.
+                © 2025 EmpowerHer. Made with ❤️ for Sri Lankan women.
               </p>
-              <p className="text-gray-600 text-xs">
+              <p className="text-gray-600 text-lg font-semibold">
                 Created by: S.Megavarsana
               </p>
             </div>

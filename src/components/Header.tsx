@@ -1,11 +1,28 @@
 
 import { Button } from "@/components/ui/button";
-import { Heart, Shield } from "lucide-react";
+import { Heart, Shield, Phone } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleEmergencyHelp = () => {
+    // Emergency functionality - could open modal or redirect
+    alert("Emergency Services:\n\nPolice: 119\nWomen's Helpline: 1938\nWomen In Need: 011-471-8585");
+  };
+
+  const handleWhoWeAre = () => {
+    scrollToSection('about');
+  };
+
+  const handleLatestNews = () => {
+    // Show Sri Lankan women empowerment news
+    window.open('https://www.newsfirst.lk/tag/women-empowerment/', '_blank');
   };
 
   return (
@@ -22,7 +39,10 @@ const Header = () => {
           </div>
           
           <div className="hidden md:flex space-x-8">
-            <button className="text-gray-700 hover:text-pastel-rose transition-colors font-medium">
+            <button 
+              onClick={handleWhoWeAre}
+              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium"
+            >
               Who We Are
             </button>
             <button 
@@ -37,13 +57,20 @@ const Header = () => {
             >
               Get Involved
             </button>
-            <button className="text-gray-700 hover:text-pastel-rose transition-colors font-medium">
+            <button 
+              onClick={handleLatestNews}
+              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium"
+            >
               Latest News
             </button>
           </div>
 
-          <Button className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-full text-lg">
-            EMERGENCY HELP
+          <Button 
+            onClick={handleEmergencyHelp}
+            className="bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full text-lg flex items-center space-x-2"
+          >
+            <Phone className="h-5 w-5" />
+            <span>EMERGENCY HELP</span>
           </Button>
         </div>
       </nav>
@@ -55,7 +82,7 @@ const Header = () => {
             {/* Left Side - Content */}
             <div className="text-left">
               <p className="text-sm font-semibold text-pastel-rose-dark mb-4 tracking-wider">
-                EST. 2024
+                EST. 2025
               </p>
               <h1 className="text-5xl md:text-6xl font-bold text-primary mb-8 leading-tight">
                 WE FUND<br />
@@ -67,9 +94,6 @@ const Header = () => {
                 <span className="bg-yellow-200 px-1">create meaningful change</span>{" "}
                 that will last beyond our lifetimes.
               </p>
-              <Button className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-none text-lg">
-                JOIN US
-              </Button>
             </div>
 
             {/* Right Side - Image placeholder */}
