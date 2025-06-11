@@ -1,11 +1,26 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const TermsOfService = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen">
       <Header />
+      
+      {/* Back Button */}
+      <div className="container mx-auto px-6 pt-6">
+        <button 
+          onClick={() => navigate('/')}
+          className="flex items-center space-x-2 text-pastel-rose-dark hover:text-pastel-rose transition-colors mb-6"
+        >
+          <ArrowLeft className="h-5 w-5" />
+          <span>Back to Home</span>
+        </button>
+      </div>
       
       <div className="container mx-auto px-6 py-12">
         <div className="max-w-4xl mx-auto">

@@ -36,6 +36,10 @@ const MainTopicsSection = () => {
     }
   ];
 
+  const handleTopicClick = (route: string) => {
+    navigate(route);
+  };
+
   return (
     <section className="section-spacing bg-white">
       <div className="container mx-auto">
@@ -53,7 +57,7 @@ const MainTopicsSection = () => {
             <Card 
               key={topic.id}
               className={`card-hover cursor-pointer transition-all duration-300 hover:scale-105 ${topic.bgColor} border-0`}
-              onClick={() => navigate(topic.route)}
+              onClick={() => handleTopicClick(topic.route)}
             >
               <CardContent className="p-8 text-center h-full flex flex-col justify-between">
                 <div>

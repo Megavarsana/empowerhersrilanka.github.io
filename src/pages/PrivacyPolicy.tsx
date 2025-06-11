@@ -1,13 +1,28 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Heart } from "lucide-react";
+import { Target, Eye, Heart, ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const PrivacyPolicy = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen">
       <Header />
       
+      {/* Back Button */}
+      <div className="container mx-auto px-6 pt-6">
+        <button 
+          onClick={() => navigate('/')}
+          className="flex items-center space-x-2 text-pastel-rose-dark hover:text-pastel-rose transition-colors mb-6"
+        >
+          <ArrowLeft className="h-5 w-5" />
+          <span>Back to Home</span>
+        </button>
+      </div>
+
       {/* About Us Section */}
       <section id="about" className="section-spacing bg-white">
         <div className="container mx-auto px-6 py-12">
