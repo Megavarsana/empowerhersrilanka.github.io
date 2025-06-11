@@ -125,6 +125,10 @@ const Header = () => {
                 <span className="bg-yellow-200 px-1">create meaningful change</span>{" "}
                 that will last beyond our lifetimes.
               </p>
+              <div className="flex items-center space-x-2 text-lg text-gray-700 mb-6">
+                <span>Made by Sri Lankan women for Sri Lankan women</span>
+                <Heart className="h-6 w-6 text-red-500 fill-red-500" />
+              </div>
             </div>
 
             {/* Right Side - Image placeholder */}

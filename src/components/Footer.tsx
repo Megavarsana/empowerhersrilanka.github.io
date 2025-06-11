@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <div className="flex items-center space-x-2 text-gray-700">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">support@empowerher.lk</span>
+                <span className="text-sm">herempower@gmail.com</span>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ const Footer = () => {
             <div className="flex space-x-6 text-sm text-gray-700">
               <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-              <a href="mailto:support@empowerher.lk" className="hover:text-white transition-colors">Contact Us</a>
+              <a href="mailto:herempower@gmail.com" className="hover:text-white transition-colors">Contact Us</a>
             </div>
           </div>
         </div>
