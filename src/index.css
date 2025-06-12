@@ -3,11 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* EmpowerHer Design System */
+/* EmpowerHer Design System - Mulberry Theme */
 
 @layer base {
   :root {
-    --background: 355 20% 95%; /* soft pastel rose background */
+    --background: 315 25% 95%; /* soft mulberry background */
     --foreground: 30 10% 25%; /* dark brown for text */
 
     --card: 0 0% 100%; /* pure white for cards */
@@ -16,24 +16,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 30 10% 25%;
 
-    --primary: 340 60% 75%; /* pastel rose */
+    --primary: 315 50% 65%; /* mulberry */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 350 30% 85%; /* light pastel rose */
+    --secondary: 315 30% 85%; /* light mulberry */
     --secondary-foreground: 30 10% 25%;
 
-    --muted: 350 30% 85%;
+    --muted: 315 30% 85%;
     --muted-foreground: 30 10% 50%;
 
-    --accent: 345 50% 80%; /* medium pastel rose */
+    --accent: 315 45% 70%; /* medium mulberry */
     --accent-foreground: 30 10% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 345 25% 85%;
-    --input: 345 25% 85%;
-    --ring: 340 60% 75%;
+    --border: 315 25% 85%;
+    --input: 315 25% 85%;
+    --ring: 315 50% 65%;
 
     --radius: 1rem;
   }
@@ -43,13 +43,13 @@
   }
 
   body {
-    @apply bg-pastel-rose-light text-foreground font-poppins;
+    @apply bg-mulberry-light text-foreground font-poppins;
   }
 }
 
 @layer components {
   .gradient-bg {
-    background: linear-gradient(135deg, #F8E8F0 0%, #F5D4E1 50%, #F2C1D3 100%);
+    background: linear-gradient(135deg, #E8D5E8 0%, #D4B5D4 50%, #C195C1 100%);
   }
   
   .card-hover {
@@ -61,6 +61,6 @@
   }
 
   .hero-section {
-    background: linear-gradient(135deg, #F8E8F0 0%, #F5D4E1 100%);
+    background: linear-gradient(135deg, #E8D5E8 0%, #D4B5D4 100%);
   }
 }

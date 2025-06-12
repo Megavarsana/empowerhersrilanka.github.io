@@ -56,12 +56,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// EmpowerHer pastel rose color palette
-				'pastel-rose': '#E8A8B8',
-				'pastel-rose-light': '#F8E8F0',
-				'pastel-rose-medium': '#F2C1D3',
-				'pastel-rose-dark': '#D584A1',
+				// EmpowerHer mulberry color palette
+				'mulberry': '#A8678A',
+				'mulberry-light': '#E8D5E8',
+				'mulberry-medium': '#D4B5D4',
+				'mulberry-dark': '#8B4A73',
 				'soft-white': '#FCFAF7',
+				// Legacy pastel colors mapped to mulberry equivalents
+				'pastel-rose': '#A8678A',
+				'pastel-rose-light': '#E8D5E8',
+				'pastel-rose-medium': '#D4B5D4',
+				'pastel-rose-dark': '#8B4A73',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

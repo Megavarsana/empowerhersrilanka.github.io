@@ -69,35 +69,35 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             {/* Logo placeholder space */}
-            <div className="w-12 h-12 bg-pastel-rose-light border-2 border-dashed border-pastel-rose rounded-lg flex items-center justify-center">
-              <span className="text-xs text-pastel-rose-dark">LOGO</span>
+            <div className="w-12 h-12 bg-mulberry-light border-2 border-dashed border-mulberry rounded-lg flex items-center justify-center">
+              <span className="text-xs text-mulberry-dark">LOGO</span>
             </div>
             <span className="text-2xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>EmpowerHer</span>
-            <span className="text-sm font-semibold text-pastel-rose-dark tracking-wider">EST. 2025</span>
+            <span className="text-sm font-semibold text-mulberry-dark tracking-wider">EST. 2025</span>
           </div>
           
           <div className="hidden md:flex space-x-8">
             <button 
               onClick={handleWhoWeAre}
-              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium cursor-pointer"
+              className="text-gray-700 hover:text-mulberry transition-colors font-medium cursor-pointer"
             >
               Who We Are
             </button>
             <button 
               onClick={handleWhatWeDo}
-              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium cursor-pointer"
+              className="text-gray-700 hover:text-mulberry transition-colors font-medium cursor-pointer"
             >
               What We Do
             </button>
             <button 
               onClick={handleGetInvolved}
-              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium cursor-pointer"
+              className="text-gray-700 hover:text-mulberry transition-colors font-medium cursor-pointer"
             >
               Get Involved
             </button>
             <button 
               onClick={handleLatestNews}
-              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium cursor-pointer"
+              className="text-gray-700 hover:text-mulberry transition-colors font-medium cursor-pointer"
             >
               Latest News
             </button>
@@ -119,7 +119,7 @@ const Header = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
             <div className="text-left">
-              <p className="text-sm font-semibold text-pastel-rose-dark mb-4 tracking-wider">
+              <p className="text-sm font-semibold text-mulberry-dark mb-4 tracking-wider">
                 EST. 2025
               </p>
               <h1 className="text-5xl md:text-6xl font-bold text-primary mb-8 leading-tight">
@@ -140,11 +140,11 @@ const Header = () => {
 
             {/* Right Side - Image placeholder */}
             <div className="flex justify-center">
-              <div className="w-full h-96 bg-pastel-rose-light border-2 border-dashed border-pastel-rose rounded-lg flex items-center justify-center">
+              <div className="w-full h-96 bg-mulberry-light border-2 border-dashed border-mulberry rounded-lg flex items-center justify-center">
                 <div className="text-center">
-                  <Heart className="h-16 w-16 text-pastel-rose mx-auto mb-4" />
-                  <span className="text-pastel-rose-dark font-medium">Hero Image Placeholder</span>
-                  <p className="text-sm text-pastel-rose-dark mt-2">Sri Lankan women empowerment image</p>
+                  <Heart className="h-16 w-16 text-mulberry mx-auto mb-4" />
+                  <span className="text-mulberry-dark font-medium">Hero Image Placeholder</span>
+                  <p className="text-sm text-mulberry-dark mt-2">Sri Lankan women empowerment image</p>
                 </div>
               </div>
             </div>

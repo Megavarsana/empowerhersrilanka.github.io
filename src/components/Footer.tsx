@@ -24,23 +24,23 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-pastel-rose text-gray-800">
+    <footer className="bg-mulberry text-white">
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="bg-white p-2 rounded-full">
-                <Heart className="h-6 w-6 text-pastel-rose-dark" />
+                <Heart className="h-6 w-6 text-mulberry-dark" />
               </div>
-              <span className="text-2xl font-bold">EmpowerHer</span>
+              <span className="text-2xl font-bold text-white">EmpowerHer</span>
             </div>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-mulberry-light mb-6 leading-relaxed">
               Empowering Sri Lankan women through safety, support, and guidance. 
               Creating a digital space where every woman can thrive with confidence and dignity.
             </p>
             <div className="flex space-x-4">
-              <div className="flex items-center space-x-2 text-gray-700">
+              <div className="flex items-center space-x-2 text-mulberry-light">
                 <Mail className="h-4 w-4" />
                 <span className="text-sm">herempower@gmail.com</span>
               </div>
@@ -49,21 +49,21 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-gray-800 mb-4">Quick Links</h4>
+            <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <div className="space-y-2">
-              <Link to="/safety" className="block text-gray-700 hover:text-white transition-colors text-sm cursor-pointer">
+              <Link to="/safety" className="block text-mulberry-light hover:text-white transition-colors text-sm cursor-pointer">
                 Safety Resources
               </Link>
-              <Link to="/support" className="block text-gray-700 hover:text-white transition-colors text-sm cursor-pointer">
+              <Link to="/support" className="block text-mulberry-light hover:text-white transition-colors text-sm cursor-pointer">
                 Support Services
               </Link>
-              <Link to="/guidance" className="block text-gray-700 hover:text-white transition-colors text-sm cursor-pointer">
+              <Link to="/guidance" className="block text-mulberry-light hover:text-white transition-colors text-sm cursor-pointer">
                 Mentorship
               </Link>
-              <Link to="/safety" className="block text-gray-700 hover:text-white transition-colors text-sm cursor-pointer">
+              <Link to="/safety" className="block text-mulberry-light hover:text-white transition-colors text-sm cursor-pointer">
                 Emergency Contacts
               </Link>
-              <Link to="/guidance" className="block text-gray-700 hover:text-white transition-colors text-sm cursor-pointer">
+              <Link to="/guidance" className="block text-mulberry-light hover:text-white transition-colors text-sm cursor-pointer">
                 Success Stories
               </Link>
             </div>
@@ -71,17 +71,17 @@ const Footer = () => {
 
           {/* Emergency Contacts */}
           <div>
-            <h4 className="font-semibold text-gray-800 mb-4">Emergency</h4>
+            <h4 className="font-semibold text-white mb-4">Emergency</h4>
             <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-gray-700">
+              <div className="flex items-center space-x-2 text-mulberry-light">
                 <Phone className="h-4 w-4" />
                 <span className="text-sm">Police: 119</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-700">
+              <div className="flex items-center space-x-2 text-mulberry-light">
                 <Phone className="h-4 w-4" />
                 <span className="text-sm">Women's Helpline: 1938</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-700">
+              <div className="flex items-center space-x-2 text-mulberry-light">
                 <MapPin className="h-4 w-4" />
                 <span className="text-sm">Sri Lanka</span>
               </div>
@@ -89,17 +89,17 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-12 pt-8">
+        <div className="border-t border-mulberry-light/30 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
-              <p className="text-gray-700 text-sm mb-2">
+              <p className="text-mulberry-light text-sm mb-2">
                 © 2025 EmpowerHer. Made with ❤️ for Sri Lankan women.
               </p>
-              <p className="text-gray-600 text-lg font-semibold">
+              <p className="text-white text-lg font-semibold">
                 Created by: S.Megavarsana
               </p>
             </div>
-            <div className="flex space-x-6 text-sm text-gray-700">
+            <div className="flex space-x-6 text-sm text-mulberry-light">
               <button 
                 onClick={handlePrivacyPolicy}
                 className="hover:text-white transition-colors cursor-pointer"
