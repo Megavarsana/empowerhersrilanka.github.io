@@ -40,6 +40,11 @@ const MainTopicsSection = () => {
     navigate(route);
   };
 
+  const handleLearnMoreClick = (e: React.MouseEvent, route: string) => {
+    e.stopPropagation(); // Prevent the card click event
+    navigate(route);
+  };
+
   return (
     <section className="section-spacing bg-white">
       <div className="container mx-auto">
@@ -72,7 +77,10 @@ const MainTopicsSection = () => {
                   </p>
                 </div>
                 <div className="mt-6">
-                  <button className="bg-white text-gray-800 px-6 py-2 rounded-full font-medium hover:bg-gray-50 transition-colors">
+                  <button 
+                    onClick={(e) => handleLearnMoreClick(e, topic.route)}
+                    className="bg-white text-gray-800 px-6 py-2 rounded-full font-medium hover:bg-gray-50 transition-colors cursor-pointer"
+                  >
                     Learn More →
                   </button>
                 </div>
