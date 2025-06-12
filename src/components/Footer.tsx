@@ -1,8 +1,28 @@
 
 import { Heart, Mail, Phone, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handlePrivacyPolicy = () => {
+    navigate('/privacy');
+    setTimeout(() => {
+      // Scroll to the privacy policy content section
+      const element = document.querySelector('.prose');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
+  const handleTermsOfService = () => {
+    navigate('/terms');
+    setTimeout(() => {
+      // Scroll to the terms of service content
+      const element = document.querySelector('.prose');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <footer className="bg-pastel-rose text-gray-800">
       <div className="container mx-auto px-6 py-12">
@@ -80,8 +100,18 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex space-x-6 text-sm text-gray-700">
-              <Link to="/privacy" className="hover:text-white transition-colors cursor-pointer">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-white transition-colors cursor-pointer">Terms of Service</Link>
+              <button 
+                onClick={handlePrivacyPolicy}
+                className="hover:text-white transition-colors cursor-pointer"
+              >
+                Privacy Policy
+              </button>
+              <button 
+                onClick={handleTermsOfService}
+                className="hover:text-white transition-colors cursor-pointer"
+              >
+                Terms of Service
+              </button>
               <a href="mailto:herempower@gmail.com" className="hover:text-white transition-colors cursor-pointer">Contact Us</a>
             </div>
           </div>

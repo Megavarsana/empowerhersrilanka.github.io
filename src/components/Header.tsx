@@ -28,13 +28,20 @@ const Header = () => {
   };
 
   const handleWhoWeAre = () => {
-    // Navigate to privacy policy page which includes About Us section
+    // Navigate to privacy policy page and scroll to about section
     navigate('/privacy');
+    setTimeout(() => {
+      const element = document.getElementById('about');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
 
   const handleWhatWeDo = () => {
-    // Navigate to what we do page
+    // Navigate to what we do page and scroll to top
     navigate('/what-we-do');
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   };
 
   const handleGetInvolved = () => {
