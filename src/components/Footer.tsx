@@ -31,19 +31,19 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-gray-800 mb-4">Quick Links</h4>
             <div className="space-y-2">
-              <Link to="/safety" className="block text-gray-700 hover:text-white transition-colors text-sm">
+              <Link to="/safety" className="block text-gray-700 hover:text-white transition-colors text-sm cursor-pointer">
                 Safety Resources
               </Link>
-              <Link to="/support" className="block text-gray-700 hover:text-white transition-colors text-sm">
+              <Link to="/support" className="block text-gray-700 hover:text-white transition-colors text-sm cursor-pointer">
                 Support Services
               </Link>
-              <Link to="/guidance" className="block text-gray-700 hover:text-white transition-colors text-sm">
+              <Link to="/guidance" className="block text-gray-700 hover:text-white transition-colors text-sm cursor-pointer">
                 Mentorship
               </Link>
-              <Link to="/safety" className="block text-gray-700 hover:text-white transition-colors text-sm">
+              <Link to="/safety" className="block text-gray-700 hover:text-white transition-colors text-sm cursor-pointer">
                 Emergency Contacts
               </Link>
-              <Link to="/guidance" className="block text-gray-700 hover:text-white transition-colors text-sm">
+              <Link to="/guidance" className="block text-gray-700 hover:text-white transition-colors text-sm cursor-pointer">
                 Success Stories
               </Link>
             </div>
@@ -80,9 +80,9 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex space-x-6 text-sm text-gray-700">
-              <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-              <a href="mailto:herempower@gmail.com" className="hover:text-white transition-colors">Contact Us</a>
+              <Link to="/privacy" className="hover:text-white transition-colors cursor-pointer">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-white transition-colors cursor-pointer">Terms of Service</Link>
+              <a href="mailto:herempower@gmail.com" className="hover:text-white transition-colors cursor-pointer">Contact Us</a>
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   const handleWhoWeAre = () => {
-    // Navigate to privacy policy page which now includes About Us
+    // Navigate to privacy policy page which includes About Us section
     navigate('/privacy');
   };
 
@@ -72,25 +72,25 @@ const Header = () => {
           <div className="hidden md:flex space-x-8">
             <button 
               onClick={handleWhoWeAre}
-              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium"
+              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium cursor-pointer"
             >
               Who We Are
             </button>
             <button 
               onClick={handleWhatWeDo}
-              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium"
+              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium cursor-pointer"
             >
               What We Do
             </button>
             <button 
               onClick={handleGetInvolved}
-              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium"
+              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium cursor-pointer"
             >
               Get Involved
             </button>
             <button 
               onClick={handleLatestNews}
-              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium"
+              className="text-gray-700 hover:text-pastel-rose transition-colors font-medium cursor-pointer"
             >
               Latest News
             </button>
@@ -98,7 +98,7 @@ const Header = () => {
 
           <Button 
             onClick={handleEmergencyHelp}
-            className="bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full text-lg flex items-center space-x-2"
+            className="bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full text-lg flex items-center space-x-2 cursor-pointer"
           >
             <Phone className="h-5 w-5" />
             <span>EMERGENCY HELP</span>
