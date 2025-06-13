@@ -12,8 +12,9 @@ const MainTopicsSection = () => {
       title: "WOMEN'S SAFETY",
       subtitle: "Emergency help, safety apps & self-defense tips",
       icon: Shield,
-      bgColor: "bg-gradient-to-br from-red-50 to-red-100",
-      iconColor: "text-red-500",
+      bgColor: "bg-primary", // Pink background
+      iconColor: "text-white",
+      textColor: "text-white",
       route: "/safety"
     },
     {
@@ -23,6 +24,7 @@ const MainTopicsSection = () => {
       icon: Heart,
       bgColor: "bg-gradient-to-br from-empowerher-pink-light to-empowerher-pink-medium",
       iconColor: "text-empowerher-pink-dark",
+      textColor: "text-gray-800",
       route: "/support"
     },
     {
@@ -30,19 +32,28 @@ const MainTopicsSection = () => {
       title: "GUIDANCE & PASSION SUPPORT",
       subtitle: "Free learning, business help, and career coaching",
       icon: Lightbulb,
-      bgColor: "bg-gradient-to-br from-yellow-50 to-yellow-100",
-      iconColor: "text-yellow-600",
+      bgColor: "bg-primary", // Pink background
+      iconColor: "text-white",
+      textColor: "text-white",
       route: "/guidance"
     }
   ];
 
   const handleTopicClick = (route: string) => {
     navigate(route);
+    // Scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   };
 
   const handleLearnMoreClick = (e: React.MouseEvent, route: string) => {
     e.stopPropagation(); // Prevent the card click event
     navigate(route);
+    // Scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   };
 
   return (
@@ -66,20 +77,20 @@ const MainTopicsSection = () => {
             >
               <CardContent className="p-8 text-center h-full flex flex-col justify-between">
                 <div>
-                  <div className="bg-white p-4 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-sm">
-                    <topic.icon className={`h-10 w-10 ${topic.iconColor}`} />
+                  <div className={`${topic.bgColor === 'bg-primary' ? 'bg-white' : 'bg-white'} p-4 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-sm`}>
+                    <topic.icon className={`h-10 w-10 ${topic.bgColor === 'bg-primary' ? 'text-primary' : topic.iconColor}`} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">
+                  <h3 className={`text-xl font-bold mb-4 ${topic.textColor}`}>
                     {topic.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className={`leading-relaxed ${topic.textColor === 'text-white' ? 'text-white/90' : 'text-gray-600'}`}>
                     {topic.subtitle}
                   </p>
                 </div>
                 <div className="mt-6">
                   <button 
                     onClick={(e) => handleLearnMoreClick(e, topic.route)}
-                    className="bg-white text-gray-800 px-6 py-2 rounded-full font-medium hover:bg-gray-50 transition-colors cursor-pointer"
+                    className={`${topic.bgColor === 'bg-primary' ? 'bg-white text-primary' : 'bg-white text-gray-800'} px-6 py-2 rounded-full font-medium hover:bg-gray-50 transition-colors cursor-pointer`}
                   >
                     Learn More →
                   </button>

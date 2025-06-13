@@ -28,11 +28,16 @@ const Header = () => {
   };
 
   const handleWhoWeAre = () => {
-    // Navigate to privacy policy page directly to top
-    navigate('/privacy');
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
+    // Navigate to home page and scroll to about section
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById('about');
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      scrollToSection('about');
+    }
   };
 
   const handleWhatWeDo = () => {
@@ -44,11 +49,11 @@ const Header = () => {
   };
 
   const handleGetInvolved = () => {
-    // If on home page, scroll to vision-mission, otherwise navigate to privacy page
+    // If on home page, scroll to vision-mission, otherwise navigate to home and scroll
     if (location.pathname === '/') {
       scrollToSection('vision-mission');
     } else {
-      navigate('/privacy');
+      navigate('/');
       setTimeout(() => {
         const element = document.getElementById('vision-mission');
         element?.scrollIntoView({ behavior: 'smooth' });
