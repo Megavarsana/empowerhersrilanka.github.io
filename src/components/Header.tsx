@@ -69,35 +69,35 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             {/* Logo placeholder space */}
-            <div className="w-12 h-12 bg-mulberry-light border-2 border-dashed border-mulberry rounded-lg flex items-center justify-center">
-              <span className="text-xs text-mulberry-dark">LOGO</span>
+            <div className="w-12 h-12 bg-empowerher-pink-light border-2 border-dashed border-empowerher-pink rounded-lg flex items-center justify-center">
+              <span className="text-xs text-empowerher-pink-dark">LOGO</span>
             </div>
             <span className="text-2xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>EmpowerHer</span>
-            <span className="text-sm font-semibold text-mulberry-dark tracking-wider">EST. 2025</span>
+            <span className="text-sm font-semibold text-empowerher-pink-dark tracking-wider">EST. 2025</span>
           </div>
           
           <div className="hidden md:flex space-x-8">
             <button 
               onClick={handleWhoWeAre}
-              className="text-gray-700 hover:text-mulberry transition-colors font-medium cursor-pointer"
+              className="text-gray-700 hover:text-empowerher-pink transition-colors font-medium cursor-pointer"
             >
               Who We Are
             </button>
             <button 
               onClick={handleWhatWeDo}
-              className="text-gray-700 hover:text-mulberry transition-colors font-medium cursor-pointer"
+              className="text-gray-700 hover:text-empowerher-pink transition-colors font-medium cursor-pointer"
             >
               What We Do
             </button>
             <button 
               onClick={handleGetInvolved}
-              className="text-gray-700 hover:text-mulberry transition-colors font-medium cursor-pointer"
+              className="text-gray-700 hover:text-empowerher-pink transition-colors font-medium cursor-pointer"
             >
               Get Involved
             </button>
             <button 
               onClick={handleLatestNews}
-              className="text-gray-700 hover:text-mulberry transition-colors font-medium cursor-pointer"
+              className="text-gray-700 hover:text-empowerher-pink transition-colors font-medium cursor-pointer"
             >
               Latest News
             </button>
@@ -119,32 +119,32 @@ const Header = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
             <div className="text-left">
-              <p className="text-sm font-semibold text-mulberry-dark mb-4 tracking-wider">
+              <p className="text-sm font-semibold text-white mb-4 tracking-wider">
                 EST. 2025
               </p>
-              <h1 className="text-5xl md:text-6xl font-bold text-primary mb-8 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
                 WE FUND<br />
                 BOLD, FEMINIST<br />
                 MOVEMENTS
               </h1>
-              <p className="text-xl text-gray-700 mb-6 leading-relaxed max-w-lg">
+              <p className="text-xl text-white mb-6 leading-relaxed max-w-lg">
                 EmpowerHer supports gender justice movements in Sri Lanka to{" "}
-                <span className="bg-yellow-200 px-1">create meaningful change</span>{" "}
+                <span className="bg-yellow-200 px-1 text-gray-800">create meaningful change</span>{" "}
                 that will last beyond our lifetimes.
               </p>
-              <div className="flex items-center space-x-2 text-lg text-gray-700 mb-6">
+              <div className="flex items-center space-x-2 text-lg text-white mb-6">
                 <span>Made by Sri Lankan women for Sri Lankan women</span>
-                <Heart className="h-6 w-6 text-red-500 fill-red-500" />
+                <Heart className="h-6 w-6 text-red-300 fill-red-300" />
               </div>
             </div>
 
             {/* Right Side - Image placeholder */}
             <div className="flex justify-center">
-              <div className="w-full h-96 bg-mulberry-light border-2 border-dashed border-mulberry rounded-lg flex items-center justify-center">
+              <div className="w-full h-96 bg-white/20 border-2 border-dashed border-white/50 rounded-lg flex items-center justify-center">
                 <div className="text-center">
-                  <Heart className="h-16 w-16 text-mulberry mx-auto mb-4" />
-                  <span className="text-mulberry-dark font-medium">Hero Image Placeholder</span>
-                  <p className="text-sm text-mulberry-dark mt-2">Sri Lankan women empowerment image</p>
+                  <Heart className="h-16 w-16 text-white mx-auto mb-4" />
+                  <span className="text-white font-medium">Hero Image Placeholder</span>
+                  <p className="text-sm text-white/80 mt-2">Sri Lankan women empowerment image</p>
                 </div>
               </div>
             </div>

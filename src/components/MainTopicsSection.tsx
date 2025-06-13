@@ -21,8 +21,8 @@ const MainTopicsSection = () => {
       title: "SUPPORT FOR WOMEN'S PROBLEMS",
       subtitle: "Mental health, abuse, toxic relationships, sexual assault",
       icon: Heart,
-      bgColor: "bg-gradient-to-br from-mulberry-light to-mulberry-medium",
-      iconColor: "text-mulberry-dark",
+      bgColor: "bg-gradient-to-br from-empowerher-pink-light to-empowerher-pink-medium",
+      iconColor: "text-empowerher-pink-dark",
       route: "/support"
     },
     {

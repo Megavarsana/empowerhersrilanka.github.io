@@ -28,7 +28,7 @@ const AboutSection = () => {
           </div>
           
           <div className="flex justify-center">
-            <div className="bg-pastel-rose-light p-8 rounded-2xl">
+            <div className="bg-empowerher-pink-light p-8 rounded-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
                 alt="Sri Lankan women empowerment"

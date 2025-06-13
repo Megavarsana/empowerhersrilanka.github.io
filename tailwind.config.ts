@@ -56,17 +56,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// EmpowerHer mulberry color palette
-				'mulberry': '#A8678A',
-				'mulberry-light': '#E8D5E8',
-				'mulberry-medium': '#D4B5D4',
-				'mulberry-dark': '#8B4A73',
+				// EmpowerHer vibrant pink/magenta color palette
+				'empowerher-pink': '#E91E63',
+				'empowerher-pink-light': '#F8BBD9',
+				'empowerher-pink-medium': '#F06292',
+				'empowerher-pink-dark': '#C2185B',
+				'empowerher-pink-darker': '#AD1457',
 				'soft-white': '#FCFAF7',
-				// Legacy pastel colors mapped to mulberry equivalents
-				'pastel-rose': '#A8678A',
-				'pastel-rose-light': '#E8D5E8',
-				'pastel-rose-medium': '#D4B5D4',
-				'pastel-rose-dark': '#8B4A73',
+				// Legacy mulberry colors mapped to pink equivalents
+				'mulberry': '#E91E63',
+				'mulberry-light': '#F8BBD9',
+				'mulberry-medium': '#F06292',
+				'mulberry-dark': '#C2185B',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
