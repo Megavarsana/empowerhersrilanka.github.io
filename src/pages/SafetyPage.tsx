@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, Phone, Smartphone, AlertTriangle, FileText } from "lucide-react";
@@ -75,15 +74,13 @@ const SafetyPage = () => {
               </p>
             </div>
             
-            {/* Image Upload Space */}
-            <div className="mt-8 bg-pastel-flesh p-6 rounded-lg border-2 border-dashed border-pastel-khaki">
-              <div className="text-center">
-                <h4 className="font-semibold text-gray-800 mb-2">📸 Image Upload Space</h4>
-                <p className="text-gray-600 text-sm">Emergency services or support related image</p>
-                <Button className="mt-4 bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
-                  Upload Image
-                </Button>
-              </div>
+            {/* Emergency Services Image */}
+            <div className="mt-8 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop"
+                alt="Emergency services and support"
+                className="w-full h-64 object-cover"
+              />
             </div>
           </section>
 
@@ -154,15 +151,13 @@ const SafetyPage = () => {
                   <h4 className="font-semibold text-gray-800 mb-4">Demo SOS Button</h4>
                 </div>
                 
-                {/* Image Upload Space */}
-                <div className="bg-pastel-flesh p-6 rounded-lg border-2 border-dashed border-pastel-khaki">
-                  <div className="text-center">
-                    <h4 className="font-semibold text-gray-800 mb-2">📸 Image Upload Space</h4>
-                    <p className="text-gray-600 text-sm">SOS button or alert system image</p>
-                    <Button className="mt-4 bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
-                      Upload Image
-                    </Button>
-                  </div>
+                {/* SOS Alert System Image */}
+                <div className="rounded-lg overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
+                    alt="SOS button and alert system"
+                    className="w-full h-48 object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -229,27 +224,30 @@ const SafetyPage = () => {
               </div>
               
               <div className="space-y-6">
-                {/* Image Upload Space */}
-                <div className="bg-pastel-flesh p-6 rounded-lg border-2 border-dashed border-pastel-khaki">
-                  <div className="text-center">
-                    <h4 className="font-semibold text-gray-800 mb-2">📸 Image Upload Space</h4>
-                    <p className="text-gray-600 text-sm">Self-defense or safety awareness image</p>
-                    <Button className="mt-4 bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
-                      Upload Image
-                    </Button>
-                  </div>
+                {/* Self-Defense Image */}
+                <div className="rounded-lg overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop"
+                    alt="Self-defense and safety awareness"
+                    className="w-full h-48 object-cover"
+                  />
                 </div>
 
-                {/* YouTube Video Placeholder */}
+                {/* YouTube Video */}
                 <div className="bg-pastel-sand p-6 rounded-lg">
-                  <h4 className="font-semibold text-gray-800 mb-2">🎥 YouTube Video Placeholder</h4>
-                  <p className="text-gray-600 text-sm mb-4">Self-Defense Techniques for Women</p>
-                  <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500">YouTube Video will be embedded here</span>
+                  <h4 className="font-semibold text-gray-800 mb-2">🎥 Self-Defense Techniques for Women</h4>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/T7aNSRoDCmg"
+                      title="Self-Defense Techniques for Women"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
-                  <Button className="mt-4 w-full bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
-                    Add YouTube Video Link
-                  </Button>
                 </div>
               </div>
             </div>
@@ -296,27 +294,30 @@ const SafetyPage = () => {
               ))}
             </div>
             
-            {/* Image Upload Space */}
-            <div className="mt-8 bg-pastel-flesh p-6 rounded-lg border-2 border-dashed border-pastel-khaki">
-              <div className="text-center">
-                <h4 className="font-semibold text-gray-800 mb-2">📸 Image Upload Space</h4>
-                <p className="text-gray-600 text-sm">Phone with safety app icons</p>
-                <Button className="mt-4 bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
-                  Upload Image
-                </Button>
-              </div>
+            {/* Safety Apps Image */}
+            <div className="mt-8 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop"
+                alt="Phone with safety app icons"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
-            {/* YouTube Video Placeholder */}
+            {/* YouTube Video */}
             <div className="mt-6 bg-pastel-sand p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-800 mb-2">🎥 YouTube Video Placeholder</h4>
-              <p className="text-gray-600 text-sm mb-4">How to Use Safety Apps Effectively</p>
-              <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
-                <span className="text-gray-500">YouTube Video will be embedded here</span>
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 How to Use Safety Apps Effectively</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/KXlf_qKEoRg"
+                  title="How to Use Safety Apps Effectively"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
-              <Button className="mt-4 w-full bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
-                Add YouTube Video Link
-              </Button>
             </div>
           </section>
 
@@ -402,27 +403,30 @@ const SafetyPage = () => {
               </div>
 
               <div className="space-y-6">
-                {/* Image Upload Space */}
-                <div className="bg-pastel-flesh p-6 rounded-lg border-2 border-dashed border-pastel-khaki">
-                  <div className="text-center">
-                    <h4 className="font-semibold text-gray-800 mb-2">📸 Image Upload Space</h4>
-                    <p className="text-gray-600 text-sm">Online safety or social media privacy image</p>
-                    <Button className="mt-4 bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
-                      Upload Image
-                    </Button>
-                  </div>
+                {/* Online Safety Image */}
+                <div className="rounded-lg overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
+                    alt="Online safety and social media privacy"
+                    className="w-full h-48 object-cover"
+                  />
                 </div>
 
-                {/* YouTube Video Placeholder */}
+                {/* YouTube Video */}
                 <div className="bg-pastel-sand p-6 rounded-lg">
-                  <h4 className="font-semibold text-gray-800 mb-2">🎥 YouTube Video Placeholder</h4>
-                  <p className="text-gray-600 text-sm mb-4">Online Safety Tips for Sri Lankan Women</p>
-                  <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500">YouTube Video will be embedded here</span>
+                  <h4 className="font-semibold text-gray-800 mb-2">🎥 Online Safety Tips for Sri Lankan Women</h4>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/gHRzqfj0aDw"
+                      title="Online Safety Tips for Women"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
-                  <Button className="mt-4 w-full bg-pastel-khaki hover:bg-pastel-sand text-gray-800">
-                    Add YouTube Video Link
-                  </Button>
                 </div>
               </div>
             </div>

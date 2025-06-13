@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -50,16 +49,25 @@ const GuidancePage = () => {
           <section id="learning" className="bg-white p-8 rounded-2xl shadow-sm">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">🟢 Free Online Learning Platforms (For Sri Lankans)</h2>
             
-            {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
-              <div className="text-center">
-                <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
-                <p className="text-pastel-rose-dark">Upload Learning Resources Image</p>
-              </div>
+            {/* Learning Resources Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=400&fit=crop"
+                alt="Online learning and education"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
+                {/* Image Upload Space */}
+                <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
+                  <div className="text-center">
+                    <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
+                    <p className="text-pastel-rose-dark">Upload Learning Resources Image</p>
+                  </div>
+                </div>
+
                 <div className="space-y-4">
                   <div className="bg-pastel-rose-light p-4 rounded-lg">
                     <h4 className="font-semibold text-gray-800 mb-2">1. Guru.lk</h4>
@@ -85,14 +93,20 @@ const GuidancePage = () => {
                 </div>
               </div>
               <div>
-                {/* YouTube Video Placeholder */}
+                {/* YouTube Video */}
                 <div className="bg-pastel-rose-light p-6 rounded-lg mb-4">
-                  <div className="flex items-center justify-center h-48 bg-white rounded-lg">
-                    <div className="text-center">
-                      <Play className="h-16 w-16 text-pastel-rose mx-auto mb-2" />
-                      <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-                      <p className="text-gray-600 text-sm">How to Get Started with Online Learning</p>
-                    </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">🎥 How to Get Started with Online Learning</h4>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/5MgBikgcWnY"
+                      title="How to Get Started with Online Learning"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
                 </div>
 
@@ -123,12 +137,13 @@ const GuidancePage = () => {
           <section id="government" className="bg-white p-8 rounded-2xl shadow-sm">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">🏛️ Government Programs for Women in Sri Lanka</h2>
             
-            {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
-              <div className="text-center">
-                <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
-                <p className="text-pastel-rose-dark">Upload Government Programs Image</p>
-              </div>
+            {/* Government Programs Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop"
+                alt="Government programs and support"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -176,14 +191,20 @@ const GuidancePage = () => {
               </div>
             </div>
 
-            {/* YouTube Video Placeholder */}
+            {/* YouTube Video */}
             <div className="mt-6 bg-pastel-rose-light p-6 rounded-lg">
-              <div className="flex items-center justify-center h-48 bg-white rounded-lg">
-                <div className="text-center">
-                  <Play className="h-16 w-16 text-pastel-rose mx-auto mb-2" />
-                  <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-                  <p className="text-gray-600 text-sm">Government Support Programs for Women</p>
-                </div>
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Government Support Programs for Women</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/8F3oMaQ9mGQ"
+                  title="Government Support Programs for Women"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
           </section>
@@ -192,16 +213,25 @@ const GuidancePage = () => {
           <section id="mentorship" className="bg-white p-8 rounded-2xl shadow-sm">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">🌟 Find a Mentor – For Sri Lankan Women</h2>
             
-            {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
-              <div className="text-center">
-                <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
-                <p className="text-pastel-rose-dark">Upload Mentorship Image</p>
-              </div>
+            {/* Mentorship Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop"
+                alt="Mentorship and guidance"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
+                {/* Image Upload Space */}
+                <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
+                  <div className="text-center">
+                    <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
+                    <p className="text-pastel-rose-dark">Upload Mentorship Image</p>
+                  </div>
+                </div>
+
                 <div className="space-y-4">
                   <div className="bg-pastel-rose-light p-4 rounded-lg">
                     <h4 className="font-semibold text-gray-800 mb-2">🔹 1. Women in Management (WIM) – Mentorship Program</h4>
@@ -230,14 +260,20 @@ const GuidancePage = () => {
                 </div>
               </div>
               <div>
-                {/* YouTube Video Placeholder */}
+                {/* YouTube Video */}
                 <div className="bg-pastel-rose-light p-6 rounded-lg mb-6">
-                  <div className="flex items-center justify-center h-48 bg-white rounded-lg">
-                    <div className="text-center">
-                      <Play className="h-16 w-16 text-pastel-rose mx-auto mb-2" />
-                      <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-                      <p className="text-gray-600 text-sm">Finding the Right Mentor for Your Career</p>
-                    </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">🎥 Finding the Right Mentor for Your Career</h4>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/ZQUxL4Jm1Lo"
+                      title="Finding the Right Mentor for Your Career"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
                 </div>
 
@@ -269,16 +305,25 @@ const GuidancePage = () => {
           <section id="business" className="bg-white p-8 rounded-2xl shadow-sm">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">🚀 I Want to Start – A Business or Project</h2>
             
-            {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
-              <div className="text-center">
-                <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
-                <p className="text-pastel-rose-dark">Upload Business Startup Image</p>
-              </div>
+            {/* Business Startup Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop"
+                alt="Business startup and entrepreneurship"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
+                {/* Image Upload Space */}
+                <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
+                  <div className="text-center">
+                    <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
+                    <p className="text-pastel-rose-dark">Upload Business Startup Image</p>
+                  </div>
+                </div>
+
                 <div className="bg-pastel-rose-light p-4 rounded-lg mb-4">
                   <h4 className="font-semibold text-gray-800 mb-2">💡 Step-by-Step Guidance</h4>
                   <ol className="text-gray-600 text-sm space-y-2">
@@ -329,14 +374,20 @@ const GuidancePage = () => {
                 </div>
               </div>
               <div>
-                {/* YouTube Video Placeholder */}
+                {/* YouTube Video */}
                 <div className="bg-pastel-rose-light p-6 rounded-lg mb-6">
-                  <div className="flex items-center justify-center h-48 bg-white rounded-lg">
-                    <div className="text-center">
-                      <Play className="h-16 w-16 text-pastel-rose mx-auto mb-2" />
-                      <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-                      <p className="text-gray-600 text-sm">How to Start a Business in Sri Lanka</p>
-                    </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">🎥 How to Start a Business in Sri Lanka</h4>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/Tuw8hxrFBH8"
+                      title="How to Start a Business in Sri Lanka"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
                 </div>
 
@@ -388,12 +439,13 @@ const GuidancePage = () => {
           <section id="stories" className="bg-white p-8 rounded-2xl shadow-sm">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">🌟 Featured Women – Inspiring Sri Lankan Stories</h2>
             
-            {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
-              <div className="text-center">
-                <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
-                <p className="text-pastel-rose-dark">Upload Success Stories Image</p>
-              </div>
+            {/* Success Stories Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop"
+                alt="Inspiring Sri Lankan women success stories"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <p className="text-lg text-gray-700 mb-6">Real stories. Real power. Here are some extraordinary Sri Lankan women who turned dreams into reality and continue to inspire others. 💪🇱🇰</p>
@@ -436,14 +488,20 @@ const GuidancePage = () => {
               </div>
             </div>
 
-            {/* YouTube Video Placeholder */}
+            {/* YouTube Video */}
             <div className="mt-6 bg-pastel-rose-light p-6 rounded-lg">
-              <div className="flex items-center justify-center h-48 bg-white rounded-lg">
-                <div className="text-center">
-                  <Play className="h-16 w-16 text-pastel-rose mx-auto mb-2" />
-                  <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-                  <p className="text-gray-600 text-sm">Inspiring Stories of Sri Lankan Women</p>
-                </div>
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Inspiring Stories of Sri Lankan Women</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/Y7lJpFuI3ns"
+                  title="Inspiring Stories of Sri Lankan Women"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
           </section>

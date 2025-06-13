@@ -72,9 +72,13 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            {/* Logo placeholder space */}
-            <div className="w-12 h-12 bg-primary/20 border-2 border-dashed border-primary rounded-lg flex items-center justify-center">
-              <span className="text-xs text-primary">LOGO</span>
+            {/* Logo */}
+            <div className="w-12 h-12 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=48&h=48&fit=crop&crop=faces"
+                alt="EmpowerHer Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="text-2xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>EmpowerHer</span>
             <span className="text-sm font-semibold text-primary tracking-wider">EST. 2025</span>
@@ -142,14 +146,14 @@ const Header = () => {
               </div>
             </div>
 
-            {/* Right Side - Image placeholder */}
+            {/* Right Side - Hero Image */}
             <div className="flex justify-center">
-              <div className="w-full h-96 bg-white/20 border-2 border-dashed border-white/50 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <Heart className="h-16 w-16 text-white mx-auto mb-4" />
-                  <span className="text-white font-medium">Hero Image Placeholder</span>
-                  <p className="text-sm text-white/80 mt-2">Sri Lankan women empowerment image</p>
-                </div>
+              <div className="w-full h-96 rounded-lg overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=500&h=400&fit=crop&crop=faces"
+                  alt="Sri Lankan women empowerment"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
