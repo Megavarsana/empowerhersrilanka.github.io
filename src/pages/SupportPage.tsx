@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -25,7 +24,7 @@ const SupportPage = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Women Support</h1>
-          <p className="text-xl text-pastel-rose mb-8">Real Help for Real Struggles</p>
+          <p className="text-xl text-empowerher-pink mb-8">Real Help for Real Struggles</p>
         </div>
 
         {/* 5-Topic Grid */}
@@ -33,11 +32,11 @@ const SupportPage = () => {
           {supportTopics.map((topic) => (
             <Card 
               key={topic.id}
-              className="cursor-pointer hover:bg-pastel-rose-light transition-colors"
+              className="cursor-pointer hover:bg-empowerher-pink-light transition-colors"
               onClick={() => scrollToSection(topic.id)}
             >
               <CardContent className="p-6 text-center">
-                <topic.icon className="h-8 w-8 text-pastel-rose mx-auto mb-3" />
+                <topic.icon className="h-8 w-8 text-empowerher-pink mx-auto mb-3" />
                 <h3 className="font-semibold text-gray-800 text-sm">{topic.title}</h3>
               </CardContent>
             </Card>
@@ -47,68 +46,68 @@ const SupportPage = () => {
         {/* Content Sections */}
         <div className="space-y-16">
           {/* Mental Health */}
-          <section id="mental" className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">🌸 Mental Health Tips for Women</h2>
+          <section id="mental" className="bg-empowerher-pink p-8 rounded-2xl shadow-sm">
+            <h2 className="text-3xl font-bold text-white mb-6">🌸 Mental Health Tips for Women</h2>
             
             {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
+            <div className="mb-6 p-6 border-2 border-dashed border-white rounded-lg bg-empowerher-pink-light">
               <div className="text-center">
-                <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
-                <p className="text-pastel-rose-dark">Upload Mental Health Support Image</p>
+                <Upload className="h-12 w-12 text-empowerher-pink mx-auto mb-2" />
+                <p className="text-empowerher-pink-dark">Upload Mental Health Support Image</p>
               </div>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
                 <div className="space-y-4">
-                  <div className="bg-pastel-rose-light p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-800 mb-2">🌿 1. Prioritize Self-Care</h4>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-empowerher-pink mb-2">🌿 1. Prioritize Self-Care</h4>
                     <p className="text-gray-600 text-sm">Set aside time daily for things that bring you peace and joy — even just 10–15 minutes. Take breaks without guilt. Rest is not laziness.</p>
                   </div>
-                  <div className="bg-pastel-rose-light p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-800 mb-2">🧠 2. Manage Stress with Mindfulness</h4>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-empowerher-pink mb-2">🧠 2. Manage Stress with Mindfulness</h4>
                     <p className="text-gray-600 text-sm">Practice meditation, deep breathing, or yoga regularly. Apps like Calm, Headspace, or Insight Timer can help.</p>
                   </div>
-                  <div className="bg-pastel-rose-light p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-800 mb-2">💬 3. Talk It Out</h4>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-empowerher-pink mb-2">💬 3. Talk It Out</h4>
                     <p className="text-gray-600 text-sm">Don't bottle things up. Talk to a trusted friend, family member, or therapist. Journaling your thoughts can also be therapeutic.</p>
                   </div>
-                  <div className="bg-pastel-rose-light p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-800 mb-2">🏃‍♀️ 4. Move Your Body</h4>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-empowerher-pink mb-2">🏃‍♀️ 4. Move Your Body</h4>
                     <p className="text-gray-600 text-sm">Regular exercise (even light walks or dancing at home) boosts mood and reduces anxiety. Aim for at least 30 minutes, 3–5 times a week.</p>
                   </div>
-                  <div className="bg-pastel-rose-light p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-800 mb-2">🛌 5. Get Good Sleep</h4>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-empowerher-pink mb-2">🛌 5. Get Good Sleep</h4>
                     <p className="text-gray-600 text-sm">Aim for 7–9 hours of restful sleep per night. Limit screen time before bed and create a calming bedtime routine.</p>
                   </div>
                 </div>
               </div>
               <div>
                 {/* YouTube Video Placeholder */}
-                <div className="bg-pastel-rose-light p-6 rounded-lg mb-4">
-                  <div className="flex items-center justify-center h-48 bg-white rounded-lg">
+                <div className="bg-white p-6 rounded-lg mb-4">
+                  <div className="flex items-center justify-center h-48 bg-empowerher-pink-light rounded-lg">
                     <div className="text-center">
-                      <Play className="h-16 w-16 text-pastel-rose mx-auto mb-2" />
-                      <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
+                      <Play className="h-16 w-16 text-empowerher-pink mx-auto mb-2" />
+                      <h4 className="font-semibold text-empowerher-pink mb-2">YouTube Video Placeholder</h4>
                       <p className="text-gray-600 text-sm">Mental Health Tips for Sri Lankan Women</p>
                     </div>
                   </div>
                 </div>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <div className="bg-pastel-rose-light p-3 rounded-lg">
-                    <p>🍎 6. Eat Nourishing Food - Balanced meals with fruits, veggies, and whole grains support brain health</p>
+                <div className="space-y-2 text-sm text-white">
+                  <div className="bg-white p-3 rounded-lg">
+                    <p className="text-gray-600">🍎 6. Eat Nourishing Food - Balanced meals with fruits, veggies, and whole grains support brain health</p>
                   </div>
-                  <div className="bg-pastel-rose-light p-3 rounded-lg">
-                    <p>❤️ 7. Set Boundaries - Learn to say no without feeling guilty. Your peace matters.</p>
+                  <div className="bg-white p-3 rounded-lg">
+                    <p className="text-gray-600">❤️ 7. Set Boundaries - Learn to say no without feeling guilty. Your peace matters.</p>
                   </div>
-                  <div className="bg-pastel-rose-light p-3 rounded-lg">
-                    <p>🧘‍♀️ 8. Reduce Social Media Overload - Take digital detoxes when needed</p>
+                  <div className="bg-white p-3 rounded-lg">
+                    <p className="text-gray-600">🧘‍♀️ 8. Reduce Social Media Overload - Take digital detoxes when needed</p>
                   </div>
-                  <div className="bg-pastel-rose-light p-3 rounded-lg">
-                    <p>👭 9. Build a Support System - Surround yourself with encouraging people</p>
+                  <div className="bg-white p-3 rounded-lg">
+                    <p className="text-gray-600">👭 9. Build a Support System - Surround yourself with encouraging people</p>
                   </div>
-                  <div className="bg-pastel-rose-light p-3 rounded-lg">
-                    <p>👩‍⚕️ 10. Don't Be Afraid to Seek Help - Therapy is strength, not weakness</p>
+                  <div className="bg-white p-3 rounded-lg">
+                    <p className="text-gray-600">👩‍⚕️ 10. Don't Be Afraid to Seek Help - Therapy is strength, not weakness</p>
                   </div>
                 </div>
               </div>
@@ -116,14 +115,14 @@ const SupportPage = () => {
           </section>
 
           {/* Sexual Assault Support */}
-          <section id="assault" className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">💔 Dealing with Sexual Assault</h2>
+          <section id="assault" className="bg-empowerher-pink p-8 rounded-2xl shadow-sm">
+            <h2 className="text-3xl font-bold text-white mb-6">💔 Dealing with Sexual Assault</h2>
             
             {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
+            <div className="mb-6 p-6 border-2 border-dashed border-white rounded-lg bg-empowerher-pink-light">
               <div className="text-center">
-                <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
-                <p className="text-pastel-rose-dark">Upload Support Resources Image</p>
+                <Upload className="h-12 w-12 text-empowerher-pink mx-auto mb-2" />
+                <p className="text-empowerher-pink-dark">Upload Support Resources Image</p>
               </div>
             </div>
 
@@ -139,7 +138,7 @@ const SupportPage = () => {
                   </ul>
                 </div>
                 
-                <div className="bg-pastel-rose-light p-4 rounded-lg mb-4">
+                <div className="bg-white p-4 rounded-lg mb-4">
                   <h4 className="font-semibold text-gray-800 mb-2">📝 How to Report Sexual Assault in Sri Lanka:</h4>
                   <div className="space-y-3">
                     <div>
@@ -162,7 +161,7 @@ const SupportPage = () => {
                   </div>
                 </div>
 
-                <div className="bg-pastel-rose-light p-4 rounded-lg">
+                <div className="bg-white p-4 rounded-lg">
                   <h4 className="font-semibold text-gray-800 mb-2">🛟 Trusted Services in Sri Lanka</h4>
                   <div className="space-y-3">
                     <div>
@@ -185,11 +184,11 @@ const SupportPage = () => {
               </div>
               <div>
                 {/* YouTube Video Placeholder */}
-                <div className="bg-pastel-rose-light p-6 rounded-lg mb-4">
-                  <div className="flex items-center justify-center h-48 bg-white rounded-lg">
+                <div className="bg-white p-6 rounded-lg mb-4">
+                  <div className="flex items-center justify-center h-48 bg-empowerher-pink-light rounded-lg">
                     <div className="text-center">
-                      <Play className="h-16 w-16 text-pastel-rose mx-auto mb-2" />
-                      <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
+                      <Play className="h-16 w-16 text-empowerher-pink mx-auto mb-2" />
+                      <h4 className="font-semibold text-empowerher-pink mb-2">YouTube Video Placeholder</h4>
                       <p className="text-gray-600 text-sm">Support for Sexual Assault Survivors</p>
                     </div>
                   </div>
@@ -213,14 +212,14 @@ const SupportPage = () => {
           </section>
 
           {/* Toxic Relationships */}
-          <section id="toxic" className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">💔 Understanding & Escaping Toxic Relationships</h2>
+          <section id="toxic" className="bg-empowerher-pink p-8 rounded-2xl shadow-sm">
+            <h2 className="text-3xl font-bold text-white mb-6">💔 Understanding & Escaping Toxic Relationships</h2>
             
             {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
+            <div className="mb-6 p-6 border-2 border-dashed border-white rounded-lg bg-empowerher-pink-light">
               <div className="text-center">
-                <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
-                <p className="text-pastel-rose-dark">Upload Relationship Support Image</p>
+                <Upload className="h-12 w-12 text-empowerher-pink mx-auto mb-2" />
+                <p className="text-empowerher-pink-dark">Upload Relationship Support Image</p>
               </div>
             </div>
 
@@ -250,7 +249,7 @@ const SupportPage = () => {
                   </ul>
                 </div>
                 
-                <div className="bg-pastel-rose-light p-4 rounded-lg">
+                <div className="bg-white p-4 rounded-lg">
                   <h4 className="font-semibold text-gray-800 mb-2">🧭 What To Do If You're in a Toxic Relationship</h4>
                   <ol className="text-gray-600 text-sm space-y-2">
                     <li>1. <strong>Acknowledge it's not normal or healthy</strong> - Love should not hurt, control, or isolate</li>
@@ -263,22 +262,22 @@ const SupportPage = () => {
               </div>
               <div>
                 {/* YouTube Video Placeholder */}
-                <div className="bg-pastel-rose-light p-6 rounded-lg mb-4">
-                  <div className="flex items-center justify-center h-48 bg-white rounded-lg">
+                <div className="bg-white p-6 rounded-lg mb-4">
+                  <div className="flex items-center justify-center h-48 bg-empowerher-pink-light rounded-lg">
                     <div className="text-center">
-                      <Play className="h-16 w-16 text-pastel-rose mx-auto mb-2" />
-                      <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
+                      <Play className="h-16 w-16 text-empowerher-pink mx-auto mb-2" />
+                      <h4 className="font-semibold text-empowerher-pink mb-2">YouTube Video Placeholder</h4>
                       <p className="text-gray-600 text-sm">Recognizing and Escaping Toxic Relationships</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-pastel-rose-light p-4 rounded-lg mb-4">
+                <div className="bg-white p-4 rounded-lg mb-4">
                   <h4 className="font-semibold text-gray-800 mb-2">🛟 Support Services for Women in Sri Lanka</h4>
                   <div className="space-y-3">
                     <div>
                       <h5 className="font-medium text-gray-800">✅ Women In Need (WIN)</h5>
-                      <p className="text-sm text-gray-600">• Helpline: 011 4718585 / 077 567 5656</p>
+                      <p className="text-sm text-gray-600">• Helpline: 011 471 8585 / 077 567 5656</p>
                       <p className="text-sm text-gray-600">• Website: winhearts.lk</p>
                       <p className="text-sm text-gray-600">• Services: Counseling, legal help, shelter, support</p>
                     </div>
