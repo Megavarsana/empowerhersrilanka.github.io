@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
@@ -8,14 +7,14 @@ const TermsOfService = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-primary">
       <Header />
       
       {/* Back Button */}
       <div className="container mx-auto px-6 pt-6">
         <button 
           onClick={() => navigate('/')}
-          className="flex items-center space-x-2 text-pastel-rose-dark hover:text-pastel-rose transition-colors mb-6"
+          className="flex items-center space-x-2 text-white hover:text-white/80 transition-colors mb-6"
         >
           <ArrowLeft className="h-5 w-5" />
           <span>Back to Home</span>
@@ -24,15 +23,15 @@ const TermsOfService = () => {
       
       <div className="container mx-auto px-6 py-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-800 mb-6">Terms of Service</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Terms of Service</h1>
           
           <div className="prose prose-lg prose-rose max-w-none">
-            <p className="lead text-lg text-gray-600 mb-8">
+            <p className="lead text-lg text-white/90 mb-8">
               Welcome to EmpowerHer. These Terms of Service ("Terms") govern your use of our website and services. By accessing or using EmpowerHer, you agree to be bound by these Terms.
             </p>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-pastel-rose-dark mb-4">1. Acceptance of Terms</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">1. Acceptance of Terms</h2>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="mb-4">
                   By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. 
@@ -45,7 +44,7 @@ const TermsOfService = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-pastel-rose-dark mb-4">2. Use of the Website</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">2. Use of the Website</h2>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="mb-4">You may use our website for lawful purposes only. You agree not to use the website:</p>
                 <ul className="list-disc ml-6 mb-4 text-gray-700">
@@ -58,7 +57,7 @@ const TermsOfService = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-pastel-rose-dark mb-4">3. Emergency Services Disclaimer</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">3. Emergency Services Disclaimer</h2>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="mb-4 font-semibold text-red-600">Important Notice:</p>
                 <p className="mb-4">
@@ -76,7 +75,7 @@ const TermsOfService = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-pastel-rose-dark mb-4">4. Content and Intellectual Property</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">4. Content and Intellectual Property</h2>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="mb-4">
                   The service and its original content, features, and functionality are and will remain the exclusive property of EmpowerHer and its licensors.
@@ -88,7 +87,7 @@ const TermsOfService = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-pastel-rose-dark mb-4">5. User Generated Content</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">5. User Generated Content</h2>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="mb-4">
                   Our service may allow you to post, link, store, share and otherwise make available certain information, text, graphics, or other material.
@@ -100,7 +99,7 @@ const TermsOfService = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-pastel-rose-dark mb-4">6. Privacy Policy</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">6. Privacy Policy</h2>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="text-gray-700">
                   Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the service, 
@@ -110,7 +109,7 @@ const TermsOfService = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-pastel-rose-dark mb-4">7. Limitation of Liability</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">7. Limitation of Liability</h2>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="mb-4">
                   In no event shall EmpowerHer, nor its directors, employees, partners, agents, suppliers, or affiliates, 
@@ -124,7 +123,7 @@ const TermsOfService = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-pastel-rose-dark mb-4">8. Changes to Terms</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">8. Changes to Terms</h2>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="text-gray-700">
                   We reserve the right, at our sole discretion, to modify or replace these Terms at any time. 
@@ -134,7 +133,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-pastel-rose-dark mb-4">9. Contact Information</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">9. Contact Information</h2>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <p className="mb-4">If you have any questions about these Terms of Service, please contact us at:</p>
                 <p className="font-medium">Email: support@empowerher.lk</p>
@@ -143,7 +142,7 @@ const TermsOfService = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-gray-600">Last Updated: June 10, 2025</p>
+            <p className="text-white/80">Last Updated: June 10, 2025</p>
           </div>
         </div>
       </div>
