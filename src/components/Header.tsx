@@ -67,8 +67,8 @@ const Header = () => {
     }
   };
   const handleLatestNews = () => {
-    // Show Sri Lankan women empowerment news
-    window.open('https://www.newsfirst.lk/tag/women-empowerment/', '_blank');
+    // Show latest Sri Lankan women empowerment news
+    window.open('https://www.dailynews.lk/tag/women-empowerment', '_blank');
   };
   return <header className="bg-white shadow-sm">
       {/* Navigation */}
@@ -133,7 +133,7 @@ const Header = () => {
             {/* Right Side - Hero Image */}
             <div className="flex justify-center">
               <div className="w-full h-96 rounded-lg overflow-hidden shadow-2xl">
-                <img alt="Sri Lankan women empowerment" className="w-full h-full object-cover" src="https://chatgpt.com/s/m_684bfdfbe8b08191bfc4d3b621f8f047" />
+                <img alt="Sri Lankan women empowerment" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600&h=600&fit=crop" />
               </div>
             </div>
           </div>

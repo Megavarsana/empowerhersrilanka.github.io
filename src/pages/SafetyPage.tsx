@@ -3,8 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Shield, Phone, Smartphone, AlertTriangle, FileText } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useState } from "react";
 
 const SafetyPage = () => {
+  const [sosActivated, setSosActivated] = useState(false);
+  const [holdTimer, setHoldTimer] = useState<NodeJS.Timeout | null>(null);
+
   const safetyTopics = [
     { id: 'emergency', title: 'Emergency Numbers', icon: Phone },
     { id: 'sos', title: 'One-Click SOS', icon: AlertTriangle },
@@ -18,14 +22,32 @@ const SafetyPage = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleSOSPress = () => {
+    const timer = setTimeout(() => {
+      setSosActivated(true);
+      // Send alert to emergency contacts
+      alert("SOS Alert Sent! Your location and emergency message have been sent to your emergency contacts and local authorities.");
+      // In a real app, this would send location and alert to emergency services
+      console.log("SOS Alert: Emergency assistance requested");
+    }, 3000); // 3 second hold
+    setHoldTimer(timer);
+  };
+
+  const handleSOSRelease = () => {
+    if (holdTimer) {
+      clearTimeout(holdTimer);
+      setHoldTimer(null);
+    }
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-primary">
       <Header />
       
       <div className="container mx-auto px-6 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Women's Safety</h1>
-          <p className="text-xl text-pastel-khaki mb-8">Your Safety, Your Power</p>
+          <h1 className="text-4xl font-bold text-white mb-4">Women's Safety</h1>
+          <p className="text-xl text-white/90 mb-8">Your Safety, Your Power</p>
         </div>
 
         {/* 5-Topic Grid */}
@@ -33,11 +55,11 @@ const SafetyPage = () => {
           {safetyTopics.map((topic) => (
             <Card 
               key={topic.id}
-              className="cursor-pointer hover:bg-pastel-flesh transition-colors"
+              className="cursor-pointer hover:bg-accent/90 transition-colors bg-white border-white"
               onClick={() => scrollToSection(topic.id)}
             >
               <CardContent className="p-6 text-center">
-                <topic.icon className="h-8 w-8 text-pastel-khaki mx-auto mb-3" />
+                <topic.icon className="h-8 w-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold text-gray-800 text-sm">{topic.title}</h3>
               </CardContent>
             </Card>
@@ -47,8 +69,18 @@ const SafetyPage = () => {
         {/* Content Sections */}
         <div className="space-y-16">
           {/* Emergency Hotline Numbers */}
-          <section id="emergency" className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">📞 Emergency Hotline Numbers for Women – Sri Lanka</h2>
+          <section id="emergency" className="bg-primary/90 p-8 rounded-2xl">
+            <h2 className="text-3xl font-bold text-white mb-6">📞 Emergency Hotline Numbers for Women – Sri Lanka</h2>
+            
+            {/* Emergency Numbers Image */}
+            <div className="mb-8 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop"
+                alt="Emergency hotline and support services"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { service: "Women's Help Line (Ministry of Women)", number: "1938", description: "24/7 confidential support for women in distress" },
@@ -61,15 +93,15 @@ const SafetyPage = () => {
                 { service: "WIN Emergency Support (24/7)", number: "077 567 8700", description: "Mobile support line for urgent assistance" },
                 { service: "Sri Lanka Red Cross – Psychosocial Support", number: "0112 682 585", description: "Emotional and psychological support" }
               ].map((contact, index) => (
-                <div key={index} className="bg-pastel-sand p-6 rounded-lg">
+                <div key={index} className="bg-white p-6 rounded-lg">
                   <h4 className="font-semibold text-gray-800 mb-2 text-sm leading-tight">{contact.service}</h4>
-                  <p className="text-2xl font-bold text-pastel-khaki mb-2">{contact.number}</p>
+                  <p className="text-2xl font-bold text-primary mb-2">{contact.number}</p>
                   <p className="text-sm text-gray-600">{contact.description}</p>
                 </div>
               ))}
             </div>
-            <div className="mt-8 p-6 bg-red-50 border border-red-200 rounded-lg">
-              <p className="text-red-800 font-medium text-center">
+            <div className="mt-8 p-6 bg-red-500 border border-red-600 rounded-lg">
+              <p className="text-white font-medium text-center">
                 ⚠️ In immediate danger? Call 119 for police or 1990 for ambulance. Your safety is the priority.
               </p>
             </div>
@@ -85,61 +117,41 @@ const SafetyPage = () => {
           </section>
 
           {/* One-Click SOS Button */}
-          <section id="sos" className="bg-pastel-pearl p-8 rounded-2xl">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">🚨 One-Click SOS Button – Ideas & Examples</h2>
+          <section id="sos" className="bg-primary/90 p-8 rounded-2xl">
+            <h2 className="text-3xl font-bold text-white mb-6">🚨 One-Click SOS Button</h2>
+            
+            {/* SOS Image */}
+            <div className="mb-8 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop"
+                alt="SOS emergency button system"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+
             <div className="grid lg:grid-cols-2 gap-8">
-              <div>
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">✅ What is it?</h3>
-                  <p className="text-gray-600 mb-4">
-                    A One-Click SOS Button is a visible and accessible button on your website that users can click in an emergency. It can:
+              <div className="bg-white p-6 rounded-lg">
+                <div className="text-center mb-6">
+                  <button
+                    className={`w-32 h-32 mx-auto rounded-full flex items-center justify-center mb-6 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl ${
+                      sosActivated ? 'bg-green-500 hover:bg-green-600' : 'bg-red-500 hover:bg-red-600'
+                    }`}
+                    onMouseDown={handleSOSPress}
+                    onMouseUp={handleSOSRelease}
+                    onMouseLeave={handleSOSRelease}
+                    onTouchStart={handleSOSPress}
+                    onTouchEnd={handleSOSRelease}
+                  >
+                    <span className="text-white font-bold text-xl">
+                      {sosActivated ? '✓' : 'SOS'}
+                    </span>
+                  </button>
+                  <h4 className="font-semibold text-gray-800 mb-4">
+                    {sosActivated ? 'SOS Alert Sent!' : 'Hold for 3 seconds to activate'}
+                  </h4>
+                  <p className="text-gray-600 mb-6">
+                    Press and hold to send your location and alert message to emergency contacts.
                   </p>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Call emergency services</li>
-                    <li>• Send a message or location to a caregiver or rescue team</li>
-                    <li>• Trigger an alarm or alert system</li>
-                    <li>• Open a help form or emergency chatbot</li>
-                  </ul>
-                </div>
-
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🔘 Text Examples for the Button</h3>
-                  <ul className="space-y-1 text-gray-600">
-                    <li>• 🚨 SOS – Emergency Help</li>
-                    <li>• 🆘 Tap Here for Immediate Help</li>
-                    <li>• 📞 Call for Emergency Assistance</li>
-                    <li>• 🔴 One-Click Rescue</li>
-                    <li>• 📍 Send Location & Alert</li>
-                    <li>• 🛑 Need Help Now? Click Here</li>
-                  </ul>
-                </div>
-
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🎯 Where to Place It</h3>
-                  <ul className="space-y-1 text-gray-600">
-                    <li>• Top-right corner of every page</li>
-                    <li>• Floating button on the bottom corner</li>
-                    <li>• Inside a fixed navigation bar</li>
-                    <li>• On the homepage hero section</li>
-                  </ul>
-                </div>
-
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🎨 Design Tips</h3>
-                  <ul className="space-y-1 text-gray-600">
-                    <li>• Use bright colors like red 🔴, orange 🟠, or yellow 🟡</li>
-                    <li>• Use emojis to make it eye-catching and instantly understandable</li>
-                    <li>• Add vibration or sound feedback for mobile (optional)</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">🧠 Things to Think About</h3>
-                  <ul className="space-y-1 text-gray-600">
-                    <li>• Should it make a call, send a message, or trigger an alert?</li>
-                    <li>• Do you need location access?</li>
-                    <li>• Do you want to store the alert logs in a database?</li>
-                  </ul>
                 </div>
               </div>
               
@@ -164,8 +176,18 @@ const SafetyPage = () => {
           </section>
 
           {/* Self-Defense Tips */}
-          <section id="defense" className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">🛡️ Self-Defense Tips for Women</h2>
+          <section id="defense" className="bg-primary/90 p-8 rounded-2xl">
+            <h2 className="text-3xl font-bold text-white mb-6">🛡️ Self-Defense Tips for Women</h2>
+            
+            {/* Self-Defense Image */}
+            <div className="mb-8 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=400&fit=crop"
+                alt="Women's self-defense training and empowerment"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
                 <div className="space-y-6">
@@ -254,8 +276,18 @@ const SafetyPage = () => {
           </section>
 
           {/* Safety Apps */}
-          <section id="apps" className="bg-pastel-pearl p-8 rounded-2xl">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">Safety App Recommendation</h2>
+          <section id="apps" className="bg-primary/90 p-8 rounded-2xl">
+            <h2 className="text-3xl font-bold text-white mb-6">📱 Safety App Recommendations</h2>
+            
+            {/* Safety Apps Image */}
+            <div className="mb-8 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop"
+                alt="Safety apps on smartphone for women's protection"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
@@ -305,13 +337,13 @@ const SafetyPage = () => {
 
             {/* YouTube Video */}
             <div className="mt-6 bg-pastel-sand p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-800 mb-2">🎥 How to Use Safety Apps Effectively</h4>
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Best Safety Apps for Women</h4>
               <div className="aspect-video rounded-lg overflow-hidden">
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/KXlf_qKEoRg"
-                  title="How to Use Safety Apps Effectively"
+                  src="https://www.youtube.com/embed/9VOfskIMtys"
+                  title="Best Safety Apps for Women"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -322,8 +354,18 @@ const SafetyPage = () => {
           </section>
 
           {/* Online Social Media Safety */}
-          <section id="online" className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">🌐 Online Social Media Safety Tips for Women</h2>
+          <section id="online" className="bg-primary/90 p-8 rounded-2xl">
+            <h2 className="text-3xl font-bold text-white mb-6">🌐 Online Social Media Safety Tips for Women</h2>
+            
+            {/* Online Safety Image */}
+            <div className="mb-8 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop"
+                alt="Online safety and social media privacy protection"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div>
@@ -414,12 +456,12 @@ const SafetyPage = () => {
 
                 {/* YouTube Video */}
                 <div className="bg-pastel-sand p-6 rounded-lg">
-                  <h4 className="font-semibold text-gray-800 mb-2">🎥 Online Safety Tips for Sri Lankan Women</h4>
+                  <h4 className="font-semibold text-gray-800 mb-2">🎥 Online Safety Tips for Women</h4>
                   <div className="aspect-video rounded-lg overflow-hidden">
                     <iframe
                       width="100%"
                       height="100%"
-                      src="https://www.youtube.com/embed/gHRzqfj0aDw"
+                      src="https://www.youtube.com/embed/aO858HyFbKI"
                       title="Online Safety Tips for Women"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

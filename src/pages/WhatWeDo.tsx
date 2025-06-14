@@ -1,8 +1,7 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Heart, BookOpen, Upload, Play, Phone, Users, Lightbulb, HeartHandshake } from "lucide-react";
+import { Shield, Heart, BookOpen, Play, Phone, Users, Lightbulb, HeartHandshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -162,12 +161,13 @@ const WhatWeDo = () => {
         <div className="bg-white p-8 rounded-2xl shadow-sm mb-16">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Our Approach</h2>
 
-          {/* Image Upload Space */}
-          <div className="mb-8 p-6 border-2 border-dashed border-primary rounded-lg bg-primary/10">
-            <div className="text-center">
-              <Upload className="h-12 w-12 text-primary mx-auto mb-2" />
-              <p className="text-primary">Upload Our Approach Image</p>
-            </div>
+          {/* Approach Image */}
+          <div className="mb-8 rounded-lg overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=400&fit=crop"
+              alt="Our approach to women empowerment"
+              className="w-full h-64 object-cover"
+            />
           </div>
           
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
@@ -200,60 +200,21 @@ const WhatWeDo = () => {
             </div>
           </div>
 
-          {/* YouTube Video Placeholder */}
+          {/* YouTube Video */}
           <div className="mt-12 bg-primary/10 p-6 rounded-lg">
-            <div className="flex items-center justify-center h-72 bg-white rounded-lg">
-              <div className="text-center">
-                <Play className="h-16 w-16 text-primary mx-auto mb-2" />
-                <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-                <p className="text-gray-600 text-sm">Our Vision for Empowering Sri Lankan Women</p>
-              </div>
+            <h4 className="font-semibold text-gray-800 mb-4 text-center">🎥 Our Vision for Empowering Sri Lankan Women</h4>
+            <div className="aspect-video rounded-lg overflow-hidden">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/gbCYzTnNErs"
+                title="Our Vision for Empowering Sri Lankan Women"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
             </div>
-          </div>
-        </div>
-
-        {/* Impact Stories */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-white mb-8">Our Impact</h2>
-          
-          {/* Image Upload Space */}
-          <div className="mb-8 p-6 border-2 border-dashed border-white rounded-lg bg-white/10">
-            <div className="text-center">
-              <Upload className="h-12 w-12 text-white mx-auto mb-2" />
-              <p className="text-white">Upload Impact Stories Image</p>
-            </div>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-primary mb-3">Safety Outreach</h3>
-              <div className="text-4xl font-bold text-primary mb-2">5,000+</div>
-              <p className="text-gray-700">Women educated on personal safety measures and self-defense techniques</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-primary mb-3">Support Services</h3>
-              <div className="text-4xl font-bold text-primary mb-2">2,500+</div>
-              <p className="text-gray-700">Women connected with mental health resources and counseling services</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-primary mb-3">Skill Development</h3>
-              <div className="text-4xl font-bold text-primary mb-2">3,200+</div>
-              <p className="text-gray-700">Women empowered with new skills and educational opportunities</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="bg-gradient-to-r from-secondary to-accent p-8 rounded-2xl text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Join Our Mission</h2>
-          <p className="text-xl text-white mb-6">Together, we can create a safer, more supportive environment for women across Sri Lanka.</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="mailto:support@empowerher.lk">
-              <Button className="bg-white text-primary hover:bg-gray-100 text-lg px-8 py-3">Contact Us</Button>
-            </a>
-            <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-3">Support Our Work</Button>
           </div>
         </div>
       </div>
