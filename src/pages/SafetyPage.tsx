@@ -4,24 +4,36 @@ import { Shield, Phone, Smartphone, AlertTriangle, FileText } from "lucide-react
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
-
 const SafetyPage = () => {
   const [sosActivated, setSosActivated] = useState(false);
   const [holdTimer, setHoldTimer] = useState<NodeJS.Timeout | null>(null);
-
-  const safetyTopics = [
-    { id: 'emergency', title: 'Emergency Numbers', icon: Phone },
-    { id: 'sos', title: 'One-Click SOS', icon: AlertTriangle },
-    { id: 'defense', title: 'Self-Defense Tips', icon: Shield },
-    { id: 'apps', title: 'Safety Apps', icon: Smartphone },
-    { id: 'online', title: 'Online Safety', icon: FileText }
-  ];
-
+  const safetyTopics = [{
+    id: 'emergency',
+    title: 'Emergency Numbers',
+    icon: Phone
+  }, {
+    id: 'sos',
+    title: 'One-Click SOS',
+    icon: AlertTriangle
+  }, {
+    id: 'defense',
+    title: 'Self-Defense Tips',
+    icon: Shield
+  }, {
+    id: 'apps',
+    title: 'Safety Apps',
+    icon: Smartphone
+  }, {
+    id: 'online',
+    title: 'Online Safety',
+    icon: FileText
+  }];
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
   const handleSOSPress = () => {
     const timer = setTimeout(() => {
       setSosActivated(true);
@@ -32,16 +44,13 @@ const SafetyPage = () => {
     }, 3000); // 3 second hold
     setHoldTimer(timer);
   };
-
   const handleSOSRelease = () => {
     if (holdTimer) {
       clearTimeout(holdTimer);
       setHoldTimer(null);
     }
   };
-
-  return (
-    <div className="min-h-screen bg-primary">
+  return <div className="min-h-screen bg-primary">
       <Header />
       
       <div className="container mx-auto px-6 py-12">
@@ -52,18 +61,12 @@ const SafetyPage = () => {
 
         {/* 5-Topic Grid */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
-          {safetyTopics.map((topic) => (
-            <Card 
-              key={topic.id}
-              className="cursor-pointer hover:bg-accent/90 transition-colors bg-white border-white"
-              onClick={() => scrollToSection(topic.id)}
-            >
+          {safetyTopics.map(topic => <Card key={topic.id} className="cursor-pointer hover:bg-accent/90 transition-colors bg-white border-white" onClick={() => scrollToSection(topic.id)}>
               <CardContent className="p-6 text-center">
                 <topic.icon className="h-8 w-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold text-gray-800 text-sm">{topic.title}</h3>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Content Sections */}
@@ -74,31 +77,51 @@ const SafetyPage = () => {
             
             {/* Emergency Numbers Image */}
             <div className="mb-8 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop"
-                alt="Emergency hotline and support services"
-                className="w-full h-64 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop" alt="Emergency hotline and support services" className="w-full h-64 object-cover" />
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { service: "Women's Help Line (Ministry of Women)", number: "1938", description: "24/7 confidential support for women in distress" },
-                { service: "Police Emergency", number: "119", description: "For any emergency including violence or threats" },
-                { service: "National Child Protection Authority (NCPA)", number: "1929", description: "For reporting abuse of girls or minors" },
-                { service: "Suwa Seriya – Ambulance Service", number: "1990", description: "Free emergency ambulance service" },
-                { service: "Legal Aid Commission – Women's Desk", number: "0112 574 167", description: "Free legal advice for women" },
-                { service: "Mithuru Piyasa (Hospital-based GBV Care)", number: "0112 682 535", description: "Gender-based violence support centers in major hospitals" },
-                { service: "Women In Need (WIN)", number: "0114 718 585", description: "Counselling, legal support, shelter, and advocacy for women survivors" },
-                { service: "WIN Emergency Support (24/7)", number: "077 567 8700", description: "Mobile support line for urgent assistance" },
-                { service: "Sri Lanka Red Cross – Psychosocial Support", number: "0112 682 585", description: "Emotional and psychological support" }
-              ].map((contact, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg">
+              {[{
+              service: "Women's Help Line (Ministry of Women)",
+              number: "1938",
+              description: "24/7 confidential support for women in distress"
+            }, {
+              service: "Police Emergency",
+              number: "119",
+              description: "For any emergency including violence or threats"
+            }, {
+              service: "National Child Protection Authority (NCPA)",
+              number: "1929",
+              description: "For reporting abuse of girls or minors"
+            }, {
+              service: "Suwa Seriya – Ambulance Service",
+              number: "1990",
+              description: "Free emergency ambulance service"
+            }, {
+              service: "Legal Aid Commission – Women's Desk",
+              number: "0112 574 167",
+              description: "Free legal advice for women"
+            }, {
+              service: "Mithuru Piyasa (Hospital-based GBV Care)",
+              number: "0112 682 535",
+              description: "Gender-based violence support centers in major hospitals"
+            }, {
+              service: "Women In Need (WIN)",
+              number: "0114 718 585",
+              description: "Counselling, legal support, shelter, and advocacy for women survivors"
+            }, {
+              service: "WIN Emergency Support (24/7)",
+              number: "077 567 8700",
+              description: "Mobile support line for urgent assistance"
+            }, {
+              service: "Sri Lanka Red Cross – Psychosocial Support",
+              number: "0112 682 585",
+              description: "Emotional and psychological support"
+            }].map((contact, index) => <div key={index} className="bg-white p-6 rounded-lg">
                   <h4 className="font-semibold text-gray-800 mb-2 text-sm leading-tight">{contact.service}</h4>
                   <p className="text-2xl font-bold text-primary mb-2">{contact.number}</p>
                   <p className="text-sm text-gray-600">{contact.description}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
             <div className="mt-8 p-6 bg-red-500 border border-red-600 rounded-lg">
               <p className="text-white font-medium text-center">
@@ -108,11 +131,7 @@ const SafetyPage = () => {
             
             {/* Emergency Services Image */}
             <div className="mt-8 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop"
-                alt="Emergency services and support"
-                className="w-full h-64 object-cover"
-              />
+              
             </div>
           </section>
 
@@ -122,26 +141,13 @@ const SafetyPage = () => {
             
             {/* SOS Image */}
             <div className="mb-8 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop"
-                alt="SOS emergency button system"
-                className="w-full h-64 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop" alt="SOS emergency button system" className="w-full h-64 object-cover" />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg">
                 <div className="text-center mb-6">
-                  <button
-                    className={`w-32 h-32 mx-auto rounded-full flex items-center justify-center mb-6 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl ${
-                      sosActivated ? 'bg-green-500 hover:bg-green-600' : 'bg-red-500 hover:bg-red-600'
-                    }`}
-                    onMouseDown={handleSOSPress}
-                    onMouseUp={handleSOSRelease}
-                    onMouseLeave={handleSOSRelease}
-                    onTouchStart={handleSOSPress}
-                    onTouchEnd={handleSOSRelease}
-                  >
+                  <button className={`w-32 h-32 mx-auto rounded-full flex items-center justify-center mb-6 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl ${sosActivated ? 'bg-green-500 hover:bg-green-600' : 'bg-red-500 hover:bg-red-600'}`} onMouseDown={handleSOSPress} onMouseUp={handleSOSRelease} onMouseLeave={handleSOSRelease} onTouchStart={handleSOSPress} onTouchEnd={handleSOSRelease}>
                     <span className="text-white font-bold text-xl">
                       {sosActivated ? '✓' : 'SOS'}
                     </span>
@@ -165,11 +171,7 @@ const SafetyPage = () => {
                 
                 {/* SOS Alert System Image */}
                 <div className="rounded-lg overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
-                    alt="SOS button and alert system"
-                    className="w-full h-48 object-cover"
-                  />
+                  
                 </div>
               </div>
             </div>
@@ -181,11 +183,7 @@ const SafetyPage = () => {
             
             {/* Self-Defense Image */}
             <div className="mb-8 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=400&fit=crop"
-                alt="Women's self-defense training and empowerment"
-                className="w-full h-64 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=400&fit=crop" alt="Women's self-defense training and empowerment" className="w-full h-64 object-cover" />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
@@ -248,27 +246,14 @@ const SafetyPage = () => {
               <div className="space-y-6">
                 {/* Self-Defense Image */}
                 <div className="rounded-lg overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop"
-                    alt="Self-defense and safety awareness"
-                    className="w-full h-48 object-cover"
-                  />
+                  
                 </div>
 
                 {/* YouTube Video */}
                 <div className="bg-pastel-sand p-6 rounded-lg">
                   <h4 className="font-semibold text-gray-800 mb-2">🎥 Self-Defense Techniques for Women</h4>
                   <div className="aspect-video rounded-lg overflow-hidden">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src="https://www.youtube.com/embed/T7aNSRoDCmg"
-                      title="Self-Defense Techniques for Women"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    ></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/T7aNSRoDCmg" title="Self-Defense Techniques for Women" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
                   </div>
                 </div>
               </div>
@@ -281,74 +266,49 @@ const SafetyPage = () => {
             
             {/* Safety Apps Image */}
             <div className="mb-8 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop"
-                alt="Safety apps on smartphone for women's protection"
-                className="w-full h-64 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop" alt="Safety apps on smartphone for women's protection" className="w-full h-64 object-cover" />
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  name: "Suraksha",
-                  type: "Local Sri Lankan App",
-                  description: "A women safety app developed in Sri Lanka, Suraksha allows users to quickly send SOS alerts with their live location to emergency contacts. It also includes access to legal support and helplines."
-                },
-                {
-                  name: "112 Sri Lanka",
-                  type: "Official Emergency Services App",
-                  description: "This app lets you contact the Sri Lanka emergency services (Police, Ambulance, Fire Brigade) with a single tap. Women can use it in emergencies to get quick help nationwide."
-                },
-                {
-                  name: "bSafe",
-                  type: "International Safety App",
-                  description: "bSafe offers voice-activated SOS, live GPS tracking, and automatic video/audio recording when you're in danger. It's great for women who travel or work late."
-                },
-                {
-                  name: "My Safetipin",
-                  type: "Community-Based Safety App",
-                  description: "This app rates locations based on safety (lighting, crowd, security, etc.). It helps women avoid unsafe areas and offers safe route suggestions with navigation."
-                },
-                {
-                  name: "Life360",
-                  type: "Family Locator & Safety App",
-                  description: "Family safety and location sharing app with real-time tracking and emergency assistance features."
-                }
-              ].map((app, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg">
+              {[{
+              name: "Suraksha",
+              type: "Local Sri Lankan App",
+              description: "A women safety app developed in Sri Lanka, Suraksha allows users to quickly send SOS alerts with their live location to emergency contacts. It also includes access to legal support and helplines."
+            }, {
+              name: "112 Sri Lanka",
+              type: "Official Emergency Services App",
+              description: "This app lets you contact the Sri Lanka emergency services (Police, Ambulance, Fire Brigade) with a single tap. Women can use it in emergencies to get quick help nationwide."
+            }, {
+              name: "bSafe",
+              type: "International Safety App",
+              description: "bSafe offers voice-activated SOS, live GPS tracking, and automatic video/audio recording when you're in danger. It's great for women who travel or work late."
+            }, {
+              name: "My Safetipin",
+              type: "Community-Based Safety App",
+              description: "This app rates locations based on safety (lighting, crowd, security, etc.). It helps women avoid unsafe areas and offers safe route suggestions with navigation."
+            }, {
+              name: "Life360",
+              type: "Family Locator & Safety App",
+              description: "Family safety and location sharing app with real-time tracking and emergency assistance features."
+            }].map((app, index) => <div key={index} className="bg-white p-6 rounded-lg">
                   <h4 className="font-bold text-gray-800 mb-2">{app.name}</h4>
                   <span className="text-xs bg-pastel-khaki text-white px-2 py-1 rounded mb-3 inline-block">
                     {app.type}
                   </span>
                   <p className="text-gray-600 text-sm mb-4">{app.description}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
             
             {/* Safety Apps Image */}
             <div className="mt-8 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop"
-                alt="Phone with safety app icons"
-                className="w-full h-64 object-cover"
-              />
+              
             </div>
 
             {/* YouTube Video */}
             <div className="mt-6 bg-pastel-sand p-6 rounded-lg">
               <h4 className="font-semibold text-gray-800 mb-2">🎥 Best Safety Apps for Women</h4>
               <div className="aspect-video rounded-lg overflow-hidden">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/9VOfskIMtys"
-                  title="Best Safety Apps for Women"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9VOfskIMtys" title="Best Safety Apps for Women" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
               </div>
             </div>
           </section>
@@ -359,11 +319,7 @@ const SafetyPage = () => {
             
             {/* Online Safety Image */}
             <div className="mb-8 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop"
-                alt="Online safety and social media privacy protection"
-                className="w-full h-64 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop" alt="Online safety and social media privacy protection" className="w-full h-64 object-cover" />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
@@ -447,27 +403,14 @@ const SafetyPage = () => {
               <div className="space-y-6">
                 {/* Online Safety Image */}
                 <div className="rounded-lg overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
-                    alt="Online safety and social media privacy"
-                    className="w-full h-48 object-cover"
-                  />
+                  
                 </div>
 
                 {/* YouTube Video */}
                 <div className="bg-pastel-sand p-6 rounded-lg">
                   <h4 className="font-semibold text-gray-800 mb-2">🎥 Online Safety Tips for Women</h4>
                   <div className="aspect-video rounded-lg overflow-hidden">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src="https://www.youtube.com/embed/aO858HyFbKI"
-                      title="Online Safety Tips for Women"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    ></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aO858HyFbKI" title="Online Safety Tips for Women" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
                   </div>
                 </div>
               </div>
@@ -477,8 +420,6 @@ const SafetyPage = () => {
       </div>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default SafetyPage;
