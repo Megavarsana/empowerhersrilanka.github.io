@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Brain, Phone, FileText, Video, Upload, Play } from "lucide-react";
+import { Heart, Brain, Phone, FileText, Video } from "lucide-react";
 
 const SupportPage = () => {
   const supportTopics = [
@@ -46,51 +46,58 @@ const SupportPage = () => {
         {/* Content Sections */}
         <div className="space-y-16">
           {/* Mental Health */}
-          <section id="mental" className="bg-empowerher-pink p-8 rounded-2xl shadow-sm">
+          <section id="mental" className="bg-primary p-8 rounded-2xl shadow-sm">
             <h2 className="text-3xl font-bold text-white mb-6">🌸 Mental Health Tips for Women</h2>
             
-            {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-white rounded-lg bg-empowerher-pink-light">
-              <div className="text-center">
-                <Upload className="h-12 w-12 text-empowerher-pink mx-auto mb-2" />
-                <p className="text-empowerher-pink-dark">Upload Mental Health Support Image</p>
-              </div>
+            {/* Mental Health Support Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop"
+                alt="Mental health support for Sri Lankan women"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
                 <div className="space-y-4">
                   <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-empowerher-pink mb-2">🌿 1. Prioritize Self-Care</h4>
+                    <h4 className="font-semibold text-primary mb-2">🌿 1. Prioritize Self-Care</h4>
                     <p className="text-gray-600 text-sm">Set aside time daily for things that bring you peace and joy — even just 10–15 minutes. Take breaks without guilt. Rest is not laziness.</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-empowerher-pink mb-2">🧠 2. Manage Stress with Mindfulness</h4>
+                    <h4 className="font-semibold text-primary mb-2">🧠 2. Manage Stress with Mindfulness</h4>
                     <p className="text-gray-600 text-sm">Practice meditation, deep breathing, or yoga regularly. Apps like Calm, Headspace, or Insight Timer can help.</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-empowerher-pink mb-2">💬 3. Talk It Out</h4>
+                    <h4 className="font-semibold text-primary mb-2">💬 3. Talk It Out</h4>
                     <p className="text-gray-600 text-sm">Don't bottle things up. Talk to a trusted friend, family member, or therapist. Journaling your thoughts can also be therapeutic.</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-empowerher-pink mb-2">🏃‍♀️ 4. Move Your Body</h4>
+                    <h4 className="font-semibold text-primary mb-2">🏃‍♀️ 4. Move Your Body</h4>
                     <p className="text-gray-600 text-sm">Regular exercise (even light walks or dancing at home) boosts mood and reduces anxiety. Aim for at least 30 minutes, 3–5 times a week.</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-empowerher-pink mb-2">🛌 5. Get Good Sleep</h4>
+                    <h4 className="font-semibold text-primary mb-2">🛌 5. Get Good Sleep</h4>
                     <p className="text-gray-600 text-sm">Aim for 7–9 hours of restful sleep per night. Limit screen time before bed and create a calming bedtime routine.</p>
                   </div>
                 </div>
               </div>
               <div>
-                {/* YouTube Video Placeholder */}
+                {/* YouTube Video */}
                 <div className="bg-white p-6 rounded-lg mb-4">
-                  <div className="flex items-center justify-center h-48 bg-empowerher-pink-light rounded-lg">
-                    <div className="text-center">
-                      <Play className="h-16 w-16 text-empowerher-pink mx-auto mb-2" />
-                      <h4 className="font-semibold text-empowerher-pink mb-2">YouTube Video Placeholder</h4>
-                      <p className="text-gray-600 text-sm">Mental Health Tips for Sri Lankan Women</p>
-                    </div>
+                  <h4 className="font-semibold text-primary mb-2">🎥 Mental Health Tips for Sri Lankan Women</h4>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/PkKXl7vSsCo"
+                      title="Mental Health Tips for Women"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
                 </div>
                 <div className="space-y-2 text-sm text-white">
@@ -115,15 +122,16 @@ const SupportPage = () => {
           </section>
 
           {/* Sexual Assault Support */}
-          <section id="assault" className="bg-empowerher-pink p-8 rounded-2xl shadow-sm">
+          <section id="assault" className="bg-primary p-8 rounded-2xl shadow-sm">
             <h2 className="text-3xl font-bold text-white mb-6">💔 Dealing with Sexual Assault</h2>
             
-            {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-white rounded-lg bg-empowerher-pink-light">
-              <div className="text-center">
-                <Upload className="h-12 w-12 text-empowerher-pink mx-auto mb-2" />
-                <p className="text-empowerher-pink-dark">Upload Support Resources Image</p>
-              </div>
+            {/* Support Resources Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&h=400&fit=crop"
+                alt="Support and healing for sexual assault survivors"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
@@ -183,14 +191,20 @@ const SupportPage = () => {
                 </div>
               </div>
               <div>
-                {/* YouTube Video Placeholder */}
+                {/* YouTube Video */}
                 <div className="bg-white p-6 rounded-lg mb-4">
-                  <div className="flex items-center justify-center h-48 bg-empowerher-pink-light rounded-lg">
-                    <div className="text-center">
-                      <Play className="h-16 w-16 text-empowerher-pink mx-auto mb-2" />
-                      <h4 className="font-semibold text-empowerher-pink mb-2">YouTube Video Placeholder</h4>
-                      <p className="text-gray-600 text-sm">Support for Sexual Assault Survivors</p>
-                    </div>
+                  <h4 className="font-semibold text-primary mb-2">🎥 Support for Sexual Assault Survivors</h4>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/pes7H4ECTdw"
+                      title="Support for Sexual Assault Survivors"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
                 </div>
 
@@ -212,15 +226,16 @@ const SupportPage = () => {
           </section>
 
           {/* Toxic Relationships */}
-          <section id="toxic" className="bg-empowerher-pink p-8 rounded-2xl shadow-sm">
+          <section id="toxic" className="bg-primary p-8 rounded-2xl shadow-sm">
             <h2 className="text-3xl font-bold text-white mb-6">💔 Understanding & Escaping Toxic Relationships</h2>
             
-            {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-white rounded-lg bg-empowerher-pink-light">
-              <div className="text-center">
-                <Upload className="h-12 w-12 text-empowerher-pink mx-auto mb-2" />
-                <p className="text-empowerher-pink-dark">Upload Relationship Support Image</p>
-              </div>
+            {/* Relationship Support Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=800&h=400&fit=crop"
+                alt="Breaking free from toxic relationships"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
@@ -261,14 +276,20 @@ const SupportPage = () => {
                 </div>
               </div>
               <div>
-                {/* YouTube Video Placeholder */}
+                {/* YouTube Video */}
                 <div className="bg-white p-6 rounded-lg mb-4">
-                  <div className="flex items-center justify-center h-48 bg-empowerher-pink-light rounded-lg">
-                    <div className="text-center">
-                      <Play className="h-16 w-16 text-empowerher-pink mx-auto mb-2" />
-                      <h4 className="font-semibold text-empowerher-pink mb-2">YouTube Video Placeholder</h4>
-                      <p className="text-gray-600 text-sm">Recognizing and Escaping Toxic Relationships</p>
-                    </div>
+                  <h4 className="font-semibold text-primary mb-2">🎥 Recognizing and Escaping Toxic Relationships</h4>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/kOpaVjCD9Kk"
+                      title="Recognizing Toxic Relationships"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
                 </div>
 
@@ -304,15 +325,16 @@ const SupportPage = () => {
           </section>
 
           {/* Free Counseling */}
-          <section id="counseling" className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">🟢 Online Counselling Platforms (Free & Confidential)</h2>
+          <section id="counseling" className="bg-primary p-8 rounded-2xl shadow-sm">
+            <h2 className="text-3xl font-bold text-white mb-6">🟢 Online Counselling Platforms (Free & Confidential)</h2>
             
-            {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
-              <div className="text-center">
-                <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
-                <p className="text-pastel-rose-dark">Upload Counseling Services Image</p>
-              </div>
+            {/* Counseling Services Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&h=400&fit=crop"
+                alt="Free counseling and therapy services"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -382,28 +404,35 @@ const SupportPage = () => {
               </div>
             </div>
 
-            {/* YouTube Video Placeholder */}
-            <div className="bg-pastel-rose-light p-6 rounded-lg">
-              <div className="flex items-center justify-center h-48 bg-white rounded-lg">
-                <div className="text-center">
-                  <Play className="h-16 w-16 text-pastel-rose mx-auto mb-2" />
-                  <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-                  <p className="text-gray-600 text-sm">How to Access Free Counseling Services</p>
-                </div>
+            {/* YouTube Video */}
+            <div className="bg-white p-6 rounded-lg">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 How to Access Free Counseling Services</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/TTIlai-6kD8"
+                  title="Free Counseling Services"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
           </section>
 
           {/* Financial Independence */}
-          <section id="financial" className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">💼 Skill Building & Financial Independence for Women</h2>
+          <section id="financial" className="bg-primary p-8 rounded-2xl shadow-sm">
+            <h2 className="text-3xl font-bold text-white mb-6">💼 Skill Building & Financial Independence for Women</h2>
             
-            {/* Image Upload Space */}
-            <div className="mb-6 p-6 border-2 border-dashed border-pastel-rose rounded-lg bg-pastel-rose-light">
-              <div className="text-center">
-                <Upload className="h-12 w-12 text-pastel-rose mx-auto mb-2" />
-                <p className="text-pastel-rose-dark">Upload Financial Independence Image</p>
-              </div>
+            {/* Financial Independence Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&h=400&fit=crop"
+                alt="Women's financial independence and empowerment"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -447,14 +476,20 @@ const SupportPage = () => {
                 </div>
               </div>
               <div>
-                {/* YouTube Video Placeholder */}
+                {/* YouTube Video */}
                 <div className="bg-pastel-rose-light p-6 rounded-lg mb-4">
-                  <div className="flex items-center justify-center h-48 bg-white rounded-lg">
-                    <div className="text-center">
-                      <Play className="h-16 w-16 text-pastel-rose mx-auto mb-2" />
-                      <h4 className="font-semibold text-gray-800 mb-2">YouTube Video Placeholder</h4>
-                      <p className="text-gray-600 text-sm">Financial Independence for Sri Lankan Women</p>
-                    </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">🎥 Financial Independence for Sri Lankan Women</h4>
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/aNhfpxY9rP8"
+                      title="Financial Independence for Women"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
                 </div>
 

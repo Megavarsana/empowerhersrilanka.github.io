@@ -1,9 +1,12 @@
+
 import { Button } from "@/components/ui/button";
 import { Heart, Shield, Phone } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
+
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+
   const scrollToSection = (id: string) => {
     // If we're not on the home page, navigate there first
     if (location.pathname !== '/') {
@@ -24,10 +27,12 @@ const Header = () => {
       });
     }
   };
+
   const handleEmergencyHelp = () => {
     // Emergency functionality - could open modal or redirect
     alert("Emergency Services:\n\nPolice: 119\nWomen's Helpline: 1938\nWomen In Need: 011-471-8585");
   };
+
   const handleWhoWeAre = () => {
     // Navigate to home page and scroll to about section
     if (location.pathname !== '/') {
@@ -42,6 +47,7 @@ const Header = () => {
       scrollToSection('about');
     }
   };
+
   const handleWhatWeDo = () => {
     // Navigate to what we do page directly to top
     navigate('/what-we-do');
@@ -52,6 +58,7 @@ const Header = () => {
       });
     }, 100);
   };
+
   const handleGetInvolved = () => {
     // If on home page, scroll to vision-mission, otherwise navigate to home and scroll
     if (location.pathname === '/') {
@@ -66,18 +73,21 @@ const Header = () => {
       }, 100);
     }
   };
+
   const handleLatestNews = () => {
     // Show latest Sri Lankan women empowerment news
-    window.open('https://www.dailynews.lk/tag/women-empowerment', '_blank');
+    window.open('https://www.newsfirst.lk/tag/women-empowerment/', '_blank');
   };
-  return <header className="bg-white shadow-sm">
+
+  return (
+    <header className="bg-white shadow-sm">
       {/* Navigation */}
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             {/* Logo */}
             <div className="w-12 h-12 rounded-lg overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=48&h=48&fit=crop&crop=faces" alt="EmpowerHer Logo" className="w-full h-full object-cover" />
+              <img src="/lovable-uploads/79a278b4-44d4-4f5e-8f41-e0df199a80d2.png" alt="EmpowerHer Logo" className="w-full h-full object-cover" />
             </div>
             <span className="text-2xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>EmpowerHer</span>
             <span className="text-sm font-semibold text-primary tracking-wider">EST. 2025</span>
@@ -133,12 +143,14 @@ const Header = () => {
             {/* Right Side - Hero Image */}
             <div className="flex justify-center">
               <div className="w-full h-96 rounded-lg overflow-hidden shadow-2xl">
-                <img alt="Sri Lankan women empowerment" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600&h=600&fit=crop" />
+                <img alt="Sri Lankan women empowerment" className="w-full h-full object-cover" src="/lovable-uploads/d0564ea2-4caf-4b08-8961-ae609c25ab55.png" />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>;
+    </header>
+  );
 };
+
 export default Header;
