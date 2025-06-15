@@ -63,4 +63,21 @@
   .hero-section {
     background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%);
   }
+
+  /* Enhanced content box styling */
+  .content-box {
+    @apply bg-white rounded-xl shadow-lg p-6 mb-6 border border-gray-100;
+  }
+
+  .content-box-small {
+    @apply bg-white rounded-lg shadow-md p-4 mb-4 border border-gray-50;
+  }
+
+  .info-card {
+    @apply bg-white rounded-lg shadow-sm p-5 border border-gray-100 hover:shadow-md transition-shadow duration-200;
+  }
+
+  .feature-card {
+    @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300;
+  }
 }
