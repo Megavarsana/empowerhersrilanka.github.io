@@ -67,8 +67,42 @@ const SafetyPage = () => {
           </p>
         </div>
 
+        {/* Quick Navigation */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
+          <Button 
+            onClick={() => document.getElementById('emergency-numbers')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+          >
+            📞 Emergency Numbers
+          </Button>
+          <Button 
+            onClick={() => document.getElementById('sos-button')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+          >
+            🚨 SOS Button
+          </Button>
+          <Button 
+            onClick={() => document.getElementById('self-defense')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+          >
+            🛡️ Self Defense
+          </Button>
+          <Button 
+            onClick={() => document.getElementById('safety-apps')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+          >
+            📱 Safety Apps
+          </Button>
+          <Button 
+            onClick={() => document.getElementById('online-safety')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+          >
+            🌐 Online Safety
+          </Button>
+        </div>
+
         {/* 1. Emergency Hotline Numbers */}
-        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="emergency-numbers" className="bg-white rounded-lg shadow-lg mb-8 p-6">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Phone className="h-7 w-7" />
@@ -76,9 +110,13 @@ const SafetyPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {/* Image Upload Space */}
-            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">📸 Image Upload Space - Emergency Contacts Visual</p>
+            {/* Emergency Numbers Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=800&h=300&fit=crop"
+                alt="Emergency hotline numbers for women in Sri Lanka"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="overflow-x-auto">
@@ -101,16 +139,11 @@ const SafetyPage = () => {
                 </tbody>
               </table>
             </div>
-
-            {/* YouTube Video Space */}
-            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">🎥 YouTube Video Space - Emergency Numbers Guide</p>
-            </div>
           </CardContent>
         </Card>
 
         {/* 2. One-Click SOS Button */}
-        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="sos-button" className="bg-white rounded-lg shadow-lg mb-8 p-6">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <AlertTriangle className="h-7 w-7" />
@@ -118,9 +151,13 @@ const SafetyPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {/* Image Upload Space */}
-            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">📸 Image Upload Space - SOS Button Interface</p>
+            {/* SOS Button Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=800&h=300&fit=crop"
+                alt="Emergency SOS button interface for women's safety"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="mb-6">
@@ -191,16 +228,11 @@ const SafetyPage = () => {
                 </ul>
               </div>
             </div>
-
-            {/* YouTube Video Space */}
-            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">🎥 YouTube Video Space - How to Use SOS Features</p>
-            </div>
           </CardContent>
         </Card>
 
         {/* 3. Self-Defense Tips */}
-        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="self-defense" className="bg-white rounded-lg shadow-lg mb-8 p-6">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Shield className="h-7 w-7" />
@@ -208,9 +240,13 @@ const SafetyPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {/* Image Upload Space */}
-            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">📸 Image Upload Space - Self-Defense Techniques</p>
+            {/* Self-Defense Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=300&fit=crop"
+                alt="Women learning self-defense techniques and martial arts"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -258,15 +294,27 @@ const SafetyPage = () => {
               </div>
             </div>
 
-            {/* YouTube Video Space */}
-            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">🎥 YouTube Video Space - Self-Defense Techniques for Women</p>
+            {/* Self-Defense Video */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Self-Defense Techniques for Women</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/KVpxP3ZZtAc"
+                  title="Self-Defense Techniques for Women"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </CardContent>
         </Card>
 
         {/* 4. Safety App Recommendations */}
-        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="safety-apps" className="bg-white rounded-lg shadow-lg mb-8 p-6">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Smartphone className="h-7 w-7" />
@@ -274,9 +322,13 @@ const SafetyPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {/* Image Upload Space */}
-            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">📸 Image Upload Space - Safety Apps Screenshots</p>
+            {/* Safety Apps Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=300&fit=crop"
+                alt="Safety apps and mobile security for women's protection"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="space-y-6">
@@ -288,15 +340,27 @@ const SafetyPage = () => {
               ))}
             </div>
 
-            {/* YouTube Video Space */}
-            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">🎥 YouTube Video Space - Best Safety Apps for Women</p>
+            {/* Safety Apps Video */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Best Safety Apps for Women</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/9VOfskIMtys"
+                  title="Best Safety Apps for Women"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </CardContent>
         </Card>
 
         {/* 5. Online Social Media Safety */}
-        <Card className="bg-white rounded-lg shadow-lg">
+        <Card id="online-safety" className="bg-white rounded-lg shadow-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Users className="h-7 w-7" />
@@ -304,9 +368,13 @@ const SafetyPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {/* Image Upload Space */}
-            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">📸 Image Upload Space - Online Safety Illustration</p>
+            {/* Online Safety Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=300&fit=crop"
+                alt="Online safety and social media security for women"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -381,9 +449,21 @@ const SafetyPage = () => {
               </div>
             </div>
 
-            {/* YouTube Video Space */}
-            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">🎥 YouTube Video Space - Online Safety Tips for Women</p>
+            {/* Online Safety Video */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Online Safety Tips for Women</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/aO858HyFbKI"
+                  title="Online Safety Tips for Women"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </CardContent>
         </Card>

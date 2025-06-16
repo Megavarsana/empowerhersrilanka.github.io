@@ -21,8 +21,42 @@ const SupportPage = () => {
           </p>
         </div>
 
+        {/* Quick Navigation */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
+          <Button 
+            onClick={() => document.getElementById('mental-health')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+          >
+            🌸 Mental Health
+          </Button>
+          <Button 
+            onClick={() => document.getElementById('sexual-assault')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+          >
+            💔 Sexual Assault
+          </Button>
+          <Button 
+            onClick={() => document.getElementById('toxic-relationships')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+          >
+            💔 Toxic Relationships
+          </Button>
+          <Button 
+            onClick={() => document.getElementById('free-counseling')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+          >
+            🟢 Free Counseling
+          </Button>
+          <Button 
+            onClick={() => document.getElementById('financial-independence')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+          >
+            💼 Financial Independence
+          </Button>
+        </div>
+
         {/* 1. Mental Health Tips */}
-        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="mental-health" className="bg-white rounded-lg shadow-lg mb-8 p-6">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Heart className="h-7 w-7" />
@@ -30,9 +64,13 @@ const SupportPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {/* Image Upload Space */}
-            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">📸 Image Upload Space - Mental Health & Wellness</p>
+            {/* Mental Health Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=300&fit=crop"
+                alt="Mental health and wellness support for women"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -91,15 +129,27 @@ const SupportPage = () => {
               </div>
             </div>
 
-            {/* YouTube Video Space */}
-            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">🎥 YouTube Video Space - Mental Health Tips for Women</p>
+            {/* Mental Health Video */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Mental Health Tips for Women</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/PkKXl7vSsCo"
+                  title="Mental Health Tips for Women"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </CardContent>
         </Card>
 
         {/* 2. Dealing with Sexual Assault */}
-        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="sexual-assault" className="bg-white rounded-lg shadow-lg mb-8 p-6">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Shield className="h-7 w-7" />
@@ -107,9 +157,13 @@ const SupportPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {/* Image Upload Space */}
-            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">📸 Image Upload Space - Support & Recovery Resources</p>
+            {/* Sexual Assault Support Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=300&fit=crop"
+                alt="Support and healing for sexual assault survivors"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
@@ -172,15 +226,27 @@ const SupportPage = () => {
               <p className="text-blue-700">Sexual assault is never the victim's fault. Whether or not you choose to report it, you deserve support, care, and justice.</p>
             </div>
 
-            {/* YouTube Video Space */}
-            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">🎥 YouTube Video Space - Support for Sexual Assault Survivors</p>
+            {/* Sexual Assault Support Video */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Support for Sexual Assault Survivors</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/pes7H4ECTdw"
+                  title="Support for Sexual Assault Survivors"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </CardContent>
         </Card>
 
         {/* 3. Understanding & Escaping Toxic Relationships */}
-        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="toxic-relationships" className="bg-white rounded-lg shadow-lg mb-8 p-6">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Users className="h-7 w-7" />
@@ -188,9 +254,13 @@ const SupportPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {/* Image Upload Space */}
-            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">📸 Image Upload Space - Breaking Free from Toxic Relationships</p>
+            {/* Toxic Relationships Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1494790108755-2616c4e20d4b?w=800&h=300&fit=crop"
+                alt="Breaking free from toxic relationships and finding healthy love"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
@@ -235,15 +305,27 @@ const SupportPage = () => {
               <p className="text-green-800 font-medium mt-3">You are not too sensitive. You are not overreacting. You deserve healthy love — safe, respectful, and kind.</p>
             </div>
 
-            {/* YouTube Video Space */}
-            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">🎥 YouTube Video Space - Recognizing and Escaping Toxic Relationships</p>
+            {/* Toxic Relationships Video */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Recognizing and Escaping Toxic Relationships</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/kOpaVjCD9Kk"
+                  title="Recognizing and Escaping Toxic Relationships"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </CardContent>
         </Card>
 
         {/* 4. Online Counselling Platforms */}
-        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="free-counseling" className="bg-white rounded-lg shadow-lg mb-8 p-6">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Lightbulb className="h-7 w-7" />
@@ -251,9 +333,13 @@ const SupportPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {/* Image Upload Space */}
-            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">📸 Image Upload Space - Online Counseling Services</p>
+            {/* Free Counseling Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=300&fit=crop"
+                alt="Free online counseling and therapy services for women"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -316,15 +402,27 @@ const SupportPage = () => {
               </div>
             </div>
 
-            {/* YouTube Video Space */}
-            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">🎥 YouTube Video Space - Free Mental Health Resources</p>
+            {/* Free Counseling Video */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Free Mental Health Resources</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/TTIlai-6kD8"
+                  title="Free Mental Health Resources"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* 5. Skill Building & Financial Independence */}
-        <Card className="bg-white rounded-lg shadow-lg">
+        {/* 5. Financial Independence */}
+        <Card id="financial-independence" className="bg-white rounded-lg shadow-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <DollarSign className="h-7 w-7" />
@@ -332,9 +430,13 @@ const SupportPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {/* Image Upload Space */}
-            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">📸 Image Upload Space - Women's Financial Independence</p>
+            {/* Financial Independence Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=300&fit=crop"
+                alt="Women's financial independence and entrepreneurship"
+                className="w-full h-64 object-cover"
+              />
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
@@ -394,9 +496,21 @@ const SupportPage = () => {
               </div>
             </div>
 
-            {/* YouTube Video Space */}
-            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
-              <p className="text-gray-500">🎥 YouTube Video Space - Financial Independence for Women</p>
+            {/* Financial Independence Video */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Financial Independence for Women</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/aNhfpxY9rP8"
+                  title="Financial Independence for Women"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </CardContent>
         </Card>
