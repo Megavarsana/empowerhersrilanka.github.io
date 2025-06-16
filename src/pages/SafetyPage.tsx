@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { AlertTriangle, Phone, Shield, Heart, Users, Home } from "lucide-react";
+import { AlertTriangle, Phone, Shield, Heart, Users, Home, Smartphone } from "lucide-react";
 import { useState } from "react";
 
 const SafetyPage = () => {
@@ -32,6 +32,26 @@ const SafetyPage = () => {
     alert("🚨 DEMO: This would activate emergency services in a real situation!\n\nContacts:\n• Police: 119\n• Women's Helpline: 1938\n• Ambulance: 1990");
   };
 
+  const emergencyContacts = [
+    { service: "Women's Help Line (Ministry of Women)", number: "1938", description: "24/7 confidential support for women in distress" },
+    { service: "Police Emergency", number: "119", description: "For any emergency including violence or threats" },
+    { service: "National Child Protection Authority (NCPA)", number: "1929", description: "For reporting abuse of girls or minors" },
+    { service: "Suwa Seriya – Ambulance Service", number: "1990", description: "Free emergency ambulance service" },
+    { service: "Legal Aid Commission – Women's Desk", number: "0112 574 167", description: "Free legal advice for women" },
+    { service: "Mithuru Piyasa (Hospital-based GBV Care)", number: "0112 682 535", description: "Gender-based violence support centers in major hospitals" },
+    { service: "Women In Need (WIN)", number: "0114 718 585", description: "Counselling, legal support, shelter, and advocacy for women survivors" },
+    { service: "WIN Emergency Support (24/7)", number: "077 567 8700", description: "Mobile support line for urgent assistance" },
+    { service: "Sri Lanka Red Cross – Psychosocial Support", number: "0112 682 585", description: "Emotional and psychological support" }
+  ];
+
+  const safetyApps = [
+    { name: "Suraksha", description: "Local Sri Lankan App - A women safety app developed in Sri Lanka, Suraksha allows users to quickly send SOS alerts with their live location to emergency contacts. It also includes access to legal support and helplines." },
+    { name: "112 Sri Lanka", description: "Official Emergency Services App - This app lets you contact the Sri Lanka emergency services (Police, Ambulance, Fire Brigade) with a single tap. Women can use it in emergencies to get quick help nationwide." },
+    { name: "bSafe", description: "International Safety App - bSafe offers voice-activated SOS, live GPS tracking, and automatic video/audio recording when you're in danger. It's great for women who travel or work late." },
+    { name: "My Safetipin", description: "Community-Based Safety App - This app rates locations based on safety (lighting, crowd, security, etc.). It helps women avoid unsafe areas and offers safe route suggestions with navigation." },
+    { name: "Life360", description: "Family Locator & Safety App - Though not made just for women, it's excellent for family safety tracking and location sharing." }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-empowerher-pink via-empowerher-pink-medium to-empowerher-pink-dark">
       <Header />
@@ -40,27 +60,81 @@ const SafetyPage = () => {
         {/* Page Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Women's Safety Guide
+            🔐 Women Safety
           </h1>
           <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
             Your safety is our priority. Access emergency resources, learn self-defense, and get immediate help when you need it most.
           </p>
         </div>
 
-        {/* Emergency SOS Section */}
-        <Card className="content-box text-center mb-12">
+        {/* 1. Emergency Hotline Numbers */}
+        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
           <CardHeader>
-            <CardTitle className="text-3xl font-bold text-red-600 flex items-center justify-center gap-3">
-              <AlertTriangle className="h-8 w-8" />
-              Emergency SOS
+            <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
+              <Phone className="h-7 w-7" />
+              1. 📞 Emergency Hotline Numbers for Women – Sri Lanka
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-lg text-gray-700 mb-8">
-              In case of immediate danger, use our emergency SOS system
-            </p>
-            
-            <div className="space-y-4">
+            {/* Image Upload Space */}
+            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+              <p className="text-gray-500">📸 Image Upload Space - Emergency Contacts Visual</p>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr className="bg-empowerher-pink text-white">
+                    <th className="border border-gray-300 p-3 text-left">Service</th>
+                    <th className="border border-gray-300 p-3 text-left">Hotline Number</th>
+                    <th className="border border-gray-300 p-3 text-left">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {emergencyContacts.map((contact, index) => (
+                    <tr key={index} className="hover:bg-gray-50">
+                      <td className="border border-gray-300 p-3 font-medium">{contact.service}</td>
+                      <td className="border border-gray-300 p-3 text-empowerher-pink font-bold text-lg">{contact.number}</td>
+                      <td className="border border-gray-300 p-3 text-gray-700">{contact.description}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* YouTube Video Space */}
+            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+              <p className="text-gray-500">🎥 YouTube Video Space - Emergency Numbers Guide</p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* 2. One-Click SOS Button */}
+        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
+              <AlertTriangle className="h-7 w-7" />
+              2. 🚨 One-Click SOS Button – Ideas & Examples
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            {/* Image Upload Space */}
+            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+              <p className="text-gray-500">📸 Image Upload Space - SOS Button Interface</p>
+            </div>
+
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold text-empowerher-pink mb-3">✅ What is it?</h3>
+              <p className="text-gray-700 mb-4">A One-Click SOS Button is a visible and accessible button on your website that users can click in an emergency. It can:</p>
+              <ul className="list-disc list-inside text-gray-700 space-y-1">
+                <li>Call emergency services</li>
+                <li>Send a message or location to a caregiver or rescue team</li>
+                <li>Trigger an alarm or alert system</li>
+                <li>Open a help form or emergency chatbot</li>
+              </ul>
+            </div>
+
+            <div className="text-center mb-6">
               <Button
                 onMouseDown={handleSOSPress}
                 onMouseUp={handleSOSRelease}
@@ -94,189 +168,222 @@ const SafetyPage = () => {
                 Demo SOS (Safe)
               </Button>
             </div>
-            
-            <p className="text-sm text-gray-600 mt-4">
-              Hold the red button for 3 seconds to activate emergency services
-            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-empowerher-pink mb-3">🔘 Text Examples for the Button</h4>
+                <ul className="text-gray-700 space-y-1">
+                  <li>• 🚨 SOS – Emergency Help</li>
+                  <li>• 🆘 Tap Here for Immediate Help</li>
+                  <li>• 📞 Call for Emergency Assistance</li>
+                  <li>• 🔴 One-Click Rescue</li>
+                  <li>• 📍 Send Location & Alert</li>
+                  <li>• 🛑 Need Help Now? Click Here</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-empowerher-pink mb-3">🎯 Where to Place It</h4>
+                <ul className="text-gray-700 space-y-1">
+                  <li>• Top-right corner of every page</li>
+                  <li>• Floating button on the bottom corner</li>
+                  <li>• Inside a fixed navigation bar</li>
+                  <li>• On the homepage hero section</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* YouTube Video Space */}
+            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+              <p className="text-gray-500">🎥 YouTube Video Space - How to Use SOS Features</p>
+            </div>
           </CardContent>
         </Card>
 
-        {/* Emergency Contacts Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <Card className="content-box-small text-center">
-            <CardContent className="pt-4">
-              <h3 className="font-bold text-empowerher-pink text-2xl">1938</h3>
-              <p className="text-sm text-gray-600">Women's Help Line (Ministry of Women)</p>
-              <p className="text-xs text-gray-500">24/7 confidential support for women in distress</p>
-            </CardContent>
-          </Card>
-
-          <Card className="content-box-small text-center">
-            <CardContent className="pt-4">
-              <h3 className="font-bold text-empowerher-pink text-2xl">119</h3>
-              <p className="text-sm text-gray-600">Police Emergency</p>
-              <p className="text-xs text-gray-500">For any emergency including violence or threats</p>
-            </CardContent>
-          </Card>
-
-          <Card className="content-box-small text-center">
-            <CardContent className="pt-4">
-              <h3 className="font-bold text-empowerher-pink text-2xl">1929</h3>
-              <p className="text-sm text-gray-600">National Child Protection Authority (NCPA)</p>
-              <p className="text-xs text-gray-500">For reporting abuse of girls or minors</p>
-            </CardContent>
-          </Card>
-
-          <Card className="content-box-small text-center">
-            <CardContent className="pt-4">
-              <h3 className="font-bold text-empowerher-pink text-2xl">1990</h3>
-              <p className="text-sm text-gray-600">Suwa Seriya – Ambulance Service</p>
-              <p className="text-xs text-gray-500">Free emergency ambulance service</p>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Additional Services */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <Card className="content-box">
-            <CardHeader>
-              <CardTitle className="text-xl font-bold text-empowerher-pink">Legal Aid Commission – Women's Desk</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700 mb-4">Free legal aid for women facing violence, harassment, or discrimination</p>
-              <div className="space-y-2">
-                <p className="text-sm"><strong>Phone:</strong> 011-2323-108</p>
-                <p className="text-sm"><strong>Address:</strong> No. 39, Kirula Road, Colombo 05</p>
-                <p className="text-sm"><strong>Services:</strong> Legal advice, court representation, mediation</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="content-box">
-            <CardHeader>
-              <CardTitle className="text-xl font-bold text-empowerher-pink">Mithuru Piyasa (Hospital-based GBV Care)</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700 mb-4">Specialized care units in hospitals for survivors of gender-based violence</p>
-              <div className="space-y-2">
-                <p className="text-sm"><strong>Available at:</strong> Major hospitals island-wide</p>
-                <p className="text-sm"><strong>Services:</strong> Medical care, counseling, legal support</p>
-                <p className="text-sm"><strong>Hotline:</strong> 071-911-4444</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Personal Safety Tips */}
-        <Card className="content-box mb-12">
+        {/* 3. Self-Defense Tips */}
+        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Shield className="h-7 w-7" />
-              Personal Safety Tips
+              3. 🛡️ Self-Defense Tips for Women
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold text-lg mb-4 text-empowerher-pink">At Home:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <Home className="h-4 w-4 mt-1 text-empowerher-pink flex-shrink-0" />
-                    <span>Keep doors and windows locked, especially at night</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Home className="h-4 w-4 mt-1 text-empowerher-pink flex-shrink-0" />
-                    <span>Install good lighting around your home entrance</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Home className="h-4 w-4 mt-1 text-empowerher-pink flex-shrink-0" />
-                    <span>Don't open the door to strangers - verify identity first</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Home className="h-4 w-4 mt-1 text-empowerher-pink flex-shrink-0" />
-                    <span>Keep emergency numbers saved and easily accessible</span>
-                  </li>
+            {/* Image Upload Space */}
+            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+              <p className="text-gray-500">📸 Image Upload Space - Self-Defense Techniques</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-empowerher-pink mb-3">✅ Awareness & Prevention</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>• 🔍 Stay alert to your surroundings, especially in unfamiliar or isolated areas.</li>
+                  <li>• 🎧 Avoid using headphones at full volume or being glued to your phone while walking alone.</li>
+                  <li>• 🚷 Trust your instincts — if something feels off, remove yourself from the situation.</li>
+                  <li>• 🚖 Use safe, well-reviewed transportation apps or services.</li>
+                  <li>• 🗺️ Let someone know your location or plans when going out alone.</li>
                 </ul>
               </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-4 text-empowerher-pink">In Public:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <Users className="h-4 w-4 mt-1 text-empowerher-pink flex-shrink-0" />
-                    <span>Stay alert and aware of your surroundings</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Users className="h-4 w-4 mt-1 text-empowerher-pink flex-shrink-0" />
-                    <span>Walk confidently and make eye contact with others</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Users className="h-4 w-4 mt-1 text-empowerher-pink flex-shrink-0" />
-                    <span>Avoid isolated areas, especially after dark</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Users className="h-4 w-4 mt-1 text-empowerher-pink flex-shrink-0" />
-                    <span>Trust your instincts - if something feels wrong, leave</span>
-                  </li>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-empowerher-pink mb-3">👜 Practical Everyday Habits</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>• 🧤 Keep keys between your fingers when walking at night for quick defense.</li>
+                  <li>• 👜 Carry your bag in a way that's difficult to snatch (e.g., cross-body with zipper inward).</li>
+                  <li>• 🔐 Lock your car doors immediately upon entering.</li>
+                  <li>• 🧯 Carry a personal safety item: pepper spray, mini alarm, or a whistle.</li>
+                  <li>• 📱 Enable emergency features on your phone (SOS mode, emergency contact).</li>
                 </ul>
               </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-empowerher-pink mb-3">🥋 Physical Self-Defense Tips</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>• 🦵 Aim for vulnerable areas: eyes, nose, throat, groin, knees.</li>
+                  <li>• ✊ Learn basic strikes: palm strike, elbow strike, and knee to groin.</li>
+                  <li>• 🏃 Don't focus on fighting — focus on escaping. The goal is to get away, not win.</li>
+                  <li>• 🧘 Practice yelling firmly like "STOP!" to shock and alert others.</li>
+                  <li>• 🥋 Consider taking a self-defense class or martial art (e.g., Krav Maga, Jiu-Jitsu).</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-empowerher-pink mb-3">🚨 In a Dangerous Situation</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>• 🚪 Always identify exits in buildings, clubs, or transport vehicles.</li>
+                  <li>• 🤳 Discreetly start recording or go live if you feel unsafe.</li>
+                  <li>• 📢 Use distraction to your advantage — throw something, make noise, or create confusion to escape.</li>
+                  <li>• 🚗 Avoid parking next to vans or in isolated areas, especially at night.</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* YouTube Video Space */}
+            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+              <p className="text-gray-500">🎥 YouTube Video Space - Self-Defense Techniques for Women</p>
             </div>
           </CardContent>
         </Card>
 
-        {/* Self-Defense Resources */}
-        <Card className="content-box mb-12">
+        {/* 4. Safety App Recommendations */}
+        <Card className="bg-white rounded-lg shadow-lg mb-8 p-6">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-empowerher-pink">Self-Defense Classes in Sri Lanka</CardTitle>
+            <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
+              <Smartphone className="h-7 w-7" />
+              4. Safety App Recommendations
+            </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <h3 className="font-semibold text-empowerher-pink mb-2">Colombo Self-Defense Academy</h3>
-                <p className="text-sm text-gray-700 mb-2">Mixed martial arts and self-defense for women</p>
-                <p className="text-xs text-gray-600">Location: Colombo 03</p>
-                <p className="text-xs text-gray-600">Contact: 011-2578-945</p>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <h3 className="font-semibold text-empowerher-pink mb-2">Karate-Do Sri Lanka</h3>
-                <p className="text-sm text-gray-700 mb-2">Traditional karate training with women's classes</p>
-                <p className="text-xs text-gray-600">Multiple locations</p>
-                <p className="text-xs text-gray-600">Visit: karate.lk</p>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <h3 className="font-semibold text-empowerher-pink mb-2">Women's Self-Defense Workshops</h3>
-                <p className="text-sm text-gray-700 mb-2">Monthly workshops by local police stations</p>
-                <p className="text-xs text-gray-600">Contact local police for schedules</p>
-                <p className="text-xs text-gray-600">Usually free of charge</p>
-              </div>
+            {/* Image Upload Space */}
+            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+              <p className="text-gray-500">📸 Image Upload Space - Safety Apps Screenshots</p>
+            </div>
+
+            <div className="space-y-6">
+              {safetyApps.map((app, index) => (
+                <div key={index} className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold text-empowerher-pink text-lg mb-2">{index + 1}. {app.name}</h4>
+                  <p className="text-gray-700">{app.description}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* YouTube Video Space */}
+            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+              <p className="text-gray-500">🎥 YouTube Video Space - Best Safety Apps for Women</p>
             </div>
           </CardContent>
         </Card>
 
-        {/* Digital Safety */}
-        <Card className="content-box">
+        {/* 5. Online Social Media Safety */}
+        <Card className="bg-white rounded-lg shadow-lg">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-empowerher-pink">Digital Safety & Online Protection</CardTitle>
+            <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
+              <Users className="h-7 w-7" />
+              5. 🌐 Online Social Media Safety Tips for Women
+            </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold text-lg mb-4 text-empowerher-pink">Social Media Safety:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• Don't share personal information (address, phone, location)</li>
-                  <li>• Use privacy settings to control who sees your posts</li>
-                  <li>• Be cautious about accepting friend requests from strangers</li>
-                  <li>• Report and block users who harass or threaten you</li>
-                </ul>
+            {/* Image Upload Space */}
+            <div className="mb-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+              <p className="text-gray-500">📸 Image Upload Space - Online Safety Illustration</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-empowerher-pink mb-2">🌐 1. Control Your Privacy Settings</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Limit visibility of your posts to friends or followers you trust.</li>
+                    <li>• Disable location sharing unless absolutely necessary.</li>
+                    <li>• Review tag settings to approve posts you're tagged in before they appear publicly.</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-empowerher-pink mb-2">👩‍💻 2. Be Selective with Friend/Follow Requests</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Avoid accepting requests from unknown accounts or people with no mutual connections.</li>
+                    <li>• Watch for fake profiles (e.g., no posts, few followers, stolen photos).</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-empowerher-pink mb-2">🗝️ 3. Use Strong, Unique Passwords</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Use a long password with letters, numbers, and symbols.</li>
+                    <li>• Never reuse passwords across accounts.</li>
+                    <li>• Enable 2-factor authentication (2FA) for extra protection.</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-empowerher-pink mb-2">🚫 4. Think Before You Share</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Avoid posting personal schedule, school/workplace locations, phone numbers or addresses</li>
+                    <li>• Even deleted posts can be screenshotted or archived.</li>
+                  </ul>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-4 text-empowerher-pink">Online Dating Safety:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• Meet in public places for first dates</li>
-                  <li>• Tell a friend where you're going and when you'll be back</li>
-                  <li>• Trust your instincts about people</li>
-                  <li>• Don't share financial information</li>
-                </ul>
+
+              <div className="space-y-4">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-empowerher-pink mb-2">📵 5. Block & Report Harassers</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Don't hesitate to block, mute, or report anyone who makes you uncomfortable.</li>
+                    <li>• Take screenshots of inappropriate behavior for evidence.</li>
+                    <li>• Use platform tools like "Restrict" (on Instagram) to quietly limit someone.</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-empowerher-pink mb-2">🧠 6. Stay Informed About Scams & Catfishing</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Be cautious of people who ask for money or personal information</li>
+                    <li>• Reverse image search suspicious profile photos.</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-empowerher-pink mb-2">📲 7. Avoid Sharing Sensitive Media</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• If you must share personal content, use end-to-end encrypted platforms (like Signal)</li>
+                    <li>• Be aware it can still be saved or misused</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-empowerher-pink mb-2">🛡️ 8. Review App Permissions</h4>
+                  <ul className="text-gray-700 text-sm space-y-1">
+                    <li>• Regularly check what apps have access to your location, camera/mic, contacts and gallery</li>
+                  </ul>
+                </div>
               </div>
+            </div>
+
+            {/* YouTube Video Space */}
+            <div className="mt-6 p-8 border-2 border-dashed border-gray-300 rounded-lg text-center bg-gray-50">
+              <p className="text-gray-500">🎥 YouTube Video Space - Online Safety Tips for Women</p>
             </div>
           </CardContent>
         </Card>
