@@ -20,7 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'poppins': ['Poppins', 'sans-serif'],
+				'georgia': ['Georgia', 'serif'],
+				'sans': ['Georgia', 'serif'], // Make Georgia the default sans font
 			},
 			colors: {
 				border: 'hsl(var(--border))',
