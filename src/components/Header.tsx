@@ -8,12 +8,10 @@ const Header = () => {
   const location = useLocation();
 
   const scrollToSection = (id: string) => {
-    // If we're not on the home page, navigate there first
     if (location.pathname !== '/') {
       navigate('/', {
         replace: true
       });
-      // Wait a bit for navigation, then scroll
       setTimeout(() => {
         const element = document.getElementById(id);
         element?.scrollIntoView({
@@ -29,12 +27,10 @@ const Header = () => {
   };
 
   const handleEmergencyHelp = () => {
-    // Emergency functionality - could open modal or redirect
     alert("Emergency Services:\n\nPolice: 119\nWomen's Helpline: 1938\nWomen In Need: 011-471-8585");
   };
 
   const handleWhoWeAre = () => {
-    // Navigate to home page and scroll to about section
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
@@ -49,7 +45,6 @@ const Header = () => {
   };
 
   const handleWhatWeDo = () => {
-    // Navigate to what we do page directly to top
     navigate('/what-we-do');
     setTimeout(() => {
       window.scrollTo({
@@ -60,7 +55,6 @@ const Header = () => {
   };
 
   const handleGetInvolved = () => {
-    // If on home page, scroll to vision-mission, otherwise navigate to home and scroll
     if (location.pathname === '/') {
       scrollToSection('vision-mission');
     } else {
@@ -75,7 +69,6 @@ const Header = () => {
   };
 
   const handleLatestNews = () => {
-    // Show latest Sri Lankan women empowerment news
     window.open('https://www.newsfirst.lk/tag/women-empowerment/', '_blank');
   };
 
@@ -90,7 +83,6 @@ const Header = () => {
               <img src="/lovable-uploads/79a278b4-44d4-4f5e-8f41-e0df199a80d2.png" alt="EmpowerHer Logo" className="w-full h-full object-cover" />
             </div>
             <span className="text-2xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>EmpowerHer</span>
-            <span className="text-sm font-semibold text-primary tracking-wider">EST. 2025</span>
           </div>
           
           <div className="hidden md:flex space-x-8">
@@ -121,9 +113,6 @@ const Header = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
             <div className="text-left">
-              <p className="text-sm font-semibold text-white mb-4 tracking-wider">
-                EST. 2025
-              </p>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
                 WE FUND<br />
                 BOLD, FEMINIST<br />

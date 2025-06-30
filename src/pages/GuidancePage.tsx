@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -44,36 +43,41 @@ const GuidancePage = () => {
 
         {/* Quick Navigation */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
-          <Button 
+          <button 
             onClick={() => document.getElementById('learning-platforms')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
           >
-            📚 Learning Platforms
-          </Button>
-          <Button 
+            <BookOpen className="h-4 w-4" />
+            Learning Platforms
+          </button>
+          <button 
             onClick={() => document.getElementById('government-programs')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
           >
-            🏛️ Gov Programs
-          </Button>
-          <Button 
+            <Building className="h-4 w-4" />
+            Gov Programs
+          </button>
+          <button 
             onClick={() => document.getElementById('find-mentor')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
           >
-            🤝 Find Mentor
-          </Button>
-          <Button 
+            <Users className="h-4 w-4" />
+            Find Mentor
+          </button>
+          <button 
             onClick={() => document.getElementById('start-business')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
           >
-            🚀 Start Business
-          </Button>
-          <Button 
+            <Lightbulb className="h-4 w-4" />
+            Start Business
+          </button>
+          <button 
             onClick={() => document.getElementById('featured-women')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
           >
-            🌟 Featured Women
-          </Button>
+            <Star className="h-4 w-4" />
+            Featured Women
+          </button>
         </div>
 
         {/* 1. Free Online Learning Platforms */}

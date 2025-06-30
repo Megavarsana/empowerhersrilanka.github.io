@@ -12,7 +12,7 @@ const MainTopicsSection = () => {
       title: "WOMEN'S SAFETY",
       subtitle: "Emergency help, safety apps & self-defense tips",
       icon: Shield,
-      bgColor: "bg-primary", // Pink background
+      bgColor: "bg-primary",
       iconColor: "text-white",
       textColor: "text-white",
       route: "/safety"
@@ -32,7 +32,7 @@ const MainTopicsSection = () => {
       title: "GUIDANCE & PASSION SUPPORT",
       subtitle: "Free learning, business help, and career coaching",
       icon: Lightbulb,
-      bgColor: "bg-primary", // Pink background
+      bgColor: "bg-primary",
       iconColor: "text-white",
       textColor: "text-white",
       route: "/guidance"
@@ -41,16 +41,14 @@ const MainTopicsSection = () => {
 
   const handleTopicClick = (route: string) => {
     navigate(route);
-    // Scroll to top after navigation
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 100);
   };
 
   const handleLearnMoreClick = (e: React.MouseEvent, route: string) => {
-    e.stopPropagation(); // Prevent the card click event
+    e.stopPropagation();
     navigate(route);
-    // Scroll to top after navigation
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 100);
@@ -90,7 +88,7 @@ const MainTopicsSection = () => {
                 <div className="mt-6">
                   <button 
                     onClick={(e) => handleLearnMoreClick(e, topic.route)}
-                    className={`${topic.bgColor === 'bg-primary' ? 'bg-white text-primary' : 'bg-white text-gray-800'} px-6 py-2 rounded-full font-medium hover:bg-gray-50 transition-colors cursor-pointer`}
+                    className="bg-white text-gray-800 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors cursor-pointer shadow-sm border border-gray-200"
                   >
                     Learn More →
                   </button>

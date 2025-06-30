@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,7 +12,6 @@ const SafetyPage = () => {
   const handleSOSPress = () => {
     setSosPressed(true);
     const timer = setTimeout(() => {
-      // Actual SOS functionality
       alert("🚨 EMERGENCY ALERT ACTIVATED!\n\nContacting emergency services:\n• Police: 119\n• Women's Helpline: 1938\n• Ambulance: 1990");
       setSosPressed(false);
     }, 3000);
@@ -69,36 +67,41 @@ const SafetyPage = () => {
 
         {/* Quick Navigation */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
-          <Button 
+          <button 
             onClick={() => document.getElementById('emergency-numbers')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
           >
-            📞 Emergency Numbers
-          </Button>
-          <Button 
+            <Phone className="h-4 w-4" />
+            Emergency Numbers
+          </button>
+          <button 
             onClick={() => document.getElementById('sos-button')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
           >
-            🚨 SOS Button
-          </Button>
-          <Button 
+            <AlertTriangle className="h-4 w-4" />
+            One-Click SOS
+          </button>
+          <button 
             onClick={() => document.getElementById('self-defense')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
           >
-            🛡️ Self Defense
-          </Button>
-          <Button 
+            <Shield className="h-4 w-4" />
+            Self-Defense Tips
+          </button>
+          <button 
             onClick={() => document.getElementById('safety-apps')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
           >
-            📱 Safety Apps
-          </Button>
-          <Button 
+            <Smartphone className="h-4 w-4" />
+            Safety Apps
+          </button>
+          <button 
             onClick={() => document.getElementById('online-safety')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
           >
-            🌐 Online Safety
-          </Button>
+            <Users className="h-4 w-4" />
+            Online Safety
+          </button>
         </div>
 
         {/* 1. Emergency Hotline Numbers */}
