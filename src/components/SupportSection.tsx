@@ -59,7 +59,7 @@ const SupportSection = () => {
             </CardHeader>
             <CardContent>
               {/* Mental Health Image */}
-              <div className="mb-6 rounded-lg overflow-hidden">
+              <div className="mb-6 rounded-lg overflow-hidden bg-background">
                 <img 
                   src="/lovable-uploads/9f0e6720-319e-49cb-a351-a1f2822af4d0.png?v=2"
                   alt="Mental health and wellness support for women"
@@ -105,7 +105,7 @@ const SupportSection = () => {
             </CardHeader>
             <CardContent>
               {/* Sexual Assault Support Image */}
-              <div className="mb-6 rounded-lg overflow-hidden">
+              <div className="mb-6 rounded-lg overflow-hidden bg-background">
                 <img 
                   src="/lovable-uploads/6f851b04-c942-4a46-98c4-d73ffcb876f7.png?v=2"
                   alt="Support and healing for sexual assault survivors"
@@ -196,7 +196,7 @@ const SupportSection = () => {
             </CardHeader>
             <CardContent>
               {/* Toxic Relationship Image */}
-              <div className="mb-6 rounded-lg overflow-hidden">
+              <div className="mb-6 rounded-lg overflow-hidden bg-background">
                 <img 
                   src="/lovable-uploads/c7370276-44e5-44cd-a7ed-20623b130f51.png?v=2"
                   alt="Breaking free from toxic relationships"
@@ -255,7 +255,7 @@ const SupportSection = () => {
             </CardHeader>
             <CardContent>
               {/* Free Counseling Image */}
-              <div className="mb-6 rounded-lg overflow-hidden">
+              <div className="mb-6 rounded-lg overflow-hidden bg-background">
                 <img 
                   src="/lovable-uploads/04b5f0eb-a90b-44b6-b7df-d4adec4d504e.png?v=2"
                   alt="Free counseling and therapy services"
@@ -320,7 +320,7 @@ const SupportSection = () => {
           </CardHeader>
           <CardContent>
             {/* Financial Independence Image */}
-            <div className="mb-6 rounded-lg overflow-hidden">
+            <div className="mb-6 rounded-lg overflow-hidden bg-background">
               <img 
                 src="/lovable-uploads/b566ae7e-a75a-4eca-a04b-ea676a96bc12.png?v=2"
                 alt="Women's financial independence and empowerment"
