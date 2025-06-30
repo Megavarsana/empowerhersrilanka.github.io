@@ -3,11 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* EmpowerHer Design System - Vibrant Pink/Magenta Theme */
+/* EmpowerHer Design System - Pastel Professional Theme */
 
 @layer base {
   :root {
-    --background: 330 15% 97%; /* very light pink background */
+    --background: 32 20% 96%; /* soft pastel nude background */
     --foreground: 30 10% 25%; /* dark brown for text */
 
     --card: 0 0% 100%; /* pure white for cards */
@@ -16,26 +16,26 @@
     --popover: 0 0% 100%;
     --popover-foreground: 30 10% 25%;
 
-    --primary: 330 85% 55%; /* vibrant pink/magenta */
-    --primary-foreground: 0 0% 100%;
+    --primary: 330 45% 75%; /* soft pastel pink */
+    --primary-foreground: 30 10% 25%;
 
-    --secondary: 330 70% 85%; /* light pink */
+    --secondary: 35 25% 88%; /* pastel pearl */
     --secondary-foreground: 30 10% 25%;
 
-    --muted: 330 20% 90%;
+    --muted: 40 15% 90%; /* pastel khaki */
     --muted-foreground: 30 10% 50%;
 
-    --accent: 330 75% 65%; /* medium pink */
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 20% 85%; /* pastel sand */
+    --accent-foreground: 30 10% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 75%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 330 25% 85%;
-    --input: 330 25% 85%;
-    --ring: 330 85% 55%;
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 330 45% 75%;
 
-    --radius: 1rem;
+    --radius: 1.5rem;
   }
 
   * {
@@ -43,41 +43,105 @@
   }
 
   body {
-    @apply bg-background text-foreground font-poppins;
+    @apply bg-background text-foreground font-inter;
+    background: linear-gradient(135deg, #F5F1ED 0%, #F0EBE6 50%, #EBE5DD 100%);
+    min-height: 100vh;
   }
 }
 
 @layer components {
   .gradient-bg {
-    background: linear-gradient(135deg, #E91E63 0%, #C2185B 50%, #AD1457 100%);
+    background: linear-gradient(135deg, #E8BEAC 0%, #D4A574 50%, #C2956B 100%);
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    @apply transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02];
   }
   
   .section-spacing {
-    @apply py-16 px-4;
+    @apply py-20 px-6;
   }
 
   .hero-section {
-    background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%);
+    background: linear-gradient(135deg, #E8BEAC 0%, #D4A574 100%);
   }
 
-  /* Enhanced content box styling */
+  /* Enhanced content box styling with 2xl rounded corners */
   .content-box {
-    @apply bg-white rounded-xl shadow-lg p-6 mb-6 border border-gray-100;
+    @apply bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-100 backdrop-blur-sm;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
   }
 
   .content-box-small {
-    @apply bg-white rounded-lg shadow-md p-4 mb-4 border border-gray-50;
+    @apply bg-white rounded-xl shadow-lg p-6 mb-6 border border-gray-50 backdrop-blur-sm;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   }
 
   .info-card {
-    @apply bg-white rounded-lg shadow-sm p-5 border border-gray-100 hover:shadow-md transition-shadow duration-200;
+    @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1;
   }
 
   .feature-card {
-    @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300;
+    @apply bg-white rounded-2xl shadow-xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02];
+  }
+
+  /* Fixed header styling */
+  .fixed-header {
+    @apply fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-lg transition-all duration-300;
+  }
+
+  /* Smooth scroll animations */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .fade-in-up.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Interactive button enhancements */
+  .btn-enhanced {
+    @apply px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+
+  /* Professional footer styling */
+  .footer-enhanced {
+    background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
+    @apply text-white py-16;
   }
 }
+
+/* Typography enhancements */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  @apply font-semibold;
+}
+
+body, p, span, div {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Scroll animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Stagger animations */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }

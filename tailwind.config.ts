@@ -20,6 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
 				'poppins': ['Poppins', 'sans-serif'],
 			},
 			colors: {
@@ -56,18 +58,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// EmpowerHer vibrant pink/magenta color palette
-				'empowerher-pink': '#E91E63',
-				'empowerher-pink-light': '#F8BBD9',
-				'empowerher-pink-medium': '#F06292',
-				'empowerher-pink-dark': '#C2185B',
-				'empowerher-pink-darker': '#AD1457',
-				'soft-white': '#FCFAF7',
-				// Legacy mulberry colors mapped to pink equivalents
-				'mulberry': '#E91E63',
-				'mulberry-light': '#F8BBD9',
-				'mulberry-medium': '#F06292',
-				'mulberry-dark': '#C2185B',
+				// Enhanced pastel color palette
+				'pastel-nude': '#F5F1ED',
+				'pastel-pearl': '#F0EBE6',
+				'pastel-khaki': '#EBE5DD',
+				'pastel-sand': '#E6DFD4',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -101,6 +96,16 @@ export default {
 						transform: 'translateY(0)'
 					}
 				},
+				'fadeInUp': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
 				'gentle-float': {
 					'0%, 100%': {
 						transform: 'translateY(0px)'
@@ -114,7 +119,11 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
+				'fadeInUp': 'fadeInUp 0.8s ease-out forwards',
 				'gentle-float': 'gentle-float 3s ease-in-out infinite',
+			},
+			boxShadow: {
+				'3xl': '0 35px 60px -12px rgba(0, 0, 0, 0.25)',
 			}
 		}
 	},
