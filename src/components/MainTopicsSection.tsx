@@ -30,9 +30,10 @@ const MainTopicsSection = () => {
       title: "WOMEN'S SAFETY",
       subtitle: "Emergency help, safety apps & self-defense tips",
       icon: Shield,
-      bgColor: "bg-gradient-to-br from-rose-200 to-pink-300",
-      iconColor: "text-rose-600",
+      bgColor: "bg-gradient-to-br from-red-100 to-red-200",
+      iconColor: "text-red-600",
       textColor: "text-gray-800",
+      subtitleColor: "text-red-700",
       route: "/safety"
     },
     {
@@ -40,9 +41,10 @@ const MainTopicsSection = () => {
       title: "SUPPORT FOR WOMEN'S PROBLEMS",
       subtitle: "Mental health, abuse, toxic relationships, sexual assault",
       icon: Heart,
-      bgColor: "bg-gradient-to-br from-orange-200 to-amber-300",
-      iconColor: "text-orange-600",
+      bgColor: "bg-gradient-to-br from-pink-100 to-pink-200",
+      iconColor: "text-pink-600",
       textColor: "text-gray-800",
+      subtitleColor: "text-pink-700",
       route: "/support"
     },
     {
@@ -50,9 +52,10 @@ const MainTopicsSection = () => {
       title: "GUIDANCE & PASSION SUPPORT",
       subtitle: "Free learning, business help, and career coaching",
       icon: Lightbulb,
-      bgColor: "bg-gradient-to-br from-yellow-200 to-orange-300",
+      bgColor: "bg-gradient-to-br from-yellow-100 to-yellow-200",
       iconColor: "text-yellow-600",
       textColor: "text-gray-800",
+      subtitleColor: "text-yellow-700",
       route: "/guidance"
     }
   ];
@@ -75,18 +78,14 @@ const MainTopicsSection = () => {
   return (
     <section 
       id="main-topics" 
-      className="section-spacing"
-      style={{
-        background: "url('/lovable-uploads/3ff5a7da-2504-4163-889a-f2a783fcabfc.png')",
-        backgroundSize: "cover"
-      }}
+      className="section-spacing main-topics-white-bg"
     >
       <div className="container mx-auto">
         <div className={`text-center mb-16 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             How We Support You
           </h2>
-          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Click on any area below to access comprehensive resources and support tailored for Sri Lankan women
           </p>
         </div>
@@ -112,7 +111,7 @@ const MainTopicsSection = () => {
                   <h3 className={`text-2xl font-bold mb-6 ${topic.textColor}`}>
                     {topic.title}
                   </h3>
-                  <p className={`leading-relaxed text-lg ${topic.textColor} opacity-90 mb-8`}>
+                  <p className={`leading-relaxed text-lg ${topic.subtitleColor} mb-8`}>
                     {topic.subtitle}
                   </p>
                 </div>
@@ -120,7 +119,7 @@ const MainTopicsSection = () => {
                 <div className="relative z-10">
                   <button 
                     onClick={(e) => handleLearnMoreClick(e, topic.route)}
-                    className="bg-white text-gray-800 px-8 py-3 rounded-full font-semibold hover:bg-gray-50 transition-all duration-300 cursor-pointer transform hover:scale-105 shadow-md hover:shadow-lg"
+                    className="bg-gray-800 text-white px-6 py-2 rounded-md font-medium hover:bg-gray-700 transition-all duration-300 cursor-pointer"
                   >
                     Learn More →
                   </button>

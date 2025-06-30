@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* EmpowerHer Design System - Original Color Theme */
+/* EmpowerHer Design System - Vibrant Pink Theme */
 
 @layer base {
   :root {
@@ -16,8 +16,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 30 10% 25%;
 
-    --primary: 330 45% 75%; /* soft pastel pink */
-    --primary-foreground: 30 10% 25%;
+    --primary: 330 85% 55%; /* vibrant pink */
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 35 25% 88%; /* pastel pearl */
     --secondary-foreground: 30 10% 25%;
@@ -33,9 +33,15 @@
 
     --border: 35 20% 85%;
     --input: 35 20% 85%;
-    --ring: 330 45% 75%;
+    --ring: 330 85% 55%;
 
     --radius: 1.5rem;
+
+    /* EmpowerHer Custom Colors */
+    --empowerher-pink: #E91E63;
+    --empowerher-pink-light: #FCE4EC;
+    --empowerher-pink-medium: #F8BBD9;
+    --empowerher-pink-dark: #AD1457;
   }
 
   * {
@@ -44,8 +50,7 @@
 
   body {
     @apply bg-background text-foreground font-inter;
-    background: url('/lovable-uploads/3ff5a7da-2504-4163-889a-f2a783fcabfc.png');
-    background-size: cover;
+    background: linear-gradient(135deg, #E91E63, #AD1457);
     background-attachment: fixed;
     min-height: 100vh;
   }
@@ -53,7 +58,7 @@
 
 @layer components {
   .gradient-bg {
-    background: url('/lovable-uploads/3ff5a7da-2504-4163-889a-f2a783fcabfc.png');
+    background: linear-gradient(135deg, #E91E63, #AD1457);
     background-size: cover;
   }
   
@@ -66,7 +71,7 @@
   }
 
   .hero-section {
-    background: url('/lovable-uploads/3ff5a7da-2504-4163-889a-f2a783fcabfc.png');
+    background: linear-gradient(135deg, #E91E63, #AD1457);
     background-size: cover;
   }
 
@@ -110,9 +115,14 @@
 
   /* Professional footer styling */
   .footer-enhanced {
-    background: url('/lovable-uploads/3ff5a7da-2504-4163-889a-f2a783fcabfc.png');
+    background: linear-gradient(135deg, #E91E63, #AD1457);
     background-size: cover;
     @apply text-white py-16;
+  }
+
+  /* Main topics section styling */
+  .main-topics-white-bg {
+    @apply bg-white;
   }
 }
 
