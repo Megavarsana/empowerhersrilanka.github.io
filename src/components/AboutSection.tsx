@@ -30,8 +30,8 @@ const AboutSection = () => {
           <div className="flex justify-center">
             <div className="bg-empowerher-pink-light p-8 rounded-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
-                alt="Sri Lankan women empowerment"
+                src="/lovable-uploads/051fdfd8-c00a-44a6-a88f-1b8189d9f108.png" 
+                alt="Professional woman working - About EmpowerHer"
                 className="w-full h-64 object-cover rounded-lg"
               />
               <p className="text-center text-gray-600 text-sm mt-4 italic">

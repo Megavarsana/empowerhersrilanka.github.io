@@ -22,8 +22,8 @@ const VisionMissionSection = () => {
             </p>
             <div className="bg-empowerher-pink-light p-4 rounded-lg">
               <img 
-                src="https://images.unsplash.com/photo-1518495973542-4542c06a5843" 
-                alt="Sri Lankan women's empowerment vision"
+                src="/lovable-uploads/31319238-8cf3-43de-81d1-26933266978f.png" 
+                alt="Our vision - We are powerful"
                 className="w-full h-48 object-cover rounded-lg"
               />
             </div>
@@ -43,11 +43,12 @@ const VisionMissionSection = () => {
               development resources. We are committed to breaking barriers and creating 
               pathways for women to achieve their full potential.
             </p>
-            <div className="bg-empowerher-pink-medium p-6 rounded-lg text-center">
-              <Target className="h-16 w-16 text-empowerher-pink-dark mx-auto mb-4" />
-              <p className="text-gray-700 font-medium">
-                Empowering Through Action
-              </p>
+            <div className="bg-empowerher-pink-light p-4 rounded-lg">
+              <img 
+                src="/lovable-uploads/f59659b1-dc75-4c9f-bc5d-4e50c0d56230.png" 
+                alt="Our mission - Women empowerment"
+                className="w-full h-48 object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
