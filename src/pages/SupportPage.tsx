@@ -1,4 +1,5 @@
 
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -25,31 +26,31 @@ const SupportPage = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
           <Button 
             onClick={() => document.getElementById('mental-health')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white hover:bg-gray-50 text-black border-none"
           >
             🌸 Mental Health
           </Button>
           <Button 
             onClick={() => document.getElementById('sexual-assault')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white hover:bg-gray-50 text-black border-none"
           >
             💔 Sexual Assault
           </Button>
           <Button 
             onClick={() => document.getElementById('toxic-relationships')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white hover:bg-gray-50 text-black border-none"
           >
             💔 Toxic Relationships
           </Button>
           <Button 
             onClick={() => document.getElementById('free-counseling')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white hover:bg-gray-50 text-black border-none"
           >
             🟢 Free Counseling
           </Button>
           <Button 
             onClick={() => document.getElementById('financial-independence')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white/20 hover:bg-white/30 text-white border border-white/30"
+            className="bg-white hover:bg-gray-50 text-black border-none"
           >
             💼 Financial Independence
           </Button>
@@ -522,3 +523,4 @@ const SupportPage = () => {
 };
 
 export default SupportPage;
+
