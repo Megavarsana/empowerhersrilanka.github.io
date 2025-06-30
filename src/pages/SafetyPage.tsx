@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -116,9 +117,9 @@ const SafetyPage = () => {
             {/* Emergency Numbers Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=800&h=300&fit=crop"
+                src="/lovable-uploads/638b3606-38eb-4f92-99a1-ed485f22cfc8.png"
                 alt="Emergency hotline numbers for women in Sri Lanka"
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover rounded-lg"
               />
             </div>
 
@@ -157,9 +158,9 @@ const SafetyPage = () => {
             {/* SOS Button Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=800&h=300&fit=crop"
+                src="/lovable-uploads/edf14dd4-483f-45fd-8c93-7f6bf37f02ed.png"
                 alt="Emergency SOS button interface for women's safety"
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover rounded-lg"
               />
             </div>
 
@@ -246,9 +247,9 @@ const SafetyPage = () => {
             {/* Self-Defense Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=300&fit=crop"
+                src="/lovable-uploads/c5ec66b3-2307-43e5-b8c3-70f333e78313.png"
                 alt="Women learning self-defense techniques and martial arts"
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover rounded-lg"
               />
             </div>
 
@@ -328,9 +329,9 @@ const SafetyPage = () => {
             {/* Safety Apps Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=300&fit=crop"
+                src="/lovable-uploads/d4a060c4-5a7f-4d35-8dad-e23c9bdfe8bd.png"
                 alt="Safety apps and mobile security for women's protection"
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover rounded-lg"
               />
             </div>
 
@@ -374,9 +375,9 @@ const SafetyPage = () => {
             {/* Online Safety Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=300&fit=crop"
+                src="/lovable-uploads/652ba6b2-ea36-468f-a515-69e8be0e83eb.png"
                 alt="Online safety and social media security for women"
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover rounded-lg"
               />
             </div>
 
