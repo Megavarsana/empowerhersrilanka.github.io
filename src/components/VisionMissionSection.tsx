@@ -24,7 +24,7 @@ const VisionMissionSection = () => {
               <img 
                 src="/lovable-uploads/31319238-8cf3-43de-81d1-26933266978f.png" 
                 alt="Our vision - We are powerful"
-                className="w-full h-48 object-cover rounded-lg"
+                className="w-full h-56 object-contain rounded-lg"
               />
             </div>
           </div>
@@ -47,7 +47,7 @@ const VisionMissionSection = () => {
               <img 
                 src="/lovable-uploads/f59659b1-dc75-4c9f-bc5d-4e50c0d56230.png" 
                 alt="Our mission - Women empowerment"
-                className="w-full h-48 object-cover rounded-lg"
+                className="w-full h-56 object-contain rounded-lg"
               />
             </div>
           </div>
