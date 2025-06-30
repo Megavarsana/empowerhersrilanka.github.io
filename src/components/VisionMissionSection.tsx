@@ -20,11 +20,11 @@ const VisionMissionSection = () => {
               access to opportunities, resources, and support systems that enable them 
               to thrive both online and offline.
             </p>
-            <div className="bg-empowerher-pink-light p-4 rounded-lg">
+            <div>
               <img 
                 src="/lovable-uploads/31319238-8cf3-43de-81d1-26933266978f.png" 
                 alt="Our vision - We are powerful"
-                className="w-full h-56 object-contain rounded-lg"
+                className="w-full h-80 object-contain rounded-lg"
               />
             </div>
           </div>
@@ -43,11 +43,11 @@ const VisionMissionSection = () => {
               development resources. We are committed to breaking barriers and creating 
               pathways for women to achieve their full potential.
             </p>
-            <div className="bg-empowerher-pink-light p-4 rounded-lg">
+            <div>
               <img 
                 src="/lovable-uploads/f59659b1-dc75-4c9f-bc5d-4e50c0d56230.png" 
                 alt="Our mission - Women empowerment"
-                className="w-full h-56 object-contain rounded-lg"
+                className="w-full h-80 object-contain rounded-lg"
               />
             </div>
           </div>
