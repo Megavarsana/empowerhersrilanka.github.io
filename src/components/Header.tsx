@@ -66,7 +66,6 @@ const Header = () => {
                 <img src="/lovable-uploads/79a278b4-44d4-4f5e-8f41-e0df199a80d2.png" alt="EmpowerHer Logo" className="w-full h-full object-cover" />
               </div>
               <span className="text-2xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>EmpowerHer</span>
-              <span className="text-sm font-semibold text-primary tracking-wider">EST. 2025</span>
             </div>
             
             {/* Desktop Navigation */}
@@ -97,10 +96,10 @@ const Header = () => {
               </Button>
             </div>
 
-            {/* Emergency Button */}
+            {/* Help Button */}
             <Button onClick={handleEmergencyHelp} className="hidden lg:flex bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full text-lg items-center space-x-2 cursor-pointer btn-enhanced">
               <Phone className="h-5 w-5" />
-              <span>EMERGENCY HELP</span>
+              <span>HELP</span>
             </Button>
           </div>
 
@@ -122,7 +121,7 @@ const Header = () => {
                 </button>
                 <Button onClick={handleEmergencyHelp} className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 rounded-full mt-4">
                   <Phone className="h-4 w-4 mr-2" />
-                  EMERGENCY HELP
+                  HELP
                 </Button>
               </div>
             </div>
@@ -135,9 +134,6 @@ const Header = () => {
         <div className="container mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-left fade-in-up">
-              <p className="text-sm font-semibold text-white mb-4 tracking-wider animate-fadeInUp stagger-1">
-                EST. 2025
-              </p>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight animate-fadeInUp stagger-2">
                 WE FUND<br />
                 BOLD, FEMINIST<br />

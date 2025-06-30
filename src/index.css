@@ -44,14 +44,17 @@
 
   body {
     @apply bg-background text-foreground font-inter;
-    background: linear-gradient(135deg, #F5F1ED 0%, #F0EBE6 50%, #EBE5DD 100%);
+    background: url('/lovable-uploads/3ff5a7da-2504-4163-889a-f2a783fcabfc.png');
+    background-size: cover;
+    background-attachment: fixed;
     min-height: 100vh;
   }
 }
 
 @layer components {
   .gradient-bg {
-    background: linear-gradient(135deg, #E8BEAC 0%, #D4A574 50%, #C2956B 100%);
+    background: url('/lovable-uploads/3ff5a7da-2504-4163-889a-f2a783fcabfc.png');
+    background-size: cover;
   }
   
   .card-hover {
@@ -63,7 +66,8 @@
   }
 
   .hero-section {
-    background: linear-gradient(135deg, #E8BEAC 0%, #D4A574 100%);
+    background: url('/lovable-uploads/3ff5a7da-2504-4163-889a-f2a783fcabfc.png');
+    background-size: cover;
   }
 
   /* Enhanced content box styling with 2xl rounded corners */
@@ -106,7 +110,8 @@
 
   /* Professional footer styling */
   .footer-enhanced {
-    background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
+    background: url('/lovable-uploads/3ff5a7da-2504-4163-889a-f2a783fcabfc.png');
+    background-size: cover;
     @apply text-white py-16;
   }
 }

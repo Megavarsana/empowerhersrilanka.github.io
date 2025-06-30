@@ -73,13 +73,20 @@ const MainTopicsSection = () => {
   };
 
   return (
-    <section id="main-topics" className="section-spacing bg-background">
+    <section 
+      id="main-topics" 
+      className="section-spacing"
+      style={{
+        background: "url('/lovable-uploads/3ff5a7da-2504-4163-889a-f2a783fcabfc.png')",
+        backgroundSize: "cover"
+      }}
+    >
       <div className="container mx-auto">
         <div className={`text-center mb-16 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             How We Support You
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
             Click on any area below to access comprehensive resources and support tailored for Sri Lankan women
           </p>
         </div>
