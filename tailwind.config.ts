@@ -63,6 +63,10 @@ export default {
 				'pastel-pearl': '#F0EBE6',
 				'pastel-khaki': '#EBE5DD',
 				'pastel-sand': '#E6DFD4',
+				// EmpowerHer color scheme
+				'empowerher-pink-light': '#F4E6DC',
+				'empowerher-pink-medium': '#E8BEAC',
+				'empowerher-pink-dark': '#D4A574',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
