@@ -9,11 +9,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="pt-0"> {/* Remove extra padding since Header handles spacing */}
-        <AboutSection />
-        <VisionMissionSection />
-        <MainTopicsSection />
-      </div>
+      <AboutSection />
+      <VisionMissionSection />
+      <MainTopicsSection />
       <Footer />
     </div>
   );
