@@ -165,7 +165,7 @@ const WomensHealthPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-pink-500 to-pink-600">
       <Header />
       
       {/* Hero Section */}
@@ -180,6 +180,24 @@ const WomensHealthPage = () => {
           <Button className="bg-white text-pink-600 hover:bg-gray-100 px-8 py-3 text-lg">
             Get Started
           </Button>
+        </div>
+      </section>
+
+      {/* Navigation Buttons */}
+      <section className="py-8 bg-white/10">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-wrap justify-center gap-4">
+            {topics.map((topic, index) => (
+              <Button
+                key={index}
+                variant="outline"
+                className="bg-white/20 text-white border-white hover:bg-white hover:text-pink-600 transition-colors"
+                onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                {topic.title}
+              </Button>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -202,17 +220,17 @@ const WomensHealthPage = () => {
         </div>
       </section>
 
-      {/* Detailed Topics Section */}
-      <section className="py-16 bg-pink-50">
+      {/* Topics Section */}
+      <section className="py-16 bg-gradient-to-b from-pink-500 to-pink-600">
         <div className="container mx-auto px-6">
           {topics.map((topic, index) => (
-            <div key={index} className="mb-16">
+            <div key={index} id={`topic-${index}`} className="mb-16">
               <div className="max-w-4xl mx-auto">
-                <Card className="feature-card">
-                  <CardHeader>
+                <Card className="bg-white shadow-xl border-0 overflow-hidden">
+                  <CardHeader className="bg-gradient-to-r from-pink-100 to-pink-200">
                     <div className="flex items-center space-x-4 mb-4">
-                      <div className="p-3 bg-pink-100 rounded-full">
-                        <topic.icon className="h-8 w-8 text-pink-600" />
+                      <div className="p-3 bg-pink-500 rounded-full">
+                        <topic.icon className="h-8 w-8 text-white" />
                       </div>
                       <div>
                         <CardTitle className="text-2xl text-pink-600">{topic.title}</CardTitle>
@@ -220,21 +238,25 @@ const WomensHealthPage = () => {
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent className="space-y-6">
-                    <p className="text-gray-700 leading-relaxed">{topic.content.intro}</p>
+                  <CardContent className="p-8 space-y-6">
+                    <p className="text-gray-700 leading-relaxed text-lg">{topic.content.intro}</p>
                     
-                    <div className="space-y-4">
+                    <div className="grid gap-6">
                       {topic.content.points.map((point, pointIndex) => (
-                        <div key={pointIndex} className="info-card">
-                          <h4 className="font-semibold text-pink-600 mb-2">{point.title}</h4>
-                          <p className="text-gray-700 leading-relaxed">{point.description}</p>
-                        </div>
+                        <Card key={pointIndex} className="bg-pink-50 border-pink-200 shadow-md">
+                          <CardContent className="p-6">
+                            <h4 className="font-semibold text-pink-600 mb-3 text-lg">{point.title}</h4>
+                            <p className="text-gray-700 leading-relaxed">{point.description}</p>
+                          </CardContent>
+                        </Card>
                       ))}
                     </div>
                     
-                    <div className="content-box bg-pink-50 border-pink-200">
-                      <p className="text-gray-700 leading-relaxed font-medium">{topic.content.conclusion}</p>
-                    </div>
+                    <Card className="bg-gradient-to-r from-pink-100 to-pink-200 border-pink-300">
+                      <CardContent className="p-6">
+                        <p className="text-gray-700 leading-relaxed font-medium text-lg">{topic.content.conclusion}</p>
+                      </CardContent>
+                    </Card>
                   </CardContent>
                 </Card>
               </div>
@@ -256,7 +278,7 @@ const WomensHealthPage = () => {
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden shadow-xl">
               <div className="aspect-video bg-gradient-to-br from-pink-200 to-pink-300 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
