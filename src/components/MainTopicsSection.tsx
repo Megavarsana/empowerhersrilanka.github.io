@@ -85,13 +85,13 @@ const MainTopicsSection = () => {
   };
 
   return (
-    <section className="section-spacing bg-white">
+    <section className="section-spacing bg-white dark:bg-gray-900 transition-colors">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 transition-colors">
             How We Support You
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors">
             Click on any area below to access comprehensive resources and support
           </p>
         </div>
@@ -100,7 +100,7 @@ const MainTopicsSection = () => {
           {topics.map((topic) => (
             <Card 
               key={topic.id}
-              className={`card-hover cursor-pointer transition-all duration-300 hover:scale-105 ${topic.bgColor} border-0`}
+              className={`card-hover cursor-pointer transition-all duration-300 hover:scale-105 ${topic.bgColor} border-0 dark:shadow-2xl`}
               onClick={() => handleTopicClick(topic.route)}
             >
               <CardContent className="p-8 text-center h-full flex flex-col justify-between">

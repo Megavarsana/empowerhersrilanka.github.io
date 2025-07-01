@@ -20,7 +20,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-primary dark:bg-gray-800 text-white transition-colors">
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}

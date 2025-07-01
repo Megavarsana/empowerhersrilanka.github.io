@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Shield, Phone } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -73,7 +74,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm">
+    <header className="bg-white dark:bg-gray-900 shadow-sm transition-colors">
       {/* Navigation */}
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -82,22 +83,23 @@ const Header = () => {
             <div className="w-12 h-12 rounded-lg overflow-hidden">
               <img src="/lovable-uploads/79a278b4-44d4-4f5e-8f41-e0df199a80d2.png" alt="EmpowerHer Logo" className="w-full h-full object-cover" />
             </div>
-            <span className="text-2xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>EmpowerHer</span>
+            <span className="text-2xl font-bold text-gray-800 dark:text-white cursor-pointer transition-colors" onClick={() => navigate('/')}>EmpowerHer</span>
           </div>
           
           <div className="hidden md:flex space-x-8">
-            <button onClick={handleWhoWeAre} className="text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer">
+            <button onClick={handleWhoWeAre} className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
               Who We Are
             </button>
-            <button onClick={handleWhatWeDo} className="text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer">
+            <button onClick={handleWhatWeDo} className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
               What We Do
             </button>
-            <button onClick={handleGetInvolved} className="text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer">
+            <button onClick={handleGetInvolved} className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
               Get Involved
             </button>
-            <button onClick={handleLatestNews} className="text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer">
+            <button onClick={handleLatestNews} className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
               Latest News
             </button>
+            <ThemeToggle />
           </div>
 
           <Button onClick={handleEmergencyHelp} className="bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full text-lg flex items-center space-x-2 cursor-pointer">
@@ -108,7 +110,7 @@ const Header = () => {
       </nav>
 
       {/* Hero Section - Global Fund for Women Style */}
-      <div className="hero-section">
+      <div className="hero-section dark:bg-gradient-to-br dark:from-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}

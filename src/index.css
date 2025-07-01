@@ -38,13 +38,43 @@
     --radius: 1rem;
   }
 
+  .dark {
+    --background: 220 15% 8%; /* dark background */
+    --foreground: 210 40% 95%; /* light text */
+
+    --card: 220 15% 12%; /* dark cards */
+    --card-foreground: 210 40% 95%;
+
+    --popover: 220 15% 12%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 330 85% 55%; /* keep vibrant pink */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 20%; /* dark secondary */
+    --secondary-foreground: 210 40% 95%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 210 40% 60%;
+
+    --accent: 330 75% 65%; /* keep pink accent */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 330 85% 55%;
+  }
+
   * {
     @apply border-border;
     font-family: Georgia, serif;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
     font-family: Georgia, serif;
   }
 
@@ -76,18 +106,18 @@
 
   /* Enhanced content box styling */
   .content-box {
-    @apply bg-white rounded-xl shadow-lg p-6 mb-6 border border-gray-100;
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6 border border-gray-100 dark:border-gray-700 transition-colors;
   }
 
   .content-box-small {
-    @apply bg-white rounded-lg shadow-md p-4 mb-4 border border-gray-50;
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 mb-4 border border-gray-50 dark:border-gray-600 transition-colors;
   }
 
   .info-card {
-    @apply bg-white rounded-lg shadow-sm p-5 border border-gray-100 hover:shadow-md transition-shadow duration-200;
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-200;
   }
 
   .feature-card {
-    @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300;
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300;
   }
 }
