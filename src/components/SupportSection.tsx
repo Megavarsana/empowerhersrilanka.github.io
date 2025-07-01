@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Brain, Phone, FileText, Video, DollarSign } from "lucide-react";
@@ -61,7 +60,7 @@ const SupportSection = () => {
               {/* Mental Health Image */}
               <div className="mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
-                  src="/lovable-uploads/0ee04747-d483-4d31-b69c-24fef6fe9803.png"
+                  src="/lovable-uploads/f07a28e2-1ea1-4891-90a9-fd7739f6d843.png"
                   alt="Mental health and wellness support for women"
                   className="w-full h-48 object-cover"
                 />
@@ -107,7 +106,7 @@ const SupportSection = () => {
               {/* Sexual Assault Support Image */}
               <div className="mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
-                  src="/lovable-uploads/e08a77d8-8132-4b02-9aea-509eaeb706de.png"
+                  src="/lovable-uploads/395d3608-3f0a-4033-8a58-eb9ea541cb02.png"
                   alt="Support and healing for sexual assault survivors"
                   className="w-full h-48 object-cover"
                 />
@@ -198,7 +197,7 @@ const SupportSection = () => {
               {/* Toxic Relationship Image */}
               <div className="mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
-                  src="/lovable-uploads/ba712aa8-6930-46fc-ba76-3400bc335cfe.png"
+                  src="/lovable-uploads/d2058424-1156-449d-ba73-931f8a5927b4.png"
                   alt="Breaking free from toxic relationships"
                   className="w-full h-48 object-cover"
                 />
@@ -257,7 +256,7 @@ const SupportSection = () => {
               {/* Free Counseling Image */}
               <div className="mb-6 rounded-lg overflow-hidden bg-gray-50">
                 <img 
-                  src="/lovable-uploads/9d0c42a0-5bfe-4506-a145-f760d329855f.png"
+                  src="/lovable-uploads/3983d81e-e1b1-4948-a1bb-ce187988139d.png"
                   alt="Free counseling and therapy services"
                   className="w-full h-48 object-cover"
                 />
@@ -322,7 +321,7 @@ const SupportSection = () => {
             {/* Financial Independence Image */}
             <div className="mb-6 rounded-lg overflow-hidden bg-gray-50">
               <img 
-                src="/lovable-uploads/d6e3ddd6-b445-4801-83e0-3cf7a367a607.png"
+                src="/lovable-uploads/a695ae98-8ff6-41c8-ae25-cf9f99e886a6.png"
                 alt="Women's financial independence and empowerment"
                 className="w-full h-48 object-cover"
               />
