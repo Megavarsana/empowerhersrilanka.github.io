@@ -165,33 +165,33 @@ const MentalHealthPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-400 via-purple-500 to-pink-600">
+    <div className="min-h-screen bg-pastel-pearl">
       <Header />
       
       {/* Hero Section */}
       <section className="hero-section text-white py-20">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             🧠 Mental Health & Self-Love
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
             Your mental wellness matters. Find support, resources, and tools to nurture your mind and build self-love.
           </p>
-          <Button className="bg-white text-purple-600 hover:bg-pink-100 px-10 py-4 text-lg font-semibold rounded-full shadow-lg transform hover:scale-105 transition-all">
+          <Button className="bg-white text-primary hover:bg-gray-100 px-10 py-4 text-lg font-semibold">
             Start Your Journey ✨
           </Button>
         </div>
       </section>
 
-      {/* Navigation Buttons */}
-      <section className="py-12 bg-gradient-to-r from-pink-500/20 to-purple-500/20 backdrop-blur-sm">
+      {/* Topic Navigation */}
+      <section className="py-8 bg-pastel-sand/30">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {topics.map((topic, index) => (
               <Button
                 key={index}
                 variant="outline"
-                className="bg-white/30 text-white border-2 border-white/50 hover:bg-white hover:text-purple-600 transition-all duration-300 px-6 py-3 rounded-full font-semibold shadow-lg"
+                className="bg-white/80 text-gray-700 border-gray-300 hover:bg-primary hover:text-white transition-colors"
                 onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({ behavior: 'smooth' })}
               >
                 {topic.title}
@@ -202,15 +202,15 @@ const MentalHealthPage = () => {
       </section>
 
       {/* Featured Image Section */}
-      <section className="py-20 bg-white/95 backdrop-blur-sm">
+      <section className="section-spacing bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             <img 
               src="/lovable-uploads/581091226825-a6a2a5aee158.jpg" 
               alt="Mental Health Support"
-              className="w-full h-[500px] object-cover rounded-3xl shadow-2xl mb-12 border-4 border-white"
+              className="w-full h-96 object-cover rounded-lg shadow-lg mb-8"
             />
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               Your Mental Wellness Matters
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
@@ -221,42 +221,40 @@ const MentalHealthPage = () => {
       </section>
 
       {/* Topics Section */}
-      <section className="py-20 bg-gradient-to-b from-pink-400 via-purple-500 to-pink-600">
+      <section className="section-spacing bg-pastel-pearl">
         <div className="container mx-auto px-6">
           {topics.map((topic, index) => (
-            <div key={index} id={`topic-${index}`} className="mb-20">
-              <div className="max-w-6xl mx-auto">
-                <Card className="bg-white/95 backdrop-blur-sm shadow-2xl border-0 overflow-hidden rounded-3xl">
-                  <CardHeader className="bg-gradient-to-r from-purple-100 via-pink-100 to-purple-100 p-12">
-                    <div className="flex items-center space-x-6 mb-6">
-                      <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl shadow-lg">
-                        <topic.icon className="h-10 w-10 text-white" />
+            <div key={index} id={`topic-${index}`} className="mb-16">
+              <div className="max-w-4xl mx-auto">
+                <Card className="content-box border-pastel-sand">
+                  <CardHeader className="bg-pastel-flesh">
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="p-3 bg-pastel-khaki rounded-full">
+                        <topic.icon className="h-8 w-8 text-white" />
                       </div>
                       <div>
-                        <CardTitle className="text-3xl md:text-4xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-bold">
-                          {topic.title}
-                        </CardTitle>
-                        <p className="text-xl text-gray-700 mt-2 font-medium">{topic.subtitle}</p>
+                        <CardTitle className="text-2xl text-gray-800">{topic.title}</CardTitle>
+                        <p className="text-lg text-gray-600 mt-1">{topic.subtitle}</p>
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent className="p-12 space-y-8">
-                    <p className="text-gray-800 leading-relaxed text-lg font-medium">{topic.content.intro}</p>
+                  <CardContent className="p-8 space-y-6">
+                    <p className="text-gray-700 leading-relaxed text-lg">{topic.content.intro}</p>
                     
-                    <div className="grid gap-8">
+                    <div className="grid gap-6">
                       {topic.content.points.map((point, pointIndex) => (
-                        <Card key={pointIndex} className="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200/50 shadow-lg rounded-2xl hover:shadow-xl transition-all duration-300">
-                          <CardContent className="p-8">
-                            <h4 className="font-bold text-purple-700 mb-4 text-xl">{point.title}</h4>
-                            <p className="text-gray-800 leading-relaxed text-lg">{point.description}</p>
+                        <Card key={pointIndex} className="content-box-small bg-pastel-sand/30">
+                          <CardContent className="p-6">
+                            <h4 className="font-semibold text-gray-800 mb-3 text-lg">{point.title}</h4>
+                            <p className="text-gray-700 leading-relaxed">{point.description}</p>
                           </CardContent>
                         </Card>
                       ))}
                     </div>
                     
-                    <Card className="bg-gradient-to-r from-purple-100 via-pink-100 to-purple-100 border-2 border-purple-300/50 rounded-2xl shadow-lg">
-                      <CardContent className="p-8">
-                        <p className="text-gray-800 leading-relaxed font-semibold text-xl text-center">{topic.content.conclusion}</p>
+                    <Card className="info-card bg-pastel-khaki/20">
+                      <CardContent className="p-6">
+                        <p className="text-gray-700 leading-relaxed font-medium text-lg">{topic.content.conclusion}</p>
                       </CardContent>
                     </Card>
                   </CardContent>
@@ -268,34 +266,30 @@ const MentalHealthPage = () => {
       </section>
 
       {/* Video Section */}
-      <section className="py-20 bg-white/95 backdrop-blur-sm">
+      <section className="section-spacing bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
               Mental Wellness Video
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600">
               Watch this helpful video for mental wellness and self-care tips
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <Card className="overflow-hidden shadow-2xl rounded-3xl border-4 border-white">
-              <div className="aspect-video bg-gradient-to-br from-purple-200 via-pink-200 to-purple-300 flex items-center justify-center">
+          <div className="max-w-2xl mx-auto">
+            <Card className="feature-card">
+              <div className="aspect-video bg-pastel-flesh flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 mx-auto shadow-lg">
-                    <div className="w-0 h-0 border-l-[16px] border-l-purple-500 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1"></div>
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto shadow-md">
+                    <div className="w-0 h-0 border-l-[12px] border-l-pastel-khaki border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
                   </div>
-                  <span className="text-purple-700 font-bold text-xl">Mental Health & Self-Love</span>
+                  <span className="text-gray-700 font-semibold">Mental Health & Self-Love</span>
                 </div>
               </div>
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  Building Confidence & Self-Love
-                </h3>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  Learn techniques for building confidence, practicing self-love, and managing stress and anxiety effectively.
-                </p>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Building Confidence & Self-Love</h3>
+                <p className="text-gray-600">Learn techniques for building confidence, practicing self-love, and managing stress and anxiety effectively.</p>
               </CardContent>
             </Card>
           </div>

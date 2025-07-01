@@ -185,7 +185,7 @@ const PregnancyPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-500 to-green-600">
+    <div className="min-h-screen bg-pastel-pearl">
       <Header />
       
       {/* Hero Section */}
@@ -197,21 +197,21 @@ const PregnancyPage = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Supporting you through pregnancy, birth, and the beautiful journey of new motherhood with comprehensive resources and care.
           </p>
-          <Button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 text-lg">
+          <Button className="bg-white text-primary hover:bg-gray-100 px-8 py-3 text-lg">
             Get Support
           </Button>
         </div>
       </section>
 
-      {/* Navigation Buttons */}
-      <section className="py-8 bg-white/10">
+      {/* Topic Navigation */}
+      <section className="py-8 bg-pastel-sand/30">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {topics.map((topic, index) => (
               <Button
                 key={index}
                 variant="outline"
-                className="bg-white/20 text-white border-white hover:bg-white hover:text-green-600 transition-colors"
+                className="bg-white/80 text-gray-700 border-gray-300 hover:bg-primary hover:text-white transition-colors"
                 onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({ behavior: 'smooth' })}
               >
                 {topic.title}
@@ -222,7 +222,7 @@ const PregnancyPage = () => {
       </section>
 
       {/* Featured Image Section */}
-      <section className="py-16 bg-white">
+      <section className="section-spacing bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <img 
@@ -241,19 +241,19 @@ const PregnancyPage = () => {
       </section>
 
       {/* Topics Section */}
-      <section className="py-16 bg-gradient-to-b from-green-500 to-green-600">
+      <section className="section-spacing bg-pastel-pearl">
         <div className="container mx-auto px-6">
           {topics.map((topic, index) => (
             <div key={index} id={`topic-${index}`} className="mb-16">
               <div className="max-w-4xl mx-auto">
-                <Card className="bg-white shadow-xl border-0 overflow-hidden">
-                  <CardHeader className="bg-gradient-to-r from-green-100 to-green-200">
+                <Card className="content-box border-pastel-sand">
+                  <CardHeader className="bg-pastel-flesh">
                     <div className="flex items-center space-x-4 mb-4">
-                      <div className="p-3 bg-green-500 rounded-full">
+                      <div className="p-3 bg-pastel-khaki rounded-full">
                         <topic.icon className="h-8 w-8 text-white" />
                       </div>
                       <div>
-                        <CardTitle className="text-2xl text-green-600">{topic.title}</CardTitle>
+                        <CardTitle className="text-2xl text-gray-800">{topic.title}</CardTitle>
                         <p className="text-lg text-gray-600 mt-1">{topic.subtitle}</p>
                       </div>
                     </div>
@@ -263,16 +263,16 @@ const PregnancyPage = () => {
                     
                     <div className="grid gap-6">
                       {topic.content.points.map((point, pointIndex) => (
-                        <Card key={pointIndex} className="bg-green-50 border-green-200 shadow-md">
+                        <Card key={pointIndex} className="content-box-small bg-pastel-sand/30">
                           <CardContent className="p-6">
-                            <h4 className="font-semibold text-green-600 mb-3 text-lg">{point.title}</h4>
+                            <h4 className="font-semibold text-gray-800 mb-3 text-lg">{point.title}</h4>
                             <p className="text-gray-700 leading-relaxed">{point.description}</p>
                           </CardContent>
                         </Card>
                       ))}
                     </div>
                     
-                    <Card className="bg-gradient-to-r from-green-100 to-green-200 border-green-300">
+                    <Card className="info-card bg-pastel-khaki/20">
                       <CardContent className="p-6">
                         <p className="text-gray-700 leading-relaxed font-medium text-lg">{topic.content.conclusion}</p>
                       </CardContent>
@@ -286,7 +286,7 @@ const PregnancyPage = () => {
       </section>
 
       {/* Video Section */}
-      <section className="py-16 bg-white">
+      <section className="section-spacing bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -298,13 +298,13 @@ const PregnancyPage = () => {
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <Card className="overflow-hidden shadow-xl">
-              <div className="aspect-video bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center">
+            <Card className="feature-card">
+              <div className="aspect-video bg-pastel-flesh flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <div className="w-0 h-0 border-l-[12px] border-l-green-500 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto shadow-md">
+                    <div className="w-0 h-0 border-l-[12px] border-l-pastel-khaki border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
                   </div>
-                  <span className="text-green-700 font-semibold">Pregnancy & Motherhood Guide</span>
+                  <span className="text-gray-700 font-semibold">Pregnancy & Motherhood Guide</span>
                 </div>
               </div>
               <CardContent className="p-6">
