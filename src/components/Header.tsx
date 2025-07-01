@@ -1,144 +1,139 @@
 
 import { Button } from "@/components/ui/button";
-import { Heart, Shield, Phone } from "lucide-react";
+import { Heart, Shield, Phone, Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const scrollToSection = (id: string) => {
-    if (location.pathname !== '/') {
-      navigate('/', {
-        replace: true
-      });
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        element?.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }, 100);
-    } else {
-      const element = document.getElementById(id);
-      element?.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "Safety", path: "/safety" },
+    { label: "Support", path: "/support" },
+    { label: "Guidance", path: "/guidance" },
+    { label: "Health", path: "/womens-health" },
+    { label: "Mental Health", path: "/mental-health" },
+    { label: "Pregnancy", path: "/pregnancy" },
+  ];
 
   const handleEmergencyHelp = () => {
     alert("Emergency Services:\n\nPolice: 119\nWomen's Helpline: 1938\nWomen In Need: 011-471-8585");
   };
 
-  const handleWhoWeAre = () => {
-    if (location.pathname !== '/') {
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById('about');
-        element?.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }, 100);
-    } else {
-      scrollToSection('about');
-    }
-  };
-
-  const handleWhatWeDo = () => {
-    navigate('/what-we-do');
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }, 100);
-  };
-
-  const handleGetInvolved = () => {
-    if (location.pathname === '/') {
-      scrollToSection('vision-mission');
-    } else {
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById('vision-mission');
-        element?.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }, 100);
-    }
-  };
-
-  const handleLatestNews = () => {
-    window.open('https://www.newsfirst.lk/tag/women-empowerment/', '_blank');
-  };
-
   return (
-    <header className="bg-white shadow-sm">
-      {/* Navigation */}
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+    <>
+      <header className={`nav-modern transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
+        <nav className="modern-container">
+          <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <div className="w-12 h-12 rounded-lg overflow-hidden">
-              <img src="/lovable-uploads/79a278b4-44d4-4f5e-8f41-e0df199a80d2.png" alt="EmpowerHer Logo" className="w-full h-full object-cover" />
+            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => navigate('/')}>
+              <div className="w-10 h-10 rounded-lg overflow-hidden bg-primary/10 flex items-center justify-center">
+                <Heart className="h-6 w-6 text-primary" />
+              </div>
+              <span className="text-xl font-bold text-foreground">EmpowerHer</span>
             </div>
-            <span className="text-2xl font-bold text-gray-800 cursor-pointer" onClick={() => navigate('/')}>EmpowerHer</span>
-          </div>
-          
-          <div className="hidden md:flex space-x-8">
-            <button onClick={handleWhoWeAre} className="text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer">
-              Who We Are
-            </button>
-            <button onClick={handleWhatWeDo} className="text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer">
-              What We Do
-            </button>
-            <button onClick={handleGetInvolved} className="text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer">
-              Get Involved
-            </button>
-            <button onClick={handleLatestNews} className="text-gray-700 hover:text-primary transition-colors font-medium cursor-pointer">
-              Latest News
-            </button>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-1">
+              {navItems.map((item) => (
+                <Button
+                  key={item.path}
+                  variant={location.pathname === item.path ? "default" : "ghost"}
+                  onClick={() => navigate(item.path)}
+                  className="text-sm font-medium transition-colors"
+                >
+                  {item.label}
+                </Button>
+              ))}
+            </div>
+
+            {/* Right side */}
+            <div className="flex items-center space-x-4">
+              <ThemeToggle />
+              
+              <Button 
+                onClick={handleEmergencyHelp} 
+                className="bg-red-500 hover:bg-red-600 text-white font-bold px-4 py-2 rounded-lg text-sm flex items-center space-x-2"
+              >
+                <Phone className="h-4 w-4" />
+                <span className="hidden sm:inline">EMERGENCY</span>
+              </Button>
+
+              {/* Mobile menu button */}
+              <Button
+                variant="ghost"
+                className="md:hidden"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </Button>
+            </div>
           </div>
 
-          <Button onClick={handleEmergencyHelp} className="bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full text-lg flex items-center space-x-2 cursor-pointer">
-            <Phone className="h-5 w-5" />
-            <span>EMERGENCY HELP</span>
-          </Button>
-        </div>
-      </nav>
+          {/* Mobile Navigation */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t border-border mt-4 pt-4 pb-2">
+              <div className="flex flex-col space-y-2">
+                {navItems.map((item) => (
+                  <Button
+                    key={item.path}
+                    variant={location.pathname === item.path ? "default" : "ghost"}
+                    onClick={() => {
+                      navigate(item.path);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="justify-start text-sm font-medium"
+                  >
+                    {item.label}
+                  </Button>
+                ))}
+              </div>
+            </div>
+          )}
+        </nav>
+      </header>
 
-      {/* Hero Section - Global Fund for Women Style */}
-      <div className="hero-section">
-        <div className="container mx-auto px-6 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Content */}
-            <div className="text-left">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-                WE FUND<br />
-                BOLD, FEMINIST<br />
-                MOVEMENTS
+      {/* Hero Section - Only on home page */}
+      {location.pathname === "/" && (
+        <div className="hero-modern pt-20">
+          <div className="modern-container py-20">
+            <div className="text-center fade-up visible">
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+                Empowering Sri Lankan Women
               </h1>
-              <p className="text-xl text-white mb-6 leading-relaxed max-w-lg">
-                EmpowerHer supports gender justice movements in Sri Lanka to{" "}
-                <span className="bg-yellow-200 px-1 text-gray-800">create meaningful change</span>{" "}
-                that will last beyond our lifetimes.
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+                Supporting gender justice movements to create meaningful change that will last beyond our lifetimes.
               </p>
-              <div className="flex items-center space-x-2 text-lg text-white mb-6">
+              <div className="flex items-center justify-center space-x-2 text-lg text-muted-foreground mb-8">
                 <span>Made by Sri Lankan women for Sri Lankan women</span>
-                <Heart className="h-6 w-6 text-red-300 fill-red-300" />
+                <Heart className="h-6 w-6 text-primary fill-primary" />
               </div>
-            </div>
-
-            {/* Right Side - Hero Image */}
-            <div className="flex justify-center">
-              <div className="w-full h-96 rounded-lg overflow-hidden shadow-2xl">
-                <img alt="Sri Lankan women empowerment" className="w-full h-full object-cover" src="/lovable-uploads/d0564ea2-4caf-4b08-8961-ae609c25ab55.png" />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="btn-modern">
+                  Get Support
+                </Button>
+                <Button variant="outline" className="btn-outline-modern">
+                  Learn More
+                </Button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      )}
+    </>
   );
 };
 
