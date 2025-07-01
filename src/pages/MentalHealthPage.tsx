@@ -165,7 +165,7 @@ const MentalHealthPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-pastel-pearl">
+    <div className="min-h-screen bg-white">
       <Header />
       
       {/* Hero Section */}
@@ -184,14 +184,14 @@ const MentalHealthPage = () => {
       </section>
 
       {/* Topic Navigation */}
-      <section className="py-8 bg-pastel-sand/30">
+      <section className="py-8 bg-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {topics.map((topic, index) => (
               <Button
                 key={index}
                 variant="outline"
-                className="bg-white/80 text-gray-700 border-gray-300 hover:bg-primary hover:text-white transition-colors"
+                className="bg-white text-gray-700 border-gray-300 hover:bg-primary hover:text-white transition-colors"
                 onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({ behavior: 'smooth' })}
               >
                 {topic.title}
@@ -201,98 +201,62 @@ const MentalHealthPage = () => {
         </div>
       </section>
 
-      {/* Featured Image Section */}
-      <section className="section-spacing bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto text-center">
-            <img 
-              src="/lovable-uploads/581091226825-a6a2a5aee158.jpg" 
-              alt="Mental Health Support"
-              className="w-full h-96 object-cover rounded-lg shadow-lg mb-8"
-            />
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Your Mental Wellness Matters
-            </h2>
-            <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              Building confidence, self-love, and emotional resilience for a healthier, happier you
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Topics Section */}
-      <section className="section-spacing bg-pastel-pearl">
+      <section className="section-spacing bg-primary">
         <div className="container mx-auto px-6">
           {topics.map((topic, index) => (
             <div key={index} id={`topic-${index}`} className="mb-16">
               <div className="max-w-4xl mx-auto">
-                <Card className="content-box border-pastel-sand">
-                  <CardHeader className="bg-pastel-flesh">
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="p-3 bg-pastel-khaki rounded-full">
-                        <topic.icon className="h-8 w-8 text-white" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-2xl text-gray-800">{topic.title}</CardTitle>
-                        <p className="text-lg text-gray-600 mt-1">{topic.subtitle}</p>
-                      </div>
-                    </div>
+                <Card className="card-hover bg-white border-white">
+                  <CardHeader>
+                    <CardTitle className="flex items-center space-x-2 text-gray-800">
+                      <topic.icon className="h-6 w-6 text-primary" />
+                      <span>{topic.title}</span>
+                    </CardTitle>
+                    <p className="text-lg text-gray-600 mt-1">{topic.subtitle}</p>
                   </CardHeader>
-                  <CardContent className="p-8 space-y-6">
-                    <p className="text-gray-700 leading-relaxed text-lg">{topic.content.intro}</p>
+                  <CardContent>
+                    {/* Image/Video Section */}
+                    <div className="mb-6 rounded-lg overflow-hidden">
+                      <img 
+                        src="/lovable-uploads/581091226825-a6a2a5aee158.jpg" 
+                        alt={`${topic.title} - Mental Health Support`}
+                        className="w-full h-64 object-cover"
+                      />
+                    </div>
+
+                    <p className="text-gray-700 leading-relaxed text-lg mb-6">{topic.content.intro}</p>
                     
-                    <div className="grid gap-6">
+                    <div className="grid gap-6 mb-6">
                       {topic.content.points.map((point, pointIndex) => (
-                        <Card key={pointIndex} className="content-box-small bg-pastel-sand/30">
-                          <CardContent className="p-6">
-                            <h4 className="font-semibold text-gray-800 mb-3 text-lg">{point.title}</h4>
-                            <p className="text-gray-700 leading-relaxed">{point.description}</p>
-                          </CardContent>
-                        </Card>
+                        <div key={pointIndex} className="bg-gray-50 p-6 rounded-lg">
+                          <h4 className="font-semibold text-gray-800 mb-3 text-lg">{point.title}</h4>
+                          <p className="text-gray-700 leading-relaxed">{point.description}</p>
+                        </div>
                       ))}
                     </div>
                     
-                    <Card className="info-card bg-pastel-khaki/20">
-                      <CardContent className="p-6">
-                        <p className="text-gray-700 leading-relaxed font-medium text-lg">{topic.content.conclusion}</p>
-                      </CardContent>
-                    </Card>
+                    <div className="bg-primary/10 p-6 rounded-lg mb-6">
+                      <p className="text-gray-700 leading-relaxed font-medium text-lg">{topic.content.conclusion}</p>
+                    </div>
+
+                    {/* YouTube Video Section */}
+                    <div className="mt-6">
+                      <h4 className="font-semibold text-gray-800 mb-2">🎥 {topic.title} Video Guide</h4>
+                      <div className="aspect-video rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <div className="text-center">
+                          <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <div className="w-0 h-0 border-l-[12px] border-l-white border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                          </div>
+                          <span className="text-gray-700 font-semibold">Video Coming Soon</span>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Video Section */}
-      <section className="section-spacing bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Mental Wellness Video
-            </h2>
-            <p className="text-lg text-gray-600">
-              Watch this helpful video for mental wellness and self-care tips
-            </p>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            <Card className="feature-card">
-              <div className="aspect-video bg-pastel-flesh flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto shadow-md">
-                    <div className="w-0 h-0 border-l-[12px] border-l-pastel-khaki border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
-                  </div>
-                  <span className="text-gray-700 font-semibold">Mental Health & Self-Love</span>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Building Confidence & Self-Love</h3>
-                <p className="text-gray-600">Learn techniques for building confidence, practicing self-love, and managing stress and anxiety effectively.</p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 
