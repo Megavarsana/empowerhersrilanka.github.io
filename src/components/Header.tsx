@@ -74,7 +74,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-sm transition-colors">
+    <header className="bg-white dark:bg-black shadow-sm transition-colors border-b border-gray-200 dark:border-gray-800">
       {/* Navigation */}
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -86,17 +86,17 @@ const Header = () => {
             <span className="text-2xl font-bold text-gray-800 dark:text-white cursor-pointer transition-colors" onClick={() => navigate('/')}>EmpowerHer</span>
           </div>
           
-          <div className="hidden md:flex space-x-8">
-            <button onClick={handleWhoWeAre} className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
+          <div className="hidden md:flex space-x-8 items-center">
+            <button onClick={handleWhoWeAre} className="text-gray-700 dark:text-white hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
               Who We Are
             </button>
-            <button onClick={handleWhatWeDo} className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
+            <button onClick={handleWhatWeDo} className="text-gray-700 dark:text-white hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
               What We Do
             </button>
-            <button onClick={handleGetInvolved} className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
+            <button onClick={handleGetInvolved} className="text-gray-700 dark:text-white hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
               Get Involved
             </button>
-            <button onClick={handleLatestNews} className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
+            <button onClick={handleLatestNews} className="text-gray-700 dark:text-white hover:text-primary dark:hover:text-primary transition-colors font-medium cursor-pointer">
               Latest News
             </button>
             <ThemeToggle />
@@ -110,7 +110,7 @@ const Header = () => {
       </nav>
 
       {/* Hero Section - Global Fund for Women Style */}
-      <div className="hero-section dark:bg-gradient-to-br dark:from-gray-800 dark:to-gray-900">
+      <div className="hero-section dark:bg-gradient-to-br dark:from-pink-600 dark:to-pink-800">
         <div className="container mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}

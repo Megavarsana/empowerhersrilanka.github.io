@@ -39,32 +39,32 @@
   }
 
   .dark {
-    --background: 220 15% 8%; /* dark background */
-    --foreground: 210 40% 95%; /* light text */
+    --background: 0 0% 0%; /* solid black background */
+    --foreground: 0 0% 100%; /* bright white text */
 
-    --card: 220 15% 12%; /* dark cards */
-    --card-foreground: 210 40% 95%;
+    --card: 0 0% 0%; /* solid black cards */
+    --card-foreground: 0 0% 100%; /* bright white text on cards */
 
-    --popover: 220 15% 12%;
-    --popover-foreground: 210 40% 95%;
+    --popover: 0 0% 0%; /* solid black popover */
+    --popover-foreground: 0 0% 100%; /* bright white text */
 
     --primary: 330 85% 55%; /* keep vibrant pink */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 20%; /* dark secondary */
-    --secondary-foreground: 210 40% 95%;
+    --secondary: 0 0% 0%; /* solid black secondary */
+    --secondary-foreground: 0 0% 100%; /* bright white text */
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 210 40% 60%;
+    --muted: 0 0% 5%; /* very dark for muted elements */
+    --muted-foreground: 0 0% 90%; /* light gray for muted text */
 
     --accent: 330 75% 65%; /* keep pink accent */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
+    --border: 0 0% 10%; /* very dark border */
+    --input: 0 0% 5%; /* very dark input */
     --ring: 330 85% 55%;
   }
 
@@ -80,10 +80,28 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, serif;
+    @apply text-foreground;
   }
 
   p, span, div, button, a {
     font-family: Georgia, serif;
+  }
+
+  /* Dark mode specific text styling */
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    @apply text-white;
+  }
+
+  .dark p, .dark span, .dark div:not(.bg-primary):not(.hero-section):not([class*="bg-gradient"]):not([class*="bg-pink"]):not([class*="bg-empowerher"]) {
+    @apply text-white;
+  }
+
+  .dark .text-gray-600, .dark .text-gray-700, .dark .text-gray-800 {
+    @apply text-white;
+  }
+
+  .dark .text-gray-300 {
+    @apply text-gray-100;
   }
 }
 
@@ -104,20 +122,46 @@
     background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%);
   }
 
-  /* Enhanced content box styling */
+  /* Enhanced content box styling with dark mode support */
   .content-box {
-    @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6 border border-gray-100 dark:border-gray-700 transition-colors;
+    @apply bg-white dark:bg-black rounded-xl shadow-lg p-6 mb-6 border border-gray-100 dark:border-gray-800 transition-colors;
   }
 
   .content-box-small {
-    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 mb-4 border border-gray-50 dark:border-gray-600 transition-colors;
+    @apply bg-white dark:bg-black rounded-lg shadow-md p-4 mb-4 border border-gray-50 dark:border-gray-700 transition-colors;
   }
 
   .info-card {
-    @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm p-5 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-200;
+    @apply bg-white dark:bg-black rounded-lg shadow-sm p-5 border border-gray-100 dark:border-gray-800 hover:shadow-md transition-all duration-200;
   }
 
   .feature-card {
-    @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300;
+    @apply bg-white dark:bg-black rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300;
+  }
+
+  /* Dark mode specific overrides for better contrast */
+  .dark .bg-white {
+    @apply bg-black;
+  }
+
+  .dark .bg-gray-50 {
+    @apply bg-black;
+  }
+
+  .dark .bg-gray-100 {
+    @apply bg-black;
+  }
+
+  .dark .bg-gray-200 {
+    @apply bg-gray-900;
+  }
+
+  /* Ensure pink sections remain vibrant in dark mode */
+  .dark .bg-primary,
+  .dark .hero-section,
+  .dark [class*="bg-gradient"],
+  .dark [class*="bg-pink"],
+  .dark [class*="bg-empowerher"] {
+    /* Keep original pink colors - don't override */
   }
 }
