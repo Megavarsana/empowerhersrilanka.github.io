@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'inter': ['Inter', 'sans-serif'],
-				'sans': ['Inter', 'sans-serif'], // Make Inter the default sans font
+				'georgia': ['Georgia', 'serif'],
+				'sans': ['Georgia', 'serif'], // Make Georgia the default sans font
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -57,22 +57,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Professional EmpowerHer color palette
-				'empowerher-rose': '#D946EF',
-				'empowerher-rose-light': '#F3E8FF',
-				'empowerher-rose-medium': '#E879F9',
-				'empowerher-rose-dark': '#C026D3',
-				'empowerher-rose-darker': '#A21CAF',
-				'empowerher-purple': '#8B5CF6',
-				'empowerher-purple-light': '#EDE9FE',
-				'empowerher-purple-dark': '#7C3AED',
-				'soft-white': '#FEFEFE',
-				'glass-white': 'rgba(255, 255, 255, 0.85)',
-				// Legacy colors for compatibility
-				'mulberry': '#D946EF',
-				'mulberry-light': '#F3E8FF',
-				'mulberry-medium': '#E879F9',
-				'mulberry-dark': '#C026D3',
+				// EmpowerHer vibrant pink/magenta color palette
+				'empowerher-pink': '#E91E63',
+				'empowerher-pink-light': '#F8BBD9',
+				'empowerher-pink-medium': '#F06292',
+				'empowerher-pink-dark': '#C2185B',
+				'empowerher-pink-darker': '#AD1457',
+				'soft-white': '#FCFAF7',
+				// Legacy mulberry colors mapped to pink equivalents
+				'mulberry': '#E91E63',
+				'mulberry-light': '#F8BBD9',
+				'mulberry-medium': '#F06292',
+				'mulberry-dark': '#C2185B',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -99,7 +95,7 @@ export default {
 				'fade-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(20px)'
+						transform: 'translateY(10px)'
 					},
 					'100%': {
 						opacity: '1',
@@ -111,38 +107,15 @@ export default {
 						transform: 'translateY(0px)'
 					},
 					'50%': {
-						transform: 'translateY(-8px)'
-					}
-				},
-				'gradient-shift': {
-					'0%, 100%': {
-						backgroundPosition: '0% 50%'
-					},
-					'50%': {
-						backgroundPosition: '100% 50%'
-					}
-				},
-				'scale-in': {
-					'0%': {
-						transform: 'scale(0.95)',
-						opacity: '0'
-					},
-					'100%': {
-						transform: 'scale(1)',
-						opacity: '1'
+						transform: 'translateY(-5px)'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.8s ease-out',
-				'gentle-float': 'gentle-float 4s ease-in-out infinite',
-				'gradient-shift': 'gradient-shift 6s ease-in-out infinite',
-				'scale-in': 'scale-in 0.3s ease-out',
-			},
-			backgroundSize: {
-				'400%': '400% 400%',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'gentle-float': 'gentle-float 3s ease-in-out infinite',
 			}
 		}
 	},

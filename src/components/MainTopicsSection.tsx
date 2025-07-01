@@ -12,9 +12,8 @@ const MainTopicsSection = () => {
       title: "WOMEN'S SAFETY",
       subtitle: "Emergency help, safety apps & self-defense tips",
       icon: Shield,
-      bgGradient: "bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600",
-      iconBg: "bg-gradient-to-br from-white to-emerald-50",
-      iconColor: "text-emerald-600",
+      bgColor: "bg-primary",
+      iconColor: "text-white",
       textColor: "text-white",
       route: "/safety"
     },
@@ -23,10 +22,9 @@ const MainTopicsSection = () => {
       title: "SUPPORT FOR WOMEN'S PROBLEMS",
       subtitle: "Mental health, abuse, toxic relationships, sexual assault",
       icon: Heart,
-      bgGradient: "bg-gradient-to-br from-rose-400 via-pink-500 to-fuchsia-600",
-      iconBg: "bg-gradient-to-br from-white to-rose-50",
-      iconColor: "text-rose-600",
-      textColor: "text-white",
+      bgColor: "bg-gradient-to-br from-empowerher-pink-light to-empowerher-pink-medium",
+      iconColor: "text-empowerher-pink-dark",
+      textColor: "text-gray-800",
       route: "/support"
     },
     {
@@ -34,9 +32,8 @@ const MainTopicsSection = () => {
       title: "GUIDANCE & PASSION SUPPORT",
       subtitle: "Free learning, business help, and career coaching",
       icon: Lightbulb,
-      bgGradient: "bg-gradient-to-br from-amber-400 via-orange-500 to-red-500",
-      iconBg: "bg-gradient-to-br from-white to-amber-50",
-      iconColor: "text-amber-600",
+      bgColor: "bg-primary",
+      iconColor: "text-white",
       textColor: "text-white",
       route: "/guidance"
     }
@@ -58,41 +55,40 @@ const MainTopicsSection = () => {
   };
 
   return (
-    <section className="section-spacing bg-gradient-to-br from-gray-50 to-white">
+    <section className="section-spacing bg-white">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-fuchsia-600 to-purple-700 bg-clip-text text-transparent mb-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             How We Support You
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium">
-            Click on any area below to access comprehensive resources and support designed specifically for Sri Lankan women
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Click on any area below to access comprehensive resources and support
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-8">
           {topics.map((topic) => (
             <Card 
               key={topic.id}
-              className={`card-hover cursor-pointer transition-all duration-500 hover:scale-105 ${topic.bgGradient} border-0 shadow-2xl group relative overflow-hidden`}
+              className={`card-hover cursor-pointer transition-all duration-300 hover:scale-105 ${topic.bgColor} border-0`}
               onClick={() => handleTopicClick(topic.route)}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <CardContent className="p-10 text-center h-full flex flex-col justify-between relative z-10">
+              <CardContent className="p-8 text-center h-full flex flex-col justify-between">
                 <div>
-                  <div className={`${topic.iconBg} p-6 rounded-3xl w-24 h-24 mx-auto mb-8 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300 ring-4 ring-white/30`}>
-                    <topic.icon className={`h-12 w-12 ${topic.iconColor}`} />
+                  <div className={`${topic.bgColor === 'bg-primary' ? 'bg-white' : 'bg-white'} p-4 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-sm`}>
+                    <topic.icon className={`h-10 w-10 ${topic.bgColor === 'bg-primary' ? 'text-primary' : topic.iconColor}`} />
                   </div>
-                  <h3 className={`text-2xl font-bold mb-6 ${topic.textColor} leading-tight`}>
+                  <h3 className={`text-xl font-bold mb-4 ${topic.textColor}`}>
                     {topic.title}
                   </h3>
-                  <p className={`leading-relaxed text-lg ${topic.textColor === 'text-white' ? 'text-white/95' : 'text-gray-600'} font-medium`}>
+                  <p className={`leading-relaxed ${topic.textColor === 'text-white' ? 'text-white/90' : 'text-gray-600'}`}>
                     {topic.subtitle}
                   </p>
                 </div>
-                <div className="mt-8">
+                <div className="mt-6">
                   <button 
                     onClick={(e) => handleLearnMoreClick(e, topic.route)}
-                    className="bg-white/95 backdrop-blur-sm text-gray-800 px-10 py-4 rounded-xl font-semibold hover:bg-white hover:scale-105 transition-all duration-300 cursor-pointer shadow-lg border border-white/50 text-lg"
+                    className="bg-white text-gray-800 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors cursor-pointer shadow-sm border border-gray-200"
                   >
                     Learn More →
                   </button>
