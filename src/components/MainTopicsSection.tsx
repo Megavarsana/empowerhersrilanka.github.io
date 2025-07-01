@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Heart, Lightbulb } from "lucide-react";
+import { Shield, Heart, Lightbulb, Calendar, Brain, Baby } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const MainTopicsSection = () => {
@@ -36,6 +36,36 @@ const MainTopicsSection = () => {
       iconColor: "text-white",
       textColor: "text-white",
       route: "/guidance"
+    },
+    {
+      id: 'womens-health',
+      title: "WOMEN'S HEALTH",
+      subtitle: "Period Help & Menstrual Care",
+      icon: Calendar,
+      bgColor: "bg-gradient-to-br from-pink-400 to-rose-500",
+      iconColor: "text-white",
+      textColor: "text-white",
+      route: "/womens-health"
+    },
+    {
+      id: 'mental-health',
+      title: "MENTAL HEALTH & SELF-LOVE",
+      subtitle: "Wellness, self-care, and emotional support",
+      icon: Brain,
+      bgColor: "bg-gradient-to-br from-purple-400 to-indigo-500",
+      iconColor: "text-white",
+      textColor: "text-white",
+      route: "/mental-health"
+    },
+    {
+      id: 'pregnancy',
+      title: "PREGNANCY & NEW MOTHERHOOD SUPPORT",
+      subtitle: "Support through pregnancy and early motherhood",
+      icon: Baby,
+      bgColor: "bg-gradient-to-br from-green-400 to-teal-500",
+      iconColor: "text-white",
+      textColor: "text-white",
+      route: "/pregnancy"
     }
   ];
 
@@ -66,7 +96,7 @@ const MainTopicsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {topics.map((topic) => (
             <Card 
               key={topic.id}
@@ -76,7 +106,7 @@ const MainTopicsSection = () => {
               <CardContent className="p-8 text-center h-full flex flex-col justify-between">
                 <div>
                   <div className={`${topic.bgColor === 'bg-primary' ? 'bg-white' : 'bg-white'} p-4 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-sm`}>
-                    <topic.icon className={`h-10 w-10 ${topic.bgColor === 'bg-primary' ? 'text-primary' : topic.iconColor}`} />
+                    <topic.icon className={`h-10 w-10 ${topic.bgColor === 'bg-primary' ? 'text-primary' : topic.iconColor === 'text-white' ? 'text-primary' : topic.iconColor}`} />
                   </div>
                   <h3 className={`text-xl font-bold mb-4 ${topic.textColor}`}>
                     {topic.title}

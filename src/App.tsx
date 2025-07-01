@@ -8,6 +8,9 @@ import Index from "./pages/Index";
 import SafetyPage from "./pages/SafetyPage";
 import SupportPage from "./pages/SupportPage";
 import GuidancePage from "./pages/GuidancePage";
+import WomensHealthPage from "./pages/WomensHealthPage";
+import MentalHealthPage from "./pages/MentalHealthPage";
+import PregnancyPage from "./pages/PregnancyPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import WhatWeDo from "./pages/WhatWeDo";
@@ -26,6 +29,9 @@ const App = () => (
           <Route path="/safety" element={<SafetyPage />} />
           <Route path="/support" element={<SupportPage />} />
           <Route path="/guidance" element={<GuidancePage />} />
+          <Route path="/womens-health" element={<WomensHealthPage />} />
+          <Route path="/mental-health" element={<MentalHealthPage />} />
+          <Route path="/pregnancy" element={<PregnancyPage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/what-we-do" element={<WhatWeDo />} />
