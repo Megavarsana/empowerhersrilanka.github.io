@@ -209,33 +209,33 @@ const WomensHealthPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-empowerher-pink via-empowerher-pink-medium to-empowerher-pink-dark">
       <Header />
       
       {/* Hero Section */}
-      <section className="hero-section text-white py-20">
+      <section className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             🩸 Women's Health
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-white">
             Period Help & Menstrual Care - Comprehensive resources for women's reproductive health and wellness
           </p>
-          <Button className="bg-white text-primary hover:bg-gray-100 px-10 py-4 text-lg font-semibold">
+          <Button className="bg-white text-empowerher-pink hover:bg-gray-100 px-10 py-4 text-lg font-semibold">
             Get Started ✨
           </Button>
         </div>
       </section>
 
       {/* Topic Navigation */}
-      <section className="py-8 bg-white">
+      <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {topics.map((topic, index) => (
               <Button
                 key={index}
                 variant="outline"
-                className="bg-white text-gray-700 border-gray-300 hover:bg-primary hover:text-white transition-colors"
+                className="bg-white text-empowerher-pink border-white hover:bg-empowerher-pink hover:text-white transition-colors"
                 onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({ behavior: 'smooth' })}
               >
                 {topic.title}
@@ -246,7 +246,7 @@ const WomensHealthPage = () => {
       </section>
 
       {/* Topics Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-6">
           {topics.map((topic, index) => (
             <div key={index} id={`topic-${index}`} className="mb-16">
@@ -254,7 +254,7 @@ const WomensHealthPage = () => {
                 <Card className="card-hover bg-white border-white shadow-lg">
                   <CardHeader className="pb-6">
                     <CardTitle className="flex items-center space-x-3 text-gray-800 text-2xl">
-                      <topic.icon className="h-8 w-8 text-primary" />
+                      <topic.icon className="h-8 w-8 text-empowerher-pink" />
                       <span>{topic.title}</span>
                     </CardTitle>
                     <p className="text-xl text-gray-600 mt-2">{topic.subtitle}</p>
@@ -280,7 +280,7 @@ const WomensHealthPage = () => {
                       ))}
                     </div>
                     
-                    <div className="bg-primary/10 p-8 rounded-lg mb-8">
+                    <div className="bg-empowerher-pink/10 p-8 rounded-lg mb-8">
                       <p className="text-gray-700 leading-relaxed font-medium text-xl">{topic.content.conclusion}</p>
                     </div>
 
