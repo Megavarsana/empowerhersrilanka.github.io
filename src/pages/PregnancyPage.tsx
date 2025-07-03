@@ -9,177 +9,205 @@ const PregnancyPage = () => {
   const topics = [
     {
       title: "❗ Where to Get Help as a New Mom",
-      subtitle: "Support Systems You Can Trust",
+      subtitle: "Support Systems You Can Trust in Sri Lanka",
       icon: Phone,
       content: {
-        intro: "Being a new mother can sometimes feel overwhelming — but remember, you don't have to do it alone.",
+        intro: "Becoming a new mom is a wonderful yet challenging journey. It's important to know where to find support for your health, your baby's care, and your mental wellbeing. Here are trusted resources and services available in Sri Lanka:",
         points: [
           {
-            title: "Health Clinics & Hospitals",
-            description: "Regular prenatal and postnatal checkups are essential. Sri Lanka has government hospitals and maternal health clinics offering free or low-cost care. Don't hesitate to visit if you have any concerns. 🏥👩‍⚕️"
+            title: "🏥 Government Hospitals & Maternal Clinics",
+            description: "Maternal and Child Health Clinics are available in most communities, offering free prenatal and postnatal care, immunizations, and guidance on baby care. Major hospitals with specialized maternity wards: Castle Street Hospital for Women, Colombo; De Soysa Maternity Hospital, Colombo; Teaching Hospitals in major cities. These centers provide check-ups, vaccinations, nutrition advice, and breastfeeding support."
           },
           {
-            title: "Midwives & Community Health Workers",
-            description: "Trained midwives often visit homes to provide guidance on pregnancy, childbirth, and baby care. They are valuable resources for advice and emotional support. 🩺🏡"
+            title: "📞 Helplines for New Moms",
+            description: "Maternal and Child Health Line: 1929 (National Child Protection Authority) — For advice and reporting concerns related to mother and child wellbeing. Family Health Bureau Helpline: +94 11 267 6162 — Offers information on maternal health services and breastfeeding support."
           },
           {
-            title: "Mother Support Groups",
-            description: "Look for local mother groups or online communities where you can share experiences, ask questions, and find friendship. These groups reduce isolation and build confidence. 🤱💬"
+            title: "🤱 Breastfeeding Support Groups",
+            description: "Many hospitals and NGOs run breastfeeding counseling and support groups to help new moms with feeding challenges and nutrition advice. Lactation consultants are available in major hospitals and some community clinics."
           },
           {
-            title: "Family & Friends",
-            description: "Trusted loved ones can provide practical help and emotional encouragement. Don't hesitate to ask for help with chores, baby care, or just a listening ear. ❤️👩‍👧"
+            title: "🧠 Mental Health Support for New Moms",
+            description: "Postpartum depression and anxiety are common. Contact: Suwa Seriya Mental Health Helpline: 1926; Women In Need (WIN): 011 4718585 / 077 5675656 for counseling and support."
           },
           {
-            title: "Emergency Numbers",
-            description: "Save important emergency contacts, including your healthcare provider, ambulance services, and local hospital. Quick access can save lives in urgent situations. 📞🚑"
+            title: "👩‍⚕️ Pediatric Care",
+            description: "Regular baby check-ups, immunizations, and growth monitoring are done at Maternal and Child Health Clinics or pediatric departments in hospitals. Immunizations follow the national schedule, available free at government clinics."
+          },
+          {
+            title: "🏠 Community Support Services & NGOs",
+            description: "Organizations like Women In Need (WIN) and Sahanaya provide counseling, training, and emergency support for mothers and families in crisis. Local community centers often host parenting classes and mother-baby groups."
+          },
+          {
+            title: "📚 Online Resources",
+            description: "Official Ministry of Health website: health.gov.lk. Parenting forums and support groups on social media where new moms share experiences and advice."
           }
         ],
-        conclusion: "Remember, seeking help is a sign of strength, not weakness. You're doing an incredible job as a mother! 🌟"
+        conclusion: "🌷 Final Note: You're not alone on this journey. Reach out, ask for help, and take care of yourself as you care for your little one. Support is always available."
       }
     },
     {
       title: "🤱 Breastfeeding",
-      subtitle: "Nourishing Your Baby Naturally",
+      subtitle: "Complete Guide for New Moms",
       icon: Heart,
       content: {
-        intro: "Breastfeeding is one of the most beautiful and beneficial gifts you can give your newborn. It provides perfect nutrition, strengthens your baby's immune system, and builds a special bond between you and your little one. Here's what every new mom should know:",
+        intro: "Breastfeeding is a beautiful bonding experience and provides the best nutrition for your baby. Here's everything you need to know to make your breastfeeding journey easier and successful.",
         points: [
           {
-            title: "Benefits for Baby",
-            description: "Breast milk contains all the nutrients your baby needs in the first 6 months — proteins, fats, vitamins, and antibodies that protect against infections. It's easily digested and adapts as your baby grows. 🍼✨"
+            title: "🌼 Benefits of Breastfeeding",
+            description: "Nutritionally complete: Breast milk contains the perfect balance of vitamins, protein, and fat for your baby's growth. Immune support: It contains antibodies that help protect babies from illnesses such as diarrhea, respiratory infections, and ear infections. Emotional bonding: Skin-to-skin contact releases hormones that strengthen the mother-baby bond. Health benefits for moms: Lowers risk of breast and ovarian cancers, type 2 diabetes, and postpartum depression. Cost-effective and convenient: No preparation needed, always at the right temperature."
           },
           {
-            title: "Benefits for Mom",
-            description: "Breastfeeding helps your uterus shrink back to its normal size, burns extra calories, and can reduce the risk of some cancers. It also releases hormones that promote relaxation and bonding. 💖🌸"
+            title: "🕰️ When and How to Breastfeed",
+            description: "Initiate breastfeeding within the first hour after birth (the 'golden hour') to stimulate milk production. Feed on demand: Watch for early hunger cues like lip smacking, rooting, or sucking motions instead of waiting for crying. Make sure your baby has a deep latch to avoid nipple pain and ensure effective milk transfer. Offer both breasts during feeding sessions to maintain supply and satisfy your baby."
           },
           {
-            title: "Getting Started",
-            description: "Try to breastfeed as soon as possible after birth, ideally within the first hour. Skin-to-skin contact helps your baby latch on easily and stimulates milk production. 🤱🕐"
+            title: "🤔 Common Breastfeeding Challenges & How to Overcome Them",
+            description: "Sore or cracked nipples: Check latch; apply expressed breast milk or lanolin cream; air dry nipples. Engorgement: Feed frequently; use warm compress before feeding; cold compress after feeding. Low milk supply: Nurse often; stay hydrated; try breastfeeding teas or consult a lactation expert. Blocked milk ducts: Massage affected area; apply warm compress; change feeding positions. Mastitis (breast infection): See a doctor for antibiotics; continue breastfeeding to clear infection."
           },
           {
-            title: "Proper Latching",
-            description: "A good latch means your baby's mouth covers both the nipple and part of the areola (the darker skin around the nipple). This helps them get enough milk and prevents nipple pain or damage. Ask a nurse or lactation consultant for help if you're unsure. 👄👍"
+            title: "🍽️ Nutrition and Self-Care for Breastfeeding Moms",
+            description: "Eat a well-balanced diet rich in fruits, vegetables, whole grains, and protein. Drink plenty of water to stay hydrated — aim for about 8-10 glasses a day. Avoid alcohol, smoking, and limit caffeine intake. Get rest whenever possible, and accept help from family or friends. Manage stress through relaxation techniques like deep breathing, meditation, or gentle exercise."
           },
           {
-            title: "Feeding on Demand",
-            description: "Feed your baby whenever they show hunger signs — rooting, sucking fingers, or fussiness — rather than on a strict schedule. This supports healthy weight gain and milk supply. ⏰❤️"
+            title: "🍼 Expressing and Storing Breast Milk",
+            description: "You can express milk manually or with a breast pump. Store milk in clean, sterilized containers. Freshly expressed milk can be kept at room temperature for up to 6 hours, in the fridge for up to 4 days, and in the freezer for up to 6 months. Always label stored milk with the date and use the oldest milk first."
           },
           {
-            title: "Common Challenges",
-            description: "Some moms may face soreness, low milk supply, or engorgement. These are normal but can be managed with proper technique, rest, hydration, and support. Don't hesitate to seek help from health workers or breastfeeding groups. 🆘🤝"
-          },
-          {
-            title: "Expressing Milk",
-            description: "You can hand express or use a breast pump to store milk for later, especially if you return to work or need a break. Stored milk keeps your baby nourished and your milk supply steady. 🍼🕒"
-          },
-          {
-            title: "Avoiding Bottle Confusion",
-            description: "If possible, delay introducing bottles or pacifiers until breastfeeding is well established (usually 3-4 weeks) to prevent nipple confusion. 🍼🚫"
+            title: "🕵️‍♀️ Frequently Asked Questions",
+            description: "Can I breastfeed if I'm sick? Usually yes. Breast milk contains antibodies that help protect your baby. Consult your doctor for specific illnesses or medications. How long should I breastfeed? WHO recommends exclusive breastfeeding for the first 6 months, then continuing with complementary foods up to 2 years or beyond. What if my baby refuses to latch? Try skin-to-skin contact, different positions, and consult a lactation consultant for personalized help."
           }
         ],
-        conclusion: "Remember, every mother and baby's breastfeeding journey is unique. Be patient with yourself, trust your instincts, and know that support is always available. You're doing an amazing job nourishing your baby with love! 🌟💕"
+        conclusion: "🆘 When to Seek Help: Your baby isn't gaining weight or seems hungry all the time. You experience severe nipple pain, swelling, redness, or fever. You notice symptoms of mastitis (flu-like symptoms with breast pain). You have concerns about milk supply or baby's feeding habits. 💡 Final Thought: Breastfeeding is a unique experience for every mother and baby. Patience, support, and self-care are key. Celebrate your efforts — you're nourishing your baby with love and health!"
       }
     },
     {
-      title: "🧠 What Are the Types of Birthing a Baby?",
+      title: "🤰 What Are the Types of Birthing a Baby?",
       subtitle: "Understanding Your Options",
       icon: BookOpen,
       content: {
-        intro: "Knowing the different types of childbirth helps you prepare and make informed choices.",
+        intro: "Every woman's birthing experience is unique. The type of birth may depend on personal choice, medical needs, or unexpected situations. Here's a guide to the main types of childbirth, so expectant mothers can feel informed and empowered.",
         points: [
           {
-            title: "Natural Birth",
-            description: "Labor and delivery without medical intervention, allowing your body to birth the baby naturally. Pain relief options like breathing techniques and support from midwives help manage contractions. 🌿👶"
+            title: "👶 Vaginal Birth (Natural Delivery)",
+            description: "Most common type of birth. Baby is delivered through the birth canal. May or may not involve pain relief (like an epidural). Allows quicker recovery and lower risk of complications in future pregnancies. Benefits: ✔️ Shorter hospital stay ✔️ Faster recovery ✔️ Immediate skin-to-skin contact"
           },
           {
-            title: "Assisted Vaginal Delivery",
-            description: "Sometimes tools like forceps or vacuum extractors are used to help deliver the baby safely during vaginal birth, often due to prolonged labor or distress. Your doctor will discuss if needed. ⚙️🛠️"
+            title: "💉 Cesarean Section (C-Section)",
+            description: "Surgical delivery through an incision in the abdomen and uterus. Planned (elective) or emergency, based on medical reasons. Needed if baby is in distress, breech position, or labor isn't progressing. Benefits: ✔️ Can be lifesaving for mother and baby ✔️ Option if vaginal birth is unsafe. Note: ❗ Recovery takes longer — usually 6 weeks. ❗ Higher chance of complications in future pregnancies."
           },
           {
-            title: "Cesarean Section (C-Section)",
-            description: "A surgical procedure where the baby is delivered through an incision in the abdomen. It may be planned or emergency for health reasons. Recovery involves special care and rest. 🏥🔪"
+            title: "🏡 Home Birth",
+            description: "Birth takes place at home with the help of a midwife. Suitable for low-risk pregnancies. Offers a calm, familiar environment. Benefits: ✔️ More personal and private ✔️ You're in control of your space and surroundings. Note: ❗ Emergency care may be delayed if complications occur."
           },
           {
-            title: "Water Birth",
-            description: "Giving birth in a warm water pool, which may help reduce pain and anxiety. Not all hospitals offer this, so check availability. 💧🌊"
+            title: "🛁 Water Birth",
+            description: "Baby is born in a tub of warm water. Can be done at home or in some hospitals/birth centers. Helps relax muscles and may ease pain. Benefits: ✔️ Natural pain relief ✔️ Calm and gentle birth experience. Note: ❗ Should be done under professional supervision."
           },
           {
-            title: "Home Birth",
-            description: "Some women choose to deliver at home with the help of trained midwives. This option requires thorough planning, medical backup, and safety measures. 🏠🩺"
+            title: "🏥 Assisted Vaginal Delivery",
+            description: "Uses tools like forceps or a vacuum device to help deliver the baby. Needed if mother is too tired, or if baby needs help coming out. Still a vaginal birth, but involves medical assistance. Note: ❗ Slightly higher risk of vaginal tears or swelling ✔️ Faster than emergency C-section in urgent cases"
+          },
+          {
+            title: "🌟 VBAC (Vaginal Birth After Cesarean)",
+            description: "A woman gives birth vaginally after having a C-section in the past. Safe in many cases with proper medical support. Reduces recovery time and avoids repeat surgery. Important: Not all women are candidates for VBAC — consult your doctor."
           }
         ],
-        conclusion: "Discuss your preferences and health status with your healthcare provider early in pregnancy to prepare the safest and most comfortable birth plan for you and your baby. 🤰🤝"
+        conclusion: "💬 Final Message: Every birth is beautiful — what matters most is the safety and wellbeing of the mother and baby. It's okay if your birth plan changes. Trust your body, trust your doctor, and know your options."
       }
     },
     {
-      title: "👶 How to Take Care of a New Baby",
+      title: "👶 How to Take Care of a Newborn Baby",
       subtitle: "Essential Tips for New Moms",
       icon: Baby,
       content: {
-        intro: "Caring for a newborn can be both magical and challenging. Here are core tips to help your baby thrive:",
+        intro: "The first few weeks with a newborn can feel overwhelming — but with gentle care, patience, and love, you can confidently meet your baby's needs. Here's a simple guide for new moms and families.",
         points: [
           {
-            title: "Feeding",
-            description: "Whether breastfeeding or formula feeding, feed your baby on demand—usually every 2-3 hours. Breast milk provides the best nutrition and immunity, but support is available if you choose formula. 🍼❤️"
+            title: "🍼 Feeding Your Newborn",
+            description: "Breastfeeding: Feed every 2–3 hours (8–12 times/day). Watch for hunger cues: rooting, sucking hands, or fussiness. Formula Feeding: Follow instructions on the formula box. Use clean, sterilized bottles. Burping: Gently burp your baby after each feed to prevent gas. 📝 Tip: Track feeds and diaper changes during the first few weeks."
           },
           {
-            title: "Sleeping",
-            description: "Newborns sleep a lot but in short bursts. Create a safe sleep space on their back, free from pillows or blankets to reduce the risk of SIDS (Sudden Infant Death Syndrome). 🛏️😴"
+            title: "😴 Helping Your Baby Sleep",
+            description: "Newborns sleep 16–18 hours a day in short naps (2–4 hours). Always place baby on their back to sleep to reduce the risk of SIDS (Sudden Infant Death Syndrome). Use a firm mattress with no pillows, toys, or heavy blankets. 🕯️ Keep the room quiet and dim to help baby distinguish night from day."
           },
           {
-            title: "Diapering",
-            description: "Change diapers frequently to keep baby dry and prevent rashes. Clean gently with warm water or hypoallergenic wipes. Allow some diaper-free time for skin to breathe. 🧴🩲"
+            title: "🧼 Bathing & Hygiene",
+            description: "Give sponge baths until the umbilical cord falls off (1–2 weeks). Use lukewarm water, mild baby soap, and a soft towel. Clean the diaper area gently with water or wipes, and change diapers every 2–3 hours or when soiled. 🌸 Apply a thin layer of baby-safe cream if diaper rash occurs."
           },
           {
-            title: "Bathing",
-            description: "Give sponge baths until the umbilical cord stump falls off. Use mild baby soap and lukewarm water. Keep bath time calm and short. 🛁🧼"
+            title: "👕 Clothing & Temperature Care",
+            description: "Dress your baby in soft cotton layers — not too hot or cold. Keep the room temperature between 24°C–26°C (75–78°F). Avoid overdressing — babies overheat easily. 👶 Check baby's neck or chest to feel if they're too warm or cold."
           },
           {
-            title: "Bonding",
-            description: "Skin-to-skin contact, gentle talking, and cuddling build your baby's trust and security. This emotional connection supports brain development and happiness. 🤱💕"
+            title: "🧠 Bonding & Development",
+            description: "Talk, sing, and cuddle your baby to build emotional connection. Give skin-to-skin contact — it's comforting and boosts immunity. Offer tummy time (supervised) for a few minutes daily to strengthen neck muscles. 🧸 Early interaction helps your baby learn, even in the first weeks!"
           },
           {
-            title: "Health Checks",
-            description: "Keep up with immunizations and regular pediatric visits. Monitor for any signs of illness like fever, unusual crying, or feeding issues and seek medical help if needed. 🩺👶"
+            title: "🏥 Health & Doctor Visits",
+            description: "Follow the vaccination schedule recommended by your local health clinic. Monitor for signs of illness: fever, trouble feeding, unusual crying, or rash. Visit your pediatrician regularly for check-ups and weight monitoring."
+          },
+          {
+            title: "📌 Umbilical Cord & Circumcision Care (if applicable)",
+            description: "Keep the area dry and exposed to air. Clean with a cotton swab dipped in warm water, if needed. It will fall off naturally within 1–2 weeks."
+          },
+          {
+            title: "💬 Ask for Help When Needed",
+            description: "It's okay to feel tired or unsure — ask your family, friends, or healthcare providers for help. Join a new-mom support group or speak with a midwife or public health nurse."
           }
         ],
-        conclusion: "Remember, it's okay to ask for help, rest when you can, and trust your instincts as a mother. You're doing an incredible job! 🌟"
+        conclusion: "❤️ Final Reminder: You're doing an amazing job. Caring for a newborn is a learning journey — trust your instincts, go gently, and remember to take care of yourself too."
       }
     },
     {
       title: "🔍 Pregnancy Symptoms",
-      subtitle: "What to Expect and When to Seek Help",
+      subtitle: "What to Expect Early On",
       icon: Home,
       content: {
-        intro: "Pregnancy brings many physical and emotional changes. Here are common symptoms and tips on managing them:",
+        intro: "Pregnancy symptoms can begin as early as the first week after conception — and each woman's experience is different. Some may notice changes right away, while others might not feel symptoms until weeks later. Here's a guide to common early pregnancy signs to help women identify and understand what's happening in their bodies.",
         points: [
           {
-            title: "Morning Sickness",
-            description: "Nausea and vomiting are common in early pregnancy. Eat small, frequent meals, avoid strong smells, and try ginger or lemon to ease nausea. If vomiting is severe, consult your doctor. 🤢🍋"
+            title: "💗 Missed Period",
+            description: "Often the first and most noticeable sign of pregnancy. If your cycle is regular and you miss a period, it's a good idea to take a pregnancy test."
           },
           {
-            title: "Fatigue",
-            description: "Your body is working hard to grow a baby. Rest when possible and listen to your energy levels. Balanced nutrition helps maintain strength. 😴💤"
+            title: "😴 Fatigue (Extreme Tiredness)",
+            description: "Rising progesterone levels can make you feel unusually sleepy or drained — even after resting. Your body is working hard to support the growing baby."
           },
           {
-            title: "Mood Swings",
-            description: "Hormonal changes can affect emotions. Practice self-care, talk openly with loved ones, and seek support if feelings become overwhelming. 😢😊"
+            title: "🤢 Nausea or Morning Sickness",
+            description: "Usually starts around week 4–6. Can happen any time of the day, not just in the morning. Some women experience vomiting, others only mild queasiness."
           },
           {
-            title: "Frequent Urination",
-            description: "The growing uterus presses on your bladder. Stay hydrated but avoid caffeinated drinks. Plan bathroom breaks ahead when outside. 🚻💧"
+            title: "👃 Heightened Sense of Smell",
+            description: "Everyday smells may suddenly seem stronger or unpleasant. Some women also develop food aversions."
           },
           {
-            title: "Cravings & Aversions",
-            description: "It's normal to want certain foods or avoid others. Eat a balanced diet, but listen to your body's needs. 🍎🍟"
+            title: "🍽️ Food Cravings or Aversions",
+            description: "You may crave certain foods or feel disgusted by others you once loved. This is normal and often caused by hormonal changes."
           },
           {
-            title: "Swelling & Back Pain",
-            description: "Mild swelling in feet and back discomfort are common later in pregnancy. Elevate your feet, wear comfortable shoes, and do gentle stretches. If swelling is sudden or severe, seek medical advice. 🦶🧘‍♀️"
+            title: "💧 Frequent Urination",
+            description: "Hormonal shifts and increased blood flow to the kidneys can cause you to pee more often, even in early pregnancy."
+          },
+          {
+            title: "😣 Mood Swings",
+            description: "You may feel more emotional or irritable due to hormonal changes — very common in the first trimester."
+          },
+          {
+            title: "🧠 Headaches or Lightheadedness",
+            description: "Caused by changes in blood pressure or blood sugar levels. Stay hydrated and eat small, frequent meals."
+          },
+          {
+            title: "🌸 Tender or Swollen Breasts",
+            description: "Your breasts may feel sore, fuller, or heavier — similar to how they feel before your period, but more intense."
+          },
+          {
+            title: "🩸 Light Spotting or Cramping",
+            description: "Known as implantation bleeding, light spotting may occur when the fertilized egg attaches to the uterine lining. This usually happens around 6–12 days after conception."
           }
         ],
-        conclusion: "Always attend prenatal appointments and discuss any symptoms that worry you. Early detection keeps both you and your baby safe and healthy. 🤰🩺"
+        conclusion: "📝 Note: Not all women experience the same symptoms. If you think you might be pregnant, the best step is to take a home pregnancy test and consult a healthcare provider."
       }
     }
   ];

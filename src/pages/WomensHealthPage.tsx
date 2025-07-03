@@ -8,158 +8,202 @@ import { Heart, Calendar, Phone, BookOpen, Users, AlertCircle } from "lucide-rea
 const WomensHealthPage = () => {
   const topics = [
     {
-      title: "🩹 Pain Relief Tips",
-      subtitle: "Managing Period Cramps Like a Pro",
+      title: "🌸 Pain Relief Tips During Periods",
+      subtitle: "Managing Menstrual Cramps Like a Pro",
       icon: Heart,
       content: {
-        intro: "Menstrual cramps (dysmenorrhea) are caused by contractions in the uterus as it sheds its lining. While common, pain can vary from mild discomfort to severe cramping that disrupts your daily life. Here are practical ways to ease this pain safely:",
+        intro: "Many women experience menstrual pain (dysmenorrhea) during their monthly cycle. While it's common, it shouldn't ruin your day. Here are some safe, effective ways to ease the discomfort.",
         points: [
           {
-            title: "Heat Therapy",
-            description: "Applying heat to your lower belly helps muscles relax and reduces pain signals. Use a hot water bottle or electric heating pad for 15-20 minutes several times a day. Warm baths with Epsom salts can also soothe aching muscles and calm your nerves. 🛁♨️"
+            title: "🔥 Use Heat Therapy",
+            description: "Apply a hot water bag or heating pad on your lower belly or back. Heat helps relax the muscles and reduce cramping. Warm baths can also soothe your body and mind."
           },
           {
-            title: "Stay Active",
-            description: "Though it sounds counterintuitive, gentle exercise like walking, yoga, or stretching boosts blood circulation and releases endorphins—your body's natural painkillers. Try specific yoga poses such as Cat-Cow, Child's Pose, or Supine Twist to relieve tension. 🧘‍♀️💃"
+            title: "🧘‍♀️ Gentle Exercise or Yoga",
+            description: "Light movement helps release endorphins (natural painkillers). Try gentle yoga poses like Child's Pose, Cat-Cow Stretch, Supine Twist. A short walk or slow stretching can also ease discomfort."
           },
           {
-            title: "Nutrition & Hydration",
-            description: "Dehydration can worsen cramps and bloating. Drink plenty of water throughout the day, and avoid salty foods, caffeine, and sugary snacks that increase inflammation. Some herbal teas like ginger or chamomile may provide calming effects. 🍵💧"
+            title: "💊 Over-the-Counter Pain Relief",
+            description: "Medications like Paracetamol, Ibuprofen, or Mefenamic Acid can help. Always follow proper dosage or ask a doctor/pharmacist for guidance."
           },
           {
-            title: "Pain Medication",
-            description: "Over-the-counter NSAIDs such as ibuprofen reduce inflammation and pain effectively. Always follow recommended dosages and consult a doctor if you have underlying health conditions or take other medications. Avoid excessive use to prevent side effects. 💊⚠️"
+            title: "☕ Sip Herbal Teas",
+            description: "Drink warm ginger tea, chamomile, or peppermint tea. These can reduce inflammation and relax your uterus naturally."
           },
           {
-            title: "Mind-Body Techniques",
-            description: "Stress can amplify pain perception. Practice deep breathing exercises, guided meditation, or progressive muscle relaxation to help your mind and body relax. Even listening to soothing music or aromatherapy with lavender can lower discomfort levels. 🧠🌿"
+            title: "🍽️ Eat Light, Anti-Inflammatory Foods",
+            description: "Choose foods rich in Magnesium (bananas, nuts), Omega-3s (fish, flaxseeds), Iron (leafy greens). Avoid too much sugar, salt, or caffeine, which can make symptoms worse."
+          },
+          {
+            title: "💤 Prioritize Rest & Sleep",
+            description: "Don't feel guilty about slowing down. Resting helps your body recover and manage pain better. Try sleeping on your side with a pillow under your knees."
+          },
+          {
+            title: "💧 Stay Hydrated",
+            description: "Drink plenty of warm water to ease bloating and muscle tension. Avoid fizzy drinks and too much coffee."
+          },
+          {
+            title: "🧖‍♀️ Try Relaxation Techniques",
+            description: "Deep breathing, meditation, or listening to calming music can reduce stress and pain. Stress often makes cramps worse, so staying calm helps a lot."
           }
         ],
-        conclusion: "If your cramps are severe, worsen over time, or come with unusual symptoms like heavy bleeding or fever, seek medical advice as it may indicate conditions like endometriosis or fibroids. You deserve relief and care. 🌟💜"
+        conclusion: "💬 When To See a Doctor: Seek medical advice if pain is severe and doesn't improve with medication, periods are irregular, too heavy, or last longer than 7 days, you experience nausea, vomiting, or fainting regularly during periods."
       }
     },
     {
-      title: "🧼 Sanitary Hygiene",
-      subtitle: "Keep Yourself Fresh & Healthy Every Day",
+      title: "🧼 Sanitary Hygiene for Women",
+      subtitle: "Essential Tips for Menstrual Health",
       icon: AlertCircle,
       content: {
-        intro: "Maintaining hygiene during your period is not only about comfort — it's crucial for preventing infections like bacterial vaginosis or urinary tract infections. Here's a comprehensive guide to safe menstrual hygiene practices:",
+        intro: "Maintaining proper menstrual hygiene is essential for preventing infections, boosting confidence, and staying healthy during your period. Here are some essential tips every girl and woman should know:",
         points: [
           {
-            title: "Regular Changing",
-            description: "Menstrual blood is a perfect environment for bacteria to grow. Change your pad, tampon, or menstrual cup every 4-6 hours, or more often if flow is heavy. Never leave tampons in for more than 8 hours to avoid toxic shock syndrome, a rare but serious condition. ⏰🩸"
+            title: "🩸 Choose the Right Sanitary Product",
+            description: "There are several options to manage your period. Choose what's comfortable and suits your flow: Sanitary pads (regular, long, overnight), Tampons, Menstrual cups, Period panties. ✅ Tip: Always use good quality, clean products and never use expired sanitary products."
           },
           {
-            title: "Hand Hygiene",
-            description: "Always wash your hands thoroughly with soap and water before and after handling menstrual products to reduce germ transfer. Carry a small bottle of sanitizer if soap isn't available. Clean hands protect both you and others. ✋🧼"
+            title: "🔁 Change Regularly",
+            description: "Change pads or tampons every 4–6 hours, even if your flow seems light. If using a menstrual cup, empty and rinse it every 6–8 hours. Prolonged use can lead to bacterial infections or bad odor."
           },
           {
-            title: "Gentle Cleaning",
-            description: "Wash your external genital area daily with warm water and mild, fragrance-free soap. Avoid douching or harsh soaps, as they can disrupt the natural balance of healthy bacteria and cause irritation. Pat dry gently to avoid moisture buildup. 🚿🧴"
+            title: "🧼 Wash Your Hands (Always!)",
+            description: "Wash your hands before and after changing your sanitary product. Use soap and clean water to avoid spreading bacteria."
           },
           {
-            title: "Disposal Practices",
-            description: "Wrap used pads and tampons in toilet paper or sanitary wrappers and place them in covered bins. Never flush these products down the toilet, as they can block plumbing and harm the environment. Teach younger girls proper disposal methods early on. 🚮♻️"
+            title: "💦 Keep Your Vaginal Area Clean",
+            description: "Gently wash the external vaginal area with warm water during your period. Avoid using scented soaps, douches, or feminine sprays — they can irritate and disturb the natural pH."
           },
           {
-            title: "Reusable Products",
-            description: "If using cloth pads or menstrual cups, proper cleaning is essential. Wash cloth pads with soap and hot water, and dry them fully under sunlight to kill germs. Sterilize menstrual cups by boiling them in water for 5-10 minutes between cycles. ☀️🧺"
+            title: "👖 Wear Clean, Breathable Underwear",
+            description: "Choose cotton underwear that lets your skin breathe. Change underwear daily and more often if it becomes stained or sweaty."
+          },
+          {
+            title: "🗑️ Dispose Sanitary Products Properly",
+            description: "Wrap used pads or tampons in paper or the product's wrapper before throwing them in a bin. Never flush pads or tampons — they can clog plumbing. Use covered bins and change the garbage regularly to maintain hygiene."
+          },
+          {
+            title: "🧺 Maintain Hygiene During Heavy Flow",
+            description: "Carry extra pads, tissues, and spare underwear if you're going out during your period. Use panty liners toward the end of your period when flow is light."
+          },
+          {
+            title: "💬 Talk Openly About Periods",
+            description: "Periods are natural — don't be ashamed to ask questions or talk about hygiene. Share this knowledge with younger girls and help break the taboo."
           }
         ],
-        conclusion: "Good hygiene habits promote confidence and comfort. If you notice itching, burning, unusual discharge, or foul odor, consult a healthcare provider promptly — these may be signs of infection. Your body deserves respect and care every day! 💚🌸"
+        conclusion: "⚠️ Warning Signs of Poor Hygiene or Infections: Itching, rash, or unusual discharge; Foul odor even after cleaning; Burning during urination or pain. If you notice any of these, consult a doctor or gynecologist immediately. 🌸 Final Reminder: Good sanitary hygiene = confidence + health + comfort. Taking small steps every day can make a big difference."
       }
     },
     {
-      title: "🩸 First Period Guide",
-      subtitle: "What to Expect & How to Prepare",
+      title: "🩸 First Period Guide (Menarche)",
+      subtitle: "What to Expect and How to Prepare",
       icon: Calendar,
       content: {
-        intro: "Getting your first period (menarche) is a major life event filled with excitement and questions. Knowing what to expect helps you feel prepared and proud. Here's everything you need to know:",
+        intro: "Getting your first period is a big moment in every girl's life. It's a natural part of growing up and becoming a young woman. Here's everything you need to know to feel confident and prepared!",
         points: [
           {
-            title: "When It Happens",
-            description: "Most girls start menstruating between ages 10 and 15, but this varies. Early or late onset is normal — your body is unique. Growth spurts, weight changes, and genetics all play a role. 🧒⏳"
+            title: "🌸 What Is a Period?",
+            description: "A period (menstruation) is when blood and tissue leave your body from the uterus through the vagina. It's part of the monthly menstrual cycle and means your body is healthy and developing normally."
           },
           {
-            title: "Physical Signs",
-            description: "Before your first period, you might notice breast development, growth of pubic hair, slight mood changes, or mild cramps. Your vaginal discharge may also increase or change in consistency as your body prepares. 🌸"
+            title: "🕰️ When Will I Get My First Period?",
+            description: "Most girls get their first period between ages 10 to 15. It may happen earlier or later — and that's completely normal! Signs it might be coming: Breast development, Hair under arms or around genitals, White vaginal discharge, Mood changes or slight cramps."
           },
           {
-            title: "What to Use",
-            description: "Have sanitary pads or soft cloth pads ready in your bag or locker. Disposable pads are easy to use and widely available; reusable cloth pads are eco-friendly options. Learn how to wear pads securely and change them regularly. 🎒🩹"
+            title: "🩹 What Should I Use During My Period?",
+            description: "Common Products: Sanitary Pads – easiest for beginners, Panty Liners – for light flow or spotting, Menstrual Cups or Tampons – can be tried later with guidance. ✅ Tip: Always carry an extra pad in your bag just in case!"
           },
           {
-            title: "Emotional Feelings",
-            description: "It's normal to feel nervous, excited, or even embarrassed. Talk to your mother, sister, or trusted adult about your feelings and questions — open conversations help normalize menstruation. ❤️"
+            title: "📆 How Long Does It Last?",
+            description: "A period usually lasts between 3 to 7 days. It may be heavy at first, then get lighter each day. Your first few periods may be irregular, but that's normal as your body adjusts."
           },
           {
-            title: "Health Tips",
-            description: "Track your cycle using a calendar or app to understand your body better. If your period is very heavy, lasts longer than 7 days, or causes intense pain, ask a healthcare worker for advice. Early care helps prevent complications. 📅🩺"
+            title: "😣 Common Symptoms You Might Feel",
+            description: "Mild cramps in the lower belly, Mood swings or emotional changes, Bloating or tender breasts, Feeling tired or sleepy. 🧘 Try using a warm compress, drinking water, and getting rest."
+          },
+          {
+            title: "🧼 How to Stay Clean and Comfortable",
+            description: "Change your pad every 4–6 hours, Wash your private area with warm water (no harsh soaps), Wear clean cotton underwear, Dispose of used pads properly — never flush them."
+          },
+          {
+            title: "💬 Who Can I Talk To?",
+            description: "A trusted adult: mom, older sister, aunt, or teacher; A school counselor or health teacher; Remember: It's okay to ask questions — you're not alone!"
           }
         ],
-        conclusion: "Celebrate your first period as a symbol of strength and growth. You're entering an amazing phase of life! 🎉✨"
+        conclusion: "📌 Important Things to Know: Periods are normal and healthy, It doesn't mean you're 'grown up' yet, just that your body is changing, You can still go to school, play, and do everything — just with a little extra care. 🌷 Final Message for Girls: Your period is a sign that your body is strong and working just as it should. There's nothing to fear or be ashamed of. Learn, stay clean, and be proud of yourself!"
       }
     },
     {
-      title: "🔍 Menstruation Myths & Truths",
+      title: "🔍 Myths & Truths About Periods",
       subtitle: "Busting Common Misconceptions",
       icon: BookOpen,
       content: {
-        intro: "Many myths about periods create confusion and shame, but knowledge is power! Here's the truth behind common misconceptions:",
+        intro: "There are many old beliefs and taboos around menstruation. Let's clear the confusion and reveal the truth behind the myths so every girl and woman can feel confident and informed.",
         points: [
           {
-            title: "❌ Myth: You shouldn't bathe or wash your hair during menstruation.",
-            description: "✅ Truth: Keeping clean is essential during your period. Bathing and washing hair are safe and encouraged to maintain hygiene and comfort. 🚿"
+            title: "❌ Myth 1: You shouldn't bathe or wash your hair during your period",
+            description: "✅ Truth: You can and should bathe during your period. In fact, warm water can help reduce cramps and keep you fresh and clean."
           },
           {
-            title: "❌ Myth: You can't exercise while on your period.",
-            description: "✅ Truth: Light to moderate exercise often helps reduce cramps, boosts mood, and increases energy. Listen to your body and adjust activity as needed. 🏃‍♀️"
+            title: "❌ Myth 2: You can't get pregnant during your period",
+            description: "✅ Truth: While it's less likely, it's still possible to get pregnant if you have unprotected sex during your period. Always use protection."
           },
           {
-            title: "❌ Myth: You're \"impure\" or \"dirty\" during your period.",
-            description: "✅ Truth: Menstruation is a healthy, natural process. You are never impure or less worthy during your cycle. Treat yourself with kindness and respect always. 💖"
+            title: "❌ Myth 3: Period blood is dirty or impure",
+            description: "✅ Truth: Period blood is just the natural shedding of the uterus lining. It's not dirty — it's a normal, healthy process."
           },
           {
-            title: "❌ Myth: Tampons cause infertility.",
-            description: "✅ Truth: When used properly and hygienically, tampons are safe and do not affect your fertility or reproductive health. Always follow usage guidelines. 🩸"
+            title: "❌ Myth 4: Girls shouldn't play sports or exercise on their period",
+            description: "✅ Truth: Light exercise or movement (like walking or yoga) can actually help reduce cramps and improve your mood!"
           },
           {
-            title: "❌ Myth: You shouldn't eat certain foods during periods.",
-            description: "✅ Truth: Balanced nutrition is important throughout your cycle. While some women may notice food cravings or sensitivities, no foods need to be completely avoided. Focus on nourishing your body! 🥗"
+            title: "❌ Myth 5: Tampons or menstrual cups take away virginity",
+            description: "✅ Truth: Using a tampon or cup does not affect your virginity. Virginity is a cultural concept — not something defined by using a hygiene product."
+          },
+          {
+            title: "❌ Myth 6: You must hide your period from everyone",
+            description: "✅ Truth: Periods are nothing to be ashamed of. It's a natural part of life. Talking about it helps break the stigma and support others."
+          },
+          {
+            title: "❌ Myth 7: You bleed a lot during your period",
+            description: "✅ Truth: It may look like a lot, but the average blood loss is only about 2–6 tablespoons per period."
+          },
+          {
+            title: "❌ Myth 8: You can't go to the temple or pray during your period",
+            description: "✅ Truth: This is based on cultural or religious beliefs, not medical facts. Periods do not make you unclean — it's up to personal or spiritual choice."
           }
         ],
-        conclusion: "Be curious and question misinformation. Your body, health, and confidence depend on facts, not myths! 📚✨"
+        conclusion: "🧠 Period Fact: Every girl is different. Flow, symptoms, and cycles vary — and that's okay. What matters is learning, caring for your body, and supporting each other with love and respect."
       }
     },
     {
       title: "🔄 Menstrual Products",
-      subtitle: "Exploring Your Options for Comfort & Care",
+      subtitle: "Choose What's Right for You",
       icon: Users,
       content: {
-        intro: "Choosing the right menstrual product can change your experience completely. Here's a detailed look at the most popular options:",
+        intro: "Every girl and woman deserves a comfortable period. Here's a guide to the different menstrual products you can choose from — depending on your flow, lifestyle, and comfort.",
         points: [
           {
-            title: "Disposable Pads",
-            description: "Easy to use, these pads come in different sizes and absorbencies. Choose unscented varieties to avoid irritation. Remember to change every 4-6 hours or more if needed. Ideal for beginners or when convenience matters. 🩹"
+            title: "🩹 Sanitary Pads (Napkins)",
+            description: "What it is: Soft absorbent sheets worn inside underwear to catch blood. ✅ Pros: Easy to use (great for beginners), Available everywhere, No insertion needed. ⚠️ Tips: Change every 4–6 hours, Choose based on flow: regular, long, ultra-thin, or overnight."
           },
           {
-            title: "Reusable Cloth Pads",
-            description: "Made from soft fabric, these are washable and eco-friendly. They require a bit more care — wash with mild detergent and dry fully in sunlight. Perfect for reducing waste and saving money over time. ♻️"
+            title: "💧 Menstrual Cups",
+            description: "What it is: A soft, reusable silicone cup inserted into the vagina to collect blood. ✅ Pros: Reusable for up to 5–10 years, Eco-friendly and cost-effective, Can be worn for 6–8 hours. ⚠️ Tips: Needs learning for insertion/removal, Must be sterilized between periods."
           },
           {
-            title: "Tampons",
-            description: "Small, absorbent plugs inserted inside the vagina to collect menstrual blood. They offer freedom of movement and discretion but require careful hygiene — change every 4-6 hours and wash hands before insertion. Not recommended for girls who have never menstruated before without guidance. 🏊‍♀️"
+            title: "🔘 Tampons",
+            description: "What it is: Small cotton cylinders inserted into the vagina to absorb blood directly. ✅ Pros: Invisible under clothes, Comfortable for sports/swimming, Available in different absorbencies. ⚠️ Tips: Change every 4–6 hours, Risk of Toxic Shock Syndrome (TSS) if worn too long."
           },
           {
-            title: "Menstrual Cups",
-            description: "Flexible silicone cups inserted into the vagina to collect blood. Reusable for years if cared for properly. They are cost-effective and environmentally friendly but need practice to use confidently. Sterilize before and after each cycle by boiling. 👩‍🔬"
+            title: "🩲 Period Panties",
+            description: "What it is: Special underwear with built-in absorbent layers to absorb menstrual flow. ✅ Pros: Reusable & leak-proof, Comfortable, no shifting like pads, Good backup with cup or tampon. ⚠️ Tips: Wash after each use, Best for light to moderate flow or as backup."
           },
           {
-            title: "Period Underwear",
-            description: "Absorbent underwear designed to be worn alone or as backup. Comfortable and reusable, they are gaining popularity for daily use and light flow days. 🩲"
+            title: "☁️ Panty Liners",
+            description: "What it is: Thin mini-pads used for spotting or light discharge. ✅ Pros: Great for the beginning or end of a period, Can be used with tampons or cups for extra protection. ⚠️ Tips: Not suitable for heavy flow, Change regularly to stay fresh."
           }
         ],
-        conclusion: "Experiment with what feels right and suits your lifestyle. Comfort, safety, and cleanliness are the most important. Don't hesitate to ask for help if you're unsure! 💜"
+        conclusion: "🧼 Important Hygiene Tips: Always wash hands before and after changing any product. Carry spare products when you're on the go. Track your cycle to stay prepared. 🌱 Eco-Friendly Tip: If you're looking to reduce waste, consider reusable products like: Cloth pads, Menstrual cups, Period underwear. 🩸 Final Word: There is no one-size-fits-all. Choose what makes YOU feel confident, clean, and comfortable. Your period, your choice."
       }
     }
   ];

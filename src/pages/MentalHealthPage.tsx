@@ -8,158 +8,194 @@ import { Brain, Heart, Phone, MessageCircle, Users, Smile } from "lucide-react";
 const MentalHealthPage = () => {
   const topics = [
     {
-      title: "How to Build Confidence",
+      title: "💪 How to Build Confidence for Women",
       subtitle: "Unlock Your Inner Power",
       icon: Smile,
       content: {
-        intro: "Confidence is a skill you can develop, not something you're just born with. It starts with believing in your worth and embracing your unique strengths.",
+        intro: "Confidence isn't something you're born with — it's something you build step by step. Every woman has the strength to believe in herself. Here's how you can grow your confidence from the inside out.",
         points: [
           {
-            title: "Positive Self-Talk",
-            description: "Notice how you speak to yourself. Replace harsh criticism with kind and encouraging words. For example, swap \"I can't do this\" with \"I am learning and growing every day.\" Practice affirmations like \"I am capable\" or \"I deserve happiness.\" 🗣️💬"
+            title: "🪞 Know Your Worth",
+            description: "Make a list of your strengths, skills, and accomplishments — even small ones. Remind yourself: You are enough. Don't compare yourself to others — your journey is unique."
           },
           {
-            title: "Set Small Goals",
-            description: "Confidence grows by achieving small wins. Set realistic daily or weekly goals — like speaking up in class, learning a new skill, or trying a new hobby. Celebrate each success, no matter how tiny. 🎯🎉"
+            title: "🎯 Set Small, Achievable Goals",
+            description: "Start with simple goals like 'speak up in class' or 'try something new today.' Achieving small things gives you big confidence boosts. Celebrate your progress — even if it's just 1%."
           },
           {
-            title: "Face Your Fears",
-            description: "Avoiding challenges can lower self-esteem. Try stepping out of your comfort zone gradually — speak to new people, share your opinions, or volunteer. Each step builds courage and self-trust. 🚶‍♀️🔥"
+            title: "💬 Speak Kindly to Yourself",
+            description: "Replace 'I'm not good enough' with 'I'm learning and improving every day.' Affirmations work! Try these: 'I am strong and capable.' 'I deserve respect.' 'I am proud of who I'm becoming.'"
           },
           {
-            title: "Body Language",
-            description: "Stand tall, maintain eye contact, and smile. These physical cues don't just show confidence—they also help you feel more confident internally. Practice power poses in front of a mirror. 🪞💪"
+            title: "👩‍🎓 Educate & Empower Yourself",
+            description: "Learn new skills, read books, or take classes that interest you. Knowledge builds power — and powerful women are confident."
           },
           {
-            title: "Surround Yourself with Support",
-            description: "Spend time with people who lift you up and believe in you. Positive friendships and mentors can inspire and motivate you on your journey. 🤗💞"
+            title: "🤝 Surround Yourself with Supportive People",
+            description: "Be around those who uplift, motivate, and believe in you. Cut out toxic relationships that make you doubt yourself."
+          },
+          {
+            title: "🧘‍♀️ Practice Self-Care & Self-Respect",
+            description: "Take care of your mental and physical health. Dress in a way that makes you feel good — not to impress others. Say no when something doesn't feel right — your boundaries matter."
+          },
+          {
+            title: "🎤 Step Out of Your Comfort Zone",
+            description: "Try new things, speak in public, take on challenges — growth happens outside the comfort zone. Even if you fail, you'll learn and become stronger."
+          },
+          {
+            title: "💗 Lift Other Women Up",
+            description: "Compliment, support, and cheer for other women. Helping others grow builds a confident, empowering community — and that confidence reflects back on you."
           }
         ],
-        conclusion: "Remember, confidence is a journey, not a destination. Be patient and gentle with yourself as you grow. You are worthy of all good things! 🌟"
+        conclusion: "✨ Final Note: Confidence isn't about being perfect. It's about showing up, trying, and never giving up. You are powerful, and your voice matters. Believe in yourself — because the world needs women like YOU."
       }
     },
     {
-      title: "Body Image Advice",
+      title: "💖 Body Image Advice for Women",
       subtitle: "Love the Skin You're In",
       icon: Heart,
       content: {
         intro: "Body image is how you see and feel about your own body. In a world full of unrealistic beauty standards, learning to appreciate and respect your body is essential for happiness.",
         points: [
           {
-            title: "Focus on Function, Not Just Form",
-            description: "Your body allows you to think, move, create, and experience life. Celebrate what it can do, not just how it looks. For example, \"My legs help me run and dance\" or \"My hands create beautiful things.\" 🏃‍♀️🎨"
+            title: "🪞 Every Body Is a Good Body",
+            description: "There's no such thing as a 'perfect' body — thin, curvy, tall, short, dark, or fair — all bodies are valid and beautiful. Celebrate your body for what it can do, not just how it looks (walking, hugging, dancing, thinking, creating!)."
           },
           {
-            title: "Limit Social Media Exposure",
-            description: "Many images online are edited or filtered, setting impossible standards. Follow accounts that promote body positivity and diversity instead. Remember, real beauty comes in many shapes, sizes, and colors. 📱❌"
+            title: "💬 Speak Kindly to Your Reflection",
+            description: "The way you talk to yourself matters. Try affirmations like: 'My body is strong and worthy.' 'I love and accept myself as I am.' 'I am more than my appearance.'"
           },
           {
-            title: "Practice Gratitude",
-            description: "Every day, think of 3 things you appreciate about your body. Maybe your smile, your strength, or your resilience. Gratitude rewires your brain to focus on the positive. 🙏😊"
+            title: "❌ Avoid Unrealistic Comparisons",
+            description: "Social media often shows highlight reels, not real life. Unfollow accounts that make you feel insecure. Follow people who represent body diversity and confidence."
           },
           {
-            title: "Wear Comfortable Clothes",
-            description: "Choose clothes that make you feel good and reflect your style, not just what's trendy or \"slimming.\" Comfort boosts confidence and self-love. 👗👚"
+            title: "🍽️ Respect Your Body with Nourishment",
+            description: "Eat to feel strong, energetic, and healthy, not to punish yourself. There's no 'bad' food — balance and listening to your body are key. Move your body in ways that bring you joy, not guilt."
           },
           {
-            title: "Talk Openly",
-            description: "Share your feelings about body image with trusted friends or family. Sometimes, just expressing your thoughts can ease insecurities and build support. 💬💖"
+            title: "🧘‍♀️ Focus on How You Feel, Not Just How You Look",
+            description: "Confidence doesn't come from changing your body — it comes from changing your mindset. Dress in ways that make you feel comfortable and happy. Don't wait to feel beautiful — you already are."
+          },
+          {
+            title: "🤝 Surround Yourself with Positivity",
+            description: "Spend time with people who support and uplift you. Talk openly with friends about body image — you're not alone. Be the friend who compliments others for who they are, not just how they look."
+          },
+          {
+            title: "📢 Your Value Is Not Measured by Your Weight or Shape",
+            description: "You are smart, creative, kind, and powerful. You are worthy of love, respect, and happiness right now, just as you are."
           }
         ],
-        conclusion: "Remember, you are beautiful as you are. Self-love is a revolutionary act in a world that tries to tell you otherwise. 💫💕"
+        conclusion: "✨ Final Message: Your body is your home — treat it with love, kindness, and respect. The world doesn't need more 'perfect' bodies, it needs more confident women who believe in themselves."
       }
     },
     {
-      title: "Dealing with Sadness or Fear",
+      title: "💙 Dealing with Sadness or Fear",
       subtitle: "You Are Not Alone",
       icon: Brain,
       content: {
-        intro: "Everyone experiences sadness, fear, or anxiety at times — it's part of being human. What matters is how you respond and seek support.",
+        intro: "Everyone experiences sadness or fear sometimes — it's a natural part of life. But when these feelings feel overwhelming, here are some ways to help you cope and heal.",
         points: [
           {
-            title: "Acknowledge Your Feelings",
-            description: "It's okay to feel sad or scared. Don't ignore or suppress your emotions. Give yourself permission to cry, write in a journal, or talk about it. Emotions are messengers, not enemies. 📝😭"
+            title: "🌿 Acknowledge Your Feelings",
+            description: "It's okay to feel sad or scared. Don't bottle up your emotions or pretend they don't exist. Give yourself permission to cry or express what you feel."
           },
           {
-            title: "Connect with Others",
-            description: "Reach out to trusted friends, family, or mentors. Sharing your worries reduces loneliness and often brings helpful perspective. If you don't feel comfortable talking, consider anonymous helplines or online support groups. 🤝📞"
+            title: "🗣️ Talk to Someone You Trust",
+            description: "Share your feelings with a close friend, family member, or counselor. Sometimes just speaking out loud helps lighten the burden."
           },
           {
-            title: "Stay Active",
-            description: "Physical activity releases endorphins that improve mood. Even a short walk or dancing to your favorite song can lift your spirits. 💃🌞"
+            title: "🧘‍♀️ Practice Deep Breathing and Mindfulness",
+            description: "Take slow, deep breaths to calm your nervous system. Try meditation or grounding exercises to stay present and reduce anxiety."
           },
           {
-            title: "Limit Stress Triggers",
-            description: "Identify things that increase your anxiety or sadness, like negative news, toxic people, or overwhelming schedules. Try to reduce or avoid them when possible. 🛑"
+            title: "🚶‍♀️ Move Your Body",
+            description: "Gentle exercise like walking, yoga, or stretching releases mood-boosting endorphins. Physical activity can ease stress and help you feel stronger."
           },
           {
-            title: "Seek Professional Help",
-            description: "If sadness or fear become overwhelming or last more than two weeks, consider talking to a counselor, psychologist, or doctor. Mental health professionals are trained to help you heal and thrive. 🧑‍⚕️💼"
+            title: "📖 Engage in Activities You Enjoy",
+            description: "Do things that bring you joy, like reading, painting, listening to music, or gardening. Creative outlets help process emotions and uplift your spirit."
+          },
+          {
+            title: "🛌 Rest and Care for Yourself",
+            description: "Make sure you get enough sleep and eat nourishing food. Sometimes sadness or fear can feel worse when you're tired or hungry."
+          },
+          {
+            title: "💡 Challenge Negative Thoughts",
+            description: "When you notice scary or sad thoughts, try to question them: Are they true? Are you assuming the worst? Replace negative thoughts with kinder, more realistic ones."
+          },
+          {
+            title: "🤝 Seek Professional Help if Needed",
+            description: "If sadness or fear lasts more than a few weeks or feels too heavy, talking to a mental health professional can help. Therapy, counseling, or support groups provide safe spaces to heal."
           }
         ],
-        conclusion: "Remember, asking for help is a sign of strength. You are never alone in your journey. ❤️"
+        conclusion: "Remember: You are not alone. Your feelings are valid, and it's okay to ask for help. Taking small steps every day can lead to brighter moments."
       }
     },
     {
-      title: "Breathing & Calming Techniques",
+      title: "🌬️ Breathing & Calming Techniques for Women",
       subtitle: "Find Your Peace Anywhere",
       icon: MessageCircle,
       content: {
-        intro: "When stress, anxiety, or overwhelming feelings strike, your breath is the most powerful tool you have to regain calm and focus.",
+        intro: "Life can get overwhelming, but with simple breathing exercises and calming techniques, you can regain control, reduce stress, and feel more centered anytime, anywhere.",
         points: [
           {
-            title: "Deep Belly Breathing",
-            description: "Sit comfortably. Breathe in slowly through your nose, filling your belly with air like a balloon. Hold for 3 seconds, then exhale slowly through your mouth. Repeat 5-10 times. This lowers heart rate and calms your mind. 🌬️🎈"
+            title: "🧘‍♀️ Deep Belly Breathing (Diaphragmatic Breathing)",
+            description: "Sit or lie comfortably. Place one hand on your chest and the other on your belly. Breathe in slowly through your nose, letting your belly rise (not your chest). Exhale gently through your mouth, feeling your belly fall. Repeat for 5–10 breaths. Benefits: Reduces anxiety and calms the nervous system."
           },
           {
-            title: "4-7-8 Technique",
-            description: "Inhale quietly through your nose for 4 seconds, hold your breath for 7 seconds, then exhale through your mouth for 8 seconds. Repeat 3-5 cycles. This slows breathing and relaxes your nervous system. ⏳💨"
+            title: "🌿 4-7-8 Breathing Technique",
+            description: "Inhale quietly through your nose for a count of 4. Hold your breath for a count of 7. Exhale completely through your mouth, making a whoosh sound, for a count of 8. Repeat 3–4 times. Benefits: Helps lower stress and prepares you for restful sleep."
           },
           {
-            title: "Progressive Muscle Relaxation",
-            description: "Starting from your toes, tense each muscle group tightly for 5 seconds, then release completely. Move upward through your body—legs, stomach, arms, neck, face. This helps relieve physical tension linked to stress. 💪😌"
+            title: "🌸 Box Breathing (Square Breathing)",
+            description: "Inhale slowly for 4 seconds. Hold your breath for 4 seconds. Exhale slowly for 4 seconds. Hold again for 4 seconds. Repeat 4 cycles. Benefits: Enhances focus and calms the mind quickly."
           },
           {
-            title: "Visualization",
-            description: "Close your eyes and imagine a peaceful place — a beach, forest, or garden. Picture every detail, smell, sound, and feeling. Spend 5 minutes here to reset your mind and emotions. 🌳🌊"
+            title: "🌼 Progressive Muscle Relaxation",
+            description: "Starting from your toes, tense each muscle group tightly for 5 seconds, then release. Move slowly up your body (feet, legs, abdomen, arms, shoulders, neck, face). Breathe deeply and feel tension melt away. Benefits: Releases physical tension, promotes relaxation."
           },
           {
-            title: "Grounding Exercise",
-            description: "Focus on your senses. Name 5 things you can see, 4 things you can touch, 3 sounds you hear, 2 smells, and 1 taste. This technique helps you stay present and reduce overwhelming feelings. 👀✋👂👃👅"
+            title: "🎶 Mindful Listening or Guided Meditation",
+            description: "Find a quiet spot and listen to calming sounds (nature, soft music, guided meditation). Focus fully on the sounds and your breath. If your mind wanders, gently bring your attention back. Benefits: Grounds your awareness and reduces racing thoughts."
+          },
+          {
+            title: "💧 Quick Grounding Technique: 5-4-3-2-1",
+            description: "Identify 5 things you can see. Identify 4 things you can touch. Identify 3 things you can hear. Identify 2 things you can smell. Identify 1 thing you can taste. Benefits: Brings your focus to the present moment and reduces anxiety."
           }
         ],
-        conclusion: "Practice these anytime you feel stressed, nervous, or sad. Over time, they become quick and easy tools to find peace wherever you are. 🌟"
+        conclusion: "✨ Final Tips: Practice these exercises daily or whenever you feel stressed. Find a quiet, comfortable space if possible, but many can be done anywhere discreetly. Consistency builds resilience and peace of mind."
       }
     },
     {
-      title: "Support Numbers and AI",
-      subtitle: "Help Is Just a Call or Click Away",
+      title: "📞 Support Numbers & Organizations",
+      subtitle: "Women's Mental Health in Sri Lanka",
       icon: Phone,
       content: {
-        intro: "You don't have to face challenges alone — many organizations and services in Sri Lanka provide mental health support, often free and confidential.",
+        intro: "Mental health support is available in Sri Lanka through various government and non-governmental organizations. Here are key resources specifically for women's mental health needs:",
         points: [
           {
-            title: "Sri Lanka Mental Health Hotline: 1926",
-            description: "Available 24/7 for crisis support, counseling, and referrals. 📞"
+            title: "1. Sri Lanka National Mental Health Helpline (Suwa Seriya)",
+            description: "Number: 1926. Availability: 24/7. Services: Free, confidential mental health counseling and crisis support for all, including women facing emotional or psychological distress."
           },
           {
-            title: "National Suicide Prevention Helpline: 1333",
-            description: "For urgent help if you or someone you know is feeling suicidal. 💛"
+            title: "2. Women In Need (WIN)",
+            description: "Helpline: 011 4718585 / 077 567 5656. Website: winhearts.lk. Services: Counseling, legal aid, shelter, and mental health support specifically for women facing abuse, trauma, or emotional challenges."
           },
           {
-            title: "Women's Hotline: 1938",
-            description: "For women facing emotional, physical, or mental distress. Offers counseling and guidance. 💪"
+            title: "3. National Institute of Mental Health, Angoda",
+            description: "Contact: +94 11 278 7161. Services: Psychiatric and psychological treatment services; referrals available for specialized women's mental health needs."
           },
           {
-            title: "Youth Helpline: 1919",
-            description: "For young people seeking advice on mental health, bullying, and stress. 🌈"
+            title: "4. Family Service Centres by Ministry of Women and Child Affairs",
+            description: "Services: Community-based counseling, support groups, and awareness programs focused on women and children's wellbeing."
           },
           {
-            title: "Online Chat & AI Support",
-            description: "Apps like Woebot or Wysa provide AI-powered mental health chats, mood tracking, and guided exercises anytime. These can complement professional help and offer privacy and convenience. 📱🤖"
+            title: "5. Suicide Prevention Helpline - Sri Lanka Red Cross Society",
+            description: "Number: 011 269 9999. Services: Immediate crisis intervention and mental health support."
           }
         ],
-        conclusion: "Remember, reaching out is brave and important. Keep these numbers handy, and share them with friends and family. Together, we build a caring community! 🤗"
+        conclusion: "🧠 About Women's Mental Health Support in Sri Lanka: Women face unique mental health challenges due to social, cultural, and economic pressures. Issues like domestic violence, gender discrimination, and trauma can affect emotional wellbeing deeply. Fortunately, Sri Lanka offers growing support through government and non-governmental organizations that provide safe spaces for counseling, legal help, and rehabilitation. If you or someone you know is struggling with anxiety, depression, trauma, or stress, reaching out to these helplines or local counselors can be a crucial first step toward healing and recovery."
       }
     }
   ];
