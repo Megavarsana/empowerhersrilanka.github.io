@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Heart, Shield, Phone } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
+import AuthButton from "./AuthButton";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -25,10 +26,6 @@ const Header = () => {
         behavior: 'smooth'
       });
     }
-  };
-
-  const handleEmergencyHelp = () => {
-    alert("Emergency Services:\n\nPolice: 119\nWomen's Helpline: 1938\nWomen In Need: 011-471-8585");
   };
 
   const handleWhoWeAre = () => {
@@ -102,10 +99,7 @@ const Header = () => {
             <ThemeToggle />
           </div>
 
-          <Button onClick={handleEmergencyHelp} className="bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full text-lg flex items-center space-x-2 cursor-pointer">
-            <Phone className="h-5 w-5" />
-            <span>EMERGENCY HELP</span>
-          </Button>
+          <AuthButton />
         </div>
       </nav>
 
