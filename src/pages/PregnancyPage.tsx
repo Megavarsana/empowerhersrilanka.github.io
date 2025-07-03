@@ -3,13 +3,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Baby, Heart, Users, BookOpen, Phone, Home } from "lucide-react";
+import { Baby, Heart, Phone, BookOpen, Users, Stethoscope } from "lucide-react";
 
 const PregnancyPage = () => {
   const topics = [
     {
-      title: "❗ Where to Get Help as a New Mom",
-      subtitle: "Support Systems You Can Trust in Sri Lanka",
+      title: "❗ Where to Get Help as a New Mom in Sri Lanka",
+      subtitle: "Support Resources for New Mothers",
       icon: Phone,
       content: {
         intro: "Becoming a new mom is a wonderful yet challenging journey. It's important to know where to find support for your health, your baby's care, and your mental wellbeing. Here are trusted resources and services available in Sri Lanka:",
@@ -40,15 +40,15 @@ const PregnancyPage = () => {
           },
           {
             title: "📚 Online Resources",
-            description: "Official Ministry of Health website: health.gov.lk. Parenting forums and support groups on social media where new moms share experiences and advice."
+            description: "Official Ministry of Health website: health.gov.lk; Parenting forums and support groups on social media where new moms share experiences and advice."
           }
         ],
         conclusion: "🌷 Final Note: You're not alone on this journey. Reach out, ask for help, and take care of yourself as you care for your little one. Support is always available."
       }
     },
     {
-      title: "🤱 Breastfeeding",
-      subtitle: "Complete Guide for New Moms",
+      title: "🤱 Breastfeeding: Complete Guide for New Moms",
+      subtitle: "Nurturing Your Baby with Love",
       icon: Heart,
       content: {
         intro: "Breastfeeding is a beautiful bonding experience and provides the best nutrition for your baby. Here's everything you need to know to make your breastfeeding journey easier and successful.",
@@ -75,16 +75,20 @@ const PregnancyPage = () => {
           },
           {
             title: "🕵️‍♀️ Frequently Asked Questions",
-            description: "Can I breastfeed if I'm sick? Usually yes. Breast milk contains antibodies that help protect your baby. Consult your doctor for specific illnesses or medications. How long should I breastfeed? WHO recommends exclusive breastfeeding for the first 6 months, then continuing with complementary foods up to 2 years or beyond. What if my baby refuses to latch? Try skin-to-skin contact, different positions, and consult a lactation consultant for personalized help."
+            description: "Can I breastfeed if I'm sick? Usually yes. Breast milk contains antibodies that help protect your baby. Consult your doctor for specific illnesses or medications. How long should I breastfeed? WHO recommends exclusive breastfeeding for the first 6 months, then continuing with complementary foods up to 2 years or beyond. What if my baby refuses to latch? Try skin-to-skin contact, different positions, and consult a lactation consultant for personalized help. Can I take medicine while breastfeeding? Many medications are safe, but always check with your healthcare provider before taking any medicines."
+          },
+          {
+            title: "🆘 When to Seek Help",
+            description: "Your baby isn't gaining weight or seems hungry all the time. You experience severe nipple pain, swelling, redness, or fever. You notice symptoms of mastitis (flu-like symptoms with breast pain). You have concerns about milk supply or baby's feeding habits. Reach out to healthcare providers, lactation consultants, or support groups for assistance."
           }
         ],
-        conclusion: "🆘 When to Seek Help: Your baby isn't gaining weight or seems hungry all the time. You experience severe nipple pain, swelling, redness, or fever. You notice symptoms of mastitis (flu-like symptoms with breast pain). You have concerns about milk supply or baby's feeding habits. 💡 Final Thought: Breastfeeding is a unique experience for every mother and baby. Patience, support, and self-care are key. Celebrate your efforts — you're nourishing your baby with love and health!"
+        conclusion: "💡 Final Thought: Breastfeeding is a unique experience for every mother and baby. Patience, support, and self-care are key. Celebrate your efforts — you're nourishing your baby with love and health!"
       }
     },
     {
       title: "🤰 What Are the Types of Birthing a Baby?",
-      subtitle: "Understanding Your Options",
-      icon: BookOpen,
+      subtitle: "Understanding Your Birth Options",
+      icon: Baby,
       content: {
         intro: "Every woman's birthing experience is unique. The type of birth may depend on personal choice, medical needs, or unexpected situations. Here's a guide to the main types of childbirth, so expectant mothers can feel informed and empowered.",
         points: [
@@ -118,8 +122,8 @@ const PregnancyPage = () => {
     },
     {
       title: "👶 How to Take Care of a Newborn Baby",
-      subtitle: "Essential Tips for New Moms",
-      icon: Baby,
+      subtitle: "Essential Newborn Care Tips",
+      icon: Stethoscope,
       content: {
         intro: "The first few weeks with a newborn can feel overwhelming — but with gentle care, patience, and love, you can confidently meet your baby's needs. Here's a simple guide for new moms and families.",
         points: [
@@ -160,9 +164,9 @@ const PregnancyPage = () => {
       }
     },
     {
-      title: "🔍 Pregnancy Symptoms",
-      subtitle: "What to Expect Early On",
-      icon: Home,
+      title: "🔍 Pregnancy Symptoms: What to Expect Early On",
+      subtitle: "Understanding Early Pregnancy Signs",
+      icon: BookOpen,
       content: {
         intro: "Pregnancy symptoms can begin as early as the first week after conception — and each woman's experience is different. Some may notice changes right away, while others might not feel symptoms until weeks later. Here's a guide to common early pregnancy signs to help women identify and understand what's happening in their bodies.",
         points: [
@@ -220,10 +224,10 @@ const PregnancyPage = () => {
       <section className="hero-section text-white py-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            🍼 Pregnancy & New Motherhood Support
+            🍼 Pregnancy & New Mother Support
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
-            Supporting you through pregnancy, birth, and the beautiful journey of new motherhood with comprehensive resources and care.
+            Complete pregnancy care and new mother support resources to guide you through this beautiful journey.
           </p>
           <Button className="bg-white text-primary hover:bg-gray-100 px-10 py-4 text-lg font-semibold">
             Get Support ✨
@@ -250,54 +254,62 @@ const PregnancyPage = () => {
       </section>
 
       {/* Topics Section */}
-      <section className="section-spacing bg-primary">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           {topics.map((topic, index) => (
             <div key={index} id={`topic-${index}`} className="mb-16">
-              <div className="max-w-4xl mx-auto">
-                <Card className="card-hover bg-white border-white">
-                  <CardHeader>
-                    <CardTitle className="flex items-center space-x-2 text-gray-800">
-                      <topic.icon className="h-6 w-6 text-primary" />
+              <div className="max-w-6xl mx-auto">
+                <Card className="card-hover bg-white border-white shadow-lg">
+                  <CardHeader className="pb-6">
+                    <CardTitle className="flex items-center space-x-3 text-gray-800 text-2xl">
+                      <topic.icon className="h-8 w-8 text-primary" />
                       <span>{topic.title}</span>
                     </CardTitle>
-                    <p className="text-lg text-gray-600 mt-1">{topic.subtitle}</p>
+                    <p className="text-xl text-gray-600 mt-2">{topic.subtitle}</p>
                   </CardHeader>
-                  <CardContent>
-                    {/* Image/Video Section */}
-                    <div className="mb-6 rounded-lg overflow-hidden">
+                  <CardContent className="p-8">
+                    {/* Image Section */}
+                    <div className="mb-8 rounded-lg overflow-hidden">
                       <img 
-                        src="/lovable-uploads/523712999610-f77fbcfc3843.jpg" 
+                        src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=400&fit=crop" 
                         alt={`${topic.title} - Pregnancy Support`}
                         className="w-full h-64 object-cover"
                       />
                     </div>
 
-                    <p className="text-gray-700 leading-relaxed text-lg mb-6">{topic.content.intro}</p>
+                    <p className="text-gray-700 leading-relaxed text-xl mb-8">{topic.content.intro}</p>
                     
-                    <div className="grid gap-6 mb-6">
+                    <div className="grid gap-8 mb-8">
                       {topic.content.points.map((point, pointIndex) => (
-                        <div key={pointIndex} className="bg-gray-50 p-6 rounded-lg">
-                          <h4 className="font-semibold text-gray-800 mb-3 text-lg">{point.title}</h4>
-                          <p className="text-gray-700 leading-relaxed">{point.description}</p>
+                        <div key={pointIndex} className="bg-gray-50 p-8 rounded-lg">
+                          <h4 className="font-semibold text-gray-800 mb-4 text-xl">{point.title}</h4>
+                          <p className="text-gray-700 leading-relaxed text-lg">{point.description}</p>
                         </div>
                       ))}
                     </div>
                     
-                    <div className="bg-primary/10 p-6 rounded-lg mb-6">
-                      <p className="text-gray-700 leading-relaxed font-medium text-lg">{topic.content.conclusion}</p>
+                    <div className="bg-primary/10 p-8 rounded-lg mb-8">
+                      <p className="text-gray-700 leading-relaxed font-medium text-xl">{topic.content.conclusion}</p>
                     </div>
 
                     {/* YouTube Video Section */}
-                    <div className="mt-6">
-                      <h4 className="font-semibold text-gray-800 mb-2">🎥 {topic.title} Video Guide</h4>
-                      <div className="aspect-video rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
-                            <div className="w-0 h-0 border-l-[12px] border-l-white border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
-                          </div>
-                          <span className="text-gray-700 font-semibold">Video Coming Soon</span>
-                        </div>
+                    <div className="mt-8">
+                      <h4 className="font-semibold text-gray-800 mb-4 text-xl">🎥 {topic.title} Video Guide</h4>
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={index === 0 ? "https://www.youtube.com/embed/OJfhLAcVF7k" : 
+                               index === 1 ? "https://www.youtube.com/embed/EhlLsGPw6qU" :
+                               index === 2 ? "https://www.youtube.com/embed/j7YucfJuziU" :
+                               index === 3 ? "https://www.youtube.com/embed/HBtUj1AjR7s" :
+                               "https://www.youtube.com/embed/mH1LLz9rbio"}
+                          title={`${topic.title} Video Guide`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                        ></iframe>
                       </div>
                     </div>
                   </CardContent>

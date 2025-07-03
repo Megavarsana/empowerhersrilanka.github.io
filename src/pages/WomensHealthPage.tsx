@@ -246,54 +246,62 @@ const WomensHealthPage = () => {
       </section>
 
       {/* Topics Section */}
-      <section className="section-spacing bg-primary">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           {topics.map((topic, index) => (
             <div key={index} id={`topic-${index}`} className="mb-16">
-              <div className="max-w-4xl mx-auto">
-                <Card className="card-hover bg-white border-white">
-                  <CardHeader>
-                    <CardTitle className="flex items-center space-x-2 text-gray-800">
-                      <topic.icon className="h-6 w-6 text-primary" />
+              <div className="max-w-6xl mx-auto">
+                <Card className="card-hover bg-white border-white shadow-lg">
+                  <CardHeader className="pb-6">
+                    <CardTitle className="flex items-center space-x-3 text-gray-800 text-2xl">
+                      <topic.icon className="h-8 w-8 text-primary" />
                       <span>{topic.title}</span>
                     </CardTitle>
-                    <p className="text-lg text-gray-600 mt-1">{topic.subtitle}</p>
+                    <p className="text-xl text-gray-600 mt-2">{topic.subtitle}</p>
                   </CardHeader>
-                  <CardContent>
-                    {/* Image/Video Section */}
-                    <div className="mb-6 rounded-lg overflow-hidden">
+                  <CardContent className="p-8">
+                    {/* Image Section */}
+                    <div className="mb-8 rounded-lg overflow-hidden">
                       <img 
-                        src="/lovable-uploads/618160702438-9b02ab6515c9.jpg" 
+                        src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop" 
                         alt={`${topic.title} - Women's Health Support`}
                         className="w-full h-64 object-cover"
                       />
                     </div>
 
-                    <p className="text-gray-700 leading-relaxed text-lg mb-6">{topic.content.intro}</p>
+                    <p className="text-gray-700 leading-relaxed text-xl mb-8">{topic.content.intro}</p>
                     
-                    <div className="grid gap-6 mb-6">
+                    <div className="grid gap-8 mb-8">
                       {topic.content.points.map((point, pointIndex) => (
-                        <div key={pointIndex} className="bg-gray-50 p-6 rounded-lg">
-                          <h4 className="font-semibold text-gray-800 mb-3 text-lg">{point.title}</h4>
-                          <p className="text-gray-700 leading-relaxed">{point.description}</p>
+                        <div key={pointIndex} className="bg-gray-50 p-8 rounded-lg">
+                          <h4 className="font-semibold text-gray-800 mb-4 text-xl">{point.title}</h4>
+                          <p className="text-gray-700 leading-relaxed text-lg">{point.description}</p>
                         </div>
                       ))}
                     </div>
                     
-                    <div className="bg-primary/10 p-6 rounded-lg mb-6">
-                      <p className="text-gray-700 leading-relaxed font-medium text-lg">{topic.content.conclusion}</p>
+                    <div className="bg-primary/10 p-8 rounded-lg mb-8">
+                      <p className="text-gray-700 leading-relaxed font-medium text-xl">{topic.content.conclusion}</p>
                     </div>
 
                     {/* YouTube Video Section */}
-                    <div className="mt-6">
-                      <h4 className="font-semibold text-gray-800 mb-2">🎥 {topic.title} Video Guide</h4>
-                      <div className="aspect-video rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
-                            <div className="w-0 h-0 border-l-[12px] border-l-white border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
-                          </div>
-                          <span className="text-gray-700 font-semibold">Video Coming Soon</span>
-                        </div>
+                    <div className="mt-8">
+                      <h4 className="font-semibold text-gray-800 mb-4 text-xl">🎥 {topic.title} Video Guide</h4>
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={index === 0 ? "https://www.youtube.com/embed/Zg8JvhTPQ-E" : 
+                               index === 1 ? "https://www.youtube.com/embed/9jSfOWzVCRU" :
+                               index === 2 ? "https://www.youtube.com/embed/nxPJhOKHRN4" :
+                               index === 3 ? "https://www.youtube.com/embed/T5Ct8bTTuN8" :
+                               "https://www.youtube.com/embed/qg5Hc0n9f_0"}
+                          title={`${topic.title} Video Guide`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                        ></iframe>
                       </div>
                     </div>
                   </CardContent>
