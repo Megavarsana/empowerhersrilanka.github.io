@@ -15,6 +15,9 @@ import PregnancyPage from "./pages/PregnancyPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import WhatWeDo from "./pages/WhatWeDo";
+import ProfilePage from "./pages/ProfilePage";
+import MyReviewsPage from "./pages/MyReviewsPage";
+import ForumPage from "./pages/ForumPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +40,9 @@ const App = () => (
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="/what-we-do" element={<WhatWeDo />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/my-reviews" element={<MyReviewsPage />} />
+            <Route path="/forum" element={<ForumPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
