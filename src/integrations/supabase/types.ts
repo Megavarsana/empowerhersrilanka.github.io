@@ -112,6 +112,30 @@ export type Database = {
           },
         ]
       }
+      user_history: {
+        Row: {
+          id: string
+          page_name: string
+          page_url: string
+          user_id: string
+          visited_at: string
+        }
+        Insert: {
+          id?: string
+          page_name: string
+          page_url: string
+          user_id: string
+          visited_at?: string
+        }
+        Update: {
+          id?: string
+          page_name?: string
+          page_url?: string
+          user_id?: string
+          visited_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
