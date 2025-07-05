@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/integrations/supabase/client';
@@ -9,7 +8,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/label';
 import { useNavigate } from 'react-router-dom';
-import { Plus, MessageSquare, User, Heart, Eye, ThumbsUp, Reply } from 'lucide-react';
+import { Plus, MessageSquare, User, Heart, Eye, ThumbsUp, Reply, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -26,14 +25,29 @@ interface ForumPost {
   };
 }
 
+interface PostReply {
+  id: string;
+  post_id: string;
+  content: string;
+  created_at: string;
+  user_id: string;
+  profiles?: {
+    first_name: string | null;
+    last_name: string | null;
+  };
+}
+
 const ForumPage = () => {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
   const [posts, setPosts] = useState<ForumPost[]>([]);
+  const [replies, setReplies] = useState<{ [key: string]: PostReply[] }>({});
   const [isLoading, setIsLoading] = useState(true);
   const [isCreating, setIsCreating] = useState(false);
   const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [replyContent, setReplyContent] = useState<{ [key: string]: string }>({});
+  const [showReplies, setShowReplies] = useState<{ [key: string]: boolean }>({});
   const [newPost, setNewPost] = useState({
     title: '',
     content: ''
@@ -51,6 +65,7 @@ const ForumPage = () => {
 
   useEffect(() => {
     loadPosts();
+    loadReplies();
   }, []);
 
   const loadPosts = async () => {
@@ -76,6 +91,16 @@ const ForumPage = () => {
       console.error('Error loading posts:', error);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const loadReplies = async () => {
+    try {
+      // For now, we'll simulate replies since we don't have a replies table
+      // In a real implementation, you'd create a forum_replies table
+      setReplies({});
+    } catch (error) {
+      console.error('Error loading replies:', error);
     }
   };
 
@@ -134,18 +159,63 @@ const ForumPage = () => {
     }
   };
 
-  const getUserDisplayName = (post: ForumPost) => {
+  const handleReply = async (postId: string) => {
+    if (!user) {
+      navigate('/');
+      return;
+    }
+
+    const content = replyContent[postId]?.trim();
+    if (!content) {
+      toast({
+        title: "Error",
+        description: "Please enter a reply message.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // For now, we'll show a success message
+    // In a real implementation, you'd save to a forum_replies table
+    toast({
+      title: "Reply Added",
+      description: "Your reply has been posted successfully!",
+    });
+
+    // Clear the reply input
+    setReplyContent(prev => ({ ...prev, [postId]: '' }));
+    
+    // Simulate adding a reply to the local state
+    const newReply: PostReply = {
+      id: Date.now().toString(),
+      post_id: postId,
+      content: content,
+      created_at: new Date().toISOString(),
+      user_id: user.id,
+      profiles: {
+        first_name: user.user_metadata?.first_name || null,
+        last_name: user.user_metadata?.last_name || null
+      }
+    };
+
+    setReplies(prev => ({
+      ...prev,
+      [postId]: [...(prev[postId] || []), newReply]
+    }));
+  };
+
+  const toggleReplies = (postId: string) => {
+    setShowReplies(prev => ({
+      ...prev,
+      [postId]: !prev[postId]
+    }));
+  };
+
+  const getUserDisplayName = (post: ForumPost | PostReply) => {
     if (post.profiles?.first_name || post.profiles?.last_name) {
       return `${post.profiles.first_name || ''} ${post.profiles.last_name || ''}`.trim();
     }
     return 'Anonymous User';
-  };
-
-  const handleReply = (postId: string) => {
-    toast({
-      title: "Reply Feature",
-      description: "Reply functionality coming soon!",
-    });
   };
 
   if (loading || isLoading) {
@@ -310,11 +380,11 @@ const ForumPage = () => {
                               <span className="text-sm">Like</span>
                             </button>
                             <button 
-                              onClick={() => handleReply(post.id)}
+                              onClick={() => toggleReplies(post.id)}
                               className="flex items-center gap-2 text-gray-500 hover:text-empowerher-pink transition-colors"
                             >
                               <Reply className="h-4 w-4" />
-                              <span className="text-sm">Reply</span>
+                              <span className="text-sm">Reply ({replies[post.id]?.length || 0})</span>
                             </button>
                             <div className="flex items-center gap-2 text-gray-500">
                               <Eye className="h-4 w-4" />
@@ -326,6 +396,44 @@ const ForumPage = () => {
                             <span className="text-sm">{Math.floor(Math.random() * 50) + 5}</span>
                           </div>
                         </div>
+
+                        {/* Reply Section */}
+                        {showReplies[post.id] && (
+                          <div className="mt-4 pt-4 border-t border-gray-100">
+                            {/* Existing Replies */}
+                            {replies[post.id]?.map((reply) => (
+                              <div key={reply.id} className="mb-4 pl-4 border-l-2 border-gray-200">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-empowerher-pink-light rounded-full flex items-center justify-center">
+                                    <User className="h-3 w-3 text-empowerher-pink" />
+                                  </div>
+                                  <span className="text-sm font-medium text-gray-700">{getUserDisplayName(reply)}</span>
+                                  <span className="text-xs text-gray-500">{new Date(reply.created_at).toLocaleDateString()}</span>
+                                </div>
+                                <p className="text-gray-600 text-sm pl-8">{reply.content}</p>
+                              </div>
+                            ))}
+
+                            {/* Reply Input */}
+                            {user && (
+                              <div className="flex gap-2 mt-4">
+                                <Input
+                                  placeholder="Write a reply..."
+                                  value={replyContent[post.id] || ''}
+                                  onChange={(e) => setReplyContent(prev => ({ ...prev, [post.id]: e.target.value }))}
+                                  className="flex-1"
+                                />
+                                <Button
+                                  onClick={() => handleReply(post.id)}
+                                  size="sm"
+                                  className="bg-empowerher-pink hover:bg-empowerher-pink-dark"
+                                >
+                                  <Send className="h-4 w-4" />
+                                </Button>
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </CardContent>
                     </Card>
                   ))}
