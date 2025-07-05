@@ -72,6 +72,9 @@ const Header = () => {
             <a href="/pregnancy" className="text-gray-700 hover:text-empowerher-pink transition-colors">
               Pregnancy
             </a>
+            <a href="/forum" className="text-gray-700 hover:text-empowerher-pink transition-colors">
+              Forum
+            </a>
             {!user && <AuthButton />}
           </nav>
 
