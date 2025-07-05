@@ -139,6 +139,19 @@
     @apply bg-white dark:bg-black rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300;
   }
 
+  /* Modern form styling */
+  .form-field-modern {
+    @apply rounded-xl border border-gray-200 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 focus:ring-2 focus:ring-empowerher-pink/20 focus:border-empowerher-pink/40;
+  }
+
+  .form-container-modern {
+    @apply bg-gradient-to-br from-pink-50/40 via-rose-50/30 to-orange-50/20 backdrop-blur-sm rounded-2xl shadow-lg border border-white/50;
+  }
+
+  .button-modern {
+    @apply rounded-xl bg-gradient-to-r from-empowerher-pink to-empowerher-pink-dark shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+
   /* Dark mode specific overrides for better contrast */
   .dark .bg-white {
     @apply bg-black;
@@ -154,6 +167,15 @@
 
   .dark .bg-gray-200 {
     @apply bg-gray-900;
+  }
+
+  /* Form dark mode adjustments */
+  .dark .form-field-modern {
+    @apply bg-gray-900/80 border-gray-700 text-white;
+  }
+
+  .dark .form-container-modern {
+    @apply bg-gradient-to-br from-gray-900/40 via-gray-800/30 to-gray-900/20;
   }
 
   /* Ensure pink sections remain vibrant in dark mode */
