@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import AboutSection from "@/components/AboutSection";
 import VisionMissionSection from "@/components/VisionMissionSection";
@@ -31,8 +32,8 @@ const Index = () => {
             <div className="flex justify-center">
               <div className="bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
                 <img 
-                  src="/lovable-uploads/560a6658-7920-4e6d-9cf6-6190132b85be.png" 
-                  alt="Four Sri Lankan women standing together, representing unity and empowerment"
+                  src="/lovable-uploads/3bb74ec0-2341-40ab-9fd8-a8318e99eb64.png" 
+                  alt="Four professional women representing different career paths - business, education, healthcare, and construction - showcasing women's empowerment across various fields"
                   className="w-full h-64 object-cover rounded-lg"
                 />
               </div>
