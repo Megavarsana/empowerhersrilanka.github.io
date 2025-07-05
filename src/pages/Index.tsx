@@ -15,12 +15,12 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
                 WE FUND BOLD, FEMINIST MOVEMENTS
               </h1>
               <p className="text-xl mb-8 leading-relaxed">
                 EmpowerHer supports gender justice movements in Sri Lanka to{" "}
-                <span className="bg-white/20 px-2 py-1 rounded">create meaningful change</span>{" "}
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded">create meaningful change</span>{" "}
                 that will last beyond our lifetimes.
               </p>
               <p className="text-lg mb-8">

@@ -235,9 +235,6 @@ const PregnancyPage = () => {
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-white">
             Your journey to motherhood matters. Find comprehensive support, guidance, and resources for every step.
           </p>
-          <Button className="bg-white text-empowerher-pink hover:bg-gray-100 px-10 py-4 text-lg font-semibold">
-            Get Support ✨
-          </Button>
         </div>
       </section>
 

@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -221,9 +220,6 @@ const WomensHealthPage = () => {
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-white">
             Period Help & Menstrual Care - Comprehensive resources for women's reproductive health and wellness
           </p>
-          <Button className="bg-white text-empowerher-pink hover:bg-gray-100 px-10 py-4 text-lg font-semibold">
-            Get Started ✨
-          </Button>
         </div>
       </section>
 
