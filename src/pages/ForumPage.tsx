@@ -5,11 +5,11 @@ import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/label';
 import { useNavigate } from 'react-router-dom';
-import { Plus, MessageSquare, User } from 'lucide-react';
+import { Plus, MessageSquare, User, Heart, Eye, ThumbsUp, Reply } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -38,6 +38,16 @@ const ForumPage = () => {
     title: '',
     content: ''
   });
+
+  // Sample featured topics for women empowerment
+  const featuredTopics = [
+    { name: "Leadership", count: 245, color: "bg-empowerher-pink" },
+    { name: "Career Growth", count: 189, color: "bg-purple-500" },
+    { name: "Health & Wellness", count: 156, color: "bg-blue-500" },
+    { name: "Entrepreneurship", count: 134, color: "bg-green-500" },
+    { name: "Financial Independence", count: 98, color: "bg-orange-500" },
+    { name: "Work-Life Balance", count: 87, color: "bg-teal-500" }
+  ];
 
   useEffect(() => {
     loadPosts();
@@ -111,7 +121,7 @@ const ForumPage = () => {
 
       setNewPost({ title: '', content: '' });
       setShowCreateDialog(false);
-      loadPosts(); // Reload posts
+      loadPosts();
     } catch (error) {
       console.error('Error creating post:', error);
       toast({
@@ -131,30 +141,46 @@ const ForumPage = () => {
     return 'Anonymous User';
   };
 
+  const handleReply = (postId: string) => {
+    toast({
+      title: "Reply Feature",
+      description: "Reply functionality coming soon!",
+    });
+  };
+
   if (loading || isLoading) {
-    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+    return <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-empowerher-pink mx-auto mb-4"></div>
+        <p className="text-gray-600">Loading community discussions...</p>
+      </div>
+    </div>;
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-empowerher-pink via-empowerher-pink-medium to-empowerher-pink-dark">
+    <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <div className="container mx-auto px-6 py-20">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex justify-between items-center mb-8">
-            <h1 className="text-4xl font-bold text-white">Community Forum</h1>
+      <div className="container mx-auto px-4 py-8 mt-16">
+        <div className="max-w-7xl mx-auto">
+          {/* Header Section */}
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-4">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">Women Empowerment Community</h1>
+              <p className="text-gray-600">Share experiences, ask questions, and support each other on the journey to empowerment</p>
+            </div>
             
             {user ? (
               <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
                 <DialogTrigger asChild>
-                  <Button className="bg-white text-empowerher-pink hover:bg-gray-100">
+                  <Button className="bg-empowerher-pink hover:bg-empowerher-pink-dark text-white px-6 py-2 rounded-lg font-medium">
                     <Plus className="h-4 w-4 mr-2" />
-                    New Post
+                    Create Post
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-lg">
                   <DialogHeader>
-                    <DialogTitle>Create New Post</DialogTitle>
+                    <DialogTitle>Share Your Story</DialogTitle>
                   </DialogHeader>
                   <form onSubmit={handleCreatePost} className="space-y-4">
                     <div>
@@ -163,8 +189,9 @@ const ForumPage = () => {
                         id="title"
                         value={newPost.title}
                         onChange={(e) => setNewPost(prev => ({ ...prev, title: e.target.value }))}
-                        placeholder="Enter post title"
+                        placeholder="What's on your mind?"
                         required
+                        className="mt-1"
                       />
                     </div>
                     <div>
@@ -173,9 +200,10 @@ const ForumPage = () => {
                         id="content"
                         value={newPost.content}
                         onChange={(e) => setNewPost(prev => ({ ...prev, content: e.target.value }))}
-                        placeholder="Share your thoughts..."
+                        placeholder="Share your thoughts, experiences, or questions..."
                         rows={4}
                         required
+                        className="mt-1"
                       />
                     </div>
                     <Button 
@@ -183,7 +211,7 @@ const ForumPage = () => {
                       disabled={isCreating}
                       className="w-full bg-empowerher-pink hover:bg-empowerher-pink-dark"
                     >
-                      {isCreating ? 'Creating...' : 'Create Post'}
+                      {isCreating ? 'Publishing...' : 'Publish Post'}
                     </Button>
                   </form>
                 </DialogContent>
@@ -191,41 +219,120 @@ const ForumPage = () => {
             ) : (
               <Button 
                 onClick={() => navigate('/')}
-                className="bg-white text-empowerher-pink hover:bg-gray-100"
+                className="bg-empowerher-pink hover:bg-empowerher-pink-dark text-white px-6 py-2"
               >
-                Sign In to Post
+                Sign In to Participate
               </Button>
             )}
           </div>
 
-          {posts.length === 0 ? (
-            <Card className="bg-white shadow-lg">
-              <CardContent className="p-8 text-center">
-                <MessageSquare className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600 text-lg">No posts yet. Be the first to start a conversation!</p>
-              </CardContent>
-            </Card>
-          ) : (
-            <div className="space-y-6">
-              {posts.map((post) => (
-                <Card key={post.id} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
-                  <CardHeader>
-                    <CardTitle className="text-xl font-bold text-gray-800">
-                      {post.title}
-                    </CardTitle>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <User className="h-4 w-4 mr-1" />
-                      <span className="mr-4">{getUserDisplayName(post)}</span>
-                      <span>{new Date(post.created_at).toLocaleDateString()}</span>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Popular Topics</h3>
+                <div className="space-y-3">
+                  {featuredTopics.map((topic, index) => (
+                    <div key={index} className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-3 h-3 rounded-full ${topic.color}`}></div>
+                        <span className="text-gray-700 font-medium">{topic.name}</span>
+                      </div>
+                      <span className="text-sm text-gray-500">{topic.count}</span>
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-700 whitespace-pre-wrap">{post.content}</p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-sm border p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Community Stats</h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Active Members</span>
+                    <span className="font-semibold text-empowerher-pink">2,847</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Posts This Month</span>
+                    <span className="font-semibold text-empowerher-pink">341</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Success Stories</span>
+                    <span className="font-semibold text-empowerher-pink">156</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Main Content */}
+            <div className="lg:col-span-3">
+              {posts.length === 0 ? (
+                <Card className="bg-white shadow-sm border">
+                  <CardContent className="p-12 text-center">
+                    <MessageSquare className="h-16 w-16 text-gray-300 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-gray-600 mb-2">Start the Conversation</h3>
+                    <p className="text-gray-500 mb-6">Be the first to share your story and inspire others in our community!</p>
+                    {user && (
+                      <Button 
+                        onClick={() => setShowCreateDialog(true)}
+                        className="bg-empowerher-pink hover:bg-empowerher-pink-dark"
+                      >
+                        Create First Post
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
-              ))}
+              ) : (
+                <div className="space-y-6">
+                  {posts.map((post) => (
+                    <Card key={post.id} className="bg-white shadow-sm border hover:shadow-md transition-shadow">
+                      <CardHeader className="pb-3">
+                        <div className="flex items-start justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 bg-empowerher-pink-light rounded-full flex items-center justify-center">
+                              <User className="h-5 w-5 text-empowerher-pink" />
+                            </div>
+                            <div>
+                              <p className="font-semibold text-gray-900">{getUserDisplayName(post)}</p>
+                              <p className="text-sm text-gray-500">{new Date(post.created_at).toLocaleDateString()}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-3">{post.title}</h3>
+                        <p className="text-gray-700 mb-4 whitespace-pre-wrap leading-relaxed">{post.content}</p>
+                        
+                        {/* Post Actions */}
+                        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                          <div className="flex items-center gap-6">
+                            <button className="flex items-center gap-2 text-gray-500 hover:text-empowerher-pink transition-colors">
+                              <ThumbsUp className="h-4 w-4" />
+                              <span className="text-sm">Like</span>
+                            </button>
+                            <button 
+                              onClick={() => handleReply(post.id)}
+                              className="flex items-center gap-2 text-gray-500 hover:text-empowerher-pink transition-colors"
+                            >
+                              <Reply className="h-4 w-4" />
+                              <span className="text-sm">Reply</span>
+                            </button>
+                            <div className="flex items-center gap-2 text-gray-500">
+                              <Eye className="h-4 w-4" />
+                              <span className="text-sm">{Math.floor(Math.random() * 100) + 20}</span>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-2 text-gray-500">
+                            <Heart className="h-4 w-4" />
+                            <span className="text-sm">{Math.floor(Math.random() * 50) + 5}</span>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </div>
       
