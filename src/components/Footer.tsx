@@ -27,13 +27,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
+              <ThemeToggle />
               <div className="bg-white p-2 rounded-full">
                 <Heart className="h-6 w-6 text-primary" />
               </div>
               <span className="text-2xl font-bold text-white">EmpowerHer</span>
-              <div className="ml-2">
-                <ThemeToggle />
-              </div>
             </div>
             <p className="text-white/90 dark:text-white mb-6 leading-relaxed">
               Empowering Sri Lankan women through safety, support, and guidance. 

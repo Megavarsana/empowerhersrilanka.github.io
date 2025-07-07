@@ -32,8 +32,8 @@ const Index = () => {
             <div className="flex justify-center">
               <div className="bg-white/10 p-12 rounded-3xl backdrop-blur-sm">
                 <img 
-                  src="/lovable-uploads/3bb74ec0-2341-40ab-9fd8-a8318e99eb64.png" 
-                  alt="Four professional women representing different career paths - business, education, healthcare, and construction - showcasing women's empowerment across various fields"
+                  src="/lovable-uploads/27852b22-cd0b-4e89-aa24-b81a1282471c.png" 
+                  alt="Four diverse Sri Lankan women representing unity and empowerment - showcasing traditional and modern styles in a beautiful outdoor setting"
                   className="w-full h-96 object-cover rounded-2xl shadow-2xl"
                 />
               </div>
