@@ -1,6 +1,7 @@
 
 import { Heart, Mail, Phone, MapPin } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -30,6 +31,9 @@ const Footer = () => {
                 <Heart className="h-6 w-6 text-primary" />
               </div>
               <span className="text-2xl font-bold text-white">EmpowerHer</span>
+              <div className="ml-4">
+                <ThemeToggle />
+              </div>
             </div>
             <p className="text-white/90 dark:text-white mb-6 leading-relaxed">
               Empowering Sri Lankan women through safety, support, and guidance. 
