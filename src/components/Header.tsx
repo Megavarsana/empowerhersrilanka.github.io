@@ -4,12 +4,15 @@ import { Link, useLocation } from "react-router-dom";
 import { Heart, Menu, X, User, MessageSquare, Users, Info, Target, UserCheck, Calendar, BookOpen, Clock, LogOut, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { useAuth } from "@/contexts/AuthContext";
 import AuthButton from "./AuthButton";
 import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { user, signOut } = useAuth();
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -19,6 +22,30 @@ const Header = () => {
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
+
+  const getUserDisplayName = () => {
+    if (!user) return 'Guest';
+    const firstName = user.user_metadata?.first_name;
+    const lastName = user.user_metadata?.last_name;
+    if (firstName && lastName) {
+      return `${firstName} ${lastName}`;
+    }
+    return user.email?.split('@')[0] || 'User';
+  };
+
+  const getUserInitials = () => {
+    const name = getUserDisplayName();
+    return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+  };
+
+  const handleSignOut = async () => {
+    try {
+      await signOut();
+      closeMenu();
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  };
 
   const navLinks = [
     { to: "/", label: "Home", icon: Heart },
@@ -86,11 +113,16 @@ const Header = () => {
                   {/* User Profile Header */}
                   <div className="p-6 bg-gradient-to-r from-empowerher-pink to-empowerher-pink-dark relative">
                     <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                        <User className="h-6 w-6 text-white" />
-                      </div>
+                      <Avatar className="w-12 h-12 border-2 border-white">
+                        <AvatarImage src={user?.user_metadata?.avatar_url} />
+                        <AvatarFallback className="bg-white text-empowerher-pink font-semibold">
+                          {user ? getUserInitials() : 'G'}
+                        </AvatarFallback>
+                      </Avatar>
                       <div>
-                        <h3 className="text-white font-semibold text-lg">megavarsana05</h3>
+                        <h3 className="text-white font-semibold text-lg">
+                          {user ? getUserDisplayName() : 'Guest'}
+                        </h3>
                         <button className="text-white/80 text-sm hover:text-white transition-colors flex items-center space-x-1">
                           <span>Edit image</span>
                         </button>
@@ -101,24 +133,26 @@ const Header = () => {
                   {/* Navigation Menu */}
                   <div className="flex-1 overflow-y-auto">
                     {/* Main Profile Links */}
-                    <div className="p-4 border-b border-gray-100 dark:border-gray-800">
-                      <Link
-                        to="/profile"
-                        onClick={closeMenu}
-                        className="flex items-center space-x-3 text-gray-700 dark:text-gray-200 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors font-medium py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
-                      >
-                        <User className="h-5 w-5" />
-                        <span>My Profile</span>
-                      </Link>
-                      <Link
-                        to="/reviews"
-                        onClick={closeMenu}
-                        className="flex items-center space-x-3 text-gray-700 dark:text-gray-200 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors font-medium py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
-                      >
-                        <MessageSquare className="h-5 w-5" />
-                        <span>My Reviews</span>
-                      </Link>
-                    </div>
+                    {user && (
+                      <div className="p-4 border-b border-gray-100 dark:border-gray-800">
+                        <Link
+                          to="/profile"
+                          onClick={closeMenu}
+                          className="flex items-center space-x-3 text-gray-700 dark:text-gray-200 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors font-medium py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
+                        >
+                          <User className="h-5 w-5" />
+                          <span>My Profile</span>
+                        </Link>
+                        <Link
+                          to="/reviews"
+                          onClick={closeMenu}
+                          className="flex items-center space-x-3 text-gray-700 dark:text-gray-200 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors font-medium py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
+                        >
+                          <MessageSquare className="h-5 w-5" />
+                          <span>My Reviews</span>
+                        </Link>
+                      </div>
+                    )}
 
                     {/* Main Navigation */}
                     <div className="p-4 border-b border-gray-100 dark:border-gray-800">
@@ -170,10 +204,15 @@ const Header = () => {
                         <ThemeToggle />
                       </div>
                       
-                      <button className="flex items-center space-x-3 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 transition-colors font-medium py-3 px-4 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 w-full">
-                        <LogOut className="h-5 w-5" />
-                        <span>Logout</span>
-                      </button>
+                      {user && (
+                        <button 
+                          onClick={handleSignOut}
+                          className="flex items-center space-x-3 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 transition-colors font-medium py-3 px-4 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 w-full"
+                        >
+                          <LogOut className="h-5 w-5" />
+                          <span>Logout</span>
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
