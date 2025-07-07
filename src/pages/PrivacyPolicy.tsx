@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -216,7 +217,7 @@ const PrivacyPolicy = () => {
               <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at:</p>
-                <p className="mt-4 font-medium">Email: herempower@gmail.com</p>
+                <p className="mt-4 font-medium">Email: empowerhersrilanka@gmail.com</p>
               </div>
             </section>
           </div>

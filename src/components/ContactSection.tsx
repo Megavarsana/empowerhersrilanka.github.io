@@ -24,7 +24,7 @@ const ContactSection = () => {
             <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50">
               <div className="text-3xl mb-4">📧</div>
               <h3 className="font-medium text-gray-800 mb-2">Email Us</h3>
-              <p className="text-empowerher-pink font-medium">hello@empowerher.org</p>
+              <p className="text-empowerher-pink font-medium">empowerhersrilanka@gmail.com</p>
             </div>
           </div>
           
@@ -32,7 +32,7 @@ const ContactSection = () => {
             <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50">
               <div className="text-3xl mb-4">📱</div>
               <h3 className="font-medium text-gray-800 mb-2">Call Us</h3>
-              <p className="text-empowerher-pink font-medium">+1 (555) 123-4567</p>
+              <p className="text-empowerher-pink font-medium">+94 77 123 4567</p>
             </div>
           </div>
           

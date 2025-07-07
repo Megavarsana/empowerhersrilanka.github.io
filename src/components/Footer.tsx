@@ -38,7 +38,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <div className="flex items-center space-x-2 text-white/90 dark:text-white">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">herempower@gmail.com</span>
+                <span className="text-sm">empowerhersrilanka@gmail.com</span>
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ const Footer = () => {
               >
                 Terms of Service
               </button>
-              <a href="mailto:herempower@gmail.com" className="hover:text-white transition-colors cursor-pointer">Contact Us</a>
+              <a href="mailto:empowerhersrilanka@gmail.com" className="hover:text-white transition-colors cursor-pointer">Contact Us</a>
             </div>
           </div>
         </div>
