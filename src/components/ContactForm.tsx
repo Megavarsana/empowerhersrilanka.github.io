@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { FormContainer, FormField, TextareaField, SubmitButton } from './ModernForm';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -22,15 +23,37 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. We'll get back to you soon.",
+    try {
+      console.log('Submitting contact form with data:', formData);
+
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
       });
+
+      if (error) {
+        console.error('Error calling edge function:', error);
+        throw error;
+      }
+
+      console.log('Contact form submitted successfully:', data);
+
+      toast({
+        title: "Message Sent Successfully! 📧",
+        description: "Thank you for reaching out. We've received your message and will get back to you soon. You should also receive a confirmation email.",
+      });
+
+      // Reset form
       setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error: any) {
+      console.error('Contact form submission error:', error);
+      toast({
+        title: "Error Sending Message",
+        description: "There was a problem sending your message. Please try again or contact us directly at empowerhersrilanka@gmail.com",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -44,44 +67,48 @@ const ContactForm = () => {
             <FormField
               label="Your Name"
               id="name"
+              name="name"
               placeholder="Enter your full name"
               required
               value={formData.name}
-              onChange={(e) => handleChange(e)}
+              onChange={handleChange}
             />
             <FormField
               label="Email Address"
               id="email"
+              name="email"
               type="email"
               placeholder="your.email@example.com"
               required
               value={formData.email}
-              onChange={(e) => handleChange(e)}
+              onChange={handleChange}
             />
           </div>
 
           <FormField
             label="Subject"
             id="subject"
+            name="subject"
             placeholder="What would you like to discuss?"
             required
             value={formData.subject}
-            onChange={(e) => handleChange(e)}
+            onChange={handleChange}
           />
 
           <TextareaField
             label="Your Message"
             id="message"
+            name="message"
             placeholder="Share your thoughts, questions, or concerns with us..."
             required
             rows={5}
             value={formData.message}
-            onChange={(e) => handleChange(e)}
+            onChange={handleChange}
           />
 
           <div className="pt-4">
             <SubmitButton loading={isSubmitting}>
-              Send Message
+              {isSubmitting ? 'Sending Message...' : 'Send Message'}
             </SubmitButton>
           </div>
         </form>
