@@ -1,90 +1,134 @@
 
-import React from 'react';
-import { useAuth } from '@/contexts/AuthContext';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import AuthButton from './AuthButton';
-import ProfileDrawer from './ProfileDrawer';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Heart, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import AuthButton from "./AuthButton";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
-  const { user } = useAuth();
-  const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const getUserInitials = () => {
-    if (!user) return '';
-    const firstName = user.user_metadata?.first_name;
-    const lastName = user.user_metadata?.last_name;
-    if (firstName && lastName) {
-      return `${firstName[0]}${lastName[0]}`.toUpperCase();
-    }
-    return user.email?.charAt(0).toUpperCase() || 'U';
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  return (
-    <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Left side - Logo/Brand and Profile */}
-          <div className="flex items-center space-x-4">
-            <div 
-              className="text-2xl font-bold text-empowerher-pink cursor-pointer"
-              onClick={() => navigate('/')}
-            >
-              EmpowerHer
-            </div>
-            
-            {user && (
-              <div className="flex items-center space-x-2">
-                <Avatar 
-                  className="h-10 w-10 cursor-pointer border-2 border-empowerher-pink"
-                  onClick={() => navigate('/profile')}
-                >
-                  <AvatarImage src={user.user_metadata?.avatar_url} />
-                  <AvatarFallback className="bg-empowerher-pink text-white font-semibold">
-                    {getUserInitials()}
-                  </AvatarFallback>
-                </Avatar>
-                <ProfileDrawer />
-              </div>
-            )}
-          </div>
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
-          {/* Right side - Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-gray-700 hover:text-empowerher-pink transition-colors">
-              Home
-            </a>
-            <a href="/safety" className="text-gray-700 hover:text-empowerher-pink transition-colors">
-              Safety
-            </a>
-            <a href="/support" className="text-gray-700 hover:text-empowerher-pink transition-colors">
-              Support
-            </a>
-            <a href="/guidance" className="text-gray-700 hover:text-empowerher-pink transition-colors">
-              Guidance
-            </a>
-            <a href="/womens-health" className="text-gray-700 hover:text-empowerher-pink transition-colors">
-              Women's Health
-            </a>
-            <a href="/mental-health" className="text-gray-700 hover:text-empowerher-pink transition-colors">
-              Mental Health
-            </a>
-            <a href="/pregnancy" className="text-gray-700 hover:text-empowerher-pink transition-colors">
-              Pregnancy
-            </a>
-            <a href="/forum" className="text-gray-700 hover:text-empowerher-pink transition-colors">
-              Forum
-            </a>
-            {!user && <AuthButton />}
+  // Close menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
+
+  const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/safety", label: "Safety" },
+    { to: "/support", label: "Support" },
+    { to: "/guidance", label: "Guidance" },
+    { to: "/womens-health", label: "Women's Health" },
+    { to: "/mental-health", label: "Mental Health" },
+    { to: "/pregnancy", label: "Pregnancy" },
+    { to: "/forum", label: "Forum" },
+  ];
+
+  return (
+    <header className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-colors">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="bg-empowerher-pink p-2 rounded-full">
+              <Heart className="h-6 w-6 text-white" />
+            </div>
+            <span className="text-2xl font-bold text-empowerher-pink">EmpowerHer</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
 
-          {/* Mobile menu button - only show when not authenticated */}
-          {!user && (
-            <div className="md:hidden">
-              <AuthButton />
-            </div>
-          )}
+          {/* Right side - Theme Toggle, Hamburger Menu, and Auth Button */}
+          <div className="flex items-center space-x-4">
+            {/* Theme Toggle - Always visible */}
+            <ThemeToggle />
+            
+            {/* Hamburger Menu - Always visible */}
+            <button
+              onClick={toggleMenu}
+              className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors lg:hidden"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="h-5 w-5 text-gray-700 dark:text-gray-200" />
+              ) : (
+                <Menu className="h-5 w-5 text-gray-700 dark:text-gray-200" />
+              )}
+            </button>
+
+            {/* Desktop Menu Button - Always visible */}
+            <button
+              onClick={toggleMenu}
+              className="hidden lg:flex items-center space-x-2 p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+              aria-label="Toggle menu"
+            >
+              <Menu className="h-5 w-5 text-gray-700 dark:text-gray-200" />
+              <span className="text-sm text-gray-700 dark:text-gray-200">Menu</span>
+            </button>
+
+            {/* Auth Button */}
+            <AuthButton />
+          </div>
         </div>
+
+        {/* Mobile/Tablet Navigation Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden border-t border-gray-200 dark:border-gray-700 py-4">
+            <nav className="flex flex-col space-y-3">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  onClick={closeMenu}
+                  className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors font-medium py-2 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        )}
+
+        {/* Desktop Dropdown Menu */}
+        {isMenuOpen && (
+          <div className="hidden lg:block absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-lg">
+            <div className="container mx-auto px-6 py-4">
+              <nav className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    onClick={closeMenu}
+                    className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors font-medium py-2 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
