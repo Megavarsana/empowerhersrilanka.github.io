@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,7 +9,6 @@ import { cn } from '@/lib/utils';
 interface FormFieldProps {
   label: string;
   id: string;
-  name: string;
   type?: string;
   placeholder?: string;
   required?: boolean;
@@ -20,7 +20,6 @@ interface FormFieldProps {
 interface TextareaFieldProps {
   label: string;
   id: string;
-  name: string;
   placeholder?: string;
   required?: boolean;
   value?: string;
@@ -32,7 +31,6 @@ interface TextareaFieldProps {
 export const FormField: React.FC<FormFieldProps> = ({
   label,
   id,
-  name,
   type = 'text',
   placeholder,
   required = false,
@@ -49,7 +47,6 @@ export const FormField: React.FC<FormFieldProps> = ({
     </Label>
     <Input
       id={id}
-      name={name}
       type={type}
       placeholder={placeholder}
       required={required}
@@ -66,7 +63,6 @@ export const FormField: React.FC<FormFieldProps> = ({
 export const TextareaField: React.FC<TextareaFieldProps> = ({
   label,
   id,
-  name,
   placeholder,
   required = false,
   value,
@@ -83,7 +79,6 @@ export const TextareaField: React.FC<TextareaFieldProps> = ({
     </Label>
     <Textarea
       id={id}
-      name={name}
       placeholder={placeholder}
       required={required}
       value={value}
