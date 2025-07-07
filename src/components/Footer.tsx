@@ -1,5 +1,5 @@
 
-import { Heart, Mail, Phone, MapPin, Bot } from "lucide-react";
+import { Heart, Mail, Phone, MapPin, Bot, Menu } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import { useEffect } from "react";
@@ -37,15 +37,15 @@ const Footer = () => {
   useEffect(() => {
     // Chatbase AI chatbot initialization
     const initChatbase = () => {
-      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+      if (!window.chatbase || (window.chatbase as any)("getState") !== "initialized") {
         window.chatbase = (...args: any[]) => {
-          if (!window.chatbase.q) { window.chatbase.q = [] }
-          window.chatbase.q.push(args)
+          if (!(window.chatbase as any).q) { (window.chatbase as any).q = [] }
+          (window.chatbase as any).q.push(args)
         };
         window.chatbase = new Proxy(window.chatbase, {
           get(target, prop) {
-            if (prop === "q") { return target.q }
-            return (...args: any[]) => target(prop, ...args)
+            if (prop === "q") { return (target as any).q }
+            return (...args: any[]) => (target as any)(prop, ...args)
           }
         });
       }
@@ -75,7 +75,6 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <ThemeToggle />
               <div className="bg-white p-2 rounded-full">
                 <Heart className="h-6 w-6 text-primary" />
               </div>
@@ -97,6 +96,20 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <div className="space-y-2">
+              {/* Theme Toggle and Home section */}
+              <div className="flex items-center space-x-3 mb-3">
+                <ThemeToggle />
+                <Link to="/" className="text-white/90 dark:text-white hover:text-white transition-colors text-sm cursor-pointer">
+                  Home
+                </Link>
+              </div>
+              
+              {/* Hamburger Menu - Always visible */}
+              <div className="flex items-center space-x-2 text-white/90 dark:text-white hover:text-white transition-colors text-sm cursor-pointer mb-2">
+                <Menu className="h-4 w-4" />
+                <span>Menu</span>
+              </div>
+              
               <Link to="/safety" className="block text-white/90 dark:text-white hover:text-white transition-colors text-sm cursor-pointer">
                 Safety Resources
               </Link>
