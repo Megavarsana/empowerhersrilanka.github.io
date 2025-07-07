@@ -31,7 +31,7 @@ const Footer = () => {
                 <Heart className="h-6 w-6 text-primary" />
               </div>
               <span className="text-2xl font-bold text-white">EmpowerHer</span>
-              <div className="ml-4">
+              <div className="ml-2">
                 <ThemeToggle />
               </div>
             </div>

@@ -26,6 +26,26 @@ const SupportSection = () => {
         {
           title: "🛌 5. Get Good Sleep",
           description: "Aim for 7–9 hours of restful sleep per night. Limit screen time before bed and create a calming bedtime routine."
+        },
+        {
+          title: "🍎 6. Eat Nourishing Food",
+          description: "Balanced meals with fruits, veggies, and whole grains support brain health. Stay hydrated and limit excessive caffeine or alcohol."
+        },
+        {
+          title: "❤️ 7. Set Boundaries",
+          description: "Learn to say no without feeling guilty. Protect your time and energy — your peace matters."
+        },
+        {
+          title: "🧘‍♀️ 8. Reduce Social Media Overload",
+          description: "Take digital detoxes when needed. Follow pages that uplift and unfollow anything that causes comparison or stress."
+        },
+        {
+          title: "👭 9. Build a Support System",
+          description: "Surround yourself with people who encourage and empower you. Find women's support groups or online communities if needed."
+        },
+        {
+          title: "👩‍⚕️ 10. Don't Be Afraid to Seek Help",
+          description: "Therapy is strength, not weakness. If you're struggling, speak to a mental health professional. You deserve help and healing."
         }
       ],
       image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop",
