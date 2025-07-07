@@ -12,9 +12,9 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-empowerher-pink to-empowerher-pink-dark text-white py-32">
+      <section className="bg-gradient-to-r from-empowerher-pink to-empowerher-pink-dark text-white py-20">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
                 WE FUND BOLD, FEMINIST MOVEMENTS
@@ -29,12 +29,12 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="flex justify-center">
-              <div className="bg-white/10 p-12 rounded-3xl backdrop-blur-sm">
+            <div className="flex justify-center lg:justify-end">
+              <div className="bg-white/10 p-6 rounded-3xl backdrop-blur-sm w-full max-w-md">
                 <img 
                   src="/lovable-uploads/27852b22-cd0b-4e89-aa24-b81a1282471c.png" 
                   alt="Four diverse Sri Lankan women representing unity and empowerment - showcasing traditional and modern styles in a beautiful outdoor setting"
-                  className="w-full h-96 object-cover rounded-2xl shadow-2xl"
+                  className="w-full h-80 object-cover rounded-2xl shadow-2xl"
                 />
               </div>
             </div>

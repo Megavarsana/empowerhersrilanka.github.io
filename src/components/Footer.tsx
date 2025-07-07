@@ -1,4 +1,5 @@
-import { Heart, Mail, Phone, MapPin } from "lucide-react";
+
+import { Heart, Mail, Phone, MapPin, Bot } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import { useEffect } from "react";
@@ -25,6 +26,12 @@ const Footer = () => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 100);
+  };
+
+  const handleAIChat = () => {
+    if (window.chatbase) {
+      window.chatbase("open");
+    }
   };
 
   useEffect(() => {
@@ -105,6 +112,16 @@ const Footer = () => {
               <Link to="/guidance" className="block text-white/90 dark:text-white hover:text-white transition-colors text-sm cursor-pointer">
                 Success Stories
               </Link>
+              <Link to="/forum" className="block text-white/90 dark:text-white hover:text-white transition-colors text-sm cursor-pointer">
+                Forum
+              </Link>
+              <button 
+                onClick={handleAIChat}
+                className="flex items-center space-x-2 text-white/90 dark:text-white hover:text-white transition-colors text-sm cursor-pointer"
+              >
+                <Bot className="h-4 w-4" />
+                <span>AI Assistant</span>
+              </button>
             </div>
           </div>
 
