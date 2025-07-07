@@ -3,16 +3,13 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Heart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import AuthButton from "./AuthButton";
 import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -59,76 +56,58 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Right side - Theme Toggle, Hamburger Menu, and Auth Button */}
+          {/* Right side - Theme Toggle, Menu Button, and Auth Button */}
           <div className="flex items-center space-x-4">
             {/* Theme Toggle - Always visible */}
             <ThemeToggle />
             
-            {/* Hamburger Menu - Always visible */}
-            <button
-              onClick={toggleMenu}
-              className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors lg:hidden"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <X className="h-5 w-5 text-gray-700 dark:text-gray-200" />
-              ) : (
-                <Menu className="h-5 w-5 text-gray-700 dark:text-gray-200" />
-              )}
-            </button>
+            {/* Hamburger Menu Sheet - Always visible */}
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+                  aria-label="Toggle menu"
+                >
+                  <Menu className="h-5 w-5 text-gray-700 dark:text-gray-200" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-80 p-0">
+                <div className="flex flex-col h-full bg-white dark:bg-gray-900">
+                  {/* Header with logo */}
+                  <div className="p-6 bg-gradient-to-r from-empowerher-pink to-empowerher-pink-dark">
+                    <div className="flex items-center space-x-2">
+                      <div className="bg-white p-2 rounded-full">
+                        <Heart className="h-6 w-6 text-empowerher-pink" />
+                      </div>
+                      <span className="text-2xl font-bold text-white">EmpowerHer</span>
+                    </div>
+                  </div>
 
-            {/* Desktop Menu Button - Always visible */}
-            <button
-              onClick={toggleMenu}
-              className="hidden lg:flex items-center space-x-2 p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
-              aria-label="Toggle menu"
-            >
-              <Menu className="h-5 w-5 text-gray-700 dark:text-gray-200" />
-              <span className="text-sm text-gray-700 dark:text-gray-200">Menu</span>
-            </button>
+                  {/* Navigation Menu */}
+                  <div className="flex-1 overflow-y-auto p-4">
+                    <nav className="space-y-2">
+                      {navLinks.map((link) => (
+                        <Link
+                          key={link.to}
+                          to={link.to}
+                          onClick={closeMenu}
+                          className="block text-gray-700 dark:text-gray-200 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors font-medium py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </nav>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
 
             {/* Auth Button */}
             <AuthButton />
           </div>
         </div>
-
-        {/* Mobile/Tablet Navigation Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 dark:border-gray-700 py-4">
-            <nav className="flex flex-col space-y-3">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  onClick={closeMenu}
-                  className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors font-medium py-2 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        )}
-
-        {/* Desktop Dropdown Menu */}
-        {isMenuOpen && (
-          <div className="hidden lg:block absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-lg">
-            <div className="container mx-auto px-6 py-4">
-              <nav className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.to}
-                    to={link.to}
-                    onClick={closeMenu}
-                    className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors font-medium py-2 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          </div>
-        )}
       </div>
     </header>
   );
