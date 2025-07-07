@@ -2,6 +2,7 @@
 import { Heart, Mail, Phone, MapPin } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
+import { useEffect } from "react";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -19,6 +20,40 @@ const Footer = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 100);
   };
+
+  useEffect(() => {
+    // Chatbase AI chatbot initialization
+    const initChatbase = () => {
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...arguments) => {
+          if (!window.chatbase.q) { window.chatbase.q = [] }
+          window.chatbase.q.push(arguments)
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") { return target.q }
+            return (...args) => target(prop, ...args)
+          }
+        });
+      }
+
+      const onLoad = function() {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "w0D6B5EbqJ_kFr-OnaHp2";
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script);
+      };
+
+      if (document.readyState === "complete") {
+        onLoad();
+      } else {
+        window.addEventListener("load", onLoad);
+      }
+    };
+
+    initChatbase();
+  }, []);
 
   return (
     <footer className="bg-primary dark:bg-black text-white transition-colors border-t-4 border-primary">
