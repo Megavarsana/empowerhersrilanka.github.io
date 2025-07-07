@@ -1,8 +1,14 @@
-
 import { Heart, Mail, Phone, MapPin } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import { useEffect } from "react";
+
+// Extend Window interface to include chatbase
+declare global {
+  interface Window {
+    chatbase: any;
+  }
+}
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -25,14 +31,14 @@ const Footer = () => {
     // Chatbase AI chatbot initialization
     const initChatbase = () => {
       if (!window.chatbase || window.chatbase("getState") !== "initialized") {
-        window.chatbase = (...arguments) => {
+        window.chatbase = (...args: any[]) => {
           if (!window.chatbase.q) { window.chatbase.q = [] }
-          window.chatbase.q.push(arguments)
+          window.chatbase.q.push(args)
         };
         window.chatbase = new Proxy(window.chatbase, {
           get(target, prop) {
             if (prop === "q") { return target.q }
-            return (...args) => target(prop, ...args)
+            return (...args: any[]) => target(prop, ...args)
           }
         });
       }
@@ -41,7 +47,7 @@ const Footer = () => {
         const script = document.createElement("script");
         script.src = "https://www.chatbase.co/embed.min.js";
         script.id = "w0D6B5EbqJ_kFr-OnaHp2";
-        script.domain = "www.chatbase.co";
+        (script as any).domain = "www.chatbase.co";
         document.body.appendChild(script);
       };
 
