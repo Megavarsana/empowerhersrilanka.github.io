@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Heart, Menu, X, User, MessageSquare, Users, Info, Target, UserCheck, Calendar, BookOpen, Clock, LogOut, Palette } from "lucide-react";
@@ -13,6 +12,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const { user, signOut } = useAuth();
+  const [profileData, setProfileData] = useState<any>(null);
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -23,8 +23,36 @@ const Header = () => {
     setIsMenuOpen(false);
   }, [location]);
 
+  // Load user profile data for avatar
+  useEffect(() => {
+    const loadUserProfile = async () => {
+      if (!user) return;
+      
+      try {
+        const { data } = await supabase
+          .from('profiles')
+          .select('avatar_url, first_name, last_name')
+          .eq('id', user.id)
+          .single();
+          
+        if (data) {
+          setProfileData(data);
+        }
+      } catch (error) {
+        console.error('Error loading user profile:', error);
+      }
+    };
+
+    if (user) {
+      loadUserProfile();
+    }
+  }, [user]);
+
   const getUserDisplayName = () => {
     if (!user) return 'Guest';
+    if (profileData?.first_name && profileData?.last_name) {
+      return `${profileData.first_name} ${profileData.last_name}`;
+    }
     const firstName = user.user_metadata?.first_name;
     const lastName = user.user_metadata?.last_name;
     if (firstName && lastName) {
@@ -36,6 +64,10 @@ const Header = () => {
   const getUserInitials = () => {
     const name = getUserDisplayName();
     return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+  };
+
+  const getUserAvatarUrl = () => {
+    return profileData?.avatar_url || user?.user_metadata?.avatar_url;
   };
 
   const handleSignOut = async () => {
@@ -96,6 +128,21 @@ const Header = () => {
             {/* Theme Toggle - Always visible */}
             <ThemeToggle />
             
+            {/* User Profile Avatar - Show when logged in */}
+            {user && (
+              <Link to="/profile" className="flex items-center space-x-2 p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <Avatar className="h-8 w-8 border-2 border-empowerher-pink">
+                  <AvatarImage src={getUserAvatarUrl()} />
+                  <AvatarFallback className="bg-empowerher-pink text-white text-sm font-semibold">
+                    {getUserInitials()}
+                  </AvatarFallback>
+                </Avatar>
+                <span className="hidden md:block text-sm font-medium text-gray-700 dark:text-gray-200">
+                  {getUserDisplayName()}
+                </span>
+              </Link>
+            )}
+            
             {/* Hamburger Menu Sheet - Always visible */}
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <SheetTrigger asChild>
@@ -114,7 +161,7 @@ const Header = () => {
                   <div className="p-6 bg-gradient-to-r from-empowerher-pink to-empowerher-pink-dark relative">
                     <div className="flex items-center space-x-3 mb-4">
                       <Avatar className="w-12 h-12 border-2 border-white">
-                        <AvatarImage src={user?.user_metadata?.avatar_url} />
+                        <AvatarImage src={getUserAvatarUrl()} />
                         <AvatarFallback className="bg-white text-empowerher-pink font-semibold">
                           {user ? getUserInitials() : 'G'}
                         </AvatarFallback>
@@ -123,9 +170,13 @@ const Header = () => {
                         <h3 className="text-white font-semibold text-lg">
                           {user ? getUserDisplayName() : 'Guest'}
                         </h3>
-                        <button className="text-white/80 text-sm hover:text-white transition-colors flex items-center space-x-1">
-                          <span>Edit image</span>
-                        </button>
+                        <Link 
+                          to="/profile"
+                          onClick={closeMenu}
+                          className="text-white/80 text-sm hover:text-white transition-colors flex items-center space-x-1"
+                        >
+                          <span>Edit profile</span>
+                        </Link>
                       </div>
                     </div>
                   </div>
