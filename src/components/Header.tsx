@@ -7,6 +7,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useAuth } from "@/contexts/AuthContext";
 import AuthButton from "./AuthButton";
 import ThemeToggle from "./ThemeToggle";
+import { supabase } from "@/integrations/supabase/client";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

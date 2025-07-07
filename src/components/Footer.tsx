@@ -128,6 +128,9 @@ const Footer = () => {
               <Link to="/forum" className="block text-white/90 dark:text-white hover:text-white transition-colors text-sm cursor-pointer">
                 Forum
               </Link>
+              <Link to="/" className="block text-white/90 dark:text-white hover:text-white transition-colors text-sm cursor-pointer">
+                Latest News
+              </Link>
               <button 
                 onClick={handleAIChat}
                 className="flex items-center space-x-2 text-white/90 dark:text-white hover:text-white transition-colors text-sm cursor-pointer"
