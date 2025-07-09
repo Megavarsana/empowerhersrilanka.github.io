@@ -3,31 +3,24 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Users, Lightbulb, Star, Globe, Phone, Building, Heart } from "lucide-react";
-
 const GuidancePage = () => {
-  const successStories = [
-    {
-      name: "Dr. Asha de Vos",
-      achievement: "Marine Biologist & Ocean Advocate",
-      description: "Founder of Oceanswell, Sri Lanka's first marine conservation research organization. She's the first Sri Lankan to earn a PhD in marine mammal research and works to protect blue whales around our island.",
-      awards: "BBC 100 Women, Rolex Laureate, National Hero"
-    },
-    {
-      name: "Tharushi Karunaratne",
-      achievement: "Asia's Fastest 800m Runner",
-      description: "A young athlete from rural Sri Lanka who won gold at the Asian Games 2023, making history in athletics and becoming a role model for young girls.",
-      awards: "From humble beginnings to Asian champion"
-    },
-    {
-      name: "Deshani Ariyawansa",
-      achievement: "AI Innovator & Youth Tech Leader",
-      description: "A schoolgirl who won international awards for building AI systems for the blind and voice-controlled systems for the elderly.",
-      awards: "Tech from the village, changing the world"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-empowerher-pink via-empowerher-pink-medium to-empowerher-pink-dark">
+  const successStories = [{
+    name: "Dr. Asha de Vos",
+    achievement: "Marine Biologist & Ocean Advocate",
+    description: "Founder of Oceanswell, Sri Lanka's first marine conservation research organization. She's the first Sri Lankan to earn a PhD in marine mammal research and works to protect blue whales around our island.",
+    awards: "BBC 100 Women, Rolex Laureate, National Hero"
+  }, {
+    name: "Tharushi Karunaratne",
+    achievement: "Asia's Fastest 800m Runner",
+    description: "A young athlete from rural Sri Lanka who won gold at the Asian Games 2023, making history in athletics and becoming a role model for young girls.",
+    awards: "From humble beginnings to Asian champion"
+  }, {
+    name: "Deshani Ariyawansa",
+    achievement: "AI Innovator & Youth Tech Leader",
+    description: "A schoolgirl who won international awards for building AI systems for the blind and voice-controlled systems for the elderly.",
+    awards: "Tech from the village, changing the world"
+  }];
+  return <div className="min-h-screen bg-gradient-to-br from-empowerher-pink via-empowerher-pink-medium to-empowerher-pink-dark">
       <Header />
       
       <div className="container mx-auto px-6 py-16">
@@ -43,38 +36,33 @@ const GuidancePage = () => {
 
         {/* Quick Navigation */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
-          <button 
-            onClick={() => document.getElementById('learning-platforms')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
-          >
+          <button onClick={() => document.getElementById('learning-platforms')?.scrollIntoView({
+          behavior: 'smooth'
+        })} className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2">
             <BookOpen className="h-4 w-4" />
             Learning Platforms
           </button>
-          <button 
-            onClick={() => document.getElementById('government-programs')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
-          >
+          <button onClick={() => document.getElementById('government-programs')?.scrollIntoView({
+          behavior: 'smooth'
+        })} className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2">
             <Building className="h-4 w-4" />
             Gov Programs
           </button>
-          <button 
-            onClick={() => document.getElementById('find-mentor')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
-          >
+          <button onClick={() => document.getElementById('find-mentor')?.scrollIntoView({
+          behavior: 'smooth'
+        })} className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2">
             <Users className="h-4 w-4" />
             Find Mentor
           </button>
-          <button 
-            onClick={() => document.getElementById('start-business')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
-          >
+          <button onClick={() => document.getElementById('start-business')?.scrollIntoView({
+          behavior: 'smooth'
+        })} className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2">
             <Lightbulb className="h-4 w-4" />
             Start Business
           </button>
-          <button 
-            onClick={() => document.getElementById('featured-women')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
-          >
+          <button onClick={() => document.getElementById('featured-women')?.scrollIntoView({
+          behavior: 'smooth'
+        })} className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2">
             <Star className="h-4 w-4" />
             Featured Women
           </button>
@@ -91,11 +79,7 @@ const GuidancePage = () => {
           <CardContent>
             {/* Learning Platforms Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=300&fit=crop"
-                alt="Online learning platforms and education for women's development"
-                className="w-full h-64 object-cover"
-              />
+              <img alt="Online learning platforms and education for women's development" className="w-full h-64 object-cover" src="/lovable-uploads/bd43042f-a34a-4175-85de-0426b112519b.jpg" />
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -161,16 +145,7 @@ const GuidancePage = () => {
             <div className="mt-6">
               <h4 className="font-semibold text-gray-800 mb-2">🎥 Free Online Learning Platforms</h4>
               <div className="aspect-video rounded-lg overflow-hidden">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/HL-VEHLTzQc"
-                  title="Free Online Learning Platforms"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HL-VEHLTzQc" title="Free Online Learning Platforms" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
               </div>
             </div>
 
@@ -201,11 +176,7 @@ const GuidancePage = () => {
           <CardContent>
             {/* Government Programs Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=300&fit=crop"
-                alt="Government programs and support for women's development"
-                className="w-full h-64 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=300&fit=crop" alt="Government programs and support for women's development" className="w-full h-64 object-cover" />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -250,16 +221,7 @@ const GuidancePage = () => {
             <div className="mt-6">
               <h4 className="font-semibold text-gray-800 mb-2">🎥 Government Programs for Women</h4>
               <div className="aspect-video rounded-lg overflow-hidden">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/CUmFFCd_9zI"
-                  title="Government Programs for Women"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CUmFFCd_9zI" title="Government Programs for Women" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
               </div>
             </div>
           </CardContent>
@@ -276,11 +238,7 @@ const GuidancePage = () => {
           <CardContent>
             {/* Find Mentor Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=300&fit=crop"
-                alt="Mentorship and guidance for women's career development"
-                className="w-full h-64 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=300&fit=crop" alt="Mentorship and guidance for women's career development" className="w-full h-64 object-cover" />
             </div>
 
             <div className="mb-6 bg-blue-50 p-6 rounded-lg">
@@ -329,16 +287,7 @@ const GuidancePage = () => {
             <div className="mt-6">
               <h4 className="font-semibold text-gray-800 mb-2">🎥 Finding the Right Mentor</h4>
               <div className="aspect-video rounded-lg overflow-hidden">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/ZQUxL4jm9BA"
-                  title="Finding the Right Mentor"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZQUxL4jm9BA" title="Finding the Right Mentor" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
               </div>
             </div>
           </CardContent>
@@ -355,11 +304,7 @@ const GuidancePage = () => {
           <CardContent>
             {/* I Want to Start Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=300&fit=crop"
-                alt="Starting new business ventures and entrepreneurship for women"
-                className="w-full h-64 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=300&fit=crop" alt="Starting new business ventures and entrepreneurship for women" className="w-full h-64 object-cover" />
             </div>
 
             <div className="mb-6 bg-green-50 p-6 rounded-lg">
@@ -406,16 +351,7 @@ const GuidancePage = () => {
             <div className="mt-6">
               <h4 className="font-semibold text-gray-800 mb-2">🎥 Starting Your Own Business</h4>
               <div className="aspect-video rounded-lg overflow-hidden">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/NqONxaJXysg"
-                  title="Starting Your Own Business"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NqONxaJXysg" title="Starting Your Own Business" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
               </div>
             </div>
           </CardContent>
@@ -432,11 +368,7 @@ const GuidancePage = () => {
           <CardContent>
             {/* Featured Women Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=300&fit=crop"
-                alt="Successful Sri Lankan women stories and achievements"
-                className="w-full h-64 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=300&fit=crop" alt="Successful Sri Lankan women stories and achievements" className="w-full h-64 object-cover" />
             </div>
 
             <div className="mb-6 text-center">
@@ -444,14 +376,12 @@ const GuidancePage = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-8">
-              {successStories.map((story, index) => (
-                <div key={index} className="bg-gray-50 p-6 rounded-lg text-center">
+              {successStories.map((story, index) => <div key={index} className="bg-gray-50 p-6 rounded-lg text-center">
                   <h4 className="font-semibold text-empowerher-pink text-lg mb-2">{story.name}</h4>
                   <p className="text-purple-600 font-medium text-sm mb-3">{story.achievement}</p>
                   <p className="text-gray-700 text-sm mb-3">{story.description}</p>
                   <p className="text-green-700 text-xs font-medium">🏅 {story.awards}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -477,16 +407,7 @@ const GuidancePage = () => {
             <div className="mt-6">
               <h4 className="font-semibold text-gray-800 mb-2">🎥 Inspiring Sri Lankan Women Stories</h4>
               <div className="aspect-video rounded-lg overflow-hidden">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/gbCYzTnNErs"
-                  title="Inspiring Sri Lankan Women Stories"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gbCYzTnNErs" title="Inspiring Sri Lankan Women Stories" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
               </div>
             </div>
           </CardContent>
@@ -494,8 +415,6 @@ const GuidancePage = () => {
       </div>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default GuidancePage;
