@@ -199,7 +199,7 @@ const MentalHealthPage = () => {
                   <CardContent className="p-8">
                     {/* Image Section */}
                     <div className="mb-8 rounded-lg overflow-hidden">
-                      <img alt={`${topic.title} - Mental Health Support`} className="w-full h-64 object-cover" src="/lovable-uploads/d557e1cd-298d-4bed-bb8d-4281b3942dcf.jpg" />
+                      <img alt={`${topic.title} - Mental Health Support`} className="w-full h-64 object-cover" src="/lovable-uploads/115dd6f0-e12b-4495-963c-7c2293d5a541.jpg" />
                     </div>
 
                     <p className="text-gray-700 leading-relaxed text-xl mb-8">{topic.content.intro}</p>
