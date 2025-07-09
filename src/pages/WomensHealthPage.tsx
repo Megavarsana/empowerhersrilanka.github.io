@@ -202,7 +202,7 @@ const WomensHealthPage = () => {
                   <CardContent className="p-8">
                     {/* Image Section */}
                     <div className="mb-8 rounded-lg overflow-hidden">
-                      <img alt={`${topic.title} - Women's Health Support`} className="w-full h-64 object-cover" src={index === 0 ? "/lovable-uploads/d2842b23-aa16-41df-8aa1-b13054fb4f8e.jpg" : index === 1 ? "/lovable-uploads/e4690e00-5092-4862-9ec6-530948b62205.jpg" : index === 2 ? "/lovable-uploads/5b4bada9-dcab-49d8-96a8-d7d62300752c.jpg" : index === 3 ? "/lovable-uploads/bd43042f-a34a-4175-85de-0426b112519b.jpg" : "/lovable-uploads/b0291ccc-e3b6-4449-b3eb-989f0e98f9af.jpg"} />
+                      <img alt={`${topic.title} - Women's Health Support`} className="w-full h-64 object-cover" src="/lovable-uploads/b0291ccc-e3b6-4449-b3eb-989f0e98f9af.jpg" />
                     </div>
 
                     <p className="text-gray-700 leading-relaxed text-xl mb-8">{topic.content.intro}</p>
