@@ -199,7 +199,13 @@ const MentalHealthPage = () => {
                   <CardContent className="p-8">
                     {/* Image Section */}
                     <div className="mb-8 rounded-lg overflow-hidden">
-                      <img alt={`${topic.title} - Mental Health Support`} className="w-full h-64 object-cover" src="/lovable-uploads/115dd6f0-e12b-4495-963c-7c2293d5a541.jpg" />
+                      <img alt={`${topic.title} - Mental Health Support`} className="w-full h-64 object-cover" src={
+                        index === 0 ? "/lovable-uploads/902846a1-4589-4d3d-bb8a-8a44d046446c.png" :
+                        index === 1 ? "/lovable-uploads/f3fae5fc-3492-4daa-8884-81770ee53fd6.png" :
+                        index === 2 ? "/lovable-uploads/447d4ecc-9806-4c9f-b404-1ab14beef29a.png" :
+                        index === 3 ? "/lovable-uploads/f2aad1c7-f49f-4978-93f7-0cf934c6ecb9.png" :
+                        "/lovable-uploads/a5b2a97b-7983-4b59-acc6-501bd2c86f19.png"
+                      } />
                     </div>
 
                     <p className="text-gray-700 leading-relaxed text-xl mb-8">{topic.content.intro}</p>
