@@ -176,7 +176,7 @@ const GuidancePage = () => {
           <CardContent>
             {/* Government Programs Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=300&fit=crop" alt="Government programs and support for women's development" className="w-full h-64 object-cover" />
+              <img alt="Government programs and support for women's development" className="w-full h-64 object-cover" src="/lovable-uploads/54e41345-3e6f-4d0d-bcd2-6ce3b483efcb.jpg" />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
