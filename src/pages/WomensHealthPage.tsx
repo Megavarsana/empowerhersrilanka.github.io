@@ -202,7 +202,7 @@ const WomensHealthPage = () => {
                   <CardContent className="p-8">
                     {/* Image Section */}
                     <div className="mb-8 rounded-lg overflow-hidden">
-                      <img alt={`${topic.title} - Women's Health Support`} className="w-full h-64 object-cover" src="/lovable-uploads/5b4bada9-dcab-49d8-96a8-d7d62300752c.jpg" />
+                      <img alt={`${topic.title} - Women's Health Support`} className="w-full h-64 object-cover" src="/lovable-uploads/ba824e6b-2623-46f8-bf2d-27271e3aa40f.jpg" />
                     </div>
 
                     <p className="text-gray-700 leading-relaxed text-xl mb-8">{topic.content.intro}</p>
