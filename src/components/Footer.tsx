@@ -12,6 +12,7 @@ declare global {
 }
 
 const Footer = () => {
+  console.log("Footer component is rendering with new design");
   const navigate = useNavigate();
 
   const handlePrivacyPolicy = () => {
@@ -70,8 +71,14 @@ const Footer = () => {
 
   return (
     <>
+      {/* TEST: This should be visible to confirm footer is updating */}
+      <div className="bg-red-500 text-white text-center py-2 font-bold">
+        🚨 FOOTER UPDATE TEST - If you see this, the footer is updating! 🚨
+      </div>
+      
       {/* Main Footer Content */}
-      <footer className="bg-gradient-to-r from-empowerher-pink to-empowerher-pink-dark text-white">
+      <footer className="bg-gradient-to-r from-empowerher-pink to-empowerher-pink-dark text-white"
+        style={{ backgroundColor: '#E91E63', background: 'linear-gradient(to right, #E91E63, #C2185B)' }}>
         <div className="container mx-auto px-6 py-16">
           <div className="grid lg:grid-cols-4 gap-12">
             {/* Brand Section */}
