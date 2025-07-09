@@ -46,13 +46,6 @@ const SupportPage = () => {
                   </div>
                 </div>
 
-                {/* YouTube Video Holder */}
-                <div className="bg-muted rounded-lg p-8 text-center">
-                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 dark:text-gray-400">YouTube Video: Mental Health Tips</span>
-                  </div>
-                </div>
-
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div className="info-card">
@@ -100,11 +93,11 @@ const SupportPage = () => {
                   </div>
                 </div>
                 
-                <div className="text-center pt-6">
-                  <Button className="bg-primary text-white hover:bg-primary/90">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Get Mental Health Support
-                  </Button>
+                {/* YouTube Video Holder */}
+                <div className="bg-muted rounded-lg p-8 text-center">
+                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-500 dark:text-gray-400">YouTube Video: Mental Health Tips</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -130,12 +123,6 @@ const SupportPage = () => {
                   </div>
                 </div>
 
-                {/* YouTube Video Holder */}
-                <div className="bg-muted rounded-lg p-8 text-center">
-                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 dark:text-gray-400">YouTube Video: Sexual Assault Support</span>
-                  </div>
-                </div>
 
                 <div className="space-y-6">
                   <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
@@ -198,11 +185,11 @@ const SupportPage = () => {
                   </div>
                 </div>
                 
-                <div className="text-center pt-6">
-                  <Button className="bg-primary text-white hover:bg-primary/90">
-                    <Phone className="h-4 w-4 mr-2" />
-                    Get Crisis Support Now
-                  </Button>
+                {/* YouTube Video Holder */}
+                <div className="bg-muted rounded-lg p-8 text-center">
+                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-500 dark:text-gray-400">YouTube Video: Sexual Assault Support</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -228,12 +215,6 @@ const SupportPage = () => {
                   </div>
                 </div>
 
-                {/* YouTube Video Holder */}
-                <div className="bg-muted rounded-lg p-8 text-center">
-                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 dark:text-gray-400">YouTube Video: Toxic Relationships</span>
-                  </div>
-                </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-6">
@@ -307,11 +288,11 @@ const SupportPage = () => {
                   <p className="text-sm font-semibold text-green-800 dark:text-green-200 mt-3">You are not too sensitive. You are not overreacting. You deserve healthy love — safe, respectful, and kind.</p>
                 </div>
                 
-                <div className="text-center pt-6">
-                  <Button className="bg-primary text-white hover:bg-primary/90">
-                    <Heart className="h-4 w-4 mr-2" />
-                    Find Relationship Support
-                  </Button>
+                {/* YouTube Video Holder */}
+                <div className="bg-muted rounded-lg p-8 text-center">
+                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-500 dark:text-gray-400">YouTube Video: Toxic Relationships</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -337,12 +318,6 @@ const SupportPage = () => {
                   </div>
                 </div>
 
-                {/* YouTube Video Holder */}
-                <div className="bg-muted rounded-lg p-8 text-center">
-                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 dark:text-gray-400">YouTube Video: Counselling Resources</span>
-                  </div>
-                </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-6">
@@ -416,11 +391,11 @@ const SupportPage = () => {
                   </div>
                 </div>
                 
-                <div className="text-center pt-6">
-                  <Button className="bg-primary text-white hover:bg-primary/90">
-                    <Phone className="h-4 w-4 mr-2" />
-                    Find Counselling Support
-                  </Button>
+                {/* YouTube Video Holder */}
+                <div className="bg-muted rounded-lg p-8 text-center">
+                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-500 dark:text-gray-400">YouTube Video: Counselling Resources</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -446,12 +421,6 @@ const SupportPage = () => {
                   </div>
                 </div>
 
-                {/* YouTube Video Holder */}
-                <div className="bg-muted rounded-lg p-8 text-center">
-                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 dark:text-gray-400">YouTube Video: Financial Independence</span>
-                  </div>
-                </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-6">
@@ -519,11 +488,11 @@ const SupportPage = () => {
                   </div>
                 </div>
                 
-                <div className="text-center pt-6">
-                  <Button className="bg-primary text-white hover:bg-primary/90">
-                    <Laptop className="h-4 w-4 mr-2" />
-                    Start Building Skills
-                  </Button>
+                {/* YouTube Video Holder */}
+                <div className="bg-muted rounded-lg p-8 text-center">
+                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-500 dark:text-gray-400">YouTube Video: Financial Independence</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
