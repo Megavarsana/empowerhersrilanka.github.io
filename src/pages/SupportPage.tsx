@@ -23,7 +23,7 @@ const SupportPage = () => {
       </section>
 
       {/* Main Content */}
-      <div className="bg-background dark:bg-black py-16">
+      <div className="bg-gradient-to-br from-empowerher-pink via-empowerher-pink-medium to-empowerher-pink-dark py-16">
         <div className="container mx-auto px-6">
           
           {/* Topic 1: Mental Health Tips for Women */}
