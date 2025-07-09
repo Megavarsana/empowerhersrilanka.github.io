@@ -70,122 +70,6 @@ const Footer = () => {
 
   return (
     <>
-      {/* Main Footer Content */}
-      <footer className="bg-background dark:bg-black text-foreground transition-colors border-t border-border">
-        <div className="container mx-auto px-6 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
-            {/* Brand */}
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="bg-primary p-2 rounded-full">
-                  <Heart className="h-6 w-6 text-white" />
-                </div>
-                <span className="text-2xl font-bold text-primary">EmpowerHer</span>
-              </div>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Empowering Sri Lankan women through safety, support, and guidance. 
-                Creating a digital space where every woman can thrive with confidence and dignity.
-              </p>
-              <div className="flex space-x-4">
-                <div className="flex items-center space-x-2 text-muted-foreground">
-                  <Mail className="h-4 w-4" />
-                  <span className="text-sm">empowerhersrilanka@gmail.com</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
-              <div className="space-y-2">
-                <Link to="/" className="block text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
-                  Home
-                </Link>
-                <div className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer mb-2">
-                  <Menu className="h-4 w-4" />
-                  <span>Menu</span>
-                </div>
-                <Link to="/safety" className="block text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
-                  Safety Resources
-                </Link>
-                <Link to="/support" className="block text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
-                  Support Services
-                </Link>
-                <Link to="/guidance" className="block text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
-                  Mentorship
-                </Link>
-                <Link to="/safety" className="block text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
-                  Emergency Contacts
-                </Link>
-                <Link to="/guidance" className="block text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
-                  Success Stories
-                </Link>
-                <Link to="/forum" className="block text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
-                  Forum
-                </Link>
-                <Link to="/" className="block text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer">
-                  Latest News
-                </Link>
-                <button 
-                  onClick={handleAIChat}
-                  className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer"
-                >
-                  <Bot className="h-4 w-4" />
-                  <span>AI Assistant</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Emergency Contacts */}
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Emergency</h4>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2 text-muted-foreground">
-                  <Phone className="h-4 w-4" />
-                  <span className="text-sm">Police: 119</span>
-                </div>
-                <div className="flex items-center space-x-2 text-muted-foreground">
-                  <Phone className="h-4 w-4" />
-                  <span className="text-sm">Women's Helpline: 1938</span>
-                </div>
-                <div className="flex items-center space-x-2 text-muted-foreground">
-                  <MapPin className="h-4 w-4" />
-                  <span className="text-sm">Sri Lanka</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-border mt-12 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <div className="text-center md:text-left">
-                <p className="text-muted-foreground text-sm mb-2">
-                  © 2025 EmpowerHer. Made with ❤️ for Sri Lankan women.
-                </p>
-                <p className="text-foreground text-lg font-semibold">
-                  Created by: S.Megavarsana
-                </p>
-              </div>
-              <div className="flex space-x-6 text-sm text-muted-foreground">
-                <button 
-                  onClick={handlePrivacyPolicy}
-                  className="hover:text-primary transition-colors cursor-pointer"
-                >
-                  Privacy Policy
-                </button>
-                <button 
-                  onClick={handleTermsOfService}
-                  className="hover:text-primary transition-colors cursor-pointer"
-                >
-                  Terms of Service
-                </button>
-                <a href="mailto:empowerhersrilanka@gmail.com" className="hover:text-primary transition-colors cursor-pointer">Contact Us</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-
       {/* Clean Footer Bar */}
       <div className="border-t border-border bg-background dark:bg-black">
         <div className="container mx-auto px-6 py-5">
@@ -235,6 +119,122 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Main Footer Content */}
+      <footer className="bg-gradient-to-r from-empowerher-pink to-empowerher-pink-dark text-white transition-colors">
+        <div className="container mx-auto px-6 py-12">
+          <div className="grid md:grid-cols-4 gap-8">
+            {/* Brand */}
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="bg-white p-2 rounded-full">
+                  <Heart className="h-6 w-6 text-primary" />
+                </div>
+                <span className="text-2xl font-bold text-white">EmpowerHer</span>
+              </div>
+              <p className="text-white/90 mb-6 leading-relaxed">
+                Empowering Sri Lankan women through safety, support, and guidance. 
+                Creating a digital space where every woman can thrive with confidence and dignity.
+              </p>
+              <div className="flex space-x-4">
+                <div className="flex items-center space-x-2 text-white/90">
+                  <Mail className="h-4 w-4" />
+                  <span className="text-sm">empowerhersrilanka@gmail.com</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-semibold text-white mb-4">Quick Links</h4>
+              <div className="space-y-2">
+                <Link to="/" className="block text-white/90 hover:text-white transition-colors text-sm cursor-pointer">
+                  Home
+                </Link>
+                <div className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors text-sm cursor-pointer mb-2">
+                  <Menu className="h-4 w-4" />
+                  <span>Menu</span>
+                </div>
+                <Link to="/safety" className="block text-white/90 hover:text-white transition-colors text-sm cursor-pointer">
+                  Safety Resources
+                </Link>
+                <Link to="/support" className="block text-white/90 hover:text-white transition-colors text-sm cursor-pointer">
+                  Support Services
+                </Link>
+                <Link to="/guidance" className="block text-white/90 hover:text-white transition-colors text-sm cursor-pointer">
+                  Mentorship
+                </Link>
+                <Link to="/safety" className="block text-white/90 hover:text-white transition-colors text-sm cursor-pointer">
+                  Emergency Contacts
+                </Link>
+                <Link to="/guidance" className="block text-white/90 hover:text-white transition-colors text-sm cursor-pointer">
+                  Success Stories
+                </Link>
+                <Link to="/forum" className="block text-white/90 hover:text-white transition-colors text-sm cursor-pointer">
+                  Forum
+                </Link>
+                <Link to="/" className="block text-white/90 hover:text-white transition-colors text-sm cursor-pointer">
+                  Latest News
+                </Link>
+                <button 
+                  onClick={handleAIChat}
+                  className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors text-sm cursor-pointer"
+                >
+                  <Bot className="h-4 w-4" />
+                  <span>AI Assistant</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Emergency Contacts */}
+            <div>
+              <h4 className="font-semibold text-white mb-4">Emergency</h4>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2 text-white/90">
+                  <Phone className="h-4 w-4" />
+                  <span className="text-sm">Police: 119</span>
+                </div>
+                <div className="flex items-center space-x-2 text-white/90">
+                  <Phone className="h-4 w-4" />
+                  <span className="text-sm">Women's Helpline: 1938</span>
+                </div>
+                <div className="flex items-center space-x-2 text-white/90">
+                  <MapPin className="h-4 w-4" />
+                  <span className="text-sm">Sri Lanka</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-white/20 mt-12 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="text-center md:text-left">
+                <p className="text-white/90 text-sm mb-2">
+                  © 2025 EmpowerHer. Made with ❤️ for Sri Lankan women.
+                </p>
+                <p className="text-white text-lg font-semibold">
+                  Created by: S.Megavarsana
+                </p>
+              </div>
+              <div className="flex space-x-6 text-sm text-white/90">
+                <button 
+                  onClick={handlePrivacyPolicy}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Privacy Policy
+                </button>
+                <button 
+                  onClick={handleTermsOfService}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Terms of Service
+                </button>
+                <a href="mailto:empowerhersrilanka@gmail.com" className="hover:text-white transition-colors cursor-pointer">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
