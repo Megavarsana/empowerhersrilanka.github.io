@@ -238,7 +238,7 @@ const GuidancePage = () => {
           <CardContent>
             {/* Find Mentor Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=300&fit=crop" alt="Mentorship and guidance for women's career development" className="w-full h-64 object-cover" />
+              <img alt="Mentorship and guidance for women's career development" className="w-full h-64 object-cover" src="/lovable-uploads/e4690e00-5092-4862-9ec6-530948b62205.jpg" />
             </div>
 
             <div className="mb-6 bg-blue-50 p-6 rounded-lg">
