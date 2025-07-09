@@ -103,11 +103,19 @@ const ProfilePage = () => {
   };
 
   const handleSaveProfile = async () => {
-    if (!user) return;
+    console.log('Save profile triggered');
+    console.log('User:', user);
+    console.log('Profile data:', profile);
+    
+    if (!user) {
+      console.log('No user found, cannot save');
+      return;
+    }
 
     setIsLoading(true);
     try {
-      const { error } = await supabase
+      console.log('Attempting to save profile...');
+      const { data, error } = await supabase
         .from('profiles')
         .upsert({
           id: user.id,
@@ -122,7 +130,10 @@ const ProfilePage = () => {
           updated_at: new Date().toISOString()
         });
 
+      console.log('Supabase response:', { data, error });
+
       if (error) {
+        console.error('Supabase error:', error);
         toast({
           title: "Error",
           description: "Failed to update profile. Please try again.",
@@ -131,6 +142,7 @@ const ProfilePage = () => {
         return;
       }
 
+      console.log('Profile saved successfully');
       toast({
         title: "Success",
         description: "Profile updated successfully!"
