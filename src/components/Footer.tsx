@@ -96,7 +96,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <div className="space-y-2">
-              {/* Theme Toggle and Home section */}
+              {/* Theme Toggle and Home section - positioned together */}
               <div className="flex items-center space-x-3 mb-3">
                 <ThemeToggle />
                 <Link to="/" className="text-white/90 dark:text-white hover:text-white transition-colors text-sm cursor-pointer">
@@ -104,7 +104,7 @@ const Footer = () => {
                 </Link>
               </div>
               
-              {/* Hamburger Menu - Always visible */}
+              {/* Hamburger Menu */}
               <div className="flex items-center space-x-2 text-white/90 dark:text-white hover:text-white transition-colors text-sm cursor-pointer mb-2">
                 <Menu className="h-4 w-4" />
                 <span>Menu</span>
