@@ -368,7 +368,7 @@ const GuidancePage = () => {
           <CardContent>
             {/* Featured Women Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=300&fit=crop" alt="Successful Sri Lankan women stories and achievements" className="w-full h-64 object-cover" />
+              <img alt="Successful Sri Lankan women stories and achievements" className="w-full h-64 object-cover" src="/lovable-uploads/d2842b23-aa16-41df-8aa1-b13054fb4f8e.jpg" />
             </div>
 
             <div className="mb-6 text-center">
