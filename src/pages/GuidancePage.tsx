@@ -304,7 +304,7 @@ const GuidancePage = () => {
           <CardContent>
             {/* I Want to Start Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=300&fit=crop" alt="Starting new business ventures and entrepreneurship for women" className="w-full h-64 object-cover" />
+              <img alt="Starting new business ventures and entrepreneurship for women" className="w-full h-64 object-cover" src="/lovable-uploads/e7f799ee-f6ab-497b-8d30-b301ada9e24b.jpg" />
             </div>
 
             <div className="mb-6 bg-green-50 p-6 rounded-lg">
