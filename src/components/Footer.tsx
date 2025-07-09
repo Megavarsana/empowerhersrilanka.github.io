@@ -71,7 +71,7 @@ const Footer = () => {
   return (
     <>
       {/* Main Footer Content */}
-      <footer className="bg-soft-white dark:bg-black text-foreground transition-colors border-t border-border">
+      <footer className="bg-background dark:bg-black text-foreground transition-colors border-t border-border">
         <div className="container mx-auto px-6 py-12">
           <div className="grid md:grid-cols-4 gap-8">
             {/* Brand */}
@@ -187,7 +187,7 @@ const Footer = () => {
       </footer>
 
       {/* Clean Footer Bar */}
-      <div className="border-t border-border bg-soft-white dark:bg-black">
+      <div className="border-t border-border bg-background dark:bg-black">
         <div className="container mx-auto px-6 py-5">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Left: Theme Toggle */}
