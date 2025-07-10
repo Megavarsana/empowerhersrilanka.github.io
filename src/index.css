@@ -3,12 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* EmpowerHer Design System - Vibrant Pink/Magenta Theme */
+/* EmpowerHer Design System - Bold Feminist Identity */
 
 @layer base {
   :root {
     --background: 343 100% 97%; /* FFF0F3 - very light pink background */
-    --foreground: 343 75% 36%; /* A4133C - dark burgundy for text */
+    --foreground: 343 75% 36%; /* Dark text for contrast */
 
     --card: 0 0% 100%; /* pure white for cards */
     --card-foreground: 343 75% 36%;
@@ -16,24 +16,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 343 75% 36%;
 
-    --primary: 343 70% 45%; /* C9184A - medium red/pink */
-    --primary-foreground: 343 100% 97%;
+    --primary: 325 100% 70%; /* #FF66B2 - Bold EmpowerHer Pink */
+    --primary-foreground: 0 0% 100%; /* White text on pink */
 
-    --secondary: 347 100% 76%; /* FF8FA3 - light pink */
+    --secondary: 325 100% 90%; /* #FFD6EB - Soft pink */
     --secondary-foreground: 343 75% 36%;
 
-    --muted: 343 100% 90%;
+    --muted: 325 100% 95%;
     --muted-foreground: 343 75% 50%;
 
-    --accent: 347 100% 73%; /* FF758F - light coral */
-    --accent-foreground: 343 100% 97%;
+    --accent: 325 85% 75%; /* #E04D8A - Hover pink */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 343 100% 90%;
-    --input: 343 100% 90%;
-    --ring: 343 70% 45%;
+    --border: 325 100% 85%;
+    --input: 325 100% 90%;
+    --ring: 325 100% 70%;
 
     --radius: 1rem;
   }
@@ -106,8 +106,21 @@
 }
 
 @layer components {
-  .gradient-bg {
-    background: linear-gradient(135deg, #C9184A 0%, #A4133C 50%, #A4133C 100%);
+  /* EmpowerHer Brand Components */
+  .empowerher-gradient {
+    background: linear-gradient(135deg, #FF66B2 0%, #E04D8A 100%);
+  }
+  
+  .empowerher-nav-link {
+    @apply relative font-bold uppercase tracking-wide text-white transition-all duration-300 hover:text-white;
+  }
+  
+  .empowerher-nav-link::after {
+    @apply absolute bottom-0 left-0 h-0.5 w-0 bg-empowerher-pink-light transition-all duration-300 content-[''];
+  }
+  
+  .empowerher-nav-link:hover::after {
+    @apply w-full;
   }
   
   .card-hover {
@@ -119,7 +132,7 @@
   }
 
   .hero-section {
-    background: linear-gradient(135deg, #C9184A 0%, #A4133C 100%);
+    background: linear-gradient(135deg, #FF66B2 0%, #E04D8A 100%);
   }
 
   /* Enhanced content box styling with dark mode support */

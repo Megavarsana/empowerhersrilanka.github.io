@@ -100,57 +100,59 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-soft-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-colors">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-12">
+    <header className="empowerher-gradient shadow-xl border-b-4 border-empowerher-pink-dark sticky top-0 z-50 transition-all duration-300">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/be224621-45b9-470b-983e-40dbaafaa42f.png" 
               alt="EmpowerHer Logo" 
-              className="h-10 w-auto object-contain bg-white rounded-lg p-1"
+              className="h-14 w-auto object-contain bg-white rounded-xl p-2 shadow-lg hover:shadow-xl transition-all duration-300"
             />
           </Link>
 
-          {/* Desktop Navigation - Always visible on larger screens */}
+          {/* Desktop Navigation - Bold and Striking */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
-              Home
+            <Link to="/" className="empowerher-nav-link text-lg py-2">
+              HOME
             </Link>
-            <Link to="/safety" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
-              Safety
+            <Link to="/safety" className="empowerher-nav-link text-lg py-2">
+              SAFETY
             </Link>
-            <Link to="/support" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
-              Support  
+            <Link to="/support" className="empowerher-nav-link text-lg py-2">
+              SUPPORT  
             </Link>
-            <Link to="/guidance" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
-              Guidance
+            <Link to="/guidance" className="empowerher-nav-link text-lg py-2">
+              GUIDANCE
             </Link>
-            <Link to="/womens-health" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
-              Women's Health
+            <Link to="/womens-health" className="empowerher-nav-link text-lg py-2">
+              WOMEN'S HEALTH
             </Link>
-            <Link to="/mental-health" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
-              Mental Health
+            <Link to="/mental-health" className="empowerher-nav-link text-lg py-2">
+              MENTAL HEALTH
             </Link>
-            <Link to="/pregnancy" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
-              Pregnancy
+            <Link to="/pregnancy" className="empowerher-nav-link text-lg py-2">
+              PREGNANCY
             </Link>
-            <Link to="/forum" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
-              Forum
+            <Link to="/forum" className="empowerher-nav-link text-lg py-2">
+              FORUM
             </Link>
           </nav>
 
           {/* Right side - Theme Toggle, User Avatar, and Menu Button */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-4">
             {/* Theme Toggle */}
-            <ThemeToggle />
+            <div className="text-white">
+              <ThemeToggle />
+            </div>
             
             {/* User Profile Avatar - Show when logged in */}
             {user && (
-              <Link to="/profile" className="flex items-center">
-                <Avatar className="h-8 w-8">
+              <Link to="/profile" className="flex items-center hover:opacity-80 transition-opacity">
+                <Avatar className="h-10 w-10 border-2 border-white shadow-lg">
                   <AvatarImage src={getUserAvatarUrl()} />
-                  <AvatarFallback className="bg-empowerher-pink text-white text-xs font-semibold">
+                  <AvatarFallback className="bg-white text-empowerher-pink text-sm font-bold">
                     {getUserInitials()}
                   </AvatarFallback>
                 </Avatar>
@@ -163,10 +165,10 @@ const Header = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                  className="p-2 rounded-lg hover:bg-white/20 text-white hover:text-white transition-all duration-300"
                   aria-label="Toggle menu"
                 >
-                  <Menu className="h-4 w-4 text-gray-700 dark:text-gray-200" />
+                  <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-80 p-0">

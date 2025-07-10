@@ -57,12 +57,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// New color palette: A4133C, C9184A, FFF0F3, FF758F, FF8FA3
-				'empowerher-pink': '#C9184A',
-				'empowerher-pink-light': '#FF8FA3',
+				// EmpowerHer Brand Colors - Bold Feminist Identity
+				'empowerher-pink': '#FF66B2',
+				'empowerher-pink-light': '#FFD6EB',
 				'empowerher-pink-medium': '#FF758F',
-				'empowerher-pink-dark': '#A4133C',
-				'empowerher-pink-darker': '#A4133C',
+				'empowerher-pink-dark': '#E04D8A',
+				'empowerher-pink-darker': '#C9184A',
 				'soft-white': '#FFF0F3',
 				// Legacy mulberry colors mapped to new palette
 				'mulberry': '#C9184A',
