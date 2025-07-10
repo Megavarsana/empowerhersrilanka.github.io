@@ -41,9 +41,11 @@ const SupportPage = () => {
               <CardContent className="space-y-6">
                 {/* Image Holder */}
                 <div className="bg-muted rounded-lg p-8 text-center">
-                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 dark:text-gray-400">Mental Health Tips Image</span>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/9f6af2da-e269-47b6-93f8-2ab58eb90d53.png" 
+                    alt="Mental Health Tips for Women"
+                    className="w-full h-64 object-cover rounded-lg"
+                  />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
@@ -118,9 +120,11 @@ const SupportPage = () => {
               <CardContent className="space-y-6">
                 {/* Image Holder */}
                 <div className="bg-muted rounded-lg p-8 text-center">
-                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 dark:text-gray-400">Sexual Assault Support Image</span>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/2b17da83-46dd-4da7-998b-f42f20481895.png" 
+                    alt="Dealing with Sexual Assault Support"
+                    className="w-full h-64 object-cover rounded-lg"
+                  />
                 </div>
 
 
@@ -210,9 +214,11 @@ const SupportPage = () => {
               <CardContent className="space-y-6">
                 {/* Image Holder */}
                 <div className="bg-muted rounded-lg p-8 text-center">
-                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 dark:text-gray-400">Toxic Relationships Image</span>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/04c9bf30-6f1b-4746-a042-96f83b7522f6.png" 
+                    alt="Understanding and Escaping Toxic Relationships"
+                    className="w-full h-64 object-cover rounded-lg"
+                  />
                 </div>
 
 
@@ -313,9 +319,11 @@ const SupportPage = () => {
               <CardContent className="space-y-6">
                 {/* Image Holder */}
                 <div className="bg-muted rounded-lg p-8 text-center">
-                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 dark:text-gray-400">Counselling Platforms Image</span>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/c04f109c-6683-42e8-9248-f4a65ea45d40.png" 
+                    alt="Counselling Platforms - Free and Confidential"
+                    className="w-full h-64 object-cover rounded-lg"
+                  />
                 </div>
 
 
@@ -416,9 +424,11 @@ const SupportPage = () => {
               <CardContent className="space-y-6">
                 {/* Image Holder */}
                 <div className="bg-muted rounded-lg p-8 text-center">
-                  <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 dark:text-gray-400">Skill Building Image</span>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/d7ecd7b8-1904-4ca4-9134-b8b0f00591f0.png" 
+                    alt="Skill Building and Financial Independence for Women"
+                    className="w-full h-64 object-cover rounded-lg"
+                  />
                 </div>
 
 
