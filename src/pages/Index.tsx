@@ -8,29 +8,31 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-empowerher-pink to-empowerher-pink-dark text-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-                WE FUND BOLD, FEMINIST MOVEMENTS
-              </h1>
-              <p className="text-xl mb-8 leading-relaxed">
-                EmpowerHer supports gender justice movements in Sri Lanka to{" "}
-                <span className="bg-yellow-400 text-black px-2 py-1 rounded">create meaningful change</span>{" "}
-                that will last beyond our lifetimes.
-              </p>
-              <p className="text-lg mb-8">
-                Made by Sri Lankan women for Sri Lankan women 💖
-              </p>
-            </div>
-            
-            <div className="flex justify-center lg:justify-end">
-              <div className="bg-white/10 p-6 rounded-3xl backdrop-blur-sm w-full max-w-md">
-                <img alt="Four diverse Sri Lankan women representing unity and empowerment - showcasing traditional and modern styles in a beautiful outdoor setting" className="w-full h-80 rounded-2xl shadow-2xl object-scale-down" src="/lovable-uploads/b789c669-6ef8-4359-b4fb-ebf3f880e4f4.png" />
-              </div>
-            </div>
-          </div>
+      <section className="relative min-h-[800px] md:min-h-[600px] flex items-center justify-center text-white overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/lovable-uploads/e4206dc1-e912-40a6-96af-c3be97ff47b1.png" 
+            alt="Sri Lankan women activists united for gender justice"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+            WE FUND BOLD, FEMINIST MOVEMENTS
+          </h1>
+          <p className="text-xl mb-8 leading-relaxed max-w-4xl mx-auto drop-shadow-md">
+            EmpowerHer supports gender justice movements in Sri Lanka to{" "}
+            <span className="bg-yellow-400 text-black px-2 py-1 rounded">create meaningful change</span>{" "}
+            that will last beyond our lifetimes.
+          </p>
+          <p className="text-lg mb-8 drop-shadow-md">
+            Made by Sri Lankan women for Sri Lankan women 💖
+          </p>
         </div>
       </section>
 
