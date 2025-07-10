@@ -108,7 +108,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/be224621-45b9-470b-983e-40dbaafaa42f.png" 
               alt="EmpowerHer Logo" 
-              className="h-10 w-auto object-contain"
+              className="h-10 w-auto object-contain bg-white rounded-lg p-1"
             />
           </Link>
 
