@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useNavigate } from 'react-router-dom';
-import { Star, Trash2, Plus } from 'lucide-react';
+import { Star, Trash2, Plus, Edit } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -29,7 +29,14 @@ const MyReviewsPage = () => {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
   const [newReview, setNewReview] = useState({
+    rating: 0,
+    comment: '',
+    page_url: ''
+  });
+  const [editReview, setEditReview] = useState({
+    id: '',
     rating: 0,
     comment: '',
     page_url: ''
@@ -148,6 +155,67 @@ const MyReviewsPage = () => {
     }
   };
 
+  const handleEditReview = async () => {
+    if (!user || editReview.rating === 0) {
+      toast({
+        title: "Error",
+        description: "Please provide a rating.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase
+        .from('reviews')
+        .update({
+          rating: editReview.rating,
+          comment: editReview.comment || null,
+          page_url: editReview.page_url || null,
+          updated_at: new Date().toISOString()
+        })
+        .eq('id', editReview.id)
+        .select()
+        .single();
+
+      if (error) {
+        toast({
+          title: "Error",
+          description: "Failed to update review.",
+          variant: "destructive"
+        });
+        return;
+      }
+
+      setReviews(prev => prev.map(review => 
+        review.id === editReview.id ? data : review
+      ));
+      setEditReview({ id: '', rating: 0, comment: '', page_url: '' });
+      setIsEditDialogOpen(false);
+      toast({
+        title: "Success",
+        description: "Review updated successfully!"
+      });
+    } catch (error) {
+      console.error('Error updating review:', error);
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred.",
+        variant: "destructive"
+      });
+    }
+  };
+
+  const openEditDialog = (review: Review) => {
+    setEditReview({
+      id: review.id,
+      rating: review.rating,
+      comment: review.comment || '',
+      page_url: review.page_url || ''
+    });
+    setIsEditDialogOpen(true);
+  };
+
   const renderClickableStars = (currentRating: number, onChange: (rating: number) => void) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -242,6 +310,55 @@ const MyReviewsPage = () => {
                 </div>
               </DialogContent>
             </Dialog>
+
+            {/* Edit Review Dialog */}
+            <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
+              <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                  <DialogTitle>Edit Review</DialogTitle>
+                </DialogHeader>
+                <div className="space-y-4 py-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="edit-rating">Rating *</Label>
+                    <div className="flex items-center space-x-1">
+                      {renderClickableStars(editReview.rating, (rating) =>
+                        setEditReview(prev => ({ ...prev, rating }))
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="edit-page_url">Page/Service (Optional)</Label>
+                    <Input
+                      id="edit-page_url"
+                      placeholder="e.g., Women's Health, Forum, etc."
+                      value={editReview.page_url}
+                      onChange={(e) => setEditReview(prev => ({ ...prev, page_url: e.target.value }))}
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="edit-comment">Comment (Optional)</Label>
+                    <Textarea
+                      id="edit-comment"
+                      placeholder="Share your thoughts..."
+                      value={editReview.comment}
+                      onChange={(e) => setEditReview(prev => ({ ...prev, comment: e.target.value }))}
+                      rows={4}
+                    />
+                  </div>
+                  
+                  <div className="flex justify-end space-x-2 pt-4">
+                    <Button variant="outline" onClick={() => setIsEditDialogOpen(false)}>
+                      Cancel
+                    </Button>
+                    <Button onClick={handleEditReview} className="bg-empowerher-pink hover:bg-empowerher-pink-dark">
+                      Update Review
+                    </Button>
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
           
           {reviews.length === 0 ? (
@@ -269,14 +386,24 @@ const MyReviewsPage = () => {
                         {renderStars(review.rating)}
                       </div>
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => handleDeleteReview(review.id)}
-                      className="text-red-500 hover:text-red-700 hover:bg-red-50"
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
+                    <div className="flex items-center space-x-2">
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => openEditDialog(review)}
+                        className="text-blue-500 hover:text-blue-700 hover:bg-blue-50"
+                      >
+                        <Edit className="h-4 w-4" />
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => handleDeleteReview(review.id)}
+                        className="text-red-500 hover:text-red-700 hover:bg-red-50"
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </Button>
+                    </div>
                   </CardHeader>
                   <CardContent>
                     {review.comment && (
