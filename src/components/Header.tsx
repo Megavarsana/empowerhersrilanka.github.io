@@ -101,56 +101,50 @@ const Header = () => {
 
   return (
     <header className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-colors">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-empowerher-pink p-2 rounded-full">
-              <Heart className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold text-empowerher-pink">EmpowerHer</span>
+            <span className="text-xl font-bold text-empowerher-pink">EmpowerHer</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation - Always visible */}
+          <nav className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors font-medium"
+                className="text-gray-600 dark:text-gray-400 hover:text-empowerher-pink dark:hover:text-empowerher-pink-light transition-colors text-sm font-medium"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          {/* Right side - Theme Toggle, Menu Button, and Auth Button */}
-          <div className="flex items-center space-x-4">
-            {/* Theme Toggle - Always visible */}
+          {/* Right side - Theme Toggle, User Avatar, and Menu Button */}
+          <div className="flex items-center space-x-3">
+            {/* Theme Toggle */}
             <ThemeToggle />
             
             {/* User Profile Avatar - Show when logged in */}
             {user && (
               <Link to="/profile" className="flex items-center space-x-2 p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                <Avatar className="h-8 w-8 border-2 border-empowerher-pink">
+                <Avatar className="h-7 w-7 border-2 border-empowerher-pink">
                   <AvatarImage src={getUserAvatarUrl()} />
-                  <AvatarFallback className="bg-empowerher-pink text-white text-sm font-semibold">
+                  <AvatarFallback className="bg-empowerher-pink text-white text-xs font-semibold">
                     {getUserInitials()}
                   </AvatarFallback>
                 </Avatar>
-                <span className="hidden md:block text-sm font-medium text-gray-700 dark:text-gray-200">
-                  {getUserDisplayName()}
-                </span>
               </Link>
             )}
             
-            {/* Hamburger Menu Sheet - Always visible */}
+            {/* Hamburger Menu Sheet - For mobile and additional options */}
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <SheetTrigger asChild>
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+                  className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors md:hidden"
                   aria-label="Toggle menu"
                 >
                   <Menu className="h-5 w-5 text-gray-700 dark:text-gray-200" />
