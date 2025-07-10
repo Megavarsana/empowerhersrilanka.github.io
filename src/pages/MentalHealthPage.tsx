@@ -152,19 +152,19 @@ const MentalHealthPage = () => {
       conclusion: "🧠 About Women's Mental Health Support in Sri Lanka: Women face unique mental health challenges due to social, cultural, and economic pressures. Issues like domestic violence, gender discrimination, and trauma can affect emotional wellbeing deeply. Fortunately, Sri Lanka offers growing support through government and non-governmental organizations that provide safe spaces for counseling, legal help, and rehabilitation. If you or someone you know is struggling with anxiety, depression, trauma, or stress, reaching out to these helplines or local counselors can be a crucial first step toward healing and recovery."
     }
   }];
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-gradient-to-br from-empowerher-pink via-empowerher-pink-medium to-empowerher-pink-dark">
       <Header />
       
       {/* Hero Section */}
-      <section className="hero-section">
+      <section className="py-20">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="hero-title">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             🧠 Mental Health & Self-Love
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-primary">
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-white">
             Your mental wellness matters. Find support, resources, and tools to nurture your mind and build self-love.
           </p>
-          <Button variant="consistent" size="lg">
+          <Button className="bg-white text-empowerher-pink hover:bg-gray-100 px-10 py-4 text-lg font-semibold">
             Start Your Journey ✨
           </Button>
         </div>
@@ -173,8 +173,8 @@ const MentalHealthPage = () => {
       {/* Topic Navigation */}
       <section className="py-8">
         <div className="container mx-auto px-6">
-          <div className="quick-nav">
-            {topics.map((topic, index) => <Button key={index} variant="consistent" className="btn-consistent" onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({
+          <div className="flex flex-wrap justify-center gap-4">
+            {topics.map((topic, index) => <Button key={index} variant="outline" className="bg-white text-empowerher-pink border-white hover:bg-empowerher-pink hover:text-white transition-colors" onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({
             behavior: 'smooth'
           })}>
                 {topic.title}
@@ -188,15 +188,15 @@ const MentalHealthPage = () => {
         <div className="container mx-auto px-6">
           {topics.map((topic, index) => <div key={index} id={`topic-${index}`} className="mb-16">
               <div className="max-w-6xl mx-auto">
-                <div className="section-container">
-                  <div className="pb-6">
-                    <h2 className="section-heading flex items-center space-x-3">
-                      <topic.icon className="h-8 w-8 text-primary" />
+                <Card className="card-hover bg-white border-white shadow-lg">
+                  <CardHeader className="pb-6">
+                    <CardTitle className="flex items-center space-x-3 text-gray-800 text-2xl">
+                      <topic.icon className="h-8 w-8 text-empowerher-pink" />
                       <span>{topic.title}</span>
-                    </h2>
-                    <p className="text-xl text-muted-foreground mt-2">{topic.subtitle}</p>
-                  </div>
-                  <div className="p-8">
+                    </CardTitle>
+                    <p className="text-xl text-gray-600 mt-2">{topic.subtitle}</p>
+                  </CardHeader>
+                  <CardContent className="p-8">
                     {/* Image Section */}
                     <div className="mb-8 rounded-lg overflow-hidden">
                       <img alt={`${topic.title} - Mental Health Support`} className="w-full h-64 object-cover" src={
@@ -224,12 +224,12 @@ const MentalHealthPage = () => {
                     {/* YouTube Video Section */}
                     <div className="mt-8">
                       <h4 className="font-semibold text-gray-800 mb-4 text-xl">🎥 {topic.title} Video Guide</h4>
-                      <div className="video-container aspect-video">
+                      <div className="aspect-video rounded-lg overflow-hidden">
                         <iframe width="100%" height="100%" src={index === 0 ? "https://www.youtube.com/embed/lw3lDjx__5w" : index === 1 ? "https://www.youtube.com/embed/VpHyLG-sc4g" : index === 2 ? "https://www.youtube.com/embed/30VMIEmA114" : index === 3 ? "https://www.youtube.com/embed/YRhqMWUH2Ig" : "https://www.youtube.com/embed/PkKXl7vSsCo"} title={`${topic.title} Video Guide`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>)}
         </div>

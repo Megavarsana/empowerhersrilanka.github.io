@@ -3,39 +3,39 @@
 @tailwind components;
 @tailwind utilities;
 
-/* EmpowerHer Design System - Soft Pastel Theme */
+/* EmpowerHer Design System - Vibrant Pink/Magenta Theme */
 
 @layer base {
   :root {
-    --background: 15 50% 98%; /* #FEFCFB - very light warm background */
-    --foreground: 15 25% 25%; /* warm dark text */
+    --background: 330 15% 97%; /* very light pink background */
+    --foreground: 30 10% 25%; /* dark brown for text */
 
     --card: 0 0% 100%; /* pure white for cards */
-    --card-foreground: 15 25% 25%;
+    --card-foreground: 30 10% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 15 25% 25%;
+    --popover-foreground: 30 10% 25%;
 
-    --primary: 11 58% 63%; /* #D97B66 - warm coral */
+    --primary: 330 85% 55%; /* vibrant pink/magenta */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 15 100% 95%; /* #FEEBF0 - very light pink */
-    --secondary-foreground: 15 25% 25%;
+    --secondary: 330 70% 85%; /* light pink */
+    --secondary-foreground: 30 10% 25%;
 
-    --muted: 30 44% 86%; /* #F7C59F - soft peach */
-    --muted-foreground: 15 25% 45%;
+    --muted: 330 20% 90%;
+    --muted-foreground: 30 10% 50%;
 
-    --accent: 15 100% 92%; /* #FFE2E6 - soft pink accent */
-    --accent-foreground: 11 58% 63%;
+    --accent: 330 75% 65%; /* medium pink */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 15 30% 90%;
-    --input: 15 30% 95%;
-    --ring: 11 58% 63%;
+    --border: 330 25% 85%;
+    --input: 330 25% 85%;
+    --ring: 330 85% 55%;
 
-    --radius: 0.625rem; /* 10px for rounded corners */
+    --radius: 1rem;
   }
 
   .dark {
@@ -70,21 +70,21 @@
 
   * {
     @apply border-border;
-    font-family: 'Montserrat', 'Poppins', sans-serif;
+    font-family: Georgia, serif;
   }
 
   body {
     @apply bg-background text-foreground transition-colors duration-300;
-    font-family: 'Montserrat', 'Poppins', sans-serif;
+    font-family: Georgia, serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', 'Poppins', sans-serif;
+    font-family: Georgia, serif;
     @apply text-foreground;
   }
 
   p, span, div, button, a {
-    font-family: 'Montserrat', 'Poppins', sans-serif;
+    font-family: Georgia, serif;
   }
 
   /* Dark mode specific text styling */
@@ -106,69 +106,10 @@
 }
 
 @layer components {
-  /* Consistent Hero Section */
-  .hero-section {
-    @apply bg-secondary py-16 px-6;
-    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--accent)) 100%);
+  .gradient-bg {
+    background: linear-gradient(135deg, #E91E63 0%, #C2185B 50%, #AD1457 100%);
   }
-
-  .hero-title {
-    @apply text-4xl md:text-5xl font-bold text-primary mb-6;
-    font-size: 28px;
-  }
-
-  /* Consistent Button Styling */
-  .btn-consistent {
-    @apply bg-accent text-accent-foreground font-bold py-3 px-6 rounded-[10px] transition-all duration-300 hover:scale-105 hover:bg-accent/80 shadow-sm hover:shadow-md;
-  }
-
-  /* Consistent Section Container */
-  .section-container {
-    @apply bg-card rounded-[20px] shadow-sm p-8 mb-8;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  /* Consistent Section Heading */
-  .section-heading {
-    @apply text-primary font-bold mb-6;
-    font-size: 28px;
-    position: relative;
-  }
-
-  .section-heading:after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: hsl(var(--primary));
-    border-radius: 2px;
-  }
-
-  /* Video Container */
-  .video-container {
-    @apply rounded-[15px] overflow-hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  /* Image Container */
-  .image-container {
-    @apply rounded-[15px] overflow-hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  /* Quick Access Navigation */
-  .quick-nav {
-    @apply flex flex-wrap justify-center gap-4 py-8;
-  }
-
-  /* Content Grid */
-  .content-grid {
-    @apply grid gap-8 mb-8;
-  }
-
-  /* Legacy styles for backward compatibility */
+  
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
@@ -177,20 +118,38 @@
     @apply py-16 px-4;
   }
 
+  .hero-section {
+    background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%);
+  }
+
+  /* Enhanced content box styling with dark mode support */
   .content-box {
-    @apply section-container;
+    @apply bg-white dark:bg-black rounded-xl shadow-lg p-6 mb-6 border border-gray-100 dark:border-gray-800 transition-colors;
   }
 
   .content-box-small {
-    @apply bg-card rounded-lg shadow-md p-4 mb-4 border border-border transition-colors;
+    @apply bg-white dark:bg-black rounded-lg shadow-md p-4 mb-4 border border-gray-50 dark:border-gray-700 transition-colors;
   }
 
   .info-card {
-    @apply bg-card rounded-lg shadow-sm p-5 border border-border hover:shadow-md transition-all duration-200;
+    @apply bg-white dark:bg-black rounded-lg shadow-sm p-5 border border-gray-100 dark:border-gray-800 hover:shadow-md transition-all duration-200;
   }
 
   .feature-card {
-    @apply section-container hover:shadow-xl transition-all duration-300;
+    @apply bg-white dark:bg-black rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300;
+  }
+
+  /* Modern form styling */
+  .form-field-modern {
+    @apply rounded-xl border border-gray-200 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 focus:ring-2 focus:ring-empowerher-pink/20 focus:border-empowerher-pink/40;
+  }
+
+  .form-container-modern {
+    @apply bg-gradient-to-br from-pink-50/40 via-rose-50/30 to-orange-50/20 backdrop-blur-sm rounded-2xl shadow-lg border border-white/50;
+  }
+
+  .button-modern {
+    @apply rounded-xl bg-gradient-to-r from-empowerher-pink to-empowerher-pink-dark shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300;
   }
 
   /* Dark mode specific overrides for better contrast */
