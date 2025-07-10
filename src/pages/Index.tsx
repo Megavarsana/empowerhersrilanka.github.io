@@ -27,7 +27,7 @@ const Index = () => {
             
             <div className="flex justify-center lg:justify-end">
               <div className="bg-white/10 p-6 rounded-3xl backdrop-blur-sm w-full max-w-md">
-                <img alt="Four diverse Sri Lankan women representing unity and empowerment - showcasing traditional and modern styles in a beautiful outdoor setting" className="w-full h-80 rounded-2xl shadow-2xl object-scale-down" src="/lovable-uploads/6df103d0-2c68-4a1d-98fb-44634ab9e480.png" />
+                <img alt="Four diverse Sri Lankan women representing unity and empowerment - showcasing traditional and modern styles in a beautiful outdoor setting" className="w-full h-80 rounded-2xl shadow-2xl object-scale-down" src="/lovable-uploads/b789c669-6ef8-4359-b4fb-ebf3f880e4f4.png" />
               </div>
             </div>
           </div>
