@@ -70,7 +70,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-gradient-to-br from-primary via-primary-foreground to-accent text-white relative overflow-hidden">
+    <footer className="bg-empowerher-pink text-white relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-white/20"></div>
