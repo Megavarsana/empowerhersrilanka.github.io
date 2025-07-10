@@ -153,13 +153,13 @@ const Header = () => {
               </Link>
             )}
             
-            {/* Hamburger Menu Sheet - For mobile and additional options */}
+            {/* Hamburger Menu Sheet - Always visible */}
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <SheetTrigger asChild>
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors lg:hidden"
+                  className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   aria-label="Toggle menu"
                 >
                   <Menu className="h-4 w-4 text-gray-700 dark:text-gray-200" />
