@@ -145,17 +145,6 @@ const Header = () => {
             {/* Theme Toggle */}
             <ThemeToggle />
             
-            {/* User Profile Avatar - Show when logged in */}
-            {user && (
-              <Link to="/profile" className="flex items-center">
-                <Avatar className="h-8 w-8">
-                  <AvatarImage src={getUserAvatarUrl()} />
-                  <AvatarFallback className="bg-empowerher-pink text-white text-xs font-semibold">
-                    {getUserInitials()}
-                  </AvatarFallback>
-                </Avatar>
-              </Link>
-            )}
             
             {/* Hamburger Menu Sheet - Always visible */}
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
