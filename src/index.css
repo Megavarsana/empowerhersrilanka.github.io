@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 330 15% 97%; /* very light pink background */
-    --foreground: 30 10% 25%; /* dark brown for text */
+    --background: 343 100% 97%; /* FFF0F3 - very light pink background */
+    --foreground: 343 75% 36%; /* A4133C - dark burgundy for text */
 
     --card: 0 0% 100%; /* pure white for cards */
-    --card-foreground: 30 10% 25%;
+    --card-foreground: 343 75% 36%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 30 10% 25%;
+    --popover-foreground: 343 75% 36%;
 
-    --primary: 330 85% 55%; /* vibrant pink/magenta */
-    --primary-foreground: 0 0% 100%;
+    --primary: 343 70% 45%; /* C9184A - medium red/pink */
+    --primary-foreground: 343 100% 97%;
 
-    --secondary: 330 70% 85%; /* light pink */
-    --secondary-foreground: 30 10% 25%;
+    --secondary: 347 100% 76%; /* FF8FA3 - light pink */
+    --secondary-foreground: 343 75% 36%;
 
-    --muted: 330 20% 90%;
-    --muted-foreground: 30 10% 50%;
+    --muted: 343 100% 90%;
+    --muted-foreground: 343 75% 50%;
 
-    --accent: 330 75% 65%; /* medium pink */
-    --accent-foreground: 0 0% 100%;
+    --accent: 347 100% 73%; /* FF758F - light coral */
+    --accent-foreground: 343 100% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 330 25% 85%;
-    --input: 330 25% 85%;
-    --ring: 330 85% 55%;
+    --border: 343 100% 90%;
+    --input: 343 100% 90%;
+    --ring: 343 70% 45%;
 
     --radius: 1rem;
   }
@@ -107,7 +107,7 @@
 
 @layer components {
   .gradient-bg {
-    background: linear-gradient(135deg, #E91E63 0%, #C2185B 50%, #AD1457 100%);
+    background: linear-gradient(135deg, #C9184A 0%, #A4133C 50%, #A4133C 100%);
   }
   
   .card-hover {
@@ -119,7 +119,7 @@
   }
 
   .hero-section {
-    background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%);
+    background: linear-gradient(135deg, #C9184A 0%, #A4133C 100%);
   }
 
   /* Enhanced content box styling with dark mode support */
