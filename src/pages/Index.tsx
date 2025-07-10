@@ -4,7 +4,7 @@ import VisionMissionSection from "@/components/VisionMissionSection";
 import MainTopicsSection from "@/components/MainTopicsSection";
 import Footer from "@/components/Footer";
 const Index = () => {
-  return <div className="min-h-screen">
+  return <div className="min-h-screen bg-gradient-to-b from-empowerher-pink to-empowerher-pink-dark">
       <Header />
       
       {/* Hero Section */}
