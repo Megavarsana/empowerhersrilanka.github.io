@@ -105,7 +105,15 @@ const Header = () => {
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-lg font-bold text-empowerher-pink">EmpowerHer</span>
+            <img 
+              src="/lovable-uploads/be224621-45b9-470b-983e-40dbaafaa42f.png" 
+              alt="EmpowerHer Logo" 
+              className="h-10 w-auto object-contain"
+              style={{
+                filter: 'brightness(0) saturate(100%) invert(24%) sepia(77%) saturate(1654%) hue-rotate(334deg) brightness(91%) contrast(90%)',
+                mixBlendMode: 'multiply'
+              }}
+            />
           </Link>
 
           {/* Desktop Navigation - Always visible on larger screens */}
