@@ -102,40 +102,40 @@ const Header = () => {
   return (
     <header className="bg-soft-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-colors">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-12">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/be224621-45b9-470b-983e-40dbaafaa42f.png" 
               alt="EmpowerHer Logo" 
-              className="h-10 w-auto object-contain bg-white rounded-lg p-1"
+              className="h-14 w-auto object-contain bg-white rounded-lg p-1"
             />
           </Link>
 
           {/* Desktop Navigation - Always visible on larger screens */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
+            <Link to="/" className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink transition-colors text-lg font-medium">
               Home
             </Link>
-            <Link to="/safety" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
+            <Link to="/safety" className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink transition-colors text-lg font-medium">
               Safety
             </Link>
-            <Link to="/support" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
+            <Link to="/support" className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink transition-colors text-lg font-medium">
               Support  
             </Link>
-            <Link to="/guidance" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
+            <Link to="/guidance" className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink transition-colors text-lg font-medium">
               Guidance
             </Link>
-            <Link to="/womens-health" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
+            <Link to="/womens-health" className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink transition-colors text-lg font-medium">
               Women's Health
             </Link>
-            <Link to="/mental-health" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
+            <Link to="/mental-health" className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink transition-colors text-lg font-medium">
               Mental Health
             </Link>
-            <Link to="/pregnancy" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
+            <Link to="/pregnancy" className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink transition-colors text-lg font-medium">
               Pregnancy
             </Link>
-            <Link to="/forum" className="text-gray-500 hover:text-empowerher-pink transition-colors text-sm">
+            <Link to="/forum" className="text-gray-700 dark:text-gray-200 hover:text-empowerher-pink transition-colors text-lg font-medium">
               Forum
             </Link>
           </nav>
