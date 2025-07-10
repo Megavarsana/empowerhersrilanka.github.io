@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Baby, Heart, Users, BookOpen, Phone, Shield } from "lucide-react";
 
@@ -223,16 +222,16 @@ const PregnancyPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-empowerher-pink via-empowerher-pink-medium to-empowerher-pink-dark">
+    <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="hero-section">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="hero-title">
             🍼 Pregnancy & New Mother Support
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-white">
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-primary">
             Your journey to motherhood matters. Find comprehensive support, guidance, and resources for every step.
           </p>
         </div>
@@ -241,12 +240,11 @@ const PregnancyPage = () => {
       {/* Topic Navigation */}
       <section className="py-8">
         <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="quick-nav">
             {topics.map((topic, index) => (
               <Button
                 key={index}
-                variant="outline"
-                className="bg-white text-empowerher-pink border-white hover:bg-empowerher-pink hover:text-white transition-colors"
+                variant="consistent"
                 onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({ behavior: 'smooth' })}
               >
                 {topic.title}
@@ -262,17 +260,17 @@ const PregnancyPage = () => {
           {topics.map((topic, index) => (
             <div key={index} id={`topic-${index}`} className="mb-16">
               <div className="max-w-6xl mx-auto">
-                <Card className="card-hover bg-white border-white shadow-lg">
-                  <CardHeader className="pb-6">
-                    <CardTitle className="flex items-center space-x-3 text-gray-800 text-2xl">
-                      <topic.icon className="h-8 w-8 text-empowerher-pink" />
+                <div className="section-container">
+                  <div className="pb-6">
+                    <h2 className="section-heading flex items-center space-x-3">
+                      <topic.icon className="h-8 w-8 text-primary" />
                       <span>{topic.title}</span>
-                    </CardTitle>
-                    <p className="text-xl text-gray-600 mt-2">{topic.subtitle}</p>
-                  </CardHeader>
-                  <CardContent className="p-8">
+                    </h2>
+                    <p className="text-xl text-muted-foreground mt-2">{topic.subtitle}</p>
+                  </div>
+                  <div className="p-8">
                     {/* Image Section */}
-                    <div className="mb-8 rounded-lg overflow-hidden">
+                    <div className="image-container mb-8">
                       <img 
                         src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=400&fit=crop" 
                         alt={`${topic.title} - Pregnancy and Motherhood Support`}
@@ -280,43 +278,46 @@ const PregnancyPage = () => {
                       />
                     </div>
 
-                    <p className="text-gray-700 leading-relaxed text-xl mb-8">{topic.content.intro}</p>
+                    <p className="text-foreground leading-relaxed text-xl mb-8">{topic.content.intro}</p>
                     
-                    <div className="grid gap-8 mb-8">
+                    <div className="content-grid">
                       {topic.content.points.map((point, pointIndex) => (
-                        <div key={pointIndex} className="bg-gray-50 p-8 rounded-lg">
-                          <h4 className="font-semibold text-gray-800 mb-4 text-xl">{point.title}</h4>
-                          <p className="text-gray-700 leading-relaxed text-lg">{point.description}</p>
+                        <div key={pointIndex} className="bg-muted p-8 rounded-[10px]">
+                          <h4 className="font-bold text-foreground mb-4 text-xl">{point.title}</h4>
+                          <p className="text-muted-foreground leading-relaxed text-lg">{point.description}</p>
                         </div>
                       ))}
                     </div>
                     
-                    <div className="bg-empowerher-pink/10 p-8 rounded-lg mb-8">
-                      <p className="text-gray-700 leading-relaxed font-medium text-xl">{topic.content.conclusion}</p>
+                    <div className="bg-secondary p-8 rounded-[10px] mb-8">
+                      <p className="text-foreground leading-relaxed font-bold text-xl">{topic.content.conclusion}</p>
                     </div>
 
                     {/* YouTube Video Section */}
                     <div className="mt-8">
-                      <h4 className="font-semibold text-gray-800 mb-4 text-xl">🎥 {topic.title} Video Guide</h4>
-                      <div className="aspect-video rounded-lg overflow-hidden">
-                        <iframe
-                          width="100%"
-                          height="100%"
-                          src={index === 0 ? "https://www.youtube.com/embed/BzVjqw-G_m8" : 
-                               index === 1 ? "https://www.youtube.com/embed/7IdMJJXpzwU" :
-                               index === 2 ? "https://www.youtube.com/embed/StNs0ZbM6es" :
-                               index === 3 ? "https://www.youtube.com/embed/HUbEiW3MZPM" :
-                               "https://www.youtube.com/embed/7d8tZo8Jz-U"}
-                          title={`${topic.title} Video Guide`}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
+                      <h4 className="font-bold text-foreground mb-4 text-xl">🎥 {topic.title} Video Guide</h4>
+                      <div className="video-container aspect-video">
+                        <iframe 
+                          width="100%" 
+                          height="100%" 
+                          src={
+                            index === 0 ? "https://www.youtube.com/embed/3GQ9dO7-OII" : 
+                            index === 1 ? "https://www.youtube.com/embed/qBfWKnMdDbw" : 
+                            index === 2 ? "https://www.youtube.com/embed/3mFgNDiRdj8" : 
+                            index === 3 ? "https://www.youtube.com/embed/Q3GxkXMtC38" : 
+                            index === 4 ? "https://www.youtube.com/embed/kQdD_wLKqgI" : 
+                            "https://www.youtube.com/embed/X4VdO7ArXYI"
+                          } 
+                          title={`${topic.title} Video Guide`} 
+                          frameBorder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                          allowFullScreen 
                           className="w-full h-full"
-                        ></iframe>
+                        />
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
