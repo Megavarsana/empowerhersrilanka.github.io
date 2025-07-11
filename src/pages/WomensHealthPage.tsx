@@ -177,11 +177,18 @@ const WomensHealthPage = () => {
       <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
-            {topics.map((topic, index) => <Button key={index} variant="outline" className="bg-white text-empowerher-pink border-white hover:bg-empowerher-pink hover:text-white transition-colors" onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({
-            behavior: 'smooth'
-          })}>
+            {topics.map((topic, index) => (
+              <Button 
+                key={index} 
+                variant="outline" 
+                className="bg-white text-empowerher-pink border-2 border-white hover:bg-empowerher-pink hover:text-white transition-colors px-6 py-3 rounded-full font-medium text-sm whitespace-nowrap" 
+                onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({
+                  behavior: 'smooth'
+                })}
+              >
                 {topic.title}
-              </Button>)}
+              </Button>
+            ))}
           </div>
         </div>
       </section>
