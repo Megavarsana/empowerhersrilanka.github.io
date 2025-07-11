@@ -288,11 +288,11 @@ const PregnancyPage = () => {
                         <iframe
                           width="100%"
                           height="100%"
-                          src={index === 0 ? "https://www.youtube.com/embed/BzVjqw-G_m8" : 
-                               index === 1 ? "https://www.youtube.com/embed/7IdMJJXpzwU" :
-                               index === 2 ? "https://www.youtube.com/embed/StNs0ZbM6es" :
-                               index === 3 ? "https://www.youtube.com/embed/HUbEiW3MZPM" :
-                               "https://www.youtube.com/embed/7d8tZo8Jz-U"}
+                          src={index === 0 ? "https://www.youtube.com/embed/3uiQ3acvI2Y" : 
+                               index === 1 ? "https://www.youtube.com/embed/-Ds3QW3CWJ0" :
+                               index === 2 ? "https://www.youtube.com/embed/FCH7lZbzgOM" :
+                               index === 3 ? "https://www.youtube.com/embed/-CWJYxIvoFQ" :
+                               "https://www.youtube.com/embed/9vuG77-WYmE"}
                           title={`${topic.title} Video Guide`}
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

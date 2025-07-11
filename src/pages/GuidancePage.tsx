@@ -145,7 +145,7 @@ const GuidancePage = () => {
             <div className="mt-6">
               <h4 className="font-semibold text-gray-800 mb-2">🎥 Free Online Learning Platforms</h4>
               <div className="aspect-video rounded-lg overflow-hidden">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HL-VEHLTzQc" title="Free Online Learning Platforms" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wY5n3uGZ6Js" title="Free Online Learning Platforms" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
               </div>
             </div>
 
@@ -285,9 +285,9 @@ const GuidancePage = () => {
 
             {/* Find Mentor Video */}
             <div className="mt-6">
-              <h4 className="font-semibold text-gray-800 mb-2">🎥 Finding the Right Mentor</h4>
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Find a Mentor – For Sri Lankan Women</h4>
               <div className="aspect-video rounded-lg overflow-hidden">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZQUxL4jm9BA" title="Finding the Right Mentor" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bO85pzQJU8o" title="Find a Mentor – For Sri Lankan Women" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
               </div>
             </div>
           </CardContent>
@@ -349,9 +349,9 @@ const GuidancePage = () => {
 
             {/* I Want to Start Video */}
             <div className="mt-6">
-              <h4 className="font-semibold text-gray-800 mb-2">🎥 Starting Your Own Business</h4>
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 I Want to Start – A Business or Project</h4>
               <div className="aspect-video rounded-lg overflow-hidden">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NqONxaJXysg" title="Starting Your Own Business" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8ifUsOBhWRM" title="I Want to Start – A Business or Project" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
               </div>
             </div>
           </CardContent>

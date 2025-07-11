@@ -76,6 +76,23 @@ const SupportPage = () => {
               />
             </div>
 
+            {/* Mental Health Video */}
+            <div className="mb-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Mental Health Tips for Women</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/u_eQYwT1ANA"
+                  title="Mental Health Tips for Women"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
@@ -201,6 +218,23 @@ const SupportPage = () => {
                   <li>• Healing takes time — be gentle with yourself and know that you are believed and you matter.</li>
                 </ul>
               </div>
+
+              {/* Dealing with Sexual Assault Video */}
+              <div className="mt-6">
+                <h4 className="font-semibold text-gray-800 mb-2">🎥 Dealing with Sexual Assault</h4>
+                <div className="aspect-video rounded-lg overflow-hidden">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/3FWQcP7lH38"
+                    title="Dealing with Sexual Assault"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -293,6 +327,23 @@ const SupportPage = () => {
               </ul>
               <p className="text-sm font-semibold text-green-800 mt-3">You are not too sensitive. You are not overreacting. You deserve healthy love — safe, respectful, and kind.</p>
             </div>
+
+            {/* Understanding & Escaping Toxic Relationship Video */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Understanding & Escaping Toxic Relationship</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/4EqbuAlrilQ"
+                  title="Understanding & Escaping Toxic Relationship"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
           </CardContent>
         </Card>
 
@@ -384,6 +435,23 @@ const SupportPage = () => {
                 </div>
               </div>
             </div>
+
+            {/* Counselling Platforms Video */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Counselling Platforms</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/JQ6faw8Sb_U"
+                  title="Counselling Platforms"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
           </CardContent>
         </Card>
 
@@ -467,6 +535,23 @@ const SupportPage = () => {
                     <li>• Information about local meetups, workshops, and seminars</li>
                   </ul>
                 </div>
+              </div>
+            </div>
+
+            {/* Skill Building & Financial Independence Video */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Skill Building & Financial Independence for Women</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/A7r2vCxa3pI"
+                  title="Skill Building & Financial Independence for Women"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
           </CardContent>

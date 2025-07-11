@@ -123,6 +123,23 @@ const SafetyPage = () => {
               />
             </div>
 
+            {/* Emergency Numbers Video */}
+            <div className="mb-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 Emergency Hotline Numbers for Women</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/YxFUGg8tN5Y"
+                  title="Emergency Hotline Numbers for Women"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-300">
                 <thead>
@@ -162,6 +179,23 @@ const SafetyPage = () => {
                 alt="Emergency SOS button interface for women's safety"
                 className="w-full h-80 object-cover rounded-lg"
               />
+            </div>
+
+            {/* One-Click SOS Button Video */}
+            <div className="mb-6">
+              <h4 className="font-semibold text-gray-800 mb-2">🎥 One-Click SOS Button</h4>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/pIby89RHEZk"
+                  title="One-Click SOS Button"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
 
             <div className="mb-6">
