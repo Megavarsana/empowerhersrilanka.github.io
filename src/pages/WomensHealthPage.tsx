@@ -176,19 +176,42 @@ const WomensHealthPage = () => {
       {/* Topic Navigation */}
       <section className="py-8">
         <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-4">
-            {topics.map((topic, index) => (
-              <Button 
-                key={index} 
-                variant="outline" 
-                className="bg-white/90 text-empowerher-pink border-2 border-white hover:bg-empowerher-pink hover:text-white transition-all duration-300 px-8 py-3 rounded-full font-semibold text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1" 
-                onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({
-                  behavior: 'smooth'
-                })}
-              >
-                {topic.title}
-              </Button>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <button 
+              onClick={() => document.getElementById('topic-0')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            >
+              <Heart className="h-4 w-4" />
+              Pain Relief Tips
+            </button>
+            <button 
+              onClick={() => document.getElementById('topic-1')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            >
+              <AlertCircle className="h-4 w-4" />
+              Sanitary Hygiene
+            </button>
+            <button 
+              onClick={() => document.getElementById('topic-2')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            >
+              <Calendar className="h-4 w-4" />
+              First Period Guide
+            </button>
+            <button 
+              onClick={() => document.getElementById('topic-3')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            >
+              <BookOpen className="h-4 w-4" />
+              Myths & Truths
+            </button>
+            <button 
+              onClick={() => document.getElementById('topic-4')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            >
+              <Users className="h-4 w-4" />
+              Menstrual Products
+            </button>
           </div>
         </div>
       </section>
