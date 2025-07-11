@@ -248,7 +248,7 @@ const MentalHealthPage = () => {
                     <div className="mt-8">
                       <h4 className="font-semibold text-gray-800 mb-4 text-xl">🎥 {topic.title} Video Guide</h4>
                       <div className="aspect-video rounded-lg overflow-hidden">
-                        <iframe width="100%" height="100%" src={index === 0 ? "https://www.youtube.com/embed/lw3lDjx__5w" : index === 1 ? "https://www.youtube.com/embed/VpHyLG-sc4g" : index === 2 ? "https://www.youtube.com/embed/30VMIEmA114" : index === 3 ? "https://www.youtube.com/embed/YRhqMWUH2Ig" : "https://www.youtube.com/embed/PkKXl7vSsCo"} title={`${topic.title} Video Guide`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
+                        <iframe width="100%" height="100%" src={index === 0 ? "https://www.youtube.com/embed/JpMzBhS5a5Y" : index === 1 ? "https://www.youtube.com/embed/qKfdHzSr-eI" : index === 2 ? "https://www.youtube.com/embed/oWJuIkzjbPc" : index === 3 ? "https://www.youtube.com/embed/LiUnFJ8P4gM" : "https://www.youtube.com/embed/EzTK5B63sRM"} title={`${topic.title} Video Guide`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
                       </div>
                     </div>
                   </CardContent>
