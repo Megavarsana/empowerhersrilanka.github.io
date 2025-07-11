@@ -253,18 +253,18 @@ const PregnancyPage = () => {
                     <p className="text-xl text-gray-600 mt-2">{topic.subtitle}</p>
                   </CardHeader>
                   <CardContent className="p-8">
-                    {/* Image Section */}
-                    <div className="mb-8 rounded-lg overflow-hidden">
-                      <img 
-                        src={index === 0 ? "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop" :
-                             index === 1 ? "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop" :
-                             index === 2 ? "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=400&fit=crop" :
-                             index === 3 ? "https://images.unsplash.com/photo-1578583977886-41b73b8e3baa?w=800&h=400&fit=crop" :
-                             "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=400&fit=crop"}
-                        alt={`${topic.title} - Pregnancy and Motherhood Support`}
-                        className="w-full h-64 object-cover"
-                      />
-                    </div>
+                     {/* Image Section */}
+                     <div className="mb-8 rounded-lg overflow-hidden">
+                       <img 
+                         src={index === 0 ? "/lovable-uploads/b971a2c3-61d5-4314-a895-e42f45690ed3.png" :
+                              index === 1 ? "/lovable-uploads/93494324-f23e-4b6e-a795-211aa68085c2.png" :
+                              index === 2 ? "/lovable-uploads/9a7ef58f-6afd-43f7-82db-71fa62f1395e.png" :
+                              index === 3 ? "/lovable-uploads/1c1cae1c-8c1c-4308-9859-35df7bb0e93b.png" :
+                              "/lovable-uploads/c644a1e4-deb4-4e10-b531-69fa3dddd489.png"}
+                         alt={`${topic.title} - Pregnancy and Motherhood Support`}
+                         className="w-full h-64 object-cover"
+                       />
+                     </div>
 
                     <p className="text-gray-700 leading-relaxed text-xl mb-8">{topic.content.intro}</p>
                     
