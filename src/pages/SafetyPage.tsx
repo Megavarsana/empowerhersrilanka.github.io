@@ -58,10 +58,10 @@ const SafetyPage = () => {
       <div className="container mx-auto px-6 py-16">
         {/* Page Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6" data-aos="fade-up">
             🔐 Women Safety
           </h1>
-          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
             Your safety is our priority. Access emergency resources, learn self-defense, and get immediate help when you need it most.
           </p>
         </div>
@@ -71,6 +71,8 @@ const SafetyPage = () => {
           <button 
             onClick={() => document.getElementById('emergency-numbers')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            data-aos="slide-up"
+            data-aos-delay="100"
           >
             <Phone className="h-4 w-4" />
             Emergency Numbers
@@ -78,6 +80,8 @@ const SafetyPage = () => {
           <button 
             onClick={() => document.getElementById('sos-button')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            data-aos="slide-up"
+            data-aos-delay="200"
           >
             <AlertTriangle className="h-4 w-4" />
             One-Click SOS
@@ -85,6 +89,8 @@ const SafetyPage = () => {
           <button 
             onClick={() => document.getElementById('self-defense')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            data-aos="slide-up"
+            data-aos-delay="300"
           >
             <Shield className="h-4 w-4" />
             Self-Defense Tips
@@ -92,6 +98,8 @@ const SafetyPage = () => {
           <button 
             onClick={() => document.getElementById('safety-apps')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            data-aos="slide-up"
+            data-aos-delay="400"
           >
             <Smartphone className="h-4 w-4" />
             Safety Apps
@@ -99,6 +107,8 @@ const SafetyPage = () => {
           <button 
             onClick={() => document.getElementById('online-safety')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            data-aos="slide-up"
+            data-aos-delay="500"
           >
             <Users className="h-4 w-4" />
             Online Safety
@@ -106,7 +116,7 @@ const SafetyPage = () => {
         </div>
 
         {/* 1. Emergency Hotline Numbers */}
-        <Card id="emergency-numbers" className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="emergency-numbers" className="bg-white rounded-lg shadow-lg mb-8 p-6" data-aos="fade-up">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Phone className="h-7 w-7" />
@@ -115,7 +125,7 @@ const SafetyPage = () => {
           </CardHeader>
           <CardContent>
             {/* Emergency Numbers Image */}
-            <div className="mb-6 rounded-lg overflow-hidden">
+            <div className="mb-6 rounded-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
               <img 
                 src="/lovable-uploads/638b3606-38eb-4f92-99a1-ed485f22cfc8.png"
                 alt="Emergency hotline numbers for women in Sri Lanka"
@@ -164,7 +174,7 @@ const SafetyPage = () => {
         </Card>
 
         {/* 2. One-Click SOS Button */}
-        <Card id="sos-button" className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="sos-button" className="bg-white rounded-lg shadow-lg mb-8 p-6" data-aos="slide-left" data-aos-delay="100">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <AlertTriangle className="h-7 w-7" />
@@ -270,7 +280,7 @@ const SafetyPage = () => {
         </Card>
 
         {/* 3. Self-Defense Tips */}
-        <Card id="self-defense" className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="self-defense" className="bg-white rounded-lg shadow-lg mb-8 p-6" data-aos="slide-right" data-aos-delay="100">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Shield className="h-7 w-7" />
@@ -352,7 +362,7 @@ const SafetyPage = () => {
         </Card>
 
         {/* 4. Safety App Recommendations */}
-        <Card id="safety-apps" className="bg-white rounded-lg shadow-lg mb-8 p-6">
+        <Card id="safety-apps" className="bg-white rounded-lg shadow-lg mb-8 p-6" data-aos="fade-up" data-aos-delay="200">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Smartphone className="h-7 w-7" />
@@ -398,7 +408,7 @@ const SafetyPage = () => {
         </Card>
 
         {/* 5. Online Social Media Safety */}
-        <Card id="online-safety" className="bg-white rounded-lg shadow-lg">
+        <Card id="online-safety" className="bg-white rounded-lg shadow-lg" data-aos="slide-up" data-aos-delay="300">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-empowerher-pink flex items-center gap-3">
               <Users className="h-7 w-7" />

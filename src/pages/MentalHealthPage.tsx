@@ -158,10 +158,10 @@ const MentalHealthPage = () => {
       {/* Page Header */}
       <div className="container mx-auto px-6 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6" data-aos="fade-up">
             🧠 Mental Health & Self-Love
           </h1>
-          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
             Your mental wellness matters. Find support, resources, and tools to nurture your mind and build self-love.
           </p>
         </div>
@@ -171,6 +171,8 @@ const MentalHealthPage = () => {
           <button 
             onClick={() => document.getElementById('topic-0')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            data-aos="slide-up"
+            data-aos-delay="100"
           >
             <Smile className="h-4 w-4" />
             How to Build Confidence
@@ -178,6 +180,8 @@ const MentalHealthPage = () => {
           <button 
             onClick={() => document.getElementById('topic-1')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            data-aos="slide-up"
+            data-aos-delay="200"
           >
             <Heart className="h-4 w-4" />
             Body Image Advice
@@ -185,6 +189,8 @@ const MentalHealthPage = () => {
           <button 
             onClick={() => document.getElementById('topic-2')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            data-aos="slide-up"
+            data-aos-delay="300"
           >
             <Brain className="h-4 w-4" />
             Dealing with Sadness or Fear
@@ -192,6 +198,8 @@ const MentalHealthPage = () => {
           <button 
             onClick={() => document.getElementById('topic-3')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            data-aos="slide-up"
+            data-aos-delay="400"
           >
             <MessageCircle className="h-4 w-4" />
             Breathing & Calming Techniques
@@ -199,6 +207,8 @@ const MentalHealthPage = () => {
           <button 
             onClick={() => document.getElementById('topic-4')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+            data-aos="slide-up"
+            data-aos-delay="500"
           >
             <Phone className="h-4 w-4" />
             Support Numbers & Organizations
@@ -209,19 +219,19 @@ const MentalHealthPage = () => {
       {/* Topics Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          {topics.map((topic, index) => <div key={index} id={`topic-${index}`} className="mb-16">
+          {topics.map((topic, index) => <div key={index} id={`topic-${index}`} className="mb-16" data-aos="fade-up" data-aos-delay={index * 100}>
               <div className="max-w-6xl mx-auto">
                 <Card className="card-hover bg-white border-white shadow-lg">
                   <CardHeader className="pb-6">
-                    <CardTitle className="flex items-center space-x-3 text-gray-800 text-2xl">
+                    <CardTitle className="flex items-center space-x-3 text-gray-800 text-2xl" data-aos="fade-right" data-aos-delay={index * 100 + 200}>
                       <topic.icon className="h-8 w-8 text-empowerher-pink" />
                       <span>{topic.title}</span>
                     </CardTitle>
-                    <p className="text-xl text-gray-600 mt-2">{topic.subtitle}</p>
+                    <p className="text-xl text-gray-600 mt-2" data-aos="fade-up" data-aos-delay={index * 100 + 300}>{topic.subtitle}</p>
                   </CardHeader>
                   <CardContent className="p-8">
                     {/* Image Section */}
-                    <div className="mb-8 rounded-lg overflow-hidden">
+                    <div className="mb-8 rounded-lg overflow-hidden" data-aos="zoom-in" data-aos-delay={index * 100 + 400}>
                       <img alt={`${topic.title} - Mental Health Support`} className="w-full h-64 object-cover" src={
                         index === 0 ? "/lovable-uploads/902846a1-4589-4d3d-bb8a-8a44d046446c.png" :
                         index === 1 ? "/lovable-uploads/f3fae5fc-3492-4daa-8884-81770ee53fd6.png" :

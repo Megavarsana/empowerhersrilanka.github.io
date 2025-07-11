@@ -10,7 +10,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-[800px] md:min-h-[600px] flex items-center justify-center text-white overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0" data-aos="zoom-in" data-aos-duration="1200">
           <img 
             src="/lovable-uploads/e4206dc1-e912-40a6-96af-c3be97ff47b1.png" 
             alt="Sri Lankan women activists united for gender justice"
@@ -22,15 +22,15 @@ const Index = () => {
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg" data-aos="fade-up" data-aos-delay="200">
             WE FUND BOLD, FEMINIST MOVEMENTS
           </h1>
-          <p className="text-xl mb-8 leading-relaxed max-w-4xl mx-auto drop-shadow-md">
+          <p className="text-xl mb-8 leading-relaxed max-w-4xl mx-auto drop-shadow-md" data-aos="fade-up" data-aos-delay="400">
             EmpowerHer supports gender justice movements in Sri Lanka to{" "}
             <span className="bg-yellow-400 text-black px-2 py-1 rounded">create meaningful change</span>{" "}
             that will last beyond our lifetimes.
           </p>
-          <p className="text-lg mb-8 drop-shadow-md">
+          <p className="text-lg mb-8 drop-shadow-md" data-aos="fade-up" data-aos-delay="600">
             Made by Sri Lankan women for Sri Lankan women 💖
           </p>
         </div>

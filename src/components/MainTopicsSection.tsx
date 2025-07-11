@@ -88,30 +88,32 @@ const MainTopicsSection = () => {
     <section className="section-spacing bg-white dark:bg-gray-900 transition-colors">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 transition-colors">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 transition-colors" data-aos="fade-up">
             How We Support You
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors" data-aos="fade-up" data-aos-delay="200">
             Click on any area below to access comprehensive resources and support
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {topics.map((topic) => (
+          {topics.map((topic, index) => (
             <Card 
               key={topic.id}
               className={`card-hover cursor-pointer transition-all duration-300 hover:scale-105 ${topic.bgColor} border-0 dark:shadow-2xl`}
               onClick={() => handleTopicClick(topic.route)}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
               <CardContent className="p-8 text-center h-full flex flex-col justify-between">
                 <div>
-                  <div className={`${topic.bgColor === 'bg-primary' ? 'bg-white' : 'bg-white'} p-4 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-sm`}>
+                  <div className={`${topic.bgColor === 'bg-primary' ? 'bg-white' : 'bg-white'} p-4 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center shadow-sm`} data-aos="zoom-in" data-aos-delay={index * 100 + 200}>
                     <topic.icon className={`h-10 w-10 ${topic.bgColor === 'bg-primary' ? 'text-primary' : topic.iconColor === 'text-white' ? 'text-primary' : topic.iconColor}`} />
                   </div>
-                  <h3 className={`text-xl font-bold mb-4 ${topic.textColor}`}>
+                  <h3 className={`text-xl font-bold mb-4 ${topic.textColor}`} data-aos="fade-up" data-aos-delay={index * 100 + 300}>
                     {topic.title}
                   </h3>
-                  <p className={`leading-relaxed ${topic.textColor === 'text-white' ? 'text-white/90' : 'text-gray-600'}`}>
+                  <p className={`leading-relaxed ${topic.textColor === 'text-white' ? 'text-white/90' : 'text-gray-600'}`} data-aos="fade-up" data-aos-delay={index * 100 + 400}>
                     {topic.subtitle}
                   </p>
                 </div>
@@ -119,6 +121,8 @@ const MainTopicsSection = () => {
                   <button 
                     onClick={(e) => handleLearnMoreClick(e, topic.route)}
                     className="bg-white text-gray-800 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors cursor-pointer shadow-sm border border-gray-200"
+                    data-aos="slide-up"
+                    data-aos-delay={index * 100 + 500}
                   >
                     Learn More →
                   </button>

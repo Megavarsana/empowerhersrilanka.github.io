@@ -109,6 +109,8 @@ const Header = () => {
               src="/lovable-uploads/be224621-45b9-470b-983e-40dbaafaa42f.png" 
               alt="EmpowerHer Logo" 
               className="h-14 w-auto object-contain bg-white rounded-lg p-1"
+              data-aos="slide-right"
+              data-aos-delay="100"
             />
           </Link>
 

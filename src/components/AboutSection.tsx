@@ -6,13 +6,13 @@ const AboutSection = () => {
     <section id="about" className="section-spacing bg-white dark:bg-black transition-colors">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-8 transition-colors">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-8 transition-colors" data-aos="fade-up">
             ABOUT US
           </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <div data-aos="slide-right" data-aos-delay="100">
             <p className="text-lg text-gray-600 dark:text-white leading-relaxed mb-6 transition-colors">
               EmpowerHer is a dedicated platform created specifically for Sri Lankan women 
               to provide comprehensive support in safety, mental health, and personal development. 
@@ -27,12 +27,14 @@ const AboutSection = () => {
             </p>
           </div>
           
-          <div className="flex justify-center">
+          <div className="flex justify-center" data-aos="slide-left" data-aos-delay="200">
             <div className="bg-empowerher-pink-light p-8 rounded-2xl">
               <img 
                 src="/lovable-uploads/051fdfd8-c00a-44a6-a88f-1b8189d9f108.png" 
                 alt="Professional woman working - About EmpowerHer"
                 className="w-full h-64 object-cover rounded-lg"
+                data-aos="zoom-in"
+                data-aos-delay="400"
               />
               <p className="text-center text-gray-600 dark:text-gray-800 text-sm mt-4 italic">
                 Supporting Sri Lankan women in their journey towards empowerment
