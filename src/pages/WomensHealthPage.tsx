@@ -181,7 +181,7 @@ const WomensHealthPage = () => {
               <Button 
                 key={index} 
                 variant="outline" 
-                className="bg-white text-empowerher-pink border-2 border-white hover:bg-empowerher-pink hover:text-white transition-colors px-6 py-3 rounded-full font-medium text-sm whitespace-nowrap" 
+                className="bg-white/90 text-empowerher-pink border-2 border-white hover:bg-empowerher-pink hover:text-white transition-all duration-300 px-8 py-3 rounded-full font-semibold text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1" 
                 onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({
                   behavior: 'smooth'
                 })}
