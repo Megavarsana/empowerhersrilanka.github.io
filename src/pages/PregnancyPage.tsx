@@ -7,217 +7,178 @@ import { Baby, Heart, Users, BookOpen, Phone, Shield } from "lucide-react";
 const PregnancyPage = () => {
   const topics = [
     {
-      title: "❗ Where to Get Help as a New Mom in Sri Lanka",
-      subtitle: "Essential Support Resources",
+      title: "❗ Where to Get Help as a New Mom — Support Systems You Can Trust",
+      subtitle: "Being a new mother can sometimes feel overwhelming — but remember, you don't have to do it alone.",
       icon: Phone,
       content: {
-        intro: "Becoming a new mom is a wonderful yet challenging journey. It's important to know where to find support for your health, your baby's care, and your mental wellbeing. Here are trusted resources and services available in Sri Lanka:",
+        intro: "Being a new mother can sometimes feel overwhelming — but remember, you don't have to do it alone.",
         points: [
           {
-            title: "🏥 Government Hospitals & Maternal Clinics",
-            description: "Maternal and Child Health Clinics are available in most communities, offering free prenatal and postnatal care, immunizations, and guidance on baby care. Major hospitals with specialized maternity wards: Castle Street Hospital for Women, Colombo; De Soysa Maternity Hospital, Colombo; Teaching Hospitals in major cities. These centers provide check-ups, vaccinations, nutrition advice, and breastfeeding support."
+            title: "🏥👩‍⚕️ Health Clinics & Hospitals",
+            description: "Regular prenatal and postnatal checkups are essential. Sri Lanka has government hospitals and maternal health clinics offering free or low-cost care. Don't hesitate to visit if you have any concerns."
           },
           {
-            title: "📞 Helplines for New Moms",
-            description: "Maternal and Child Health Line: 1929 (National Child Protection Authority) — For advice and reporting concerns related to mother and child wellbeing. Family Health Bureau Helpline: +94 11 267 6162 — Offers information on maternal health services and breastfeeding support."
+            title: "🩺🏡 Midwives & Community Health Workers",
+            description: "Trained midwives often visit homes to provide guidance on pregnancy, childbirth, and baby care. They are valuable resources for advice and emotional support."
           },
           {
-            title: "🤱 Breastfeeding Support Groups",
-            description: "Many hospitals and NGOs run breastfeeding counseling and support groups to help new moms with feeding challenges and nutrition advice. Lactation consultants are available in major hospitals and some community clinics."
+            title: "🤱💬 Mother Support Groups",
+            description: "Look for local mother groups or online communities where you can share experiences, ask questions, and find friendship. These groups reduce isolation and build confidence."
           },
           {
-            title: "🧠 Mental Health Support for New Moms",
-            description: "Postpartum depression and anxiety are common. Contact: Suwa Seriya Mental Health Helpline: 1926; Women In Need (WIN): 011 4718585 / 077 5675656 for counseling and support."
+            title: "❤️👩‍👧 Family & Friends",
+            description: "Trusted loved ones can provide practical help and emotional encouragement. Don't hesitate to ask for help with chores, baby care, or just a listening ear."
           },
           {
-            title: "👩‍⚕️ Pediatric Care",
-            description: "Regular baby check-ups, immunizations, and growth monitoring are done at Maternal and Child Health Clinics or pediatric departments in hospitals. Immunizations follow the national schedule, available free at government clinics."
-          },
-          {
-            title: "🏠 Community Support Services & NGOs",
-            description: "Organizations like Women In Need (WIN) and Sahanaya provide counseling, training, and emergency support for mothers and families in crisis. Local community centers often host parenting classes and mother-baby groups."
-          },
-          {
-            title: "📚 Online Resources",
-            description: "Official Ministry of Health website: health.gov.lk; Parenting forums and support groups on social media where new moms share experiences and advice."
+            title: "📞🚑 Emergency Numbers",
+            description: "Save important emergency contacts, including your healthcare provider, ambulance services, and local hospital. Quick access can save lives in urgent situations."
           }
         ],
-        conclusion: "🌷 Final Note: You're not alone on this journey. Reach out, ask for help, and take care of yourself as you care for your little one. Support is always available."
+        conclusion: "Remember, seeking help is a sign of strength, not weakness. You're doing an amazing job!"
       }
     },
     {
-      title: "🤰 What to Expect During Pregnancy",
-      subtitle: "A Trimester-by-Trimester Guide",
-      icon: Baby,
-      content: {
-        intro: "Pregnancy is divided into three trimesters, each bringing unique changes and milestones. Here's a general overview of what to expect:",
-        points: [
-          {
-            title: "🌱 First Trimester (Weeks 1-13)",
-            description: "Key Developments: Baby's organs begin to form; Heart starts beating; Limbs and facial features develop. Common Symptoms: Morning sickness (nausea, vomiting); Fatigue; Frequent urination; Breast tenderness. Self-Care Tips: Get plenty of rest; Eat small, frequent meals; Stay hydrated; Take prenatal vitamins."
-          },
-          {
-            title: "🌸 Second Trimester (Weeks 14-27)",
-            description: "Key Developments: Baby grows rapidly; You may feel the baby move; Organs fully develop. Common Symptoms: Increased appetite; Backaches; Leg cramps; Skin changes (darkening of nipples, linea nigra). Self-Care Tips: Continue prenatal vitamins; Exercise regularly; Get enough calcium; Start planning for baby's arrival."
-          },
-          {
-            title: "🌼 Third Trimester (Weeks 28-40)",
-            description: "Key Developments: Baby gains weight and prepares for birth; Lungs mature; Baby drops lower in your abdomen. Common Symptoms: Shortness of breath; Heartburn; Swelling in ankles and feet; Braxton Hicks contractions. Self-Care Tips: Attend childbirth classes; Pack your hospital bag; Get plenty of rest; Monitor baby's movements."
-          },
-          {
-            title: "⚠️ Warning Signs: When to Call Your Doctor",
-            description: "Severe abdominal pain; Vaginal bleeding; Sudden swelling; Severe headache; Blurred vision; Decreased fetal movement. Always seek immediate medical attention if you experience any concerning symptoms."
-          }
-        ],
-        conclusion: "📌 Important Note: Every pregnancy is unique. Consult your doctor or midwife for personalized advice and care throughout your journey."
-      }
-    },
-    {
-      title: "💖 Healthy Diet & Nutrition During Pregnancy",
-      subtitle: "Nourishing You and Your Baby",
+      title: "🤱 Breastfeeding — Nourishing Your Baby Naturally",
+      subtitle: "Breastfeeding is one of the most beautiful and beneficial gifts you can give your newborn.",
       icon: Heart,
       content: {
-        intro: "Eating a balanced diet during pregnancy is crucial for your baby's growth and development, as well as your own health. Here's a guide to essential nutrients and food choices:",
+        intro: "Breastfeeding is one of the most beautiful and beneficial gifts you can give your newborn. It provides perfect nutrition, strengthens your baby's immune system, and builds a special bond between you and your little one. Here's what every new mom should know:",
         points: [
           {
-            title: "🥦 Key Nutrients",
-            description: "Folic Acid: Prevents neural tube defects (leafy greens, fortified cereals). Iron: Supports blood production (red meat, beans, spinach). Calcium: Builds strong bones and teeth (dairy, leafy greens). Vitamin D: Helps absorb calcium (fortified milk, sunlight). Omega-3 Fatty Acids: Supports brain development (fish, flaxseeds)."
+            title: "🍼✨ Benefits for Baby",
+            description: "Breast milk contains all the nutrients your baby needs in the first 6 months — proteins, fats, vitamins, and antibodies that protect against infections. It's easily digested and adapts as your baby grows."
           },
           {
-            title: "🍽️ Food Choices",
-            description: "Protein: Lean meats, poultry, fish, beans, tofu. Carbohydrates: Whole grains, fruits, vegetables. Healthy Fats: Avocados, nuts, olive oil. Dairy: Milk, yogurt, cheese (pasteurized). Fruits & Vegetables: Aim for a variety of colors."
+            title: "💖🌸 Benefits for Mom",
+            description: "Breastfeeding helps your uterus shrink back to its normal size, burns extra calories, and can reduce the risk of some cancers. It also releases hormones that promote relaxation and bonding."
           },
           {
-            title: "🚫 Foods to Avoid",
-            description: "Raw or undercooked meat, poultry, fish, or eggs; Unpasteurized dairy products; High-mercury fish (shark, swordfish, king mackerel); Alcohol; Excessive caffeine; Processed foods and sugary drinks."
+            title: "🤱🕐 Getting Started",
+            description: "Try to breastfeed as soon as possible after birth, ideally within the first hour. Skin-to-skin contact helps your baby latch on easily and stimulates milk production."
           },
           {
-            title: "💧 Hydration",
-            description: "Drink plenty of water throughout the day to stay hydrated and prevent constipation. Aim for at least 8-10 glasses of water daily."
+            title: "👄👍 Proper Latching",
+            description: "A good latch means your baby's mouth covers both the nipple and part of the areola (the darker skin around the nipple). This helps them get enough milk and prevents nipple pain or damage. Ask a nurse or lactation consultant for help if you're unsure."
           },
           {
-            title: "💊 Prenatal Vitamins",
-            description: "Take a prenatal vitamin as recommended by your doctor to ensure you're getting all the essential nutrients. Start taking them before conception if possible."
+            title: "⏰❤️ Feeding on Demand",
+            description: "Feed your baby whenever they show hunger signs — rooting, sucking fingers, or fussiness — rather than on a strict schedule. This supports healthy weight gain and milk supply."
           },
           {
-            title: "🤰 Weight Gain",
-            description: "Talk to your doctor about healthy weight gain during pregnancy. It varies depending on your pre-pregnancy weight. Aim for gradual and steady weight gain."
+            title: "🆘🤝 Common Challenges",
+            description: "Some moms may face soreness, low milk supply, or engorgement. These are normal but can be managed with proper technique, rest, hydration, and support. Don't hesitate to seek help from health workers or breastfeeding groups."
+          },
+          {
+            title: "🍼🕒 Expressing Milk",
+            description: "You can hand express or use a breast pump to store milk for later, especially if you return to work or need a break. Stored milk keeps your baby nourished and your milk supply steady."
+          },
+          {
+            title: "🍼🚫 Avoiding Bottle Confusion",
+            description: "If possible, delay introducing bottles or pacifiers until breastfeeding is well established (usually 3-4 weeks) to prevent nipple confusion."
           }
         ],
-        conclusion: "⚠️ Important Note: If you have any dietary restrictions or health conditions, consult a registered dietitian or your doctor for personalized advice."
+        conclusion: "Remember, every mother and baby's breastfeeding journey is unique. Be patient with yourself, trust your instincts, and know that support is always available. You're doing an amazing job nourishing your baby with love! 🌟💕"
       }
     },
     {
-      title: "📖 Pregnancy & Motherhood Books",
-      subtitle: "Recommended Reads for Expecting Parents",
-      icon: BookOpen,
+      title: "🧠 What Are the Types of Birthing a Baby? — Understanding Your Options",
+      subtitle: "Knowing the different types of childbirth helps you prepare and make informed choices.",
+      icon: Baby,
       content: {
-        intro: "Reading books about pregnancy and motherhood can provide valuable information, guidance, and support as you prepare for your new role. Here are some recommended reads:",
+        intro: "Knowing the different types of childbirth helps you prepare and make informed choices.",
         points: [
           {
-            title: "📚 What to Expect When You're Expecting",
-            description: "A comprehensive guide covering every stage of pregnancy, from conception to postpartum. It includes information on symptoms, nutrition, and medical procedures."
+            title: "🌿👶 Natural Birth",
+            description: "Labor and delivery without medical intervention, allowing your body to birth the baby naturally. Pain relief options like breathing techniques and support from midwives help manage contractions."
           },
           {
-            title: "📚 The Happiest Baby on the Block",
-            description: "Offers techniques for soothing and calming newborns, based on the concept of the 'fourth trimester.' It teaches parents how to understand and respond to their baby's needs."
+            title: "⚙️🛠️ Assisted Vaginal Delivery",
+            description: "Sometimes tools like forceps or vacuum extractors are used to help deliver the baby safely during vaginal birth, often due to prolonged labor or distress. Your doctor will discuss if needed."
           },
           {
-            title: "📚 Ina May's Guide to Childbirth",
-            description: "Shares the wisdom and experience of renowned midwife Ina May Gaskin. It promotes natural childbirth and empowers women to trust their bodies."
+            title: "🏥🔪 Cesarean Section (C-Section)",
+            description: "A surgical procedure where the baby is delivered through an incision in the abdomen. It may be planned or emergency for health reasons. Recovery involves special care and rest."
           },
           {
-            title: "📚 The Fourth Trimester: A Postpartum Guide to Healing Your Body, Balancing Your Emotions, and Restoring Your Vitality",
-            description: "Focuses on the postpartum period and provides guidance on physical recovery, emotional wellbeing, and self-care for new mothers."
+            title: "💧🌊 Water Birth",
+            description: "Giving birth in a warm water pool, which may help reduce pain and anxiety. Not all hospitals offer this, so check availability."
           },
           {
-            title: "📚 Brain Rules for Baby: How to Raise a Smart and Happy Child from Zero to Five",
-            description: "Explains the science behind early childhood development and offers practical tips for raising intelligent and emotionally healthy children."
-          },
-          {
-            title: "📚 Mayo Clinic Guide to a Healthy Pregnancy",
-            description: "Provides evidence-based information on prenatal care, labor and delivery, and postpartum recovery. It covers a wide range of topics and is written by medical experts."
+            title: "🏠🩺 Home Birth",
+            description: "Some women choose to deliver at home with the help of trained midwives. This option requires thorough planning, medical backup, and safety measures."
           }
         ],
-        conclusion: "📌 Note: Check your local library or bookstore for these and other helpful resources. Online parenting forums and communities can also offer valuable insights and recommendations."
+        conclusion: "Discuss your preferences and health status with your healthcare provider early in pregnancy to prepare the safest and most comfortable birth plan for you and your baby. 🤰🤝"
       }
     },
     {
-      title: "🤝 Building Your Mom Tribe",
-      subtitle: "Finding Support and Friendship",
+      title: "👶 How to Take Care of a New Baby — Essential Tips for New Moms",
+      subtitle: "Caring for a newborn can be both magical and challenging. Here are core tips to help your baby thrive:",
       icon: Users,
       content: {
-        intro: "Connecting with other moms can provide invaluable support, friendship, and a sense of community during your journey into motherhood. Here are some ways to build your mom tribe:",
+        intro: "Caring for a newborn can be both magical and challenging. Here are core tips to help your baby thrive:",
         points: [
           {
-            title: "🏘️ Local Mom Groups",
-            description: "Search for mom groups in your area through online directories, social media, or community centers. These groups often organize playdates, outings, and social events."
+            title: "🍼❤️ Feeding",
+            description: "Whether breastfeeding or formula feeding, feed your baby on demand—usually every 2-3 hours. Breast milk provides the best nutrition and immunity, but support is available if you choose formula."
           },
           {
-            title: "🤱 Breastfeeding Support Groups",
-            description: "Attend breastfeeding support groups at hospitals, clinics, or community centers. These groups offer guidance, encouragement, and a chance to connect with other nursing moms."
+            title: "🛏️😴 Sleeping",
+            description: "Newborns sleep a lot but in short bursts. Create a safe sleep space on their back, free from pillows or blankets to reduce the risk of SIDS (Sudden Infant Death Syndrome)."
           },
           {
-            title: "👶 Playdates",
-            description: "Organize playdates with other moms and their children at parks, playgrounds, or your homes. These gatherings provide opportunities for kids to socialize and moms to chat."
+            title: "🧴🩲 Diapering",
+            description: "Change diapers frequently to keep baby dry and prevent rashes. Clean gently with warm water or hypoallergenic wipes. Allow some diaper-free time for skin to breathe."
           },
           {
-            title: "💻 Online Forums and Social Media",
-            description: "Join online parenting forums, Facebook groups, or Instagram communities. These platforms offer a space to ask questions, share experiences, and connect with moms from around the world."
+            title: "🛁🧼 Bathing",
+            description: "Give sponge baths until the umbilical cord stump falls off. Use mild baby soap and lukewarm water. Keep bath time calm and short."
           },
           {
-            title: "🚶‍♀️ Stroller Walks",
-            description: "Invite other moms to join you for stroller walks in your neighborhood or local parks. Walking and talking can be a great way to exercise and socialize."
+            title: "🤱💕 Bonding",
+            description: "Skin-to-skin contact, gentle talking, and cuddling build your baby's trust and security. This emotional connection supports brain development and happiness."
           },
           {
-            title: "📚 Parenting Classes",
-            description: "Attend parenting classes or workshops at hospitals, community centers, or online. These classes provide valuable information and a chance to meet other expecting or new parents."
-          },
-          {
-            title: "💖 Be Open and Approachable",
-            description: "Smile, strike up conversations, and be open to meeting new people. You never know where you'll find your next mom friend."
+            title: "🩺👶 Health Checks",
+            description: "Keep up with immunizations and regular pediatric visits. Monitor for any signs of illness like fever, unusual crying, or feeding issues and seek medical help if needed."
           }
         ],
-        conclusion: "🌷 Remember: Building a mom tribe takes time and effort. Be patient, persistent, and authentic. The rewards of having a supportive community are well worth it."
+        conclusion: "Remember, it's okay to ask for help, rest when you can, and trust your instincts as a mother. You're doing an incredible job! 🌟"
       }
     },
     {
-      title: "🛡️ Safety Tips for Pregnancy",
-      subtitle: "Protecting You and Your Baby",
-      icon: Shield,
+      title: "🔍 Pregnancy Symptoms — What to Expect and When to Seek Help",
+      subtitle: "Pregnancy brings many physical and emotional changes. Here are common symptoms and tips on managing them:",
+      icon: BookOpen,
       content: {
-        intro: "Pregnancy requires extra precautions to ensure the safety and wellbeing of both you and your baby. Here are some essential safety tips:",
+        intro: "Pregnancy brings many physical and emotional changes. Here are common symptoms and tips on managing them:",
         points: [
           {
-            title: "🚗 Car Safety",
-            description: "Always wear a seatbelt when driving or riding in a car. Position the lap belt below your belly and the shoulder belt across your chest. Avoid air travel during the late stages of pregnancy."
+            title: "🤢🍋 Morning Sickness",
+            description: "Nausea and vomiting are common in early pregnancy. Eat small, frequent meals, avoid strong smells, and try ginger or lemon to ease nausea. If vomiting is severe, consult your doctor."
           },
           {
-            title: "🏠 Home Safety",
-            description: "Prevent falls by removing tripping hazards, using non-slip mats, and wearing supportive shoes. Install smoke detectors and carbon monoxide detectors. Store cleaning products and medications out of reach of children."
+            title: "😴💤 Fatigue",
+            description: "Your body is working hard to grow a baby. Rest when possible and listen to your energy levels. Balanced nutrition helps maintain strength."
           },
           {
-            title: "💊 Medication Safety",
-            description: "Only take medications approved by your doctor during pregnancy. Avoid herbal supplements and over-the-counter drugs without consulting your healthcare provider."
+            title: "😢😊 Mood Swings",
+            description: "Hormonal changes can affect emotions. Practice self-care, talk openly with loved ones, and seek support if feelings become overwhelming."
           },
           {
-            title: "🌡️ Environmental Safety",
-            description: "Avoid exposure to harmful chemicals, pesticides, and radiation. Limit your intake of high-mercury fish. Wash fruits and vegetables thoroughly. Drink filtered water."
+            title: "🚻💧 Frequent Urination",
+            description: "The growing uterus presses on your bladder. Stay hydrated but avoid caffeinated drinks. Plan bathroom breaks ahead when outside."
           },
           {
-            title: "🏋️‍♀️ Exercise Safety",
-            description: "Continue exercising during pregnancy, but modify your routine as needed. Avoid high-impact activities, contact sports, and exercises that could cause you to fall. Stay hydrated and avoid overheating."
+            title: "🍎🍟 Cravings & Aversions",
+            description: "It's normal to want certain foods or avoid others. Eat a balanced diet, but listen to your body's needs."
           },
           {
-            title: "🐾 Pet Safety",
-            description: "Avoid contact with cat feces to prevent toxoplasmosis. Wear gloves when gardening. Wash your hands thoroughly after handling pets."
-          },
-          {
-            title: "🤒 Illness Prevention",
-            description: "Wash your hands frequently to prevent infections. Avoid contact with sick people. Get vaccinated against the flu and other recommended diseases."
+            title: "🦶🧘‍♀️ Swelling & Back Pain",
+            description: "Mild swelling in feet and back discomfort are common later in pregnancy. Elevate your feet, wear comfortable shoes, and do gentle stretches. If swelling is sudden or severe, seek medical advice."
           }
         ],
-        conclusion: "⚠️ Important Note: If you have any concerns about your safety during pregnancy, consult your doctor or midwife for personalized advice."
+        conclusion: "Always attend prenatal appointments and discuss any symptoms that worry you. Early detection keeps both you and your baby safe and healthy. 🤰🩺"
       }
     }
   ];
@@ -226,35 +187,56 @@ const PregnancyPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-empowerher-pink via-empowerher-pink-medium to-empowerher-pink-dark">
       <Header />
       
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      {/* Page Header */}
+      <div className="container mx-auto px-6 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             🍼 Pregnancy & New Mother Support
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-white">
+          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
             Your journey to motherhood matters. Find comprehensive support, guidance, and resources for every step.
           </p>
         </div>
-      </section>
 
-      {/* Topic Navigation */}
-      <section className="py-8">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-4">
-            {topics.map((topic, index) => (
-              <Button
-                key={index}
-                variant="outline"
-                className="bg-white text-empowerher-pink border-white hover:bg-empowerher-pink hover:text-white transition-colors"
-                onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                {topic.title}
-              </Button>
-            ))}
-          </div>
+        {/* Quick Navigation */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+          <button 
+            onClick={() => document.getElementById('topic-0')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <Phone className="h-4 w-4" />
+            Where to Get Help
+          </button>
+          <button 
+            onClick={() => document.getElementById('topic-1')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <Heart className="h-4 w-4" />
+            Breastfeeding
+          </button>
+          <button 
+            onClick={() => document.getElementById('topic-2')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <Baby className="h-4 w-4" />
+            Types of Birthing
+          </button>
+          <button 
+            onClick={() => document.getElementById('topic-3')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <Users className="h-4 w-4" />
+            Baby Care Tips
+          </button>
+          <button 
+            onClick={() => document.getElementById('topic-4')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <BookOpen className="h-4 w-4" />
+            Pregnancy Symptoms
+          </button>
         </div>
-      </section>
+      </div>
 
       {/* Topics Section */}
       <section className="py-16">
@@ -274,7 +256,11 @@ const PregnancyPage = () => {
                     {/* Image Section */}
                     <div className="mb-8 rounded-lg overflow-hidden">
                       <img 
-                        src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=400&fit=crop" 
+                        src={index === 0 ? "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop" :
+                             index === 1 ? "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop" :
+                             index === 2 ? "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=400&fit=crop" :
+                             index === 3 ? "https://images.unsplash.com/photo-1578583977886-41b73b8e3baa?w=800&h=400&fit=crop" :
+                             "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=400&fit=crop"}
                         alt={`${topic.title} - Pregnancy and Motherhood Support`}
                         className="w-full h-64 object-cover"
                       />
