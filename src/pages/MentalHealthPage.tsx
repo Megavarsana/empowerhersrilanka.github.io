@@ -155,33 +155,56 @@ const MentalHealthPage = () => {
   return <div className="min-h-screen bg-gradient-to-br from-empowerher-pink via-empowerher-pink-medium to-empowerher-pink-dark">
       <Header />
       
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      {/* Page Header */}
+      <div className="container mx-auto px-6 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             🧠 Mental Health & Self-Love
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-white">
+          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
             Your mental wellness matters. Find support, resources, and tools to nurture your mind and build self-love.
           </p>
-          <Button className="bg-white text-empowerher-pink hover:bg-gray-100 px-10 py-4 text-lg font-semibold">
-            Start Your Journey ✨
-          </Button>
         </div>
-      </section>
 
-      {/* Topic Navigation */}
-      <section className="py-8">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-4">
-            {topics.map((topic, index) => <Button key={index} variant="outline" className="bg-white text-empowerher-pink border-white hover:bg-empowerher-pink hover:text-white transition-colors" onClick={() => document.getElementById(`topic-${index}`)?.scrollIntoView({
-            behavior: 'smooth'
-          })}>
-                {topic.title}
-              </Button>)}
-          </div>
+        {/* Quick Navigation */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
+          <button 
+            onClick={() => document.getElementById('topic-0')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <Smile className="h-4 w-4" />
+            How to Build Confidence
+          </button>
+          <button 
+            onClick={() => document.getElementById('topic-1')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <Heart className="h-4 w-4" />
+            Body Image Advice
+          </button>
+          <button 
+            onClick={() => document.getElementById('topic-2')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <Brain className="h-4 w-4" />
+            Dealing with Sadness or Fear
+          </button>
+          <button 
+            onClick={() => document.getElementById('topic-3')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <MessageCircle className="h-4 w-4" />
+            Breathing & Calming Techniques
+          </button>
+          <button 
+            onClick={() => document.getElementById('topic-4')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-sm border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <Phone className="h-4 w-4" />
+            Support Numbers & Organizations
+          </button>
         </div>
-      </section>
+      </div>
 
       {/* Topics Section */}
       <section className="py-16">
