@@ -107,10 +107,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/a531b592-2ccc-434a-86de-b8f48e44e9c2.png"
+              src="/lovable-uploads/73b4e841-0c38-486b-9e6f-3613dd37a4bd.png"
               alt="EmpowerHer Logo" 
               className="h-10 w-auto object-contain"
-              style={{ filter: 'brightness(0) saturate(100%) invert(17%) sepia(81%) saturate(3151%) hue-rotate(350deg) brightness(88%) contrast(101%)' }}
               data-aos="slide-right"
               data-aos-delay="100"
             />
