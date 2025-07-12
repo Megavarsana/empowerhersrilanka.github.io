@@ -1,8 +1,8 @@
 
-import { Heart, Mail, Phone, MapPin, Bot, Menu } from "lucide-react";
+import { Heart, Mail, Phone, MapPin, Bot, Menu, ArrowLeft } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Extend Window interface to include chatbase
 declare global {
@@ -14,6 +14,7 @@ declare global {
 const Footer = () => {
   console.log("Footer component is rendering with new design");
   const navigate = useNavigate();
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const handlePrivacyPolicy = () => {
     navigate('/privacy');
@@ -32,7 +33,16 @@ const Footer = () => {
   const handleAIChat = () => {
     if (window.chatbase) {
       window.chatbase("open");
+      setIsChatOpen(true);
     }
+  };
+
+  const handleBackToForum = () => {
+    if (window.chatbase) {
+      window.chatbase("close");
+    }
+    setIsChatOpen(false);
+    navigate('/forum');
   };
 
   useEffect(() => {
@@ -67,7 +77,24 @@ const Footer = () => {
     };
 
     initChatbase();
-  }, []);
+
+    // Monitor Chatbase widget state changes
+    const checkChatbaseState = () => {
+      if (window.chatbase && typeof window.chatbase === 'function') {
+        try {
+          const state = window.chatbase("getState");
+          if (state === "closed" && isChatOpen) {
+            setIsChatOpen(false);
+          }
+        } catch (error) {
+          // Ignore errors from chatbase state checking
+        }
+      }
+    };
+
+    const interval = setInterval(checkChatbaseState, 1000);
+    return () => clearInterval(interval);
+  }, [isChatOpen]);
 
   return (
     <footer className="bg-empowerher-pink text-white relative overflow-hidden">
@@ -226,6 +253,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Floating Back to Forum Button */}
+      {isChatOpen && (
+        <button
+          onClick={handleBackToForum}
+          className="fixed top-4 right-4 z-[10001] bg-empowerher-pink hover:bg-empowerher-pink/80 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-105"
+          aria-label="Back to Forum"
+        >
+          <ArrowLeft className="h-5 w-5" />
+        </button>
+      )}
     </footer>
   );
 };
