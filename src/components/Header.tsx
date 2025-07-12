@@ -8,6 +8,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import AuthButton from "./AuthButton";
 import ThemeToggle from "./ThemeToggle";
 import { supabase } from "@/integrations/supabase/client";
+import empowerherLogo from "@/assets/empowerher-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -106,9 +107,10 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/be224621-45b9-470b-983e-40dbaafaa42f.png" 
+              src={empowerherLogo}
               alt="EmpowerHer Logo" 
-              className="h-14 w-auto object-contain bg-white rounded-lg p-1"
+              className="h-12 w-auto object-contain"
+              style={{ filter: 'brightness(0) saturate(100%) invert(17%) sepia(81%) saturate(3151%) hue-rotate(350deg) brightness(88%) contrast(101%)' }}
               data-aos="slide-right"
               data-aos-delay="100"
             />
