@@ -96,9 +96,32 @@ const ForumPage = () => {
 
   const loadReplies = async () => {
     try {
-      // For now, we'll simulate replies since we don't have a replies table
-      // In a real implementation, you'd create a forum_replies table
-      setReplies({});
+      const { data, error } = await supabase
+        .from('forum_replies')
+        .select(`
+          *,
+          profiles:user_id (
+            first_name,
+            last_name
+          )
+        `)
+        .order('created_at', { ascending: true });
+
+      if (error) {
+        console.error('Error loading replies:', error);
+        return;
+      }
+
+      // Group replies by post_id
+      const repliesByPost: { [key: string]: PostReply[] } = {};
+      data?.forEach((reply) => {
+        if (!repliesByPost[reply.post_id]) {
+          repliesByPost[reply.post_id] = [];
+        }
+        repliesByPost[reply.post_id].push(reply);
+      });
+
+      setReplies(repliesByPost);
     } catch (error) {
       console.error('Error loading replies:', error);
     }
@@ -175,33 +198,42 @@ const ForumPage = () => {
       return;
     }
 
-    // For now, we'll show a success message
-    // In a real implementation, you'd save to a forum_replies table
-    toast({
-      title: "Reply Added",
-      description: "Your reply has been posted successfully!",
-    });
+    try {
+      const { error } = await supabase
+        .from('forum_replies')
+        .insert({
+          post_id: postId,
+          content: content,
+          user_id: user.id
+        });
 
-    // Clear the reply input
-    setReplyContent(prev => ({ ...prev, [postId]: '' }));
-    
-    // Simulate adding a reply to the local state
-    const newReply: PostReply = {
-      id: Date.now().toString(),
-      post_id: postId,
-      content: content,
-      created_at: new Date().toISOString(),
-      user_id: user.id,
-      profiles: {
-        first_name: user.user_metadata?.first_name || null,
-        last_name: user.user_metadata?.last_name || null
+      if (error) {
+        toast({
+          title: "Error",
+          description: "Failed to post reply. Please try again.",
+          variant: "destructive"
+        });
+        return;
       }
-    };
 
-    setReplies(prev => ({
-      ...prev,
-      [postId]: [...(prev[postId] || []), newReply]
-    }));
+      toast({
+        title: "Reply Added",
+        description: "Your reply has been posted successfully!",
+      });
+
+      // Clear the reply input
+      setReplyContent(prev => ({ ...prev, [postId]: '' }));
+      
+      // Reload replies to show the new reply
+      loadReplies();
+    } catch (error) {
+      console.error('Error posting reply:', error);
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred.",
+        variant: "destructive"
+      });
+    }
   };
 
   const toggleReplies = (postId: string) => {
