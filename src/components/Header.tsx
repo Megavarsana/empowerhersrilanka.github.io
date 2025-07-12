@@ -109,11 +109,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/a4757542-3ec1-4b0e-bd77-b70b3b56b420.png"
               alt="EmpowerHer Logo" 
-              className="h-12 w-auto object-contain bg-soft-white dark:bg-gray-900"
-              style={{ 
-                filter: 'brightness(0) saturate(100%) invert(17%) sepia(81%) saturate(3151%) hue-rotate(350deg) brightness(88%) contrast(101%)',
-                background: 'inherit'
-              }}
+              className="h-12 w-auto object-contain bg-transparent"
               data-aos="slide-right"
               data-aos-delay="100"
             />
