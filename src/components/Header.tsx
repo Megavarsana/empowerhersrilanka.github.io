@@ -110,10 +110,6 @@ const Header = () => {
               src="/lovable-uploads/958e4ddd-08c4-4c2b-a7dd-7fec0ff50bb9.png"
               alt="EmpowerHer Logo" 
               className="h-12 w-auto object-contain"
-              style={{ 
-                filter: 'brightness(0) saturate(100%) invert(17%) sepia(81%) saturate(3151%) hue-rotate(350deg) brightness(88%) contrast(101%)',
-                mixBlendMode: 'multiply'
-              }}
               data-aos="slide-right"
               data-aos-delay="100"
             />
