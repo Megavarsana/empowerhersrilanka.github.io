@@ -109,8 +109,7 @@ const Header = () => {
             <img 
               src={empowerherLogo}
               alt="EmpowerHer Logo" 
-              className="h-12 w-auto object-contain"
-              style={{ filter: 'brightness(0) saturate(100%) invert(17%) sepia(81%) saturate(3151%) hue-rotate(350deg) brightness(88%) contrast(101%)' }}
+              className="h-10 w-auto object-contain"
               data-aos="slide-right"
               data-aos-delay="100"
             />
